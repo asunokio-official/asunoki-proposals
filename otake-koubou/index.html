@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>大竹工房 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --wood:#6b4226;
+    --wood-deep:#3f2817;
+    --clay:#c9713a;
+    --cream:#f7f1e6;
+    --ink:#2c2116;
+    --line:#e4d8c3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"游明朝","Hiragino Mincho ProN",serif;background:var(--cream);color:var(--ink);line-height:1.9;}
+  .notice{background:var(--wood-deep);color:#f0e2cc;text-align:center;font-size:.78rem;padding:6px 10px;font-family:sans-serif;}
+  header{position:sticky;top:0;z-index:50;background:rgba(247,241,230,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .brand{font-size:1.2rem;letter-spacing:.1em;color:var(--wood-deep);font-weight:bold;}
+  .brand small{display:block;font-size:.62rem;color:var(--clay);letter-spacing:.2em;font-weight:normal;font-family:sans-serif;}
+  .navlinks{display:flex;gap:22px;font-size:.85rem;flex-wrap:wrap;font-family:sans-serif;}
+  .navlinks a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;transition:.3s;}
+  .navlinks a:hover{border-color:var(--clay);color:var(--wood);}
+  .hero{
+    display:grid;grid-template-columns:1fr 1fr;min-height:80vh;align-items:stretch;
+  }
+  .hero-text{
+    display:flex;flex-direction:column;justify-content:center;padding:60px;
+  }
+  .hero-eyebrow{color:var(--clay);letter-spacing:.3em;font-size:.75rem;margin-bottom:20px;font-family:sans-serif;}
+  .hero h1{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--wood-deep);margin-bottom:22px;line-height:1.6;}
+  .hero p{color:#5c4a37;max-width:420px;}
+  .hero-image{
+    background:linear-gradient(135deg,#e6d6ba,#f7f1e6);
+    display:flex;align-items:center;justify-content:center;color:var(--clay);
+    font-size:.85rem;font-family:sans-serif;position:relative;overflow:hidden;
+  }
+  .hero-image::before{content:"";position:absolute;inset:24px;border:1px solid var(--clay);}
+  section{padding:90px 24px;max-width:1100px;margin:0 auto;}
+  .section-title{margin-bottom:56px;text-align:center;}
+  .section-title small{color:var(--clay);letter-spacing:.3em;font-size:.75rem;font-family:sans-serif;}
+  .section-title h2{color:var(--wood-deep);font-size:1.85rem;margin-top:10px;}
+  .fade{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .gallery .g-item{
+    aspect-ratio:1;background:linear-gradient(135deg,#e6d6ba,#f0e6d0);
+    display:flex;align-items:center;justify-content:center;color:var(--clay);
+    font-size:.78rem;font-family:sans-serif;transition:transform .4s;
+  }
+  .gallery .g-item:hover{transform:scale(1.03);}
+  .gallery .g-item:nth-child(2){grid-row:span 2;aspect-ratio:auto;}
+  .profile{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:start;}
+  .profile-photo{aspect-ratio:3/4;background:linear-gradient(135deg,#e6d6ba,#f0e6d0);display:flex;align-items:center;justify-content:center;color:var(--clay);font-size:.85rem;font-family:sans-serif;}
+  .quote{font-size:1.15rem;color:var(--wood-deep);border-left:3px solid var(--clay);padding-left:24px;margin-bottom:28px;}
+  .profile p{color:#5c4a37;margin-bottom:16px;font-size:.95rem;}
+  .timeline{position:relative;padding-left:26px;font-family:sans-serif;}
+  .timeline::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:var(--line);}
+  .t-item{position:relative;padding-bottom:22px;}
+  .t-item::before{content:"";position:absolute;left:-26px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--clay);}
+  .t-item .yr{font-size:.8rem;color:var(--clay);font-weight:bold;}
+  .t-item .desc{font-size:.9rem;color:#4a3b2c;}
+  .highlight-strip{
+    background:var(--wood-deep);color:#f0e2cc;text-align:center;padding:70px 24px;font-family:sans-serif;
+  }
+  .highlight-strip .items{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:20px;}
+  .highlight-strip .item{max-width:220px;}
+  .highlight-strip .item .yr{color:var(--clay);font-weight:bold;font-size:1.1rem;}
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:50px;font-family:sans-serif;}
+  .map-box{aspect-ratio:4/3;background:linear-gradient(135deg,#e6d6ba,#f0e6d0);display:flex;align-items:center;justify-content:center;color:var(--clay);font-size:.85rem;}
+  .info-line{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .info-line .k{width:80px;color:var(--clay);font-size:.85rem;flex-shrink:0;}
+  .cta{text-align:center;padding:90px 24px;background:linear-gradient(180deg,var(--cream),#efe1c8);font-family:sans-serif;}
+  .cta h2{color:var(--wood-deep);margin-bottom:20px;font-size:1.6rem;font-family:"游明朝",serif;}
+  .btn{display:inline-block;background:var(--wood);color:#fff;padding:16px 44px;text-decoration:none;letter-spacing:.1em;transition:.3s;}
+  .btn:hover{background:var(--wood-deep);}
+  footer{text-align:center;padding:32px 24px;font-size:.75rem;color:#e6d6ba;background:var(--wood-deep);font-family:sans-serif;}
+  @media(max-width:760px){
+    .hero{grid-template-columns:1fr;}
+    .hero-image{min-height:280px;}
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    .profile,.access{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">大竹工房<small>OTAKE KOUBOU</small></div>
+    <div class="navlinks">
+      <a href="#gallery">作品</a>
+      <a href="#profile">大竹おさむ</a>
+      <a href="#history">あゆみ</a>
+      <a href="#access">工房アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">長野県安曇野市 ｜ 創作木工家具</div>
+    <h1>木と向き合う時間から<br>生まれる、ひとつの椅子。</h1>
+    <p>信州安曇野の工房で、一つひとつ手作業により木工家具を制作しています。</p>
+  </div>
+  <div class="hero-image">工房・作品写真スペース</div>
+</div>
+
+<section id="gallery" class="fade">
+  <div class="section-title"><small>WORKS</small><h2>作品</h2></div>
+  <div class="gallery">
+    <div class="g-item">椅子</div>
+    <div class="g-item">テーブル</div>
+    <div class="g-item">小物</div>
+    <div class="g-item">収納家具</div>
+    <div class="g-item">オーダー品</div>
+  </div>
+</section>
+
+<section id="profile" class="profile fade">
+  <div class="profile-photo">大竹おさむ 写真スペース</div>
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>PROFILE</small><h2>大竹おさむ</h2></div>
+    <div class="quote">「木と木工に関するメッセージを、作品を通じてお届けしています。」</div>
+    <p>東京工業大学を卒業後、化学プラントのエンジニアとして世界十数カ国を渡航。1988年に退社し、松本技術専門校木工科で木工を学んだのち、安曇野に工房を開設しました。</p>
+    <p>以来、国内外での個展やグループ展を重ね、木工家具の制作を続けています。</p>
+  </div>
+</section>
+
+<section id="history" class="fade">
+  <div class="section-title"><small>HISTORY</small><h2>あゆみ</h2></div>
+  <div class="timeline">
+    <div class="t-item"><div class="yr">1991</div><div class="desc">工房開設。第一号の製品を出荷</div></div>
+    <div class="t-item"><div class="yr">1994</div><div class="desc">安曇野山光ホールにて初の個展開催</div></div>
+    <div class="t-item"><div class="yr">1998</div><div class="desc">東京銀座松屋デパートにて個展</div></div>
+    <div class="t-item"><div class="yr">2004</div><div class="desc">東京世田谷のギャラリーAU HASARDにて個展</div></div>
+    <div class="t-item"><div class="yr">2009</div><div class="desc">著書「木工ひとつばなし」を上梓</div></div>
+    <div class="t-item"><div class="yr">2014</div><div class="desc">NHKラジオ放送「ラジオ深夜便」に出演</div></div>
+    <div class="t-item"><div class="yr">2022〜</div><div class="desc">燕山荘（山小屋）からオリジナル土産品の製作依頼（毎年継続）</div></div>
+  </div>
+</section>
+
+<div class="highlight-strip fade">
+  <div class="section-title"><small style="color:#e6d6ba">HIGHLIGHT</small><h2 style="color:#fff">主な実績</h2></div>
+  <div class="items">
+    <div class="item"><div class="yr">1998</div>銀座松屋デパート個展</div>
+    <div class="item"><div class="yr">2014</div>NHKラジオ出演</div>
+    <div class="item"><div class="yr">2022〜</div>燕山荘 土産品製作</div>
+  </div>
+</div>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>ACCESS</small><h2>工房アクセス</h2></div>
+    <div class="info-line"><div class="k">住所</div><div>長野県安曇野市穂高有明</div></div>
+    <div class="info-line"><div class="k">電話</div><div>0263-83-5695</div></div>
+  </div>
+  <div class="map-box">工房アクセス地図</div>
+</section>
+
+<div class="cta fade">
+  <h2>作品のご相談・お問い合わせ</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>大竹工房（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
