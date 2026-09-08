@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>時游窯工房 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --clay:#b5652f;
+    --clay-deep:#7a4420;
+    --sage:#7c8a63;
+    --cream:#f6efe4;
+    --ink:#332a20;
+    --line:#e6d8c2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--cream);color:var(--ink);line-height:1.8;}
+  .notice{background:var(--clay-deep);color:#f6e8d8;text-align:center;font-size:.78rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(246,239,228,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:bold;font-size:1.1rem;color:var(--clay-deep);}
+  .brand .dot{width:34px;height:34px;border-radius:50%;background:var(--clay);}
+  .navlinks{display:flex;gap:20px;font-size:.85rem;flex-wrap:wrap;}
+  .navlinks a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;transition:.3s;}
+  .navlinks a:hover{border-color:var(--clay);color:var(--clay-deep);}
+  .hero{
+    min-height:74vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;
+    background:radial-gradient(circle at 30% 30%, rgba(181,101,47,.14), transparent 60%),
+               radial-gradient(circle at 75% 70%, rgba(124,138,99,.14), transparent 60%),
+               var(--cream);
+  }
+  .hero-eyebrow{color:var(--sage);letter-spacing:.3em;font-size:.78rem;margin-bottom:18px;}
+  .hero h1{font-size:clamp(2rem,4.5vw,3.2rem);color:var(--clay-deep);margin-bottom:20px;}
+  .hero p{color:#5b4d3c;max-width:520px;margin:0 auto;}
+  section{padding:86px 24px;max-width:1100px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:52px;}
+  .section-title small{color:var(--sage);letter-spacing:.28em;font-size:.75rem;}
+  .section-title h2{color:var(--clay-deep);font-size:1.85rem;margin-top:8px;}
+  .fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .gallery .g{aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#e6d0b3,#f2e6d2);display:flex;align-items:center;justify-content:center;color:var(--clay);font-size:.72rem;transition:transform .4s;}
+  .gallery .g:hover{transform:scale(1.06);}
+  .spec-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+  .spec-table th{background:var(--clay-deep);color:#f6e8d8;text-align:left;padding:14px 20px;font-size:.85rem;width:35%;}
+  .spec-table td{padding:14px 20px;border-bottom:1px solid var(--line);font-size:.9rem;}
+  .spec-table tr:last-child td{border-bottom:none;}
+  .courses{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .course{background:#fff;border:1px solid var(--line);border-radius:8px;padding:30px 24px;text-align:center;transition:transform .35s;}
+  .course:hover{transform:translateY(-6px);}
+  .course .mark{width:48px;height:48px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-weight:bold;}
+  .course h3{color:var(--clay-deep);margin-bottom:8px;}
+  .course p{font-size:.85rem;color:#6b5d4c;}
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .map-box{aspect-ratio:4/3;background:linear-gradient(135deg,#e6d0b3,#f2e6d2);border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--clay);font-size:.85rem;}
+  .info-line{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .info-line .k{width:80px;color:var(--sage);font-size:.85rem;flex-shrink:0;font-weight:bold;}
+  .cta{text-align:center;background:linear-gradient(180deg,var(--cream),#ecdec4);padding:90px 24px;}
+  .cta h2{color:var(--clay-deep);font-size:1.6rem;margin-bottom:20px;}
+  .btn{display:inline-block;background:var(--clay);color:#fff;padding:16px 44px;text-decoration:none;border-radius:30px;letter-spacing:.05em;transition:.3s;}
+  .btn:hover{background:var(--clay-deep);}
+  footer{text-align:center;padding:32px 24px;font-size:.75rem;color:#f2e6d2;background:var(--clay-deep);}
+  @media(max-width:760px){
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    .courses,.access{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand"><div class="dot"></div>時游窯工房</div>
+    <div class="navlinks">
+      <a href="#gallery">作品ギャラリー</a>
+      <a href="#spec">工房について</a>
+      <a href="#courses">教室案内</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="hero-eyebrow">静岡県浜松市</div>
+    <h1>技法に捕われない、<br>自由な作陶を。</h1>
+    <p>手回しろくろ・電動ろくろを完備した工房で、初心者から経験者まで自由な陶芸をお楽しみいただけます。</p>
+  </div>
+</div>
+
+<section id="gallery" class="fade">
+  <div class="section-title"><small>GALLERY</small><h2>作品ギャラリー</h2></div>
+  <div class="gallery">
+    <div class="g">器</div><div class="g">花瓶</div><div class="g">茶碗</div><div class="g">皿</div>
+    <div class="g">壺</div><div class="g">酒器</div><div class="g">オブジェ</div><div class="g">その他</div>
+  </div>
+  <p style="text-align:center;color:#6b5d4c;font-size:.85rem;margin-top:20px;">常時約200点の作品を展示・販売しております。</p>
+</section>
+
+<section id="spec" class="fade">
+  <div class="section-title"><small>ABOUT</small><h2>工房について</h2></div>
+  <table class="spec-table">
+    <tr><th>設備</th><td>手回しろくろ 8台／電動ろくろ 4台</td></tr>
+    <tr><th>土</th><td>信楽土 3種類</td></tr>
+    <tr><th>釉薬</th><td>自前調合釉薬 25種類</td></tr>
+    <tr><th>駐車場</th><td>10台分完備</td></tr>
+    <tr><th>お支払い</th><td>現金／PayPay対応</td></tr>
+  </table>
+</section>
+
+<section id="courses" class="fade">
+  <div class="section-title"><small>COURSES</small><h2>教室・体験案内</h2></div>
+  <div class="courses">
+    <div class="course"><div class="mark">教</div><h3>陶芸教室</h3><p>初心者向けカリキュラム完備。じっくり技術を身につけたい方に。</p></div>
+    <div class="course"><div class="mark">体</div><h3>陶芸体験</h3><p>一日体験から気軽にお楽しみいただけます。</p></div>
+    <div class="course"><div class="mark">展</div><h3>作品展示・販売</h3><p>ギャラリーでは常時約200点の作品をご覧いただけます。</p></div>
+  </div>
+</section>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>ACCESS</small><h2>アクセス・お問い合わせ</h2></div>
+    <div class="info-line"><div class="k">住所</div><div>浜松市東区半田町1201-1</div></div>
+    <div class="info-line"><div class="k">電話</div><div>090-5634-1749（留守電）</div></div>
+    <div class="info-line"><div class="k">営業</div><div>ギャラリー 9:30〜18:00</div></div>
+  </div>
+  <div class="map-box">アクセスマップ</div>
+</section>
+
+<div class="cta fade">
+  <h2>陶芸体験・教室のお問い合わせはお気軽に</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>時游窯工房（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
