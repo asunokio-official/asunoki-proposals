@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>有限会社はやしや翔健堂 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --green:#4c6b3f;
+    --green-deep:#33482a;
+    --amber:#d99a3a;
+    --cream:#f7f5ec;
+    --ink:#2e2a20;
+    --line:#e2ddc8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--cream);color:var(--ink);line-height:1.8;}
+  .notice{background:var(--green-deep);color:#e9f0e0;text-align:center;font-size:.78rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(247,245,236,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .brand{font-weight:bold;font-size:1.1rem;color:var(--green-deep);}
+  .brand small{display:block;font-size:.62rem;color:var(--amber);letter-spacing:.1em;font-weight:normal;}
+  .navlinks{display:flex;gap:20px;font-size:.85rem;flex-wrap:wrap;}
+  .navlinks a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;transition:.3s;}
+  .navlinks a:hover{border-color:var(--amber);color:var(--green-deep);}
+  .hero{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(180deg,#eef2e6,var(--cream));}
+  .hero-eyebrow{color:var(--amber);letter-spacing:.28em;font-size:.78rem;margin-bottom:18px;}
+  .hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem);color:var(--green-deep);margin-bottom:20px;}
+  .hero p{color:#524d3e;max-width:520px;margin:0 auto;}
+  section{padding:86px 24px;max-width:1100px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:52px;}
+  .section-title small{color:var(--amber);letter-spacing:.25em;font-size:.75rem;}
+  .section-title h2{color:var(--green-deep);font-size:1.85rem;margin-top:8px;}
+  .fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+  .quality-badges{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+  .qb{background:#fff;border:1px solid var(--line);border-radius:30px;padding:12px 26px;font-size:.85rem;color:var(--green-deep);font-weight:bold;}
+  .products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .product-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:transform .35s,box-shadow .35s;}
+  .product-card:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(76,107,63,.12);}
+  .product-image{aspect-ratio:4/3;background:linear-gradient(135deg,#e3ead9,#f2eedb);display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:.8rem;}
+  .product-body{padding:22px 20px;}
+  .product-body h3{color:var(--green-deep);margin-bottom:10px;}
+  .product-body p{font-size:.85rem;color:#5c5646;margin-bottom:12px;}
+  .price-table{width:100%;font-size:.82rem;border-top:1px solid var(--line);padding-top:10px;}
+  .price-table div{display:flex;justify-content:space-between;padding:3px 0;color:#6b6555;}
+  .price-table span:last-child{color:var(--green-deep);font-weight:bold;}
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .map-box{aspect-ratio:4/3;background:#eef2e6;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:.85rem;}
+  .info-line{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .info-line .k{width:80px;color:var(--amber);font-size:.85rem;flex-shrink:0;font-weight:bold;}
+  .cta{text-align:center;background:linear-gradient(180deg,var(--cream),#eef2e6);padding:90px 24px;}
+  .cta h2{color:var(--green-deep);margin-bottom:20px;font-size:1.6rem;}
+  .btn{display:inline-block;background:var(--green);color:#fff;padding:16px 44px;text-decoration:none;border-radius:30px;letter-spacing:.05em;transition:.3s;}
+  .btn:hover{background:var(--green-deep);}
+  footer{text-align:center;padding:32px 24px;font-size:.75rem;color:#dce6d3;background:var(--green-deep);}
+  @media(max-width:760px){
+    .products,.access{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">はやしや翔健堂<small>YOSHIKENDO</small></div>
+    <div class="navlinks">
+      <a href="#quality">こだわり</a>
+      <a href="#products">商品一覧</a>
+      <a href="#access">お問い合わせ</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="hero-eyebrow">長野県松本市</div>
+    <h1>信州の自然から生まれる、<br>からだへのやさしさ。</h1>
+    <p>にんにく卵黄・もろみ酢・ウコンなど、無添加・無保存料にこだわった健康食品をお届けします。</p>
+  </div>
+</div>
+
+<section id="quality" class="fade">
+  <div class="section-title"><small>QUALITY</small><h2>私たちのこだわり</h2></div>
+  <div class="quality-badges">
+    <div class="qb">添加物不使用</div>
+    <div class="qb">保存料不使用</div>
+    <div class="qb">信州の自然素材</div>
+    <div class="qb">独自の手作り製法</div>
+  </div>
+</section>
+
+<section id="products" class="fade">
+  <div class="section-title"><small>PRODUCTS</small><h2>商品一覧</h2></div>
+  <div class="products">
+    <div class="product-card">
+      <div class="product-image">にんにく卵黄</div>
+      <div class="product-body">
+        <h3>信州にんにく卵黄</h3>
+        <p>信州産にんにくと新鮮な卵黄を独自製法で結合。粉末・カプセルタイプをご用意。</p>
+        <div class="price-table">
+          <div><span>粉末タイプ 1袋</span><span>¥2,500</span></div>
+          <div><span>カプセル 1袋〜</span><span>¥1,600〜</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">もろみ酢</div>
+      <div class="product-body">
+        <h3>もろみ酢</h3>
+        <p>黒麹で仕込んだもろみを天然発酵。クエン酸・アミノ酸が豊富です。</p>
+        <div class="price-table">
+          <div><span>黒糖入り 1本〜</span><span>¥1,980〜</span></div>
+          <div><span>軟カプセル 1袋〜</span><span>¥1,600〜</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">ウコン粒</div>
+      <div class="product-body">
+        <h3>ウコン粒</h3>
+        <p>有効成分クルクミンを豊富に含む秋ウコンが主成分。毎日の栄養補助に。</p>
+        <div class="price-table">
+          <div><span>詳細</span><span>お問い合わせください</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>ACCESS</small><h2>アクセス・お問い合わせ</h2></div>
+    <div class="info-line"><div class="k">会社名</div><div>有限会社はやしや翔健堂</div></div>
+    <div class="info-line"><div class="k">住所</div><div>長野県松本市丸の内6-6</div></div>
+    <div class="info-line"><div class="k">電話</div><div>0263-40-7631</div></div>
+    <div class="info-line"><div class="k">FAX</div><div>0263-40-7633</div></div>
+  </div>
+  <div class="map-box">地図スペース</div>
+</section>
+
+<div class="cta fade">
+  <h2>商品についてのご相談はお気軽に</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>有限会社はやしや翔健堂（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
