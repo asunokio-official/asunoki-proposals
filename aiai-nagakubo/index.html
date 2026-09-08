@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>民宿永久保 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --forest:#1e3a2f;
+    --forest-deep:#0f2019;
+    --moss:#5a7a5a;
+    --sand:#e8dcc0;
+    --coral:#d98a5f;
+    --cream:#f7f4ec;
+    --ink:#22281f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--cream);color:var(--ink);line-height:1.85;overflow-x:hidden;}
+  .notice{background:var(--forest-deep);color:var(--sand);text-align:center;font-size:.75rem;padding:6px 10px;}
+  header{position:absolute;top:0;left:0;right:0;z-index:50;padding:24px 32px;}
+  nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+  .brand{color:#fff;font-weight:700;font-size:1.1rem;letter-spacing:.08em;text-shadow:0 2px 12px rgba(0,0,0,.3);}
+  .navlinks{display:flex;gap:28px;font-size:.82rem;}
+  .navlinks a{color:#fff;text-decoration:none;opacity:.85;text-shadow:0 2px 8px rgba(0,0,0,.3);}
+  .navlinks a:hover{opacity:1;}
+
+  /* HERO — full bleed, layered forest/ocean gradient evoking Yakushima */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:flex-end;
+    background:
+      radial-gradient(ellipse 80% 60% at 15% 0%, rgba(90,122,90,.55), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 90% 100%, rgba(217,138,95,.25), transparent 60%),
+      linear-gradient(200deg, #16301f 0%, #0f2019 55%, #0a1712 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      repeating-linear-gradient(100deg, rgba(255,255,255,.03) 0 1px, transparent 1px 90px),
+      repeating-linear-gradient(20deg, rgba(255,255,255,.02) 0 1px, transparent 1px 130px);
+  }
+  .hero-content{position:relative;z-index:2;padding:0 32px 90px;max-width:1200px;margin:0 auto;width:100%;}
+  .hero-eyebrow{color:var(--sand);letter-spacing:.35em;font-size:.72rem;margin-bottom:24px;opacity:.85;}
+  .hero h1{
+    font-size:clamp(2.4rem,7vw,5rem);color:#fff;line-height:1.35;font-weight:700;
+    max-width:720px;text-shadow:0 4px 30px rgba(0,0,0,.35);
+  }
+  .hero p{color:#d8e0d4;max-width:440px;margin-top:26px;font-size:1.02rem;}
+  .scroll-hint{position:absolute;bottom:28px;left:32px;color:#fff;font-size:.7rem;letter-spacing:.2em;opacity:.6;z-index:2;}
+
+  section{padding:100px 32px;max-width:1200px;margin:0 auto;}
+  .fade{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  /* Story block — the husband-wife rock, asymmetric */
+  .story{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;}
+  .story-visual{
+    aspect-ratio:3/4;position:relative;border-radius:2px;overflow:hidden;
+    background:
+      radial-gradient(circle at 30% 75%, rgba(217,138,95,.4), transparent 55%),
+      radial-gradient(circle at 70% 30%, rgba(90,122,90,.5), transparent 55%),
+      linear-gradient(160deg,#2a4534,#0f2019);
+  }
+  .story-visual .label{position:absolute;bottom:24px;left:24px;color:var(--sand);font-size:.75rem;letter-spacing:.15em;}
+  .story-eyebrow{color:var(--coral);letter-spacing:.3em;font-size:.72rem;margin-bottom:20px;}
+  .story h2{font-size:clamp(1.6rem,3vw,2.3rem);color:var(--forest-deep);margin-bottom:24px;line-height:1.6;}
+  .story p{color:#4a5245;font-size:.98rem;margin-bottom:16px;}
+
+  /* Rooms — elegant list, not cards */
+  .rooms-header{text-align:center;margin-bottom:64px;}
+  .rooms-header small{color:var(--coral);letter-spacing:.3em;font-size:.72rem;}
+  .rooms-header h2{color:var(--forest-deep);font-size:clamp(1.6rem,3vw,2.3rem);margin-top:14px;}
+  .room-list{max-width:800px;margin:0 auto;}
+  .room-row{
+    display:grid;grid-template-columns:80px 1fr auto;gap:24px;align-items:center;
+    padding:28px 0;border-bottom:1px solid rgba(30,58,47,.15);
+  }
+  .room-row:first-child{border-top:1px solid rgba(30,58,47,.15);}
+  .room-row .num{font-size:.75rem;color:var(--coral);letter-spacing:.1em;}
+  .room-row .name{font-size:1.1rem;color:var(--forest-deep);font-weight:600;}
+  .room-row .desc{font-size:.85rem;color:#6b7264;margin-top:4px;}
+  .room-row .price{font-size:.95rem;color:var(--forest);font-weight:600;text-align:right;}
+
+  /* Access — dark band */
+  .access{
+    background:var(--forest-deep);color:var(--sand);padding:100px 32px;
+  }
+  .access-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  .access-inner small{color:var(--coral);letter-spacing:.3em;font-size:.72rem;}
+  .access-inner h2{color:#fff;font-size:clamp(1.6rem,3vw,2.1rem);margin:16px 0 28px;}
+  .info-line{display:flex;gap:20px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .info-line .k{width:70px;color:var(--coral);font-size:.82rem;flex-shrink:0;}
+  .info-line .v{color:#e8e4d8;font-size:.92rem;}
+  .map-box{
+    aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;
+    color:rgba(255,255,255,.4);font-size:.82rem;
+  }
+
+  .cta{text-align:center;padding:110px 32px;background:var(--cream);}
+  .cta h2{color:var(--forest-deep);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:24px;}
+  .btn{
+    display:inline-block;background:var(--coral);color:#fff;padding:18px 50px;text-decoration:none;
+    letter-spacing:.08em;font-size:.92rem;border-radius:2px;transition:.3s;
+  }
+  .btn:hover{background:#c67a4f;}
+  footer{text-align:center;padding:36px 24px;font-size:.72rem;color:var(--sand);background:var(--forest-deep);}
+  @media(max-width:760px){
+    .story{grid-template-columns:1fr;}
+    .access-inner{grid-template-columns:1fr;}
+    .room-row{grid-template-columns:50px 1fr;}
+    .room-row .price{grid-column:2;text-align:left;margin-top:6px;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">民宿永久保</div>
+    <div class="navlinks">
+      <a href="#story">物語</a>
+      <a href="#rooms">お部屋</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">世界自然遺産の島 屋久島 ｜ 永久保</div>
+    <h1>森と、岩と、<br>あたたかな手料理と。</h1>
+    <p>世界自然遺産の島・屋久島の永久保集落で、快適なお部屋とあたたかい手料理でお迎えします。</p>
+  </div>
+  <div class="scroll-hint">SCROLL ↓</div>
+</div>
+
+<section id="story" class="story fade">
+  <div>
+    <div class="story-eyebrow">OUR STORY</div>
+    <h2>裏庭に残された、<br>夫婦岩の物語。</h2>
+    <p>建物の裏庭には、工事の際にどうしても動かず離れなかった大きな夫婦岩があります。よく見ると、その下には小さな子供岩も。</p>
+    <p>私たちもこの岩のように、屋久島でともに生きていければと思い、大切に残すことにしました。みなさまの旅の思い出づくりを、少しでもお手伝いできれば幸いです。</p>
+  </div>
+  <div class="story-visual">
+    <div class="label">夫婦岩 ｜ 裏庭にて</div>
+  </div>
+</section>
+
+<section id="rooms" class="fade">
+  <div class="rooms-header">
+    <small>ROOMS</small>
+    <h2>お部屋のご案内</h2>
+  </div>
+  <div class="room-list">
+    <div class="room-row">
+      <div class="num">01</div>
+      <div><div class="name">和室</div><div class="desc">清潔で落ち着いた、屋久島らしい静かなお部屋</div></div>
+      <div class="price">お問い合わせください</div>
+    </div>
+    <div class="room-row">
+      <div class="num">02</div>
+      <div><div class="name">お食事</div><div class="desc">あたたかい手料理をご用意してお待ちしております</div></div>
+      <div class="price">1泊2食付</div>
+    </div>
+    <div class="room-row">
+      <div class="num">03</div>
+      <div><div class="name">旅のサポート</div><div class="desc">荒川登山口行きバス停すぐ。旅のご相談も承ります</div></div>
+      <div class="price">お気軽にご相談</div>
+    </div>
+  </div>
+</section>
+
+<div class="access" id="access">
+  <div class="access-inner fade">
+    <div class="map-box">アクセスマップ</div>
+    <div>
+      <small>ACCESS</small>
+      <h2>アクセス・お問い合わせ</h2>
+      <div class="info-line"><div class="k">住所</div><div class="v">鹿児島県熊毛郡屋久島町船行1043-56</div></div>
+      <div class="info-line"><div class="k">電話</div><div class="v">0997-49-7033</div></div>
+      <div class="info-line"><div class="k">アクセス</div><div class="v">永久保バス停からすぐ</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta fade">
+  <h2>屋久島での滞在を、永久保で。</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>民宿永久保（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
