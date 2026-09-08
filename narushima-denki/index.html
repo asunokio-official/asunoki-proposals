@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>株式会社ナルシマ電気 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --blue:#0c3c66;
+    --blue-deep:#082744;
+    --yellow:#f2b705;
+    --steel:#4d6a85;
+    --bg:#f5f7f9;
+    --line:#e1e7ec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:#1e293b;line-height:1.75;}
+  .notice{background:var(--blue-deep);color:#ffe9a8;text-align:center;font-size:.78rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:var(--blue);color:#fff;border-bottom:4px solid var(--yellow);}
+  nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:bold;font-size:1.1rem;}
+  .brand .badge{width:38px;height:38px;background:var(--yellow);color:var(--blue-deep);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+  .navlinks{display:flex;gap:22px;font-size:.85rem;flex-wrap:wrap;}
+  .navlinks a{color:#dbe9f7;text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px;transition:.3s;}
+  .navlinks a:hover{color:#fff;border-color:var(--yellow);}
+  .hero{
+    background:linear-gradient(135deg,var(--blue),var(--blue-deep));
+    color:#fff;padding:100px 24px 80px;position:relative;overflow:hidden;
+  }
+  .hero-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center;}
+  .hero-eyebrow{color:var(--yellow);letter-spacing:.2em;font-size:.8rem;margin-bottom:18px;}
+  .hero h1{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:20px;}
+  .hero p{color:#c9dcee;max-width:480px;}
+  .hero-badge-box{
+    background:rgba(255,255,255,.06);border:1px solid rgba(242,183,5,.4);border-radius:10px;
+    padding:30px;text-align:center;
+  }
+  .hero-badge-box .yr{font-size:2.4rem;color:var(--yellow);font-weight:bold;}
+  .hero-badge-box .yr-label{font-size:.8rem;color:#c9dcee;margin-top:6px;}
+  section{padding:80px 24px;max-width:1120px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:50px;}
+  .section-title small{color:var(--steel);letter-spacing:.25em;font-size:.75rem;}
+  .section-title h2{color:var(--blue);font-size:1.8rem;margin-top:8px;}
+  .fade{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+  .motto-bar{
+    display:flex;justify-content:center;gap:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  }
+  .motto-bar div{flex:1;text-align:center;padding:26px 16px;border-right:1px solid var(--line);}
+  .motto-bar div:last-child{border-right:none;}
+  .motto-bar .ch{font-size:1.6rem;color:var(--blue);font-weight:bold;}
+  .motto-bar .en{font-size:.75rem;color:var(--steel);margin-top:6px;letter-spacing:.1em;}
+  .services{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  .service-card{
+    background:#fff;border:1px solid var(--line);border-radius:8px;padding:34px 30px;position:relative;overflow:hidden;
+    transition:transform .35s;
+  }
+  .service-card:hover{transform:translateY(-6px);}
+  .service-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--yellow);}
+  .service-card h3{color:var(--blue);margin-bottom:12px;font-size:1.15rem;}
+  .service-card p{font-size:.88rem;color:#5b6b80;}
+  .service-card ul{margin-top:14px;padding-left:18px;font-size:.85rem;color:#5b6b80;}
+  .service-card li{margin-bottom:4px;}
+  .timeline{position:relative;padding-left:28px;}
+  .timeline::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--line);}
+  .t-item{position:relative;padding-bottom:30px;}
+  .t-item::before{content:"";position:absolute;left:-28px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--yellow);border:3px solid var(--blue);}
+  .t-item .date{font-size:.8rem;color:var(--steel);font-weight:bold;margin-bottom:4px;}
+  .t-item .desc{color:#334155;font-size:.92rem;}
+  .partners{
+    background:#fff;border:1px solid var(--line);border-radius:10px;padding:36px;text-align:center;
+  }
+  .partners .tag{font-size:.8rem;color:var(--steel);letter-spacing:.1em;margin-bottom:16px;}
+  .partner-list{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-size:.85rem;color:var(--blue);}
+  .partner-list span{background:var(--bg);border:1px solid var(--line);padding:8px 16px;border-radius:20px;}
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .map-box{aspect-ratio:4/3;background:#e6edf5;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--steel);font-size:.85rem;}
+  .info-line{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .info-line .k{width:80px;color:var(--steel);font-size:.85rem;flex-shrink:0;font-weight:bold;}
+  .cta{text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;padding:90px 24px;}
+  .cta h2{margin-bottom:20px;font-size:1.6rem;}
+  .btn{display:inline-block;background:var(--yellow);color:var(--blue-deep);padding:16px 44px;text-decoration:none;font-weight:bold;border-radius:4px;transition:.3s;}
+  .btn:hover{background:#ffd54f;}
+  footer{text-align:center;padding:32px 24px;font-size:.75rem;color:#9db6cd;background:var(--blue-deep);}
+  @media(max-width:760px){
+    .hero-grid,.services,.access{grid-template-columns:1fr;}
+    .motto-bar{flex-direction:column;}
+    .motto-bar div{border-right:none;border-bottom:1px solid var(--line);}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand"><div class="badge">電</div>株式会社ナルシマ電気</div>
+    <div class="navlinks">
+      <a href="#motto">理念</a>
+      <a href="#services">工事のご案内</a>
+      <a href="#track">施工実績</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">東京都 ｜ 電気工事業</div>
+      <h1>安心・安全・丁寧な<br>電気工事を、地域へ。</h1>
+      <p>昭和51年の設立以来、住宅・マンション・オフィス・店舗・工場まで、幅広い電気工事を手がけております。</p>
+    </div>
+    <div class="hero-badge-box">
+      <div class="yr">1976〜</div>
+      <div class="yr-label">創業（昭和51年）</div>
+    </div>
+  </div>
+</div>
+
+<section id="motto" class="fade">
+  <div class="section-title"><small>OUR MOTTO</small><h2>心・誠心・誠力</h2></div>
+  <div class="motto-bar">
+    <div><div class="ch">安心</div><div class="en">ANSHIN</div></div>
+    <div><div class="ch">安全</div><div class="en">ANZEN</div></div>
+    <div><div class="ch">丁寧</div><div class="en">TEINEI</div></div>
+  </div>
+</section>
+
+<section id="services" class="fade">
+  <div class="section-title"><small>SERVICES</small><h2>工事のご案内</h2></div>
+  <div class="services">
+    <div class="service-card">
+      <h3>一般家庭向け</h3>
+      <p>ご家庭の電気工事全般を承ります。</p>
+      <ul><li>住宅の電気設備工事</li><li>照明・コンセント増設</li><li>各種修理・メンテナンス</li></ul>
+    </div>
+    <div class="service-card">
+      <h3>法人様向け</h3>
+      <p>オフィス・店舗・工場の電気設備工事に対応。</p>
+      <ul><li>オフィス・店舗の電気設備工事</li><li>マンション共用部の工事</li><li>公共施設の改修工事</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="track" class="fade">
+  <div class="section-title"><small>TRACK RECORD</small><h2>施工実績（一部）</h2></div>
+  <div class="timeline">
+    <div class="t-item"><div class="date">2017</div><div class="desc">江戸川区役所 新中川ソーラー灯改修工事</div></div>
+    <div class="t-item"><div class="date">2015</div><div class="desc">江戸川区役所 街路灯改修工事・公園園灯改修工事・歩道照明改修工事</div></div>
+    <div class="t-item"><div class="date">2014</div><div class="desc">スターツCAM株式会社様 マンション電気設備工事（複数物件）</div></div>
+    <div class="t-item"><div class="date">2013〜2014</div><div class="desc">株式会社クリスタルグリーン様 グループホーム電気設備工事</div></div>
+    <div class="t-item"><div class="date">2013</div><div class="desc">株式会社トヨダ工業様 マンション電気設備工事</div></div>
+  </div>
+</section>
+
+<section class="fade">
+  <div class="partners">
+    <div class="tag">主な取引実績</div>
+    <div class="partner-list">
+      <span>江戸川区役所</span>
+      <span>スターツCAM株式会社</span>
+      <span>株式会社クリスタルグリーン</span>
+      <span>株式会社トヨダ工業</span>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>ACCESS</small><h2>アクセス・お問い合わせ</h2></div>
+    <div class="info-line"><div class="k">会社名</div><div>株式会社ナルシマ電気</div></div>
+    <div class="info-line"><div class="k">創業</div><div>昭和51年3月</div></div>
+    <div class="info-line"><div class="k">電話</div><div>03-3675-5151</div></div>
+    <div class="info-line"><div class="k">活動地域</div><div>東京都江戸川区を中心に</div></div>
+  </div>
+  <div class="map-box">地図スペース</div>
+</section>
+
+<div class="cta fade">
+  <h2>電気工事のご相談は、お気軽にどうぞ</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>株式会社ナルシマ電気（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
