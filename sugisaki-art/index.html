@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>杉崎彫刻工房 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --stone:#3a3a3d;
+    --stone-deep:#1e1e20;
+    --stone-light:#8a8a8c;
+    --bronze:#a87848;
+    --paper:#f2f1ee;
+    --ink:#1e1e20;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.8;}
+  .notice{background:var(--stone-deep);color:#d8d4cc;text-align:center;font-size:.75rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:var(--stone-deep);}
+  nav{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;}
+  .brand{color:#fff;font-weight:700;letter-spacing:.05em;font-size:1.05rem;}
+  .navlinks{display:flex;gap:24px;font-size:.82rem;}
+  .navlinks a{color:#b0aea8;text-decoration:none;transition:.3s;}
+  .navlinks a:hover{color:var(--bronze);}
+
+  /* HERO — monumental, huge type over textured stone gradient */
+  .hero{
+    position:relative;min-height:92vh;display:flex;align-items:center;
+    background:
+      linear-gradient(135deg, rgba(0,0,0,.15), rgba(0,0,0,.5)),
+      repeating-linear-gradient(115deg, #2c2c2e 0 3px, #333335 3px 7px),
+      linear-gradient(160deg,#3a3a3d,#1e1e20);
+  }
+  .hero-content{max-width:1160px;margin:0 auto;padding:0 28px;width:100%;}
+  .hero-eyebrow{color:var(--bronze);letter-spacing:.35em;font-size:.75rem;margin-bottom:28px;}
+  .hero h1{
+    font-size:clamp(2.6rem,8vw,6.5rem);color:#f2f1ee;line-height:1.05;font-weight:700;
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{font-style:normal;color:var(--bronze);}
+  .hero p{color:#c4c2ba;max-width:460px;margin-top:32px;font-size:1.02rem;}
+
+  section{padding:100px 28px;max-width:1160px;margin:0 auto;}
+  .section-eyebrow{color:var(--bronze);letter-spacing:.3em;font-size:.72rem;}
+  .fade{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  /* Big stat strip */
+  .stat-strip{background:var(--stone-deep);color:#fff;padding:70px 28px;}
+  .stat-inner{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
+  .stat{flex:1;min-width:180px;}
+  .stat .num{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;color:var(--bronze);}
+  .stat .label{font-size:.82rem;color:#b0aea8;margin-top:8px;letter-spacing:.05em;}
+
+  /* Services — asymmetric large blocks, not equal cards */
+  .services-header{margin-bottom:56px;}
+  .services-header h2{font-size:clamp(1.6rem,3vw,2.3rem);color:var(--ink);margin-top:14px;}
+  .services{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;}
+  .svc-main{
+    background:var(--stone);color:#fff;padding:56px 44px;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px;
+  }
+  .svc-main h3{font-size:1.5rem;margin-bottom:16px;}
+  .svc-main p{color:#c4c2ba;font-size:.92rem;max-width:400px;}
+  .svc-side{display:flex;flex-direction:column;gap:28px;}
+  .svc-small{background:#fff;border:1px solid #ddd9cf;padding:32px;flex:1;}
+  .svc-small h4{color:var(--ink);margin-bottom:10px;font-size:1.05rem;}
+  .svc-small p{font-size:.86rem;color:#6b6b64;}
+
+  /* Timeline — engraved plaque style */
+  .plaque{background:var(--stone-deep);color:#fff;padding:100px 28px;}
+  .plaque-inner{max-width:900px;margin:0 auto;}
+  .plaque-inner .section-eyebrow{text-align:center;display:block;}
+  .plaque-inner h2{text-align:center;color:#fff;font-size:clamp(1.6rem,3vw,2.1rem);margin:14px 0 60px;}
+  .timeline{border-top:1px solid rgba(255,255,255,.15);}
+  .t-row{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.15);}
+  .t-row .yr{color:var(--bronze);font-weight:700;font-size:1.05rem;}
+  .t-row .desc{color:#d4d2ca;font-size:.92rem;}
+
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  .map-box{aspect-ratio:4/3;background:#e5e2d8;display:flex;align-items:center;justify-content:center;color:#9a988e;font-size:.85rem;}
+  .info-line{display:flex;gap:18px;padding:13px 0;border-bottom:1px solid #ddd9cf;}
+  .info-line .k{width:76px;color:var(--bronze);font-size:.85rem;flex-shrink:0;font-weight:600;}
+
+  .cta{text-align:center;padding:110px 28px;}
+  .cta h2{font-size:clamp(1.5rem,3vw,2rem);color:var(--ink);margin-bottom:24px;}
+  .btn{display:inline-block;background:var(--ink);color:#fff;padding:18px 50px;text-decoration:none;letter-spacing:.08em;transition:.3s;}
+  .btn:hover{background:var(--bronze);}
+  footer{text-align:center;padding:32px 24px;font-size:.72rem;color:#b0aea8;background:var(--stone-deep);}
+  @media(max-width:760px){
+    .services{grid-template-columns:1fr;}
+    .access{grid-template-columns:1fr;}
+    .t-row{grid-template-columns:70px 1fr;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">杉崎彫刻工房</div>
+    <div class="navlinks">
+      <a href="#services">制作事業</a>
+      <a href="#history">あゆみ</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">宮城県角田市 ｜ 彫刻・モニュメント制作</div>
+    <h1>石に刻む、<br><em>三十年</em>の想い。</h1>
+    <p>公共施設、学校、駅、慰霊碑まで。石造彫刻を中心に、長く残るものづくりを続けています。</p>
+  </div>
+</div>
+
+<div class="stat-strip">
+  <div class="stat-inner fade">
+    <div class="stat"><div class="num">30年+</div><div class="label">の制作歴</div></div>
+    <div class="stat"><div class="num">多数</div><div class="label">の公共彫刻プロジェクト</div></div>
+    <div class="stat"><div class="num">石造</div><div class="label">彫刻が中心</div></div>
+  </div>
+</div>
+
+<section id="services" class="fade">
+  <div class="services-header">
+    <div class="section-eyebrow">SERVICES</div>
+    <h2>制作事業</h2>
+  </div>
+  <div class="services">
+    <div class="svc-main">
+      <h3>モニュメント・パブリックアート</h3>
+      <p>公共施設・学校・駅舎など、地域のシンボルとなる大規模彫刻を制作します。</p>
+    </div>
+    <div class="svc-side">
+      <div class="svc-small"><h4>レリーフ制作</h4><p>建築物に調和するレリーフ彫刻を手がけます。</p></div>
+      <div class="svc-small"><h4>慰霊碑・記念碑</h4><p>想いを長く残す慰霊碑・記念碑の制作にも対応します。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="plaque" id="history">
+  <div class="plaque-inner">
+    <div class="section-eyebrow" style="text-align:center;">HISTORY</div>
+    <h2>あゆみ</h2>
+    <div class="timeline fade">
+      <div class="t-row"><div class="yr">創業</div><div class="desc">石造彫刻を専門とする工房として制作を開始</div></div>
+      <div class="t-row"><div class="yr">学校彫刻</div><div class="desc">各地の学校施設への彫刻設置に携わる</div></div>
+      <div class="t-row"><div class="yr">駅舎彫刻</div><div class="desc">駅前広場等のパブリックアート制作を手がける</div></div>
+      <div class="t-row"><div class="yr">慰霊碑</div><div class="desc">慰霊碑・記念碑の制作を通じ、地域の想いを形に</div></div>
+      <div class="t-row"><div class="yr">現在</div><div class="desc">30年以上の経験を活かし、公共彫刻を中心に制作を続ける</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-eyebrow">ACCESS</div>
+    <h2 style="font-size:1.8rem;margin:14px 0 24px;">アクセス・お問い合わせ</h2>
+    <div class="info-line"><div class="k">住所</div><div>宮城県角田市松島町字川原40-7</div></div>
+    <div class="info-line"><div class="k">電話</div><div>0224-65-2012</div></div>
+    <div class="info-line"><div class="k">FAX</div><div>0224-65-2012</div></div>
+  </div>
+  <div class="map-box">アクセスマップ</div>
+</section>
+
+<div class="cta fade">
+  <h2>彫刻・モニュメントのご相談はお気軽に</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>杉崎彫刻工房（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
