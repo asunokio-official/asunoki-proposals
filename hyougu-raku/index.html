@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>表具工房 楽 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --indigo:#1f2d4a;
+    --indigo-deep:#131c30;
+    --gold:#c9a24b;
+    --paper:#f5f3ec;
+    --ink:#232323;
+    --line:#ddd8c9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"游明朝","Hiragino Mincho ProN",serif;background:var(--paper);color:var(--ink);line-height:1.85;}
+  .notice{background:var(--indigo-deep);color:#e8dfc4;text-align:center;font-size:.78rem;padding:6px 10px;font-family:sans-serif;}
+  header{position:sticky;top:0;z-index:50;background:var(--indigo);color:#fff;}
+  nav{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .brand{font-size:1.1rem;letter-spacing:.08em;font-weight:bold;}
+  .brand small{display:block;font-size:.6rem;color:var(--gold);letter-spacing:.15em;font-weight:normal;font-family:sans-serif;}
+  .navlinks{display:flex;gap:20px;font-size:.85rem;flex-wrap:wrap;font-family:sans-serif;}
+  .navlinks a{color:#e5e1d3;text-decoration:none;border-bottom:1px solid transparent;transition:.3s;}
+  .navlinks a:hover{border-color:var(--gold);color:#fff;}
+  .hero{background:linear-gradient(135deg,var(--indigo),var(--indigo-deep));color:#fff;padding:100px 24px 80px;text-align:center;}
+  .hero-eyebrow{color:var(--gold);letter-spacing:.3em;font-size:.78rem;margin-bottom:20px;font-family:sans-serif;}
+  .hero h1{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:20px;line-height:1.6;}
+  .hero p{color:#c8cfe0;max-width:520px;margin:0 auto;font-family:sans-serif;}
+  section{padding:86px 24px;max-width:1080px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:52px;}
+  .section-title small{color:var(--gold);letter-spacing:.28em;font-size:.75rem;font-family:sans-serif;}
+  .section-title h2{color:var(--indigo);font-size:1.85rem;margin-top:8px;}
+  .fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+  .awards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:-56px;position:relative;z-index:3;}
+  .award-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:6px;padding:28px 22px;text-align:center;box-shadow:0 16px 32px rgba(19,28,48,.1);font-family:sans-serif;}
+  .award-card .yr{color:var(--gold);font-weight:bold;font-size:1.1rem;}
+  .award-card .name{color:var(--indigo);font-size:.92rem;margin-top:8px;}
+  .services{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;font-family:sans-serif;}
+  .service{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px 26px;transition:transform .35s;}
+  .service:hover{transform:translateY(-6px);}
+  .service h3{color:var(--indigo);margin-bottom:10px;font-family:"游明朝",serif;}
+  .service p{font-size:.88rem;color:#5a5a52;}
+  .philosophy{background:var(--indigo);color:#fff;text-align:center;padding:80px 24px;}
+  .philosophy p{max-width:600px;margin:0 auto;font-size:1.1rem;line-height:2;}
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:50px;font-family:sans-serif;}
+  .map-box{aspect-ratio:4/3;background:#e8e4d5;border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.85rem;}
+  .info-line{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .info-line .k{width:80px;color:var(--gold);font-size:.85rem;flex-shrink:0;}
+  .cta{text-align:center;padding:90px 24px;background:#ece7d8;font-family:sans-serif;}
+  .cta h2{color:var(--indigo);margin-bottom:20px;font-size:1.6rem;font-family:"游明朝",serif;}
+  .btn{display:inline-block;background:var(--indigo);color:#fff;padding:16px 44px;text-decoration:none;letter-spacing:.1em;transition:.3s;}
+  .btn:hover{background:var(--indigo-deep);}
+  footer{text-align:center;padding:32px 24px;font-size:.75rem;color:#e5e1d3;background:var(--indigo-deep);font-family:sans-serif;}
+  @media(max-width:760px){
+    .awards,.services,.access{grid-template-columns:1fr;}
+    .awards{margin-top:20px;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">表具工房 楽<small>HYOUGU KOUBOU RAKU</small></div>
+    <div class="navlinks">
+      <a href="#awards">受賞歴</a>
+      <a href="#services">業務内容</a>
+      <a href="#philosophy">理念</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-eyebrow">東京都東村山市</div>
+  <h1>掛軸に、襖に、<br>伝統の技を宿す。</h1>
+  <p>表具・内装工事を通じて、日本の伝統文化を現代へつなぐ仕事をしております。</p>
+</div>
+
+<div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+  <div class="awards fade">
+    <div class="award-card"><div class="yr">2007</div><div class="name">東京都表装作品展<br>全表連会長賞</div></div>
+    <div class="award-card"><div class="yr">2011</div><div class="name">全国技能グランプリ<br>表具競技 二位</div></div>
+    <div class="award-card"><div class="yr">2019</div><div class="name">東京都表装内装作品展<br>都知事賞</div></div>
+  </div>
+</div>
+
+<section id="services" class="fade">
+  <div class="section-title"><small>SERVICES</small><h2>業務内容</h2></div>
+  <div class="services">
+    <div class="service"><h3>掛軸装裱</h3><p>大切な書画を美しく仕立てる、伝統的な表装技術です。</p></div>
+    <div class="service"><h3>襖・障子の張替え</h3><p>ご家庭の襖・障子を丁寧に張り替えます。</p></div>
+    <div class="service"><h3>壁装</h3><p>空間に合わせた壁装工事を承ります。</p></div>
+    <div class="service"><h3>文化財修復</h3><p>文化財の修復にも対応する確かな技術力。</p></div>
+  </div>
+</section>
+
+<div class="philosophy fade">
+  <div class="section-title"><small style="color:#c8cfe0">PHILOSOPHY</small><h2 style="color:#fff">理念</h2></div>
+  <p>骨董趣味ではなく、伝統技術を活かしながら、生きた日本文化の底上げに参画する——それが私たちの目指すものづくりです。</p>
+</div>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>ACCESS</small><h2>アクセス・お問い合わせ</h2></div>
+    <div class="info-line"><div class="k">住所</div><div>東京都東村山市久米川町5-19-42</div></div>
+    <div class="info-line"><div class="k">電話/FAX</div><div>042-392-5596</div></div>
+  </div>
+  <div class="map-box">地図スペース</div>
+</section>
+
+<div class="cta fade">
+  <h2>掛軸・襖・内装のご相談はお気軽に</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>表具工房 楽（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
