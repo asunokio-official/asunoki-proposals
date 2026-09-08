@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>佐藤管工設備株式会社 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --teal:#0e5a63;
+    --teal-deep:#083e45;
+    --orange:#e8823d;
+    --bg:#f4f8f8;
+    --line:#dbe6e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:#233;line-height:1.75;}
+  .notice{background:var(--teal-deep);color:#d8f0ee;text-align:center;font-size:.78rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:var(--teal);color:#fff;}
+  nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+  .brand{font-weight:bold;font-size:1.1rem;}
+  .navlinks{display:flex;gap:20px;font-size:.85rem;flex-wrap:wrap;}
+  .navlinks a{color:#d8f0ee;text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px;transition:.3s;}
+  .navlinks a:hover{color:#fff;border-color:var(--orange);}
+  .emergency-bar{background:var(--orange);color:#fff;text-align:center;padding:10px;font-size:.85rem;font-weight:bold;}
+  .hero{background:linear-gradient(135deg,var(--teal),var(--teal-deep));color:#fff;padding:80px 24px 70px;text-align:center;}
+  .hero-eyebrow{color:#a8e0d8;letter-spacing:.2em;font-size:.8rem;margin-bottom:18px;}
+  .hero h1{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:20px;}
+  .hero p{color:#cfe8e5;max-width:520px;margin:0 auto;}
+  section{padding:80px 24px;max-width:1120px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:50px;}
+  .section-title small{color:var(--orange);letter-spacing:.25em;font-size:.75rem;}
+  .section-title h2{color:var(--teal-deep);font-size:1.8rem;margin-top:8px;}
+  .fade{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+  .trouble-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .trouble{
+    background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px 20px;position:relative;
+    transition:transform .35s;
+  }
+  .trouble:hover{transform:translateY(-4px);}
+  .trouble::before{content:"？";position:absolute;top:-14px;left:20px;width:28px;height:28px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;}
+  .trouble p{font-size:.88rem;color:#3a4a4a;margin-top:8px;}
+  .arrow-row{text-align:center;color:var(--teal);font-size:1.3rem;margin:20px 0;}
+  .solution-bar{
+    background:var(--teal);color:#fff;text-align:center;padding:30px;border-radius:8px;font-size:1.05rem;
+  }
+  .services{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .service-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:30px 26px;transition:transform .35s;}
+  .service-card:hover{transform:translateY(-6px);}
+  .service-card h3{color:var(--teal-deep);margin-bottom:10px;}
+  .service-card p{font-size:.88rem;color:#5b6b6b;}
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .map-box{aspect-ratio:4/3;background:#e0eeed;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.85rem;}
+  .info-line{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .info-line .k{width:80px;color:var(--teal);font-size:.85rem;flex-shrink:0;font-weight:bold;}
+  .cta{text-align:center;background:linear-gradient(135deg,var(--teal),var(--teal-deep));color:#fff;padding:90px 24px;}
+  .cta h2{margin-bottom:20px;font-size:1.6rem;}
+  .btn{display:inline-block;background:var(--orange);color:#fff;padding:16px 44px;text-decoration:none;font-weight:bold;border-radius:4px;transition:.3s;}
+  .btn:hover{background:#d67230;}
+  footer{text-align:center;padding:32px 24px;font-size:.75rem;color:#a8e0d8;background:var(--teal-deep);}
+  @media(max-width:760px){
+    .trouble-grid,.services,.access{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">佐藤管工設備株式会社</div>
+    <div class="navlinks">
+      <a href="#trouble">こんな時は</a>
+      <a href="#services">サービス</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+<div class="emergency-bar">お急ぎの水回りトラブルはお電話で　0120-910-381</div>
+
+<div class="hero">
+  <div class="hero-eyebrow">山形県鶴岡市</div>
+  <h1>水まわりのお困りごとを、<br>丁寧に、確実に。</h1>
+  <p>水道修理から住宅リフォームまで、地域の暮らしを支える設備工事会社です。</p>
+</div>
+
+<section id="trouble" class="fade">
+  <div class="section-title"><small>TROUBLE</small><h2>こんな“困った”ご相談ください</h2></div>
+  <div class="trouble-grid">
+    <div class="trouble"><p>蛇口の水がポタポタ…</p></div>
+    <div class="trouble"><p>トイレがつまった</p></div>
+    <div class="trouble"><p>ボイラーの具合が悪い</p></div>
+    <div class="trouble"><p>水道メーターが回っている！</p></div>
+    <div class="trouble"><p>お風呂の水が流れにくい</p></div>
+    <div class="trouble"><p>冷暖房機の調子が悪い</p></div>
+  </div>
+  <div class="arrow-row">▼</div>
+  <div class="solution-bar">小さな工事・修理から新築・増改築まで、まとめてご相談いただけます</div>
+</section>
+
+<section id="services" class="fade">
+  <div class="section-title"><small>SERVICES</small><h2>サービス内容</h2></div>
+  <div class="services">
+    <div class="service-card"><h3>水道修理</h3><p>蛇口・トイレ・給湯器など、水回りのトラブルに迅速に対応します。</p></div>
+    <div class="service-card"><h3>住宅リフォーム</h3><p>快適な水まわりをプランニング。バリアフリー対応（介護保険）も承ります。</p></div>
+    <div class="service-card"><h3>下水道工事</h3><p>下水道工事も一貫して対応いたします。</p></div>
+    <div class="service-card"><h3>新築・増改築</h3><p>新築工事から増改築まで、幅広く承っております。</p></div>
+  </div>
+</section>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>ACCESS</small><h2>アクセス・お問い合わせ</h2></div>
+    <div class="info-line"><div class="k">住所</div><div>山形県鶴岡市東新斎町12-10</div></div>
+    <div class="info-line"><div class="k">電話</div><div>0235-23-8381</div></div>
+    <div class="info-line"><div class="k">FAX</div><div>0235-22-3063</div></div>
+    <div class="info-line"><div class="k">フリーダイヤル</div><div>0120-910-381</div></div>
+  </div>
+  <div class="map-box">地図スペース</div>
+</section>
+
+<div class="cta fade">
+  <h2>水まわりのご相談は、お気軽にどうぞ</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>佐藤管工設備株式会社（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
