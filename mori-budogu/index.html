@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>森武道具 | 東京・日本橋の剣道具専門店</title>
+<style>
+  :root{ --ai:#10233d; --ai2:#1b3a5c; --silver:#c9d3dd; --paper:#f4f6f8; --accent:#d64545; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Sans","Yu Gothic",sans-serif; background:var(--paper); color:#101820;}
+  a{color:inherit; text-decoration:none;}
+  .notice{background:#000; color:#9db3c7; text-align:center; font-size:.7rem; padding:6px 10px;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  header{position:sticky; top:0; z-index:30; background:var(--ai); color:#fff;}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:16px 24px;}
+  .brand{font-weight:900; letter-spacing:.04em; font-size:1.05rem;}
+  nav{display:flex; gap:22px; font-size:.82rem;}
+  nav a{opacity:.8; transition:.2s;}
+  nav a:hover{opacity:1; color:var(--accent);}
+
+  .hero{position:relative; background:linear-gradient(140deg,var(--ai) 0%, var(--ai2) 55%, #0a1626 100%);
+    color:#fff; padding:110px 24px 100px; overflow:hidden;}
+  .hero::before{content:""; position:absolute; inset:0; opacity:.5;
+    background:repeating-linear-gradient(115deg, rgba(255,255,255,.04) 0 2px, transparent 2px 90px);}
+  .hero .wrap{position:relative; display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center;}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.2rem); font-weight:900; line-height:1.35; letter-spacing:.02em;}
+  .hero h1 em{display:block; font-style:normal; color:var(--accent);}
+  .hero p{margin-top:22px; font-size:.94rem; color:#c7d3e0; max-width:440px; line-height:1.9;}
+  .hero .badge{margin-top:30px; display:inline-flex; gap:10px; align-items:center; font-size:.74rem; letter-spacing:.15em; color:var(--silver); border:1px solid rgba(255,255,255,.25); padding:8px 18px;}
+  .men{width:100%; aspect-ratio:1/1; position:relative;}
+  .men svg{width:100%; height:100%;}
+
+  section{padding:80px 24px;}
+  .eyebrow{font-size:.72rem; letter-spacing:.3em; color:var(--accent); margin-bottom:10px;}
+  h2.title{font-size:1.5rem; margin-bottom:44px;}
+  .center{text-align:center;}
+
+  .lineup{display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid #d7dde3;}
+  .lineup .col{padding:36px 26px; border-right:1px solid #d7dde3; position:relative;}
+  .lineup .col:last-child{border-right:none;}
+  .lineup .col .num{position:absolute; top:20px; right:24px; font-size:2.6rem; font-weight:900; color:#e3e8ee;}
+  .lineup .col h3{font-size:1.05rem; margin-bottom:10px; color:var(--ai);}
+  .lineup .col p{font-size:.82rem; color:#5a6572; line-height:1.85;}
+
+  .craft{background:var(--ai); color:#fff;}
+  .craft .grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+  .craft ul{margin-top:20px; font-size:.85rem; color:#c7d3e0;}
+  .craft li{padding:12px 0; border-bottom:1px solid rgba(255,255,255,.12); display:flex; justify-content:space-between;}
+  .craft li span{color:var(--accent); font-weight:700;}
+  .craft .panel{aspect-ratio:4/3; border:1px solid rgba(255,255,255,.2);
+    background:repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 6px, transparent 6px 26px);
+    display:flex; align-items:center; justify-content:center; color:var(--silver); font-size:.85rem; letter-spacing:.2em;}
+
+  .cta{text-align:center;}
+  .cta .box{max-width:520px; margin:0 auto; border:1px solid #d7dde3; padding:48px 32px;}
+  .cta h2{font-size:1.35rem; margin-bottom:14px; color:var(--ai);}
+  .cta p{font-size:.85rem; color:#5a6572; margin-bottom:26px;}
+  .btn{display:inline-block; padding:14px 42px; background:var(--ai); color:#fff; font-weight:700; font-size:.85rem; letter-spacing:.1em; transition:.25s;}
+  .btn:hover{background:var(--accent);}
+
+  footer{padding:30px 24px; text-align:center; font-size:.72rem; color:#8894a0; background:var(--ai); }
+  footer span{color:#5a6572;}
+  @media(max-width:760px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .men{max-width:220px; margin:0 auto;}
+    .lineup{grid-template-columns:1fr;}
+    .lineup .col{border-right:none; border-bottom:1px solid #d7dde3;}
+    .craft .grid{grid-template-columns:1fr;}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実際のサービス内容とは異なる場合があります。</div>
+
+<header>
+  <div class="wrap">
+    <div class="brand">森武道具</div>
+    <nav>
+      <a href="#lineup">商品ラインアップ</a>
+      <a href="#craft">こだわり</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>一本の防具に、<em>百年の矜持を。</em></h1>
+      <p>東京・日本橋にて創業以来、剣道具一筋。手刺・ミシン刺の面・甲手から剣道衣、袴まで、実戦で使う道具だからこそ、妥協せずお届けします。</p>
+      <div class="badge">SINCE 1912 ／ 日本橋・小伝馬町</div>
+    </div>
+    <div class="men">
+      <svg viewBox="0 0 200 220" fill="none">
+        <path d="M100 10c-46 0-78 34-78 78v20c0 40 30 72 60 88l18 10 18-10c30-16 60-48 60-88V88c0-44-32-78-78-78z" stroke="#c9d3dd" stroke-width="2" opacity=".5"/>
+        <circle cx="100" cy="96" r="46" stroke="#d64545" stroke-width="2" opacity=".8"/>
+        <path d="M60 96h80M100 56v80" stroke="#c9d3dd" stroke-width="1.5" opacity=".5"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="lineup">
+  <div class="eyebrow center" style="text-align:center;">Product Lineup</div>
+  <h2 class="title center">用途と体格に、確かに合わせる。</h2>
+  <div class="lineup">
+    <div class="col"><span class="num">01</span><h3>面・甲手</h3><p>刺し方・素材から選べる本格仕様。試合用から稽古用まで幅広く。</p></div>
+    <div class="col"><span class="num">02</span><h3>剣道衣・袴</h3><p>動きやすさと耐久性を両立。サイズ調整のご相談も承ります。</p></div>
+    <div class="col"><span class="num">03</span><h3>メンテナンス</h3><p>紐の交換、面の張り替えなど、長く使うためのお手入れにも対応。</p></div>
+  </div>
+</section>
+
+<section class="craft" id="craft">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Our Commitment</div>
+      <h2 class="title" style="color:#fff;">見た目でなく、使ってわかる質を。</h2>
+      <ul>
+        <li>刺し方 <span>手刺／ミシン刺 選択可</span></li>
+        <li>サイズ展開 <span>子供用〜大人用まで</span></li>
+        <li>ご相談 <span>体格・流派に合わせて調整</span></li>
+      </ul>
+    </div>
+    <div class="panel">MORI BUDOGU</div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="box">
+    <h2>サイズ選び、まずはご相談ください</h2>
+    <p>初めての防具選びから買い替えまで、経験豊富なスタッフが対応します。</p>
+    <a class="btn" href="#">お問い合わせ</a>
+  </div>
+</section>
+
+<footer><span>© 森武道具株式会社　※本サイトはデザイン提案用のモックアップです</span></footer>
+</body>
+</html>
