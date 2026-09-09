@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>内藤額縁店｜福岡 スポーツユニフォーム額装専門店</title>
+<style>
+  :root{
+    --navy:#0e1f3d;
+    --red:#c1273a;
+    --paper:#f5f6f8;
+    --ink:#151b28;
+    --line:rgba(14,31,61,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:var(--navy);color:#eef1f6;text-align:center;font-size:.72rem;padding:8px 12px;letter-spacing:.05em;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header{position:sticky;top:0;background:rgba(245,246,248,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:50;}
+  .navrow{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1080px;margin:0 auto;}
+  .brand{font-weight:800;font-size:1.05rem;letter-spacing:.02em;color:var(--navy);}
+  .brand span{color:var(--red);}
+  nav{display:none;gap:26px;font-size:.85rem;font-weight:600;}
+  @media(min-width:760px){nav{display:flex;}}
+
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:linear-gradient(120deg,var(--navy) 0%,#182c54 55%,var(--navy) 100%);
+    padding:90px 0 76px;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 18px, transparent 18px 60px);
+  }
+  .hero::after{
+    content:"";position:absolute;right:-8%;top:-10%;width:55%;height:130%;
+    background:linear-gradient(120deg, transparent 40%, var(--red) 41%, var(--red) 46%, transparent 47%);
+    opacity:.85;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .eyebrow{font-size:.75rem;letter-spacing:.3em;color:#9fb4dd;margin-bottom:20px;font-weight:700;}
+  .hero h1{font-size:clamp(2rem,5vw,3.3rem);font-weight:900;line-height:1.4;max-width:14ch;}
+  .hero h1 em{font-style:normal;color:#ff5b6e;}
+  .hero p.lead{margin-top:22px;font-size:1rem;max-width:40ch;color:#cbd6ec;}
+  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px;}
+  .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:16px 22px;min-width:140px;}
+  .stat .n{font-size:1.7rem;font-weight:900;}
+  .stat .l{font-size:.72rem;color:#aebbd6;margin-top:2px;}
+
+  section{padding:80px 0;}
+  .section-head{margin-bottom:42px;}
+  .section-head .en{font-size:.7rem;letter-spacing:.28em;color:var(--red);font-weight:700;}
+  .section-head h2{font-size:1.6rem;margin-top:10px;font-weight:900;color:var(--navy);}
+
+  .items{background:#fff;}
+  .item-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(min-width:700px){.item-grid{grid-template-columns:repeat(4,1fr);}}
+  .item{background:var(--paper);padding:30px 22px;position:relative;}
+  .item .swatch{width:36px;height:36px;border-radius:6px;margin-bottom:16px;}
+  .item:nth-child(1) .swatch{background:linear-gradient(135deg,var(--navy),#2a4a8a);}
+  .item:nth-child(2) .swatch{background:linear-gradient(135deg,var(--red),#e85a6b);}
+  .item:nth-child(3) .swatch{background:linear-gradient(135deg,#e08a1c,#f2b24a);}
+  .item:nth-child(4) .swatch{background:linear-gradient(135deg,#1c8a5a,#3fc98a);}
+  .item h3{font-size:1rem;font-weight:800;margin-bottom:8px;}
+  .item p{font-size:.82rem;color:#4a4c58;}
+
+  .process{background:var(--navy);color:#eef1f6;}
+  .steps{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(255,255,255,.14);}
+  @media(min-width:700px){.steps{grid-template-columns:repeat(3,1fr);}}
+  .step{background:#101f3c;padding:32px 26px;}
+  .step .idx{font-size:1.7rem;font-weight:900;color:var(--red);}
+  .step h4{margin:12px 0 8px;font-size:1rem;font-weight:800;}
+  .step p{font-size:.84rem;color:#b9c3da;}
+
+  .trust-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:700px){.trust-grid{grid-template-columns:repeat(2,1fr);}}
+  .trust-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;}
+  .trust-card h4{font-size:1rem;font-weight:800;margin-bottom:10px;color:var(--navy);}
+  .trust-card p{font-size:.86rem;color:#4a4c58;}
+
+  .fade{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  .cta{background:var(--paper);text-align:center;border-top:1px solid var(--line);}
+  .cta h2{font-size:1.5rem;font-weight:900;margin-bottom:14px;color:var(--navy);}
+  .cta p{font-size:.9rem;color:#4a4c58;max-width:40ch;margin:0 auto 28px;}
+  .btn{display:inline-block;padding:15px 38px;background:var(--red);color:#fff;font-weight:800;border-radius:6px;font-size:.88rem;letter-spacing:.02em;transition:.2s;}
+  .btn:hover{background:#a11d2e;}
+
+  footer{padding:40px 0;text-align:center;font-size:.75rem;color:#6b6d78;border-top:1px solid var(--line);}
+  footer .fnote{margin-top:8px;color:#9a9ba3;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（ASUNOKI作成）</div>
+
+<header>
+  <div class="navrow">
+    <div class="brand">内藤額縁店 <span>SPORTS FRAMING</span></div>
+    <nav>
+      <a href="#items">対応アイテム</a>
+      <a href="#process">ご注文の流れ</a>
+      <a href="#trust">選ばれる理由</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">FUKUOKA — UNIFORM &amp; MEMORABILIA FRAMING</div>
+    <h1>その一枚のユニフォームを、<br><em>ずっと飾れる形</em>に。</h1>
+    <p class="lead">野球・サッカー・バスケットボール・ラグビー——あらゆる競技のユニフォームや記念品を、オーダーメイドで美しく額装します。</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">1000+</div><div class="l">展示サンプル実績</div></div>
+      <div class="stat"><div class="n">全国</div><div class="l">チーム・企業様からのご依頼</div></div>
+      <div class="stat"><div class="n">個人</div><div class="l">のご依頼も多数対応</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="items" class="items">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">ITEMS</div><h2>対応アイテム</h2></div>
+    <div class="item-grid">
+      <div class="item"><div class="swatch"></div><h3>野球ユニフォーム</h3><p>背番号・サインを活かしたレイアウトでオーダーメイド額装します。</p></div>
+      <div class="item"><div class="swatch"></div><h3>サッカーユニフォーム</h3><p>エンブレムやスポンサーロゴを美しく見せるレイアウトをご提案します。</p></div>
+      <div class="item"><div class="swatch"></div><h3>バスケ・ラグビージャージ</h3><p>大判サイズのジャージにも対応。会場や記念館への納品実績も豊富です。</p></div>
+      <div class="item"><div class="swatch"></div><h3>記念品・グッズ</h3><p>ボールやメダルなど、ユニフォーム以外の記念品も組み合わせて額装できます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="process">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">HOW TO ORDER</div><h2 style="color:#eef1f6;">ご注文の流れ</h2></div>
+    <div class="steps">
+      <div class="step"><div class="idx">01</div><h4>ご相談・お見積り</h4><p>アイテムのサイズや飾りたいイメージをお聞かせください。</p></div>
+      <div class="step"><div class="idx">02</div><h4>デザイン・製作</h4><p>1000件以上の実績をもとに、最適なレイアウトで製作します。</p></div>
+      <div class="step"><div class="idx">03</div><h4>納品・設置</h4><p>個人宅から会場・記念館まで、丁寧にお届けします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">WHY US</div><h2>選ばれる理由</h2></div>
+    <div class="trust-grid">
+      <div class="trust-card"><h4>豊富な展示サンプル</h4><p>1000件を超える展示サンプル画像から、仕上がりイメージをご確認いただけます。</p></div>
+      <div class="trust-card"><h4>オーダーメイドガイド</h4><p>アイテムごとに最適な額装方法をご提案するオーダーメイドガイドをご用意しています。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">ACCESS</div><h2>店舗のご案内</h2></div>
+    <p style="font-size:.92rem;color:#4a4c58;max-width:44ch;">
+      〒831-0005 福岡県大川市中2156-6<br>
+      TEL：0944-88-3223
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>大切な一枚を、飾る形にしませんか。</h2>
+    <p>サイズやイメージが決まっていなくても大丈夫です。まずはお気軽にご相談ください。</p>
+    <a class="btn" href="tel:0944883223">電話でご相談</a>
+  </div>
+</section>
+
+<footer>
+  <div>内藤額縁店 — 福岡県大川市</div>
+  <div class="fnote">本ページはリニューアル提案用モックアップです。実店舗の情報とは異なる場合があります。</div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
