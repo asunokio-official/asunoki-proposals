@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>亀屋染物店（暖簾屋）| 江戸・上方の本染めのれん</title>
+<style>
+  :root{
+    --indigo:#1f3a5f; --indigo-deep:#12233d; --sand:#f3ede0; --sand-deep:#e8dfc9;
+    --ink:#26241f; --accent:#b5502f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; background:var(--sand); color:var(--ink); line-height:1.9; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  .notice{background:var(--indigo-deep); color:#fff; text-align:center; font-size:.72rem; padding:6px 10px; letter-spacing:.05em;}
+  header{position:sticky; top:0; z-index:50; background:rgba(243,237,224,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--sand-deep);}
+  .nav{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:14px 24px;}
+  .brand{font-size:1.05rem; letter-spacing:.18em; font-weight:600;}
+  .brand span{color:var(--indigo);}
+  .nav ul{display:flex; gap:28px; list-style:none; font-size:.82rem; letter-spacing:.08em;}
+  .nav ul a:hover{color:var(--accent);}
+
+  .hero{position:relative; min-height:88vh; display:flex; align-items:flex-end; padding:90px 24px 70px; background:
+    linear-gradient(180deg, rgba(18,35,61,.05), rgba(18,35,61,.85) 92%),
+    repeating-linear-gradient(100deg, #294a72 0 3px, #24436a 3px 46px, #1c3a5c 46px 90px);
+    color:#f3ede0; overflow:hidden;}
+  .hero::before{content:""; position:absolute; inset:0;
+    background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 26px);
+    animation: drift 22s linear infinite; opacity:.5;}
+  @keyframes drift{ from{ transform:translateY(0);} to{ transform:translateY(-120px);} }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto; width:100%;}
+  .eyebrow{font-size:.78rem; letter-spacing:.35em; color:#d8b98a;}
+  .hero h1{font-size:clamp(2.1rem,5vw,3.6rem); font-weight:600; margin:18px 0 10px; letter-spacing:.06em;}
+  .hero p{max-width:520px; font-size:.98rem; color:#e7ddc7; letter-spacing:.03em;}
+  .sample-tag{position:absolute; top:26px; right:24px; font-size:.68rem; background:rgba(0,0,0,.35); padding:6px 12px; border-radius:99px; letter-spacing:.05em;}
+
+  section{max-width:1080px; margin:0 auto; padding:90px 24px;}
+  .lede{max-width:640px;}
+  .lede .tag{color:var(--accent); letter-spacing:.3em; font-size:.75rem;}
+  .lede h2{font-size:clamp(1.5rem,3vw,2.1rem); margin:14px 0 20px; font-weight:600;}
+  .lede p{font-size:.95rem; color:#4b463c;}
+
+  .styles{display:grid; grid-template-columns:repeat(2,1fr); gap:2px; margin-top:56px; background:var(--sand-deep);}
+  .style-card{background:var(--sand); padding:46px 34px; position:relative; overflow:hidden; opacity:0; transform:translateY(24px); transition:.8s cubic-bezier(.2,.7,.2,1);}
+  .style-card.in{opacity:1; transform:none;}
+  .style-card h3{font-size:1.3rem; letter-spacing:.08em; margin-bottom:12px;}
+  .style-card .num{position:absolute; top:16px; right:22px; font-size:3.4rem; font-weight:700; color:rgba(31,58,95,.08);}
+  .style-card p{font-size:.86rem; color:#5a5548;}
+  .swatch{width:56px; height:6px; margin:18px 0 6px; background:linear-gradient(90deg,var(--indigo),var(--accent));}
+
+  .process{background:var(--indigo-deep); color:#f3ede0; padding:100px 0;}
+  .process .inner{max-width:1080px; margin:0 auto; padding:0 24px;}
+  .process h2{font-size:1.9rem; letter-spacing:.08em; margin-bottom:50px;}
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .step{border-top:1px solid rgba(255,255,255,.2); padding-top:18px; opacity:0; transform:translateY(20px); transition:.7s;}
+  .step.in{opacity:1; transform:none;}
+  .step .n{font-size:.72rem; letter-spacing:.2em; color:#d8b98a;}
+  .step h4{margin:10px 0 8px; font-size:1.02rem; letter-spacing:.05em;}
+  .step p{font-size:.82rem; color:#cfc6ae;}
+
+  .voice{padding:100px 24px; text-align:center;}
+  .voice blockquote{max-width:700px; margin:0 auto; font-size:1.2rem; line-height:2; color:#3a362d;}
+  .voice cite{display:block; margin-top:26px; font-size:.78rem; color:#8a8371; font-style:normal; letter-spacing:.1em;}
+
+  .info{background:var(--sand-deep); padding:90px 24px;}
+  .info-inner{max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  .info h2{font-size:1.5rem; margin-bottom:20px; letter-spacing:.06em;}
+  .info dl{font-size:.9rem;}
+  .info dt{color:var(--accent); font-size:.72rem; letter-spacing:.15em; margin-top:16px;}
+  .info dd{margin:4px 0 0;}
+
+  .cta{padding:110px 24px; text-align:center; background:var(--indigo); color:#f3ede0;}
+  .cta h2{font-size:1.7rem; margin-bottom:16px; letter-spacing:.05em;}
+  .cta p{font-size:.9rem; color:#d9d0ba; max-width:480px; margin:0 auto 34px;}
+  .btn{display:inline-block; background:#f3ede0; color:var(--indigo-deep); padding:16px 42px; font-size:.88rem; letter-spacing:.1em; border-radius:2px; transition:.3s;}
+  .btn:hover{background:#fff;}
+
+  footer{padding:34px 24px; text-align:center; font-size:.72rem; color:#8a8371; background:var(--sand);}
+
+  @media(max-width:760px){
+    .nav ul{display:none;}
+    .styles{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .info-inner{grid-template-columns:1fr; gap:36px;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（ASUNOKIによるリニューアル提案モックアップ）</div>
+<header>
+  <div class="nav">
+    <div class="brand">亀屋染物店 <span>暖簾屋</span></div>
+    <ul>
+      <li><a href="#styles">のれんの種類</a></li>
+      <li><a href="#process">制作の流れ</a></li>
+      <li><a href="#info">店舗情報</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="sample-tag">DESIGN SAMPLE</span>
+  <div class="hero-inner">
+    <div class="eyebrow">ASUNOKI PROPOSAL</div>
+    <h1>江戸と上方、<br>ふたつの型で染める。</h1>
+    <p>本染め・引染め・友禅染め——伝統技法でつくるオーダー暖簾専門の染物工房です。</p>
+  </div>
+</section>
+
+<section class="lede">
+  <div class="tag">ABOUT</div>
+  <h2>一枚の暖簾に、店の顔を染め込む。</h2>
+  <p>亀屋染物店は、江戸のれんと上方のれん、ふたつの伝統技法を扱う染物工房です。素材（麻・絹）や技法（引染め・友禅染め）によって表情が変わる暖簾を、お店やご自宅の顔として一枚一枚手がけています。クリーニングなど、既存の暖簾のお手入れにも対応しています。</p>
+</section>
+
+<section id="styles">
+  <div class="tag">STYLES</div>
+  <h2 style="font-size:1.6rem;margin:14px 0 0;">のれんの型</h2>
+  <div class="styles">
+    <div class="style-card"><span class="num">01</span><div class="swatch"></div><h3>江戸のれん</h3><p>藍を基調とした、粋で引き締まった意匠。職人町の店先に映える、直線的で潔いデザインです。</p></div>
+    <div class="style-card"><span class="num">02</span><div class="swatch"></div><h3>上方のれん</h3><p>柔らかな曲線と華やぎのある意匠。京・大坂の商家に受け継がれた、優美な染めの表現です。</p></div>
+    <div class="style-card"><span class="num">03</span><div class="swatch"></div><h3>引染め</h3><p>一色一色を丁寧に引き重ねる技法。深みのある発色と、素材の風合いを活かした仕上がり。</p></div>
+    <div class="style-card"><span class="num">04</span><div class="swatch"></div><h3>友禅染め</h3><p>細やかな絵柄を糊で防染しながら描く技法。一枚ごとに違う表情が生まれます。</p></div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="inner">
+    <h2>制作の流れ</h2>
+    <div class="steps">
+      <div class="step"><div class="n">STEP 01</div><h4>ご相談</h4><p>用途・サイズ・素材のご希望をお伺いします。</p></div>
+      <div class="step"><div class="n">STEP 02</div><h4>意匠・型決め</h4><p>江戸／上方、技法、色柄を一緒に決めていきます。</p></div>
+      <div class="step"><div class="n">STEP 03</div><h4>染め</h4><p>職人の手で一枚一枚、丁寧に染め上げます。</p></div>
+      <div class="step"><div class="n">STEP 04</div><h4>お渡し</h4><p>仕上がりを確認いただき、納品いたします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="tag" style="color:var(--accent);letter-spacing:.3em;font-size:.75rem;">MATERIALS</div>
+  <blockquote>「麻は凛とした佇まいを、絹はやわらかな艶を。<br>素材が変われば、同じ意匠でも表情がまるで違う。」</blockquote>
+  <cite>— 亀屋染物店</cite>
+</section>
+
+<section class="info" id="info">
+  <div class="info-inner">
+    <div>
+      <h2>店舗情報</h2>
+      <dl>
+        <dt>店名</dt><dd>亀屋染物店（暖簾屋）</dd>
+        <dt>電話</dt><dd>0465-25-0388</dd>
+        <dt>メール</dt><dd>nolenya_z2@yahoo.co.jp</dd>
+        <dt>取扱い</dt><dd>オーダー暖簾製作・暖簾クリーニング</dd>
+      </dl>
+    </div>
+    <div>
+      <h2>対応内容</h2>
+      <p style="font-size:.9rem;color:#4b463c;">江戸のれん・上方のれんの新規オーダー製作のほか、既存の暖簾のクリーニングにも対応しています。素材・技法・色柄はご相談のうえ、お店や住まいの雰囲気に合わせてご提案します。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>あなたの店の顔を、染める。</h2>
+  <p>まずはお気軽にご相談ください。素材やご予算に応じてご提案いたします。</p>
+  <a class="btn" href="mailto:nolenya_z2@yahoo.co.jp">お問い合わせ</a>
+</section>
+
+<footer>※本ページはASUNOKIによるリニューアル提案用のデザインサンプルです。実在の亀屋染物店様の公式サイトではありません。</footer>
+
+<script>
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }), {threshold:.15});
+  document.querySelectorAll('.style-card,.step').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
