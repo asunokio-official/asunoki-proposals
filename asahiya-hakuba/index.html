@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>民宿あさひや｜白馬 24時間入浴可の温泉民宿</title>
+<style>
+  :root{
+    --night:#0b1424;
+    --night-deep:#050a15;
+    --amber:#f0a84e;
+    --paper:#f6f4ee;
+    --ink:#1c2230;
+    --line:rgba(28,34,48,.13);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:var(--night-deep);color:#e9e3d3;text-align:center;font-size:.72rem;padding:8px 12px;letter-spacing:.05em;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header{position:sticky;top:0;background:rgba(246,244,238,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:50;}
+  .navrow{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1080px;margin:0 auto;}
+  .brand{font-weight:800;font-size:1.05rem;letter-spacing:.06em;}
+  nav{display:none;gap:26px;font-size:.85rem;}
+  @media(min-width:760px){nav{display:flex;}}
+
+  /* ===== hero: illustrated night mountain onsen scene ===== */
+  .hero{
+    position:relative;min-height:82vh;display:flex;align-items:flex-end;overflow:hidden;color:#f2ecd9;
+  }
+  .hero-bg{
+    position:absolute;inset:-4%;
+    background:
+      radial-gradient(ellipse at 78% 8%, rgba(240,168,78,.10), transparent 40%),
+      linear-gradient(180deg,#0b1424 0%,#101c33 45%,#182a47 78%,#22364f 100%);
+    animation: hero-kenburns 15s ease-in-out infinite;
+  }
+  @keyframes hero-kenburns{
+    0%,100%{transform:scale(1) translate(0,0);}
+    50%{transform:scale(1.045) translate(-8px,-6px);}
+  }
+  @media (prefers-reduced-motion: reduce){ .hero-bg{animation:none;} }
+
+  .stars{position:absolute;inset:0;}
+  .star{position:absolute;width:2px;height:2px;border-radius:999px;background:#fff;
+    box-shadow:0 0 5px 1px rgba(255,255,255,.8);animation:tw 3.2s ease-in-out infinite;}
+  @keyframes tw{0%,100%{opacity:.2;}50%{opacity:.95;}}
+  @media (prefers-reduced-motion: reduce){ .star{animation:none;opacity:.6;} }
+
+  .moon{
+    position:absolute;right:12%;top:12%;width:64px;height:64px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #fff7e0, #f0d99a 60%, #d9bb6c 100%);
+    box-shadow:0 0 40px 10px rgba(240,217,154,.35);
+  }
+
+  .ridge{position:absolute;left:0;right:0;bottom:0;}
+  .ridge svg{display:block;width:100%;height:auto;}
+
+  .mist{position:absolute;left:-10%;right:-10%;bottom:14%;height:60px;
+    background:radial-gradient(ellipse at center, rgba(255,255,255,.35), transparent 70%);
+    filter:blur(10px);animation:mist-drift 18s ease-in-out infinite;}
+  .mist.m2{bottom:8%;left:20%;right:-20%;height:80px;animation-duration:24s;animation-direction:reverse;
+    background:radial-gradient(ellipse at center, rgba(240,200,150,.25), transparent 70%);}
+  @keyframes mist-drift{0%,100%{transform:translateX(0);}50%{transform:translateX(40px);}}
+  @media (prefers-reduced-motion: reduce){ .mist{animation:none;} }
+
+  .lodge-glow{
+    position:absolute;left:38%;bottom:16%;width:180px;height:100px;border-radius:40%;
+    background:radial-gradient(ellipse at center, rgba(240,168,78,.5), transparent 70%);
+    filter:blur(14px);animation:glow-breathe 5s ease-in-out infinite;
+  }
+  @keyframes glow-breathe{0%,100%{opacity:.55;}50%{opacity:.95;}}
+  @media (prefers-reduced-motion: reduce){ .lodge-glow{animation:none;opacity:.7;} }
+
+  .hero-inner{position:relative;z-index:3;padding:0 0 68px;}
+  .eyebrow{font-size:.75rem;letter-spacing:.3em;color:var(--amber);margin-bottom:18px;}
+  .hero h1{font-size:clamp(2rem,5.4vw,3.4rem);font-weight:800;line-height:1.5;max-width:12ch;}
+  .hero p.lead{margin-top:22px;font-size:.98rem;max-width:36ch;color:#dcd3ba;}
+  .meta{margin-top:28px;font-size:.78rem;letter-spacing:.05em;color:#b7ab8a;display:flex;gap:20px;flex-wrap:wrap;}
+
+  section{padding:80px 0;}
+  .section-head{margin-bottom:42px;}
+  .section-head .en{font-size:.7rem;letter-spacing:.28em;color:#b8863a;}
+  .section-head h2{font-size:1.6rem;margin-top:10px;font-weight:800;}
+
+  .feature-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(min-width:700px){.feature-grid{grid-template-columns:repeat(3,1fr);}}
+  .feature{background:var(--paper);padding:32px 26px;}
+  .feature .n{font-size:.7rem;letter-spacing:.18em;color:#b8863a;}
+  .feature h3{font-size:1.05rem;margin:10px 0 8px;font-weight:800;}
+  .feature p{font-size:.85rem;color:#4a4c58;}
+
+  .room{background:#eee7d6;}
+  .room-grid{display:grid;grid-template-columns:1fr;gap:30px;}
+  @media(min-width:800px){.room-grid{grid-template-columns:1fr 1fr;align-items:center;}}
+  .room-visual{aspect-ratio:4/3;border-radius:6px;background:linear-gradient(150deg,#3a2f20,#5c4a30);position:relative;overflow:hidden;}
+  .room-visual::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 44px);}
+  .price-list{margin-top:18px;font-size:.88rem;color:#4a4c58;}
+  .price-list div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);}
+
+  .fade{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  .cta{background:linear-gradient(160deg,var(--night),#182a47);color:#f2ecd9;text-align:center;}
+  .cta h2{font-size:1.5rem;font-weight:800;margin-bottom:14px;}
+  .cta p{font-size:.9rem;color:#cfc7ab;max-width:40ch;margin:0 auto 28px;}
+  .btn{display:inline-block;padding:15px 38px;background:var(--amber);color:#241a08;font-weight:800;border-radius:4px;font-size:.88rem;letter-spacing:.03em;transition:.2s;}
+  .btn:hover{background:#d99236;}
+
+  footer{padding:40px 0;text-align:center;font-size:.75rem;color:#6b6d78;border-top:1px solid var(--line);}
+  footer .fnote{margin-top:8px;color:#9a9ba3;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（ASUNOKI作成）</div>
+
+<header>
+  <div class="navrow">
+    <div class="brand">民宿あさひや</div>
+    <nav>
+      <a href="#feature">宿の特徴</a>
+      <a href="#room">お部屋・料金</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="stars">
+    <span class="star" style="left:12%;top:14%;animation-delay:0s;"></span>
+    <span class="star" style="left:22%;top:8%;animation-delay:.6s;"></span>
+    <span class="star" style="left:34%;top:20%;animation-delay:1.2s;"></span>
+    <span class="star" style="left:8%;top:30%;animation-delay:1.8s;"></span>
+    <span class="star" style="left:46%;top:11%;animation-delay:2.3s;"></span>
+    <span class="star" style="left:60%;top:6%;animation-delay:.3s;"></span>
+    <span class="star" style="left:70%;top:22%;animation-delay:1.5s;"></span>
+    <span class="star" style="left:88%;top:30%;animation-delay:2.6s;"></span>
+  </div>
+  <div class="moon"></div>
+  <div class="ridge">
+    <svg viewBox="0 0 1200 260" preserveAspectRatio="none">
+      <polygon points="0,260 0,140 120,60 220,150 320,90 430,170 560,50 640,140 760,80 880,180 980,110 1080,190 1200,120 1200,260" fill="#0f1c33"/>
+      <polygon points="0,260 0,190 150,150 260,200 380,160 500,210 620,150 760,200 880,160 1000,210 1120,170 1200,200 1200,260" fill="#152640"/>
+    </svg>
+  </div>
+  <div class="mist"></div>
+  <div class="mist m2"></div>
+  <div class="lodge-glow"></div>
+
+  <div class="wrap hero-inner">
+    <div class="eyebrow">HAKUBA — HOT SPRING GUESTHOUSE</div>
+    <h1>白馬の山あいで、<br>湯とごはんに、身をゆだねる。</h1>
+    <p class="lead">白馬駅から徒歩9分。24時間入浴可能な温泉と、自家産あきたこまちを使った手作り料理でお迎えする、山の宿です。</p>
+    <div class="meta">
+      <span>長野県北安曇郡白馬村</span>
+      <span>TEL 0261-72-2556</span>
+      <span>白馬駅より送迎あり</span>
+    </div>
+  </div>
+</section>
+
+<section id="feature">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">FEATURES</div><h2>あさひやの過ごし方</h2></div>
+    <div class="feature-grid">
+      <div class="feature"><div class="n">01</div><h3>24時間入浴可の温泉</h3><p>好きな時間に、山歩きの疲れをゆっくりと癒せる温泉をご用意しています。</p></div>
+      <div class="feature"><div class="n">02</div><h3>自家産米の手作り料理</h3><p>自家産「あきたこまち」を使用した、心のこもった1泊2食の食事をお楽しみいただけます。</p></div>
+      <div class="feature"><div class="n">03</div><h3>駅・ゲレンデ送迎</h3><p>白馬駅からの送迎に加え、八方尾根スキー場への送迎サービスも行っています。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="room" class="room">
+  <div class="wrap room-grid fade">
+    <div class="room-visual"></div>
+    <div>
+      <div class="section-head"><div class="en">ROOM &amp; RATE</div><h2>お部屋・ご宿泊料金</h2></div>
+      <p style="font-size:.92rem;color:#4a4c58;">6帖〜13帖の和室をご用意。全室に冷蔵庫・テレビ・無線LANを完備し、乾燥室やEV/PHV充電設備もございます。</p>
+      <div class="price-list">
+        <div><span>平日</span><span>8,400円〜（税込・1泊2食）</span></div>
+        <div><span>繁忙期</span><span>9,500円〜（税込・1泊2食）</span></div>
+        <div><span>連泊・複数名</span><span>ご相談ください</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">ACCESS</div><h2>宿のご案内</h2></div>
+    <p style="font-size:.92rem;color:#4a4c58;max-width:44ch;">
+      〒399-9301 長野県北安曇郡白馬村大字北城5890<br>
+      TEL：0261-72-2556　FAX：0261-72-7585<br>
+      白馬駅から徒歩9分／周辺にスーパー・薬局・コンビニあり
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>山と湯のある一晩を、白馬で。</h2>
+    <p>ご宿泊のご相談・空室確認は、お電話にて承っております。</p>
+    <a class="btn" href="tel:0261722556">電話で問い合わせる</a>
+  </div>
+</section>
+
+<footer>
+  <div>民宿あさひや — 長野県北安曇郡白馬村</div>
+  <div class="fnote">本ページはリニューアル提案用モックアップです。実店舗の情報とは異なる場合があります。背景ビジュアルはイメージ図です。</div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
