@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>調所電器 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --walnut:#2a2018;
+    --walnut-deep:#180f0a;
+    --amber:#d99a3a;
+    --copper:#b5652f;
+    --cream:#f2ead9;
+    --ink:#2a2018;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--cream);color:var(--ink);line-height:1.8;}
+  .notice{background:var(--walnut-deep);color:#e0cfa8;text-align:center;font-size:.75rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:var(--walnut);}
+  nav{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;}
+  .brand{color:#fff;font-weight:700;letter-spacing:.08em;font-size:1.05rem;}
+  .brand small{display:block;font-size:.6rem;color:var(--amber);letter-spacing:.15em;font-weight:normal;}
+  .navlinks{display:flex;gap:24px;font-size:.82rem;}
+  .navlinks a{color:#b8a888;text-decoration:none;transition:.3s;}
+  .navlinks a:hover{color:var(--amber);}
+
+  /* HERO — vacuum-tube glow, schematic lines */
+  .hero{
+    position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
+    background:radial-gradient(ellipse 60% 50% at 80% 40%, rgba(217,154,58,.18), transparent 60%),
+               linear-gradient(160deg,var(--walnut),var(--walnut-deep));
+  }
+  .tube-glow{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle, rgba(217,154,58,.5), rgba(181,101,47,.15) 55%, transparent 75%);filter:blur(2px);}
+  .schematic{position:absolute;inset:0;opacity:.12;}
+  .hero-content{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:0 28px;width:100%;}
+  .hero-eyebrow{color:var(--amber);letter-spacing:.35em;font-size:.72rem;margin-bottom:26px;}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.8rem);color:#f2ead9;line-height:1.4;max-width:640px;font-weight:700;}
+  .hero p{color:#c4b498;max-width:460px;margin-top:26px;}
+  .hero .est{margin-top:36px;font-size:.85rem;color:var(--amber);letter-spacing:.12em;}
+
+  section{padding:100px 28px;max-width:1140px;margin:0 auto;}
+  .section-eyebrow{color:var(--copper);letter-spacing:.3em;font-size:.72rem;}
+  .fade{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  /* Products — asymmetric feature blocks, technical spec feel */
+  .products-header{margin-bottom:56px;}
+  .products-header h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--ink);margin-top:14px;}
+  .product-row{display:grid;grid-template-columns:.5fr 1.5fr;gap:40px;padding:44px 0;border-top:1px solid rgba(42,32,24,.15);align-items:start;}
+  .product-row:last-child{border-bottom:1px solid rgba(42,32,24,.15);}
+  .product-row .tag{font-size:.78rem;color:var(--copper);letter-spacing:.1em;font-weight:600;}
+  .product-row h3{font-size:1.2rem;color:var(--ink);margin-bottom:10px;}
+  .product-row p{font-size:.9rem;color:#5a4c3a;}
+
+  /* History stat strip */
+  .stat-strip{background:var(--walnut);color:#fff;padding:70px 28px;}
+  .stat-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
+  .stat .num{font-size:clamp(2rem,4.5vw,3rem);font-weight:700;color:var(--amber);}
+  .stat .label{font-size:.8rem;color:#b8a888;margin-top:6px;}
+
+  /* Philosophy quote */
+  .quote-block{text-align:center;padding:100px 28px;}
+  .quote-block p{font-size:clamp(1.05rem,2.2vw,1.35rem);max-width:680px;margin:0 auto;line-height:2;color:var(--ink);}
+  .quote-block cite{display:block;margin-top:28px;font-size:.78rem;color:var(--copper);letter-spacing:.15em;font-style:normal;}
+
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  .map-box{aspect-ratio:4/3;background:#e5dcc4;display:flex;align-items:center;justify-content:center;color:var(--copper);font-size:.85rem;}
+  .info-line{display:flex;gap:18px;padding:13px 0;border-bottom:1px solid rgba(42,32,24,.15);}
+  .info-line .k{width:76px;color:var(--copper);font-size:.85rem;flex-shrink:0;font-weight:600;}
+
+  .cta{text-align:center;padding:110px 28px;background:var(--walnut-deep);color:#fff;}
+  .cta h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:24px;}
+  .btn{display:inline-block;background:var(--amber);color:var(--walnut-deep);padding:18px 50px;text-decoration:none;font-weight:700;letter-spacing:.05em;transition:.3s;}
+  .btn:hover{background:#c49030;}
+  footer{text-align:center;padding:32px 24px;font-size:.72rem;color:#8a7a5c;background:var(--walnut-deep);}
+  @media(max-width:760px){
+    .product-row{grid-template-columns:1fr;gap:10px;}
+    .access{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">調所電器<small>CHOSHO ELECTRIC</small></div>
+    <div class="navlinks">
+      <a href="#products">製品</a>
+      <a href="#history">あゆみ</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="tube-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">山形県山形市 ｜ オーディオ機器製造</div>
+    <h1>手巻きのトランスが、<br>音の陰影を、生む。</h1>
+    <p>景山式平面スピーカー、フィールド型スピーカー、真空管アンプ。すべて自社の手作業で製造しています。</p>
+    <div class="est">昭和42年創業 ｜ 調所電器</div>
+  </div>
+</div>
+
+<div class="stat-strip">
+  <div class="stat-inner fade">
+    <div class="stat"><div class="num">59年</div><div class="label">の技術の蓄積</div></div>
+    <div class="stat"><div class="num">全て</div><div class="label">自社ハンドメイド製造</div></div>
+    <div class="stat"><div class="num">研究機関</div><div class="label">への特殊トランス供給実績</div></div>
+  </div>
+</div>
+
+<section id="products" class="fade">
+  <div class="products-header">
+    <div class="section-eyebrow">PRODUCTS</div>
+    <h2>取り扱い製品</h2>
+  </div>
+  <div class="product-row">
+    <div class="tag">SPEAKER</div>
+    <div><h3>景山式平面スピーカー</h3><p>関西のオーディオ研究家・景山朋氏が手がけた独自構造の平面スピーカー。原音の陰影をそのまま再現する特性を持ち、演奏家をはじめ根強いファンに支えられています。</p></div>
+  </div>
+  <div class="product-row">
+    <div class="tag">SPEAKER</div>
+    <div><h3>フィールド型（励磁式）スピーカー</h3><p>磁気回路に電磁石を使用。現在の永久磁石ユニットには無いピュアなサウンドが、ベテランのオーディオマニアに支持されています。</p></div>
+  </div>
+  <div class="product-row">
+    <div class="tag">TRANSFORMER</div>
+    <div><h3>オーディオ／産業用特殊トランス</h3><p>全て手巻きによる製造。仕様を問わずオーダーメイドに対応し、200Vオーディオ電源用トランスは特にユーザーから好評をいただいています。</p></div>
+  </div>
+  <div class="product-row">
+    <div class="tag">AMPLIFIER</div>
+    <div><h3>真空管アンプ</h3><p>シャーシから全て独自設計。トランス類も自社製造のため、回路設計に合わせた自由な音作りが可能です。</p></div>
+  </div>
+</section>
+
+<div class="quote-block fade" id="history">
+  <div class="section-eyebrow" style="display:block;">PHILOSOPHY</div>
+  <p>旧い物を大事にするだけではなく、オーディオ製品という電気製品でありながら、工業製品を工芸品の域までクオリティーを高める。</p>
+  <cite>調所電器</cite>
+</div>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-eyebrow">ACCESS</div>
+    <h2 style="font-size:1.8rem;margin:14px 0 24px;">アクセス・お問い合わせ</h2>
+    <div class="info-line"><div class="k">住所</div><div>山形県山形市大野目2丁目4-18-6</div></div>
+    <div class="info-line"><div class="k">電話</div><div>023-632-3531</div></div>
+    <div class="info-line"><div class="k">定休日</div><div>土・日</div></div>
+  </div>
+  <div class="map-box">アクセスマップ</div>
+</section>
+
+<div class="cta fade">
+  <h2>製品・視聴のご相談はお気軽に</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>調所電器（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
