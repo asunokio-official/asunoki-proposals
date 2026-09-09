@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>はぐろ動物クリニック | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --sage:#5c7a5f;
+    --sage-deep:#3a5240;
+    --peach:#e8a97a;
+    --cream:#faf6ee;
+    --ink:#2e2f28;
+    --line:#e2ddc9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--cream);color:var(--ink);line-height:1.85;}
+  .notice{background:var(--sage-deep);color:#eaf0e6;text-align:center;font-size:.75rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;}
+  .brand{font-weight:700;font-size:1.1rem;color:var(--sage-deep);}
+  .navlinks{display:flex;gap:22px;font-size:.82rem;}
+  .navlinks a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;transition:.3s;}
+  .navlinks a:hover{border-color:var(--peach);color:var(--sage-deep);}
+
+  .hero{min-height:76vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;background:linear-gradient(135deg,#f0ede0,var(--cream));}
+  .hero-text{padding:60px 28px;}
+  .hero-eyebrow{color:var(--peach);letter-spacing:.25em;font-size:.78rem;margin-bottom:20px;}
+  .hero h1{font-size:clamp(1.9rem,4.5vw,3rem);color:var(--sage-deep);line-height:1.6;margin-bottom:24px;}
+  .hero p{color:#5a5c4e;max-width:420px;}
+  .hero-visual{
+    margin:40px;aspect-ratio:1;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,#fff,var(--peach) 85%);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;font-weight:600;
+  }
+
+  section{padding:96px 28px;max-width:1100px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:56px;}
+  .section-title small{color:var(--peach);letter-spacing:.28em;font-size:.75rem;}
+  .section-title h2{color:var(--sage-deep);font-size:clamp(1.5rem,3vw,2.1rem);margin-top:12px;}
+  .fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  /* Services — calm vertical flow, alternating alignment */
+  .service-flow{max-width:760px;margin:0 auto;}
+  .service-item{display:grid;grid-template-columns:56px 1fr;gap:24px;padding:30px 0;border-top:1px solid var(--line);}
+  .service-item:last-child{border-bottom:1px solid var(--line);}
+  .service-item .icon{width:56px;height:56px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+  .service-item h3{font-size:1.05rem;color:var(--sage-deep);margin-bottom:6px;}
+  .service-item p{font-size:.88rem;color:#6b6d5e;}
+
+  /* Hours table */
+  .hours-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:36px 40px;max-width:560px;margin:0 auto;}
+  .hours-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.9rem;}
+  .hours-row:last-child{border-bottom:none;}
+  .hours-row .day{color:var(--sage-deep);font-weight:600;}
+
+  .quote-strip{background:var(--sage-deep);color:#fff;text-align:center;padding:80px 28px;}
+  .quote-strip p{max-width:560px;margin:0 auto;font-size:1.05rem;line-height:2;color:#e0e8dc;}
+
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  .map-box{aspect-ratio:4/3;background:#f0ede0;display:flex;align-items:center;justify-content:center;color:var(--peach);font-size:.85rem;}
+  .info-line{display:flex;gap:18px;padding:13px 0;border-bottom:1px solid var(--line);}
+  .info-line .k{width:76px;color:var(--peach);font-size:.85rem;flex-shrink:0;font-weight:600;}
+
+  .cta{text-align:center;padding:110px 28px;background:linear-gradient(180deg,var(--cream),#f0ede0);}
+  .cta h2{color:var(--sage-deep);font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:24px;}
+  .btn{display:inline-block;background:var(--peach);color:#fff;padding:18px 50px;text-decoration:none;border-radius:30px;font-weight:600;transition:.3s;}
+  .btn:hover{background:#d99863;}
+  footer{text-align:center;padding:32px 24px;font-size:.72rem;color:#c8d4c0;background:var(--sage-deep);}
+  @media(max-width:760px){
+    .hero{grid-template-columns:1fr;}
+    .hero-visual{min-height:200px;width:200px;margin:0 auto 20px;}
+    .access{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">はぐろ動物クリニック</div>
+    <div class="navlinks">
+      <a href="#services">診療案内</a>
+      <a href="#hours">診療時間</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">山形県鶴岡市</div>
+    <h1>大切な家族の、<br>いちばん近くに。</h1>
+    <p>犬・猫の診療から手術・往診まで、地域のかかりつけ医として寄り添います。</p>
+  </div>
+  <div class="hero-visual">診療風景 写真スペース</div>
+</div>
+
+<section id="services" class="fade">
+  <div class="section-title"><small>SERVICES</small><h2>診療案内</h2></div>
+  <div class="service-flow">
+    <div class="service-item"><div class="icon">診</div><div><h3>一般診療</h3><p>犬・猫を中心に、日々の健康相談から診察まで対応いたします。</p></div></div>
+    <div class="service-item"><div class="icon">手</div><div><h3>手術</h3><p>各種手術に対応。安心して任せていただける体制を整えています。</p></div></div>
+    <div class="service-item"><div class="icon">往</div><div><h3>往診</h3><p>通院が難しい場合のご相談も承っております。</p></div></div>
+    <div class="service-item"><div class="icon">保</div><div><h3>動物健康保険</h3><p>アニコムなど各種ペット保険にも対応しています。</p></div></div>
+  </div>
+</section>
+
+<div class="quote-strip fade">
+  <p>ワンちゃん、猫ちゃんの体調で気になることがあれば、どんな些細なことでもお気軽にご相談ください。</p>
+</div>
+
+<section id="hours" class="fade">
+  <div class="section-title"><small>HOURS</small><h2>診療時間</h2></div>
+  <div class="hours-box">
+    <div class="hours-row"><div class="day">午前</div><div>9:00 〜 11:30</div></div>
+    <div class="hours-row"><div class="day">午後</div><div>16:00 〜 18:30</div></div>
+    <div class="hours-row"><div class="day">休診日</div><div>月曜日・祝日</div></div>
+  </div>
+</section>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>ACCESS</small><h2>アクセス・お問い合わせ</h2></div>
+    <div class="info-line"><div class="k">住所</div><div>山形県鶴岡市羽黒町黒瀬字黒瀬186</div></div>
+    <div class="info-line"><div class="k">電話</div><div>0235-64-0177</div></div>
+  </div>
+  <div class="map-box">アクセスマップ</div>
+</section>
+
+<div class="cta fade">
+  <h2>ご相談はお気軽にどうぞ</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>はぐろ動物クリニック（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
