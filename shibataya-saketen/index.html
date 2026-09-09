@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>柴田屋酒店｜愛知県田原市の地酒・酒類専門店</title>
+<style>
+  :root{
+    --ink:#171410;
+    --paper:#f6f1e7;
+    --gold:#b8862f;
+    --gold-deep:#8a5f1e;
+    --line:rgba(23,20,16,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .notice{
+    background:var(--ink);color:#e9dfc9;text-align:center;
+    font-size:.72rem;letter-spacing:.05em;padding:8px 12px;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,241,231,.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto;}
+  .brand{font-size:1.15rem;letter-spacing:.14em;font-weight:600;}
+  .brand span{color:var(--gold-deep);}
+  nav.links{display:none;gap:28px;font-size:.85rem;letter-spacing:.08em;}
+  @media(min-width:760px){nav.links{display:flex;}}
+
+  .hero{
+    position:relative;overflow:hidden;
+    min-height:78vh;display:flex;align-items:flex-end;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(184,134,47,.35), transparent 55%),
+      linear-gradient(160deg,#1c1710 0%,#2a2013 45%,#181209 100%);
+    color:#f3e9d3;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(100deg, rgba(184,134,47,.07) 0 2px, transparent 2px 140px);
+    opacity:.6;
+  }
+  .hero-bottles{
+    position:absolute;right:6%;bottom:-4%;display:flex;gap:14px;align-items:flex-end;opacity:.9;
+  }
+  .bottle{width:34px;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,#3d2e12,#171009);position:relative;}
+  .bottle::before{content:"";position:absolute;left:50%;top:-16px;transform:translateX(-50%);width:12px;height:20px;background:inherit;border-radius:3px;}
+  .bottle:nth-child(1){height:150px;}
+  .bottle:nth-child(2){height:190px;background:linear-gradient(180deg,#5a3f14,#20160a);}
+  .bottle:nth-child(3){height:130px;}
+  .bottle:nth-child(4){height:170px;background:linear-gradient(180deg,#4a3411,#1a120a);}
+
+  .hero-inner{position:relative;z-index:2;padding:64px 0 72px;}
+  .hero-eyebrow{font-size:.78rem;letter-spacing:.3em;color:var(--gold);margin-bottom:18px;}
+  .hero h1{
+    font-size:clamp(2rem,5.4vw,3.4rem);
+    line-height:1.5;font-weight:600;letter-spacing:.04em;
+    max-width:11ch;
+  }
+  .hero p.lead{margin-top:22px;font-size:.98rem;max-width:34ch;color:#e6d9ba;}
+  .hero .meta{margin-top:30px;font-size:.78rem;letter-spacing:.06em;color:#c9b98c;display:flex;gap:22px;flex-wrap:wrap;}
+
+  section{padding:88px 0;}
+  .section-head{margin-bottom:44px;}
+  .section-head .en{font-size:.72rem;letter-spacing:.32em;color:var(--gold-deep);}
+  .section-head h2{font-size:1.7rem;margin-top:10px;font-weight:600;letter-spacing:.03em;}
+
+  .intro-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+  @media(min-width:800px){.intro-grid{grid-template-columns:1.1fr .9fr;align-items:center;}}
+  .intro-visual{
+    aspect-ratio:4/3;border-radius:2px;
+    background:
+      linear-gradient(135deg,#2a2013,#4a3411 60%,#2a2013),
+      repeating-linear-gradient(90deg, rgba(246,241,231,.04) 0 1px, transparent 1px 40px);
+    position:relative;overflow:hidden;
+  }
+  .intro-visual .ring{position:absolute;border:1px solid rgba(246,241,231,.25);border-radius:50%;}
+  .intro-visual .ring.r1{width:70%;aspect-ratio:1;top:15%;left:10%;}
+  .intro-visual .ring.r2{width:40%;aspect-ratio:1;bottom:10%;right:8%;}
+  .intro-text p{font-size:.95rem;color:#3a332a;margin-bottom:16px;}
+  .intro-text p:last-child{margin-bottom:0;}
+
+  .catalog{background:#efe6d2;}
+  .cat-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(min-width:700px){.cat-grid{grid-template-columns:repeat(2,1fr);}}
+  .cat-card{background:var(--paper);padding:34px 30px;transition:background .3s;}
+  .cat-card:hover{background:#f9f3e4;}
+  .cat-card .num{font-size:.72rem;letter-spacing:.2em;color:var(--gold-deep);}
+  .cat-card h3{font-size:1.15rem;margin:12px 0 10px;font-weight:600;}
+  .cat-card p{font-size:.88rem;color:#4a4236;}
+
+  .corner{
+    display:grid;grid-template-columns:1fr;gap:30px;
+  }
+  @media(min-width:800px){.corner{grid-template-columns:.9fr 1.1fr;align-items:center;}}
+  .corner-badge{
+    display:inline-block;font-size:.7rem;letter-spacing:.18em;color:var(--gold-deep);
+    border:1px solid var(--gold-deep);padding:6px 14px;border-radius:999px;margin-bottom:16px;
+  }
+  .payline{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
+  .payline span{
+    font-size:.72rem;letter-spacing:.05em;border:1px solid var(--line);
+    padding:6px 12px;border-radius:4px;color:#4a4236;background:var(--paper);
+  }
+
+  .fade{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  .cta{
+    background:linear-gradient(160deg,#1c1710,#2a2013);color:#f3e9d3;text-align:center;
+  }
+  .cta h2{font-size:1.5rem;font-weight:600;margin-bottom:16px;}
+  .cta p{font-size:.9rem;color:#d8c9a4;max-width:38ch;margin:0 auto 30px;}
+  .btn{
+    display:inline-block;padding:15px 40px;border:1px solid var(--gold);color:#f3e9d3;
+    font-size:.85rem;letter-spacing:.14em;border-radius:2px;transition:.25s;
+  }
+  .btn:hover{background:var(--gold);color:#1c1710;}
+
+  footer{padding:44px 0;text-align:center;font-size:.75rem;color:#7a7061;border-top:1px solid var(--line);}
+  footer .fnote{margin-top:10px;color:#a99a7c;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（ASUNOKI作成）</div>
+
+<header class="site">
+  <div class="navrow">
+    <div class="brand">柴田屋酒店 <span>| Shibataya</span></div>
+    <nav class="links">
+      <a href="#about">こだわり</a>
+      <a href="#catalog">お取り扱い</a>
+      <a href="#corner">缶カフェ</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow">AICHI TAHARA — SAKE &amp; LIQUOR</div>
+    <h1>渥美半島の地に根づく、<br>町の酒屋。</h1>
+    <p class="lead">田原の銘酒「豊」をはじめ、地酒からワインまで。長年地域に寄り添ってきた柴田屋酒店が、一本一本を丁寧にお届けします。</p>
+    <div class="meta">
+      <span>愛知県田原市田原町</span>
+      <span>TEL 0531-22-0826</span>
+      <span>PayPay / au PAY / メルペイ 対応</span>
+    </div>
+  </div>
+  <div class="hero-bottles">
+    <div class="bottle"></div><div class="bottle"></div><div class="bottle"></div><div class="bottle"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap intro-grid fade">
+    <div class="intro-visual"><div class="ring r1"></div><div class="ring r2"></div></div>
+    <div class="intro-text">
+      <div class="section-head"><div class="en">ABOUT US</div><h2>選ぶ楽しさを、対面で。</h2></div>
+      <p>大型店にはない目利きの品揃えと、気軽に相談できる距離の近さ。田原の地酒「豊」を軸に、季節ごとのおすすめや贈答用の一本まで、お客様一人ひとりに合わせてご提案しています。</p>
+      <p>キャッシュレス決済（PayPay・au PAY・メルペイ・d払い）にも対応し、昔ながらの町の酒屋でありながら、今の暮らしに合わせた買いやすさも大切にしています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="catalog">
+  <div class="wrap">
+    <div class="section-head fade"><div class="en">LINE UP</div><h2>お取り扱いのご案内</h2></div>
+    <div class="cat-grid fade">
+      <div class="cat-card"><div class="num">01</div><h3>田原の銘酒「豊」</h3><p>地元田原で醸される地酒。季節限定酒や特別本醸造など、時期に応じた品揃えをご用意しています。</p></div>
+      <div class="cat-card"><div class="num">02</div><h3>全国の地酒・焼酎</h3><p>渥美半島の食文化に合う一本を中心に、全国各地の銘柄も取り揃えています。お好みに応じてご相談ください。</p></div>
+      <div class="cat-card"><div class="num">03</div><h3>ワイン・その他酒類</h3><p>普段の食卓から贈答用まで、幅広い価格帯のワイン・洋酒もご案内可能です。</p></div>
+      <div class="cat-card"><div class="num">04</div><h3>贈答・ギフト対応</h3><p>のし対応や化粧箱でのご用意も可能。大切な方への贈り物としてもご利用いただけます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="corner">
+  <div class="wrap corner fade">
+    <div>
+      <div class="corner-badge">併設スペース</div>
+      <div class="section-head"><div class="en">LOCAL CAFE CORNER</div><h2>店先のひとやすみ。</h2></div>
+      <p style="font-size:.95rem;color:#4a4236;">お酒を選びながら、ちょっと一息つける飲食スペースも併設。買い物ついでに立ち寄れる、地域の方の憩いの場になっています。</p>
+      <div class="payline">
+        <span>PayPay</span><span>au PAY</span><span>メルペイ</span><span>d払い</span><span>クレジットカード</span>
+      </div>
+    </div>
+    <div class="intro-visual" style="aspect-ratio:16/10;">
+      <div class="ring r1" style="width:50%;top:20%;left:15%;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="catalog">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">ACCESS</div><h2>店舗のご案内</h2></div>
+    <p style="font-size:.92rem;color:#4a4236;max-width:44ch;">
+      〒441-3421 愛知県田原市田原町字南二３<br>
+      TEL：0531-22-0826　FAX：0531-23-2489<br>
+      営業時間：店舗にお問い合わせください
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>今日の一本を、柴田屋で。</h2>
+    <p>贈り物のご相談も、普段のお酒選びも。お気軽にお立ち寄り・お問い合わせください。</p>
+    <a class="btn" href="tel:0531220826">電話でお問い合わせ</a>
+  </div>
+</section>
+
+<footer>
+  <div>柴田屋酒店 — 愛知県田原市</div>
+  <div class="fnote">本ページはリニューアル提案用モックアップです。実店舗の情報とは異なる場合があります。</div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
