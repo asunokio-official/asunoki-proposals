@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>高田時計店｜群馬 掛け時計・置き時計の専門店</title>
+<style>
+  :root{
+    --navy:#12213a;
+    --navy-deep:#0a1526;
+    --gold:#c9a44c;
+    --paper:#f7f6f1;
+    --ink:#1b2333;
+    --line:rgba(18,33,58,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:var(--navy-deep);color:#e8e2cf;text-align:center;font-size:.72rem;padding:8px 12px;letter-spacing:.05em;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+
+  header{position:sticky;top:0;background:rgba(247,246,241,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:50;}
+  .navrow{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1040px;margin:0 auto;}
+  .brand{font-weight:700;font-size:1.05rem;letter-spacing:.06em;color:var(--navy);}
+  nav{display:none;gap:26px;font-size:.85rem;}
+  @media(min-width:760px){nav{display:flex;}}
+
+  .hero{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);color:#f2ecd9;position:relative;overflow:hidden;padding:88px 0 70px;}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:44px;align-items:center;}
+  @media(min-width:820px){.hero .wrap{grid-template-columns:1.15fr .85fr;}}
+  .eyebrow{font-size:.75rem;letter-spacing:.3em;color:var(--gold);margin-bottom:20px;}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3rem);font-weight:800;line-height:1.55;max-width:13ch;}
+  .hero p.lead{margin-top:22px;font-size:.98rem;max-width:38ch;color:#cfc7ab;}
+  .hero .meta{margin-top:30px;font-size:.78rem;letter-spacing:.05em;color:#a89a72;display:flex;gap:20px;flex-wrap:wrap;}
+
+  .clockwrap{display:flex;justify-content:center;}
+  .clock{
+    width:220px;height:220px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #1c2c48, var(--navy-deep) 70%);
+    border:3px solid var(--gold);position:relative;box-shadow:0 20px 50px rgba(0,0,0,.4);
+  }
+  .clock::before,.clock::after{content:"";position:absolute;background:var(--gold);}
+  .tick{position:absolute;width:2px;height:10px;background:rgba(201,164,76,.6);left:50%;top:6px;transform-origin:50% 104px;}
+  .hand{position:absolute;left:50%;bottom:50%;transform-origin:bottom center;background:#f2ecd9;border-radius:3px;}
+  .hand.hour{width:5px;height:56px;margin-left:-2.5px;animation:spin 40s linear infinite;}
+  .hand.min{width:3px;height:80px;margin-left:-1.5px;background:var(--gold);animation:spin 8s linear infinite;}
+  .pivot{position:absolute;left:50%;top:50%;width:10px;height:10px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);}
+  @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  @media (prefers-reduced-motion: reduce){.hand{animation:none;}}
+
+  section{padding:78px 0;}
+  .section-head{margin-bottom:40px;}
+  .section-head .en{font-size:.7rem;letter-spacing:.28em;color:var(--gold);}
+  .section-head h2{font-size:1.55rem;margin-top:10px;font-weight:800;color:var(--navy);}
+
+  .cat-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(min-width:700px){.cat-grid{grid-template-columns:repeat(3,1fr);}}
+  .cat-card{background:var(--paper);padding:32px 26px;}
+  .cat-card .n{font-size:.7rem;letter-spacing:.18em;color:var(--gold);}
+  .cat-card h3{font-size:1.05rem;margin:10px 0 8px;font-weight:800;color:var(--navy);}
+  .cat-card p{font-size:.84rem;color:#4a4c58;}
+
+  .engrave{background:var(--navy);color:#f2ecd9;}
+  .eg-grid{display:grid;grid-template-columns:1fr;gap:30px;}
+  @media(min-width:800px){.eg-grid{grid-template-columns:1fr 1fr;align-items:center;}}
+  .eg-grid p{font-size:.92rem;color:#cfc7ab;margin-bottom:14px;}
+  .sample-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;}
+  .sample{border:1px solid rgba(201,164,76,.5);padding:8px 16px;border-radius:4px;font-size:.78rem;color:var(--gold);}
+
+  .fade{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  .cta{background:var(--paper);text-align:center;border-top:1px solid var(--line);}
+  .cta h2{font-size:1.5rem;font-weight:800;margin-bottom:14px;color:var(--navy);}
+  .cta p{font-size:.9rem;color:#4a4c58;max-width:38ch;margin:0 auto 28px;}
+  .btn{display:inline-block;padding:15px 38px;background:var(--navy);color:#f2ecd9;font-weight:700;border-radius:4px;font-size:.88rem;letter-spacing:.04em;transition:.2s;}
+  .btn:hover{background:var(--navy-deep);}
+
+  footer{padding:40px 0;text-align:center;font-size:.75rem;color:#6b6d78;border-top:1px solid var(--line);}
+  footer .fnote{margin-top:8px;color:#9a9ba3;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（ASUNOKI作成）</div>
+
+<header>
+  <div class="navrow">
+    <div class="brand">高田時計店</div>
+    <nav>
+      <a href="#catalog">お取り扱い</a>
+      <a href="#engrave">名入れ・特注</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">GUNMA — WATCH &amp; CLOCK SPECIALIST</div>
+      <h1>暮らしの時間に、<br>ひとつ選び抜いた時計を。</h1>
+      <p class="lead">セイコー・シチズン・リズム時計など、掛け時計から電波時計、からくり時計まで幅広く取り扱う地域の時計専門店です。</p>
+      <div class="meta">
+        <span>群馬県北群馬郡吉岡町</span>
+        <span>TEL 0279-75-2683</span>
+        <span>月曜定休</span>
+      </div>
+    </div>
+    <div class="clockwrap">
+      <div class="clock">
+        <div class="hand hour"></div>
+        <div class="hand min"></div>
+        <div class="pivot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">LINE UP</div><h2>お取り扱いラインナップ</h2></div>
+    <div class="cat-grid">
+      <div class="cat-card"><div class="n">01</div><h3>電波時計</h3><p>正確な時を刻む電波時計を各種取り揃え。ご家庭からオフィスまで幅広くご案内します。</p></div>
+      <div class="cat-card"><div class="n">02</div><h3>掛け時計・置き時計</h3><p>インテリアに合わせて選べる豊富なデザイン。新築祝いや引越し祝いにも人気です。</p></div>
+      <div class="cat-card"><div class="n">03</div><h3>からくり時計・ソーラー時計</h3><p>時報を奏でるからくり時計や、環境に配慮したソーラー時計もご案内しています。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="engrave" class="engrave">
+  <div class="wrap eg-grid fade">
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px;">CUSTOM ENGRAVING</div>
+      <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:16px;">名入れで、贈り物にひとつの物語を。</h2>
+      <p>カッティングマシンによる文字入れサービスに対応。ご退職祝い・結婚祝い・記念品など、大切な節目の贈り物としてもご利用いただけます。</p>
+      <div class="sample-row">
+        <span class="sample">還暦祝い</span><span class="sample">退職記念</span><span class="sample">開店祝い</span><span class="sample">ノベルティ</span>
+      </div>
+    </div>
+    <div class="clock" style="margin:0 auto;">
+      <div class="hand hour"></div>
+      <div class="hand min"></div>
+      <div class="pivot"></div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap fade">
+    <div class="section-head"><div class="en">ACCESS</div><h2>店舗のご案内</h2></div>
+    <p style="font-size:.92rem;color:#4a4c58;max-width:44ch;">
+      群馬県北群馬郡吉岡町岩平871-12<br>
+      TEL：0279-75-2683<br>
+      営業時間：8:30〜17:30（月曜定休）
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>贈り物のご相談も、お気軽に。</h2>
+    <p>名入れ・オーダーメイドのご相談も承っています。まずはお問い合わせください。</p>
+    <a class="btn" href="tel:0279752683">電話でお問い合わせ</a>
+  </div>
+</section>
+
+<footer>
+  <div>高田時計店 — 群馬県北群馬郡吉岡町</div>
+  <div class="fnote">本ページはリニューアル提案用モックアップです。実店舗の情報とは異なる場合があります。</div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
