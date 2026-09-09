@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>日本橋銀杏堂 | 印章・ゴム印の専門店</title>
+<style>
+  :root{
+    --sumi:#1c1a17; --shu:#a3352b; --gold:#b8975a; --washi:#f6f1e7; --washi-deep:#ede4d1;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; background:var(--washi); color:var(--sumi); line-height:1.9;}
+  .notice{background:var(--sumi); color:#cbbfa6; text-align:center; font-size:.72rem; padding:6px 10px; letter-spacing:.05em;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+
+  header{position:sticky; top:0; z-index:20; background:rgba(246,241,231,.92); backdrop-filter:blur(6px); border-bottom:1px solid rgba(28,26,23,.08);}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 24px;}
+  .brand{font-size:1.05rem; letter-spacing:.15em; font-weight:700;}
+  nav{display:flex; gap:22px; font-size:.82rem; letter-spacing:.08em;}
+  nav a{opacity:.75; border-bottom:1px solid transparent; padding-bottom:2px; transition:.25s;}
+  nav a:hover{opacity:1; border-color:var(--shu);}
+
+  .hero{position:relative; padding:96px 24px 100px; text-align:center; overflow:hidden;}
+  .hero::before{content:""; position:absolute; inset:0; background:
+    radial-gradient(circle at 50% 30%, rgba(163,53,43,.06), transparent 60%);}
+  .seal{
+    width:150px; height:150px; margin:0 auto 34px; border:3px solid var(--shu); border-radius:6px;
+    display:flex; align-items:center; justify-content:center; color:var(--shu);
+    writing-mode:vertical-rl; font-size:2.6rem; font-weight:700; letter-spacing:.2em;
+    transform:scale(.6) rotate(-8deg); opacity:0; animation:stamp 1s cubic-bezier(.2,.9,.3,1) .2s forwards;
+  }
+  @keyframes stamp{ to{ transform:scale(1) rotate(-6deg); opacity:1; } }
+  .hero h1{font-size:clamp(1.9rem,4.4vw,3rem); letter-spacing:.14em; font-weight:700; margin-bottom:18px;}
+  .hero p{max-width:520px; margin:0 auto; font-size:.98rem; color:#4c463d;}
+  .hero .sub{margin-top:28px; font-size:.78rem; letter-spacing:.2em; color:var(--gold); text-transform:uppercase;}
+
+  section{padding:76px 24px;}
+  .section-title{text-align:center; font-size:1.5rem; letter-spacing:.12em; margin-bottom:12px;}
+  .section-title small{display:block; font-size:.7rem; letter-spacing:.3em; color:var(--gold); margin-bottom:10px; font-family:sans-serif;}
+  .lede{text-align:center; max-width:560px; margin:0 auto 56px; color:#5a5346; font-size:.92rem;}
+
+  .history{background:var(--washi-deep);}
+  .history .grid{display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:center;}
+  .history .num{font-size:3.2rem; color:var(--shu); font-weight:700; line-height:1;}
+  .history dl{margin-top:22px; font-size:.88rem;}
+  .history dt{color:var(--gold); letter-spacing:.1em; font-size:.72rem; margin-top:14px;}
+  .history dd{margin-top:4px;}
+  .history .plate{aspect-ratio:4/3; border:1px solid rgba(28,26,23,.15); border-radius:4px;
+    background:
+      repeating-linear-gradient(135deg, rgba(163,53,43,.05) 0 2px, transparent 2px 26px),
+      linear-gradient(160deg,#fff,var(--washi-deep));
+    display:flex; align-items:center; justify-content:center; color:var(--shu); font-size:.8rem; letter-spacing:.3em;}
+
+  .works{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(28,26,23,.1); border:1px solid rgba(28,26,23,.1);}
+  .works .item{background:var(--washi); padding:38px 20px; text-align:center; opacity:0; transform:translateY(16px); transition:.7s;}
+  .works .item.show{opacity:1; transform:none;}
+  .works .item .mark{width:56px; height:56px; margin:0 auto 16px; border-radius:50%; border:2px solid var(--shu); color:var(--shu);
+    display:flex; align-items:center; justify-content:center; font-size:1.4rem;}
+  .works .item h3{font-size:.98rem; letter-spacing:.08em; margin-bottom:8px;}
+  .works .item p{font-size:.8rem; color:#615a4d;}
+
+  .voice{background:var(--sumi); color:var(--washi); text-align:center;}
+  .voice blockquote{max-width:560px; margin:0 auto; font-size:1.15rem; letter-spacing:.04em; line-height:2;}
+  .voice cite{display:block; margin-top:24px; font-size:.75rem; letter-spacing:.15em; color:var(--gold); font-style:normal;}
+
+  .cta{text-align:center;}
+  .cta .box{max-width:480px; margin:0 auto; border:1px solid rgba(28,26,23,.15); padding:48px 32px; background:var(--washi-deep);}
+  .cta h2{font-size:1.3rem; letter-spacing:.1em; margin-bottom:14px;}
+  .cta p{font-size:.85rem; color:#5a5346; margin-bottom:26px;}
+  .btn{display:inline-block; padding:13px 40px; background:var(--shu); color:#fff; font-size:.85rem; letter-spacing:.15em; border-radius:2px; transition:.25s;}
+  .btn:hover{background:#8c2b22;}
+
+  footer{padding:36px 24px; text-align:center; font-size:.72rem; color:#8a8172; letter-spacing:.05em;}
+  @media(max-width:720px){
+    .history .grid{grid-template-columns:1fr;}
+    .works{grid-template-columns:1fr;}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実際のサービス内容とは異なる場合があります。</div>
+
+<header>
+  <div class="wrap">
+    <div class="brand">日本橋銀杏堂</div>
+    <nav>
+      <a href="#history">沿革</a>
+      <a href="#works">お仕事</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="seal">印</div>
+  <h1>一つの印に、<br>百年の技を込めて。</h1>
+  <p>東京・日本橋本町にて、実印・銀行印・角印・ゴム印まで。お客様お一人おひとりに向き合う、昔ながらの印章専門店です。</p>
+  <div class="sub">Nihonbashi Ginnando</div>
+</div>
+
+<section class="history" id="history">
+  <div class="wrap grid">
+    <div>
+      <div class="num">100+</div>
+      <p style="margin-top:10px; letter-spacing:.05em; font-size:.85rem; color:#5a5346;">年にわたり受け継がれてきた、印章づくりの技術と信頼。</p>
+      <dl>
+        <dt>所在地</dt>
+        <dd>東京都中央区日本橋本町</dd>
+        <dt>取扱商品</dt>
+        <dd>実印・銀行印・認印・角印・ゴム印・シルク印材</dd>
+        <dt>お支払い</dt>
+        <dd>店頭現金のほか、各種キャッシュレス決済にも対応</dd>
+      </dl>
+    </div>
+    <div class="plate">日本橋 銀杏堂</div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="section-title"><small>Our Craft</small>手のひらにおさまる、一生ものを。</div>
+  <p class="lede">印材選びから彫刻、仕上げまで。目的やお好みに合わせてお選びいただけます。</p>
+  <div class="works">
+    <div class="item"><div class="mark">実</div><h3>実印</h3><p>人生の節目に。手彫りならではの一点物の風合い。</p></div>
+    <div class="item"><div class="mark">銀</div><h3>銀行印</h3><p>大切な資産を守る、確かな一本。</p></div>
+    <div class="item"><div class="mark">認</div><h3>認印・角印</h3><p>日々のお仕事に。書体・サイズもご相談ください。</p></div>
+    <div class="item"><div class="mark">ゴ</div><h3>ゴム印</h3><p>住所印・会社印など、業務用途にも幅広く対応。</p></div>
+    <div class="item"><div class="mark">直</div><h3>刻み直し</h3><p>長年お使いの印鑑の彫り直しも承ります。</p></div>
+    <div class="item"><div class="mark">相</div><h3>ご相談</h3><p>印材・書体に迷ったら、まずはお気軽に。</p></div>
+  </div>
+</section>
+
+<section class="voice" id="voice">
+  <blockquote>
+    「祖父の代から使っている実印を、そのまま彫り直していただきました。あの店に頼めば間違いない、という安心感があります。」
+    <cite>— 日本橋本町 個人のお客様</cite>
+  </blockquote>
+</section>
+
+<section class="cta" id="contact">
+  <div class="box">
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>印材選びから書体、納期まで。経験豊富な職人が丁寧にお伺いします。</p>
+    <a class="btn" href="#">お問い合わせ</a>
+  </div>
+</section>
+
+<footer>© 日本橋銀杏堂　※本サイトはデザイン提案用のモックアップです</footer>
+
+<script>
+  const items = document.querySelectorAll('.works .item');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); } });
+  }, {threshold:.2});
+  items.forEach((el,i)=>{ el.style.transitionDelay = (i*80)+'ms'; io.observe(el); });
+</script>
+</body>
+</html>
