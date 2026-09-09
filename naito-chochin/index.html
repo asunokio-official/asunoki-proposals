@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>内藤提灯店 | 東京・府中の提灯専門店</title>
+<style>
+  :root{ --night:#170d0a; --night2:#2a1410; --shu:#c1442b; --gold:#e0a94a; --paper:#fff8ef; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Sans","Yu Gothic",sans-serif; background:var(--paper); color:#2b211b;}
+  a{color:inherit; text-decoration:none;}
+  .notice{background:#000; color:#c9a06b; text-align:center; font-size:.7rem; padding:6px 10px;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 24px;}
+
+  header{position:sticky; top:0; z-index:30; background:rgba(23,13,10,.88); backdrop-filter:blur(6px);}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; color:#f2e4cf;}
+  .brand{font-weight:800; letter-spacing:.08em;}
+  nav{display:flex; gap:20px; font-size:.82rem;}
+  nav a{opacity:.75; transition:.2s;}
+  nav a:hover{opacity:1; color:var(--gold);}
+
+  .hero{position:relative; min-height:88vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; color:#fbeedd; overflow:hidden; padding:120px 24px 80px;
+    background:radial-gradient(120% 90% at 50% 20%, var(--night2) 0%, var(--night) 60%, #0c0605 100%);}
+  .glow{position:absolute; border-radius:50%; filter:blur(30px); pointer-events:none;}
+  .glow.a{width:280px; height:280px; left:12%; top:18%; background:radial-gradient(circle, rgba(224,169,74,.5), transparent 70%); animation:breathe 5s ease-in-out infinite;}
+  .glow.b{width:340px; height:340px; right:10%; top:32%; background:radial-gradient(circle, rgba(193,68,43,.45), transparent 70%); animation:breathe 6.5s ease-in-out infinite 1s;}
+  .glow.c{width:220px; height:220px; left:50%; top:60%; transform:translateX(-50%); background:radial-gradient(circle, rgba(224,169,74,.35), transparent 70%); animation:breathe 7.5s ease-in-out infinite .5s;}
+  @keyframes breathe{ 0%,100%{opacity:.35; transform:scale(1);} 50%{opacity:.7; transform:scale(1.12);} }
+  .lantern{position:relative; width:96px; height:120px; margin:0 auto 30px;}
+  .lantern .body{position:absolute; inset:0; border-radius:46% 46% 40% 40%; background:linear-gradient(180deg,#e0492e,#a8301c);
+    box-shadow:0 0 40px 6px rgba(224,169,74,.45); animation:sway 4.5s ease-in-out infinite;}
+  .lantern .body::after{content:"提"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    color:#fbeedd; font-size:1.6rem; font-weight:700;}
+  .lantern .cap{position:absolute; top:-8px; left:50%; transform:translateX(-50%); width:36px; height:10px; background:#3a2a1c; border-radius:3px;}
+  @keyframes sway{ 0%,100%{ transform:rotate(-2deg); } 50%{ transform:rotate(2deg); } }
+  .hero h1{position:relative; font-size:clamp(1.9rem,4.6vw,3.1rem); font-weight:800; letter-spacing:.06em; margin-bottom:16px;}
+  .hero p{position:relative; max-width:520px; margin:0 auto; font-size:.95rem; color:#e6d3ba; line-height:1.9;}
+  .hero .tag{position:relative; margin-top:26px; font-size:.72rem; letter-spacing:.3em; color:var(--gold);}
+
+  section{padding:80px 24px;}
+  .eyebrow{text-align:center; font-size:.72rem; letter-spacing:.3em; color:var(--shu); margin-bottom:10px;}
+  h2.title{text-align:center; font-size:1.5rem; margin-bottom:44px;}
+
+  .flow{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid #e5d7c2; border-bottom:1px solid #e5d7c2;}
+  .flow .step{padding:34px 18px; text-align:center; border-right:1px solid #e5d7c2; position:relative;}
+  .flow .step:last-child{border-right:none;}
+  .flow .step .n{font-size:.7rem; color:var(--shu); letter-spacing:.2em; margin-bottom:10px;}
+  .flow .step h3{font-size:.92rem; margin-bottom:8px;}
+  .flow .step p{font-size:.78rem; color:#6b5c4a;}
+
+  .products{background:#fbf3e6;}
+  .products .row{display:flex; flex-wrap:wrap; gap:18px; justify-content:center;}
+  .products .card{width:260px; background:#fff; border:1px solid #ecdcc2; padding:26px 22px; transition:.3s;}
+  .products .card:hover{transform:translateY(-6px); box-shadow:0 16px 30px -18px rgba(23,13,10,.35);}
+  .products .card .icon{width:44px; height:44px; border-radius:50%; background:var(--shu); color:#fff; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:1.1rem;}
+  .products .card h3{font-size:.98rem; margin-bottom:8px;}
+  .products .card p{font-size:.8rem; color:#6b5c4a; line-height:1.8;}
+
+  .cta{text-align:center; background:var(--night); color:#f5e8d3;}
+  .cta h2{font-size:1.4rem; margin-bottom:14px;}
+  .cta p{font-size:.88rem; color:#d8c3a4; max-width:480px; margin:0 auto 28px;}
+  .btn{display:inline-block; padding:14px 42px; background:var(--gold); color:#241407; font-weight:700; font-size:.85rem; letter-spacing:.1em; border-radius:999px; transition:.25s;}
+  .btn:hover{background:#f0bd66;}
+
+  footer{padding:30px 24px; text-align:center; font-size:.72rem; color:#8a7a63;}
+  @media(max-width:760px){
+    .flow{grid-template-columns:1fr 1fr;}
+    .flow .step:nth-child(2){border-right:none;}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実際のサービス内容とは異なる場合があります。</div>
+
+<header>
+  <div class="wrap">
+    <div class="brand">内藤提灯店</div>
+    <nav>
+      <a href="#flow">製作の流れ</a>
+      <a href="#products">商品</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <span class="glow a"></span><span class="glow b"></span><span class="glow c"></span>
+  <div class="lantern"><span class="cap"></span><span class="body"></span></div>
+  <h1>灯りをともして、<br>百年。</h1>
+  <p>東京・府中にて提灯一筋。神社仏閣の祭礼提灯から、お店の看板提灯、ご家庭用の盆提灯まで、一つひとつ心を込めて製作しています。</p>
+  <div class="tag">CHOCHIN CRAFTSMANSHIP SINCE OVER 100 YEARS</div>
+</div>
+
+<section id="flow">
+  <div class="eyebrow">Our Process</div>
+  <h2 class="title">竹と和紙から、灯りが生まれるまで</h2>
+  <div class="flow">
+    <div class="step"><div class="n">01</div><h3>竹ひご組み</h3><p>提灯の骨格となる竹ひごを、手作業で一本一本組み上げます。</p></div>
+    <div class="step"><div class="n">02</div><h3>和紙貼り</h3><p>骨組みに和紙を貼り、独特のふくらみを持たせていきます。</p></div>
+    <div class="step"><div class="n">03</div><h3>文字入れ</h3><p>屋号や紋、絵柄を筆で描き入れる、最も繊細な工程です。</p></div>
+    <div class="step"><div class="n">04</div><h3>仕上げ</h3><p>骨組みを整え、灯りが美しく灯るよう最終調整をします。</p></div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="eyebrow">Products</div>
+  <h2 class="title">用途に合わせた提灯づくり</h2>
+  <div class="row">
+    <div class="card"><div class="icon">祭</div><h3>祭礼提灯</h3><p>神社仏閣の祭事に。伝統の書体・意匠で誂えます。</p></div>
+    <div class="card"><div class="icon">店</div><h3>看板提灯</h3><p>屋号入りの提灯で、お店の顔をつくります。</p></div>
+    <div class="card"><div class="icon">盆</div><h3>盆提灯</h3><p>ご先祖様をお迎えする、ご家庭用の盆提灯。</p></div>
+    <div class="card"><div class="icon">特</div><h3>特注・オーダー</h3><p>サイズ・絵柄・数量まで、細やかにご相談いただけます。</p></div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>灯りのご相談、承ります</h2>
+  <p>祭礼提灯から特注品まで、まずはお気軽にお問い合わせください。</p>
+  <a class="btn" href="#">お問い合わせ</a>
+</section>
+
+<footer>© 内藤提灯店　※本サイトはデザイン提案用のモックアップです</footer>
+</body>
+</html>
