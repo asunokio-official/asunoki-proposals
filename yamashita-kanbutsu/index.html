@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>山下鹿造商店(乾物本舗) | 熊本・荒尾の乾物専門店</title>
+<style>
+  :root{ --kraft:#f1e6d3; --kraft-deep:#e4d3b3; --brown:#5e4326; --shu:#b5482c; --sumi:#2c2013; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Sans","Yu Gothic",sans-serif; background:var(--kraft); color:var(--sumi);}
+  a{color:inherit; text-decoration:none;}
+  .notice{background:var(--sumi); color:#dcc9a3; text-align:center; font-size:.7rem; padding:6px 10px;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 24px;}
+
+  header{position:sticky; top:0; z-index:30; background:var(--brown); color:#f6ecd8;}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:15px 24px;}
+  .brand{font-weight:800; letter-spacing:.04em;}
+  nav{display:flex; gap:20px; font-size:.82rem;}
+  nav a{opacity:.8;}
+  nav a:hover{opacity:1; color:#e8b96a;}
+
+  .hero{padding:90px 24px 60px; text-align:center; background:
+    radial-gradient(circle at 20% 20%, rgba(181,72,44,.08), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(94,67,38,.08), transparent 55%), var(--kraft);}
+  .hero .stamp{display:inline-block; border:2px solid var(--shu); color:var(--shu); border-radius:50%; width:74px; height:74px;
+    display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:900; margin-bottom:26px; transform:rotate(-6deg);}
+  .hero h1{font-size:clamp(1.8rem,4.2vw,2.9rem); font-weight:900; margin-bottom:16px; letter-spacing:.02em;}
+  .hero p{max-width:520px; margin:0 auto; font-size:.92rem; color:#5e4326; line-height:1.9;}
+  .hero .est{margin-top:24px; font-size:.76rem; letter-spacing:.15em; color:var(--brown); opacity:.7;}
+
+  section{padding:70px 24px;}
+  .eyebrow{text-align:center; font-size:.72rem; letter-spacing:.25em; color:var(--shu); margin-bottom:10px;}
+  h2.title{text-align:center; font-size:1.4rem; margin-bottom:44px;}
+
+  .board{display:grid; grid-template-columns:repeat(3,1fr); border:3px solid var(--brown); border-radius:8px; overflow:hidden;}
+  .board .cell{padding:30px 22px; border-right:1px solid rgba(94,67,38,.25); border-bottom:1px solid rgba(94,67,38,.25); background:#fbf5e8;}
+  .board .cell:nth-child(3n){border-right:none;}
+  .board .cell h3{font-size:1rem; margin-bottom:8px; color:var(--brown);}
+  .board .cell .price{font-size:.78rem; color:var(--shu); font-weight:700; margin-bottom:8px;}
+  .board .cell p{font-size:.8rem; color:#6b5a3f;}
+
+  .story{background:var(--brown); color:#f6ecd8;}
+  .story .grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+  .story .figure{aspect-ratio:4/3; border:1px solid rgba(246,236,216,.25);
+    background:repeating-linear-gradient(60deg, rgba(246,236,216,.05) 0 8px, transparent 8px 30px);
+    display:flex; align-items:center; justify-content:center; font-size:.85rem; letter-spacing:.2em; color:#e8b96a;}
+  .story p{font-size:.88rem; color:#e2d3b2; margin-bottom:14px; line-height:1.9;}
+
+  .voice{text-align:center;}
+  .voice .row{display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:40px;}
+  .voice .card{width:280px; background:#fbf5e8; border:1px solid var(--kraft-deep); padding:26px 22px; text-align:left;}
+  .voice .card p{font-size:.84rem; color:#5e4326; line-height:1.85;}
+  .voice .card cite{display:block; margin-top:14px; font-size:.74rem; color:var(--shu); font-style:normal;}
+
+  .cta{text-align:center;}
+  .cta .box{max-width:480px; margin:0 auto; border:2px dashed var(--brown); border-radius:10px; padding:44px 30px; background:#fbf5e8;}
+  .cta h2{font-size:1.3rem; margin-bottom:14px; color:var(--brown);}
+  .cta p{font-size:.85rem; color:#5e4326; margin-bottom:26px;}
+  .btn{display:inline-block; padding:14px 40px; background:var(--shu); color:#fff; font-weight:700; font-size:.85rem; letter-spacing:.08em; border-radius:999px;}
+  .btn:hover{background:#943821;}
+
+  footer{padding:30px 24px; text-align:center; font-size:.72rem; color:#8a7a5f;}
+  @media(max-width:760px){
+    .board{grid-template-columns:1fr 1fr;}
+    .board .cell:nth-child(2n){border-right:none;}
+    .story .grid{grid-template-columns:1fr;}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実際のサービス内容とは異なる場合があります。</div>
+
+<header>
+  <div class="wrap">
+    <div class="brand">山下鹿造商店</div>
+    <nav>
+      <a href="#board">商品</a>
+      <a href="#story">私たちについて</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="stamp">乾</div>
+  <h1>だしと、暮らしの<br>あいだに。</h1>
+  <p>熊本県荒尾市にて、乾物一筋70年。かつお節、昆布、干し椎茸など、毎日の食卓を支える乾物を、目利きで選び抜いてお届けしています。</p>
+  <div class="est">山下鹿造商店（乾物本舗） ・ 創業70年</div>
+</div>
+
+<section id="board">
+  <div class="eyebrow">Our Selection</div>
+  <h2 class="title">品揃え、いろいろ</h2>
+  <div class="board">
+    <div class="cell"><h3>かつお節</h3><div class="price">枕崎・土佐など産地厳選</div><p>削りたての香りをそのままに。用途に合わせた厚みでご用意。</p></div>
+    <div class="cell"><h3>昆布</h3><div class="price">利尻・羅臼・日高</div><p>だし用から佃煮用まで、産地と等級をお選びいただけます。</p></div>
+    <div class="cell"><h3>干し椎茸</h3><div class="price">国産・肉厚</div><p>戻し方のコツもお伝えしながら、お好みの厚みでご提案。</p></div>
+    <div class="cell"><h3>干物・珍味</h3><div class="price">季節のおすすめあり</div><p>季節ごとに仕入れる、地元ならではの干物・珍味も。</p></div>
+    <div class="cell"><h3>豆類・雑穀</h3><div class="price">量り売り対応</div><p>使いたい分だけ、量り売りでのご購入も承っています。</p></div>
+    <div class="cell"><h3>贈答用セット</h3><div class="price">ご予算に応じて</div><p>お中元・お歳暮など、贈り物としてのご相談も承ります。</p></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow" style="color:#e8b96a;">Since 70 Years</div>
+      <p>「良い乾物は、良い食卓をつくる」。そんな思いで、熊本県荒尾市の地で乾物一筋にやってきました。</p>
+      <p>目利きした素材を、お客様の使い方に合わせてご提案する。それが、長年変わらぬ私たちの仕事です。</p>
+    </div>
+    <div class="figure">YAMASHITA KANBUTSU</div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="eyebrow">Voice</div>
+  <h2 class="title">お客様の声</h2>
+  <div class="row">
+    <div class="card"><p>「かつお節の削りたての香りが全然違います。だしを取るのが楽しみになりました。」</p><cite>— 荒尾市 個人のお客様</cite></div>
+    <div class="card"><p>「贈答用のセットを選んでいただき、先方にとても喜ばれました。」</p><cite>— 荒尾市 個人のお客様</cite></div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="box">
+    <h2>乾物選び、まずはご相談ください</h2>
+    <p>用途や量り売りのご相談も、お気軽にどうぞ。</p>
+    <a class="btn" href="#">お問い合わせ</a>
+  </div>
+</section>
+
+<footer>© 山下鹿造商店（乾物本舗）　※本サイトはデザイン提案用のモックアップです</footer>
+</body>
+</html>
