@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>宮島建具店 | 廿日市市・木の建具工房</title>
+<style>
+  :root{ --char:#221f1c; --char-soft:#3a352e; --wood:#a9793f; --paper:#efe9dd; --line:rgba(233,225,205,.16); }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif; background:var(--char); color:#efe9dd; line-height:1.8;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:#000; color:#c9bfa8; text-align:center; font-size:.72rem; padding:6px 10px;}
+  header{position:sticky; top:0; z-index:50; background:rgba(34,31,28,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  .nav{max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:18px 24px;}
+  .brand{font-weight:700; letter-spacing:.12em; font-size:1.05rem;}
+  .nav ul{display:flex; gap:30px; list-style:none; font-size:.8rem; letter-spacing:.06em; color:#c9bfa8;}
+
+  .kumiko{width:100%; height:2px; background:
+    repeating-linear-gradient(90deg, var(--wood) 0 2px, transparent 2px 42px);}
+
+  .hero{position:relative; padding:100px 24px 90px; max-width:1100px; margin:0 auto; overflow:hidden;}
+  .hero::before{content:""; position:absolute; right:-40px; top:0; width:60%; height:100%;
+    background-image:
+      repeating-linear-gradient(45deg, transparent 0 40px, rgba(169,121,63,.12) 40px 42px),
+      repeating-linear-gradient(-45deg, transparent 0 40px, rgba(169,121,63,.12) 40px 42px);
+    opacity:.9; animation: shimmer 12s ease-in-out infinite;}
+  @keyframes shimmer{ 0%,100%{opacity:.55;} 50%{opacity:.9;} }
+  .hero-inner{position:relative; max-width:560px;}
+  .eyebrow{font-size:.78rem; letter-spacing:.3em; color:var(--wood);}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.1rem); font-weight:800; margin:20px 0 16px; line-height:1.5;}
+  .hero p{font-size:.94rem; color:#c9bfa8;}
+
+  section{max-width:1100px; margin:0 auto; padding:90px 24px;}
+  .head{margin-bottom:48px;}
+  .head .tag{font-size:.75rem; color:var(--wood); letter-spacing:.25em;}
+  .head h2{font-size:1.6rem; font-weight:800; margin-top:12px;}
+
+  .grid-craft{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line);}
+  .craft{background:var(--char); padding:38px 28px; opacity:0; transform:scale(.96); transition:.7s;}
+  .craft.in{opacity:1; transform:none;}
+  .craft .mark{width:44px; height:44px; border:2px solid var(--wood); transform:rotate(45deg); margin-bottom:22px;}
+  .craft h3{font-size:1.05rem; margin-bottom:10px; font-weight:700;}
+  .craft p{font-size:.84rem; color:#b6ab92;}
+
+  .works{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line);}
+  .work{background:var(--char-soft); aspect-ratio:4/3; position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:24px;}
+  .work::before{content:""; position:absolute; inset:0;
+    background: repeating-linear-gradient(90deg, rgba(169,121,63,.35) 0 3px, transparent 3px 30px),
+                repeating-linear-gradient(0deg, rgba(169,121,63,.35) 0 3px, transparent 3px 30px);
+    opacity:.5;}
+  .work span{position:relative; font-size:.85rem; color:#efe9dd; font-weight:700;}
+
+  .flow{border-top:1px solid var(--line);}
+  .flow-row{display:grid; grid-template-columns:120px 1fr; gap:20px; padding:26px 0; border-bottom:1px solid var(--line); opacity:0; transform:translateY(16px); transition:.6s;}
+  .flow-row.in{opacity:1; transform:none;}
+  .flow-row .step{color:var(--wood); font-weight:800; font-size:.85rem;}
+  .flow-row h4{font-size:1rem; margin-bottom:6px;}
+  .flow-row p{font-size:.84rem; color:#b6ab92;}
+
+  .cta{background:var(--wood); color:#221f1c; text-align:center; padding:90px 24px;}
+  .cta h2{font-size:1.7rem; font-weight:800; margin-bottom:14px;}
+  .cta p{font-size:.9rem; margin-bottom:30px;}
+  .btn{display:inline-block; background:#221f1c; color:#efe9dd; padding:16px 40px; font-weight:700; font-size:.88rem; border-radius:2px;}
+
+  footer{padding:30px 24px; text-align:center; font-size:.72rem; color:#8a8371;}
+
+  @media(max-width:760px){
+    .nav ul{display:none;}
+    .grid-craft{grid-template-columns:1fr;}
+    .works{grid-template-columns:1fr;}
+    .flow-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（ASUNOKIによるリニューアル提案モックアップ）</div>
+<header>
+  <div class="nav">
+    <div class="brand">宮島建具店</div>
+    <ul>
+      <li><a href="#craft">技術</a></li>
+      <li><a href="#works">施工例</a></li>
+      <li><a href="#flow">流れ</a></li>
+    </ul>
+  </div>
+</header>
+<div class="kumiko"></div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">ASUNOKI PROPOSAL</div>
+    <h1>木を組み、<br>光を通す建具を。</h1>
+    <p>廿日市市山辺で、住まいの引戸・ふすま・障子を手がける建具工房です。既製品にはない、寸法・意匠のご相談に応じます。</p>
+  </div>
+</section>
+
+<section id="craft">
+  <div class="head"><div class="tag">CRAFT</div><h2>手がける建具</h2></div>
+  <div class="grid-craft">
+    <div class="craft"><div class="mark"></div><h3>引戸・玄関建具</h3><p>採寸から製作・取付まで。住まいの開口部に合わせたオーダー建具です。</p></div>
+    <div class="craft"><div class="mark"></div><h3>ふすま・障子</h3><p>組子や紙の張替えから、木枠ごとの新調まで対応します。</p></div>
+    <div class="craft"><div class="mark"></div><h3>修理・調整</h3><p>建付けの悪くなった建具の調整、破損箇所の修理も承ります。</p></div>
+  </div>
+</section>
+
+<section id="works" style="padding-top:0;">
+  <div class="head"><div class="tag">EXAMPLES</div><h2>建具の意匠例</h2></div>
+  <div class="works">
+    <div class="work"><span>組子建具</span></div>
+    <div class="work"><span>格子戸</span></div>
+  </div>
+</section>
+
+<section id="flow" style="padding-top:0;">
+  <div class="head"><div class="tag">FLOW</div><h2>ご依頼の流れ</h2></div>
+  <div class="flow">
+    <div class="flow-row"><div class="step">01</div><div><h4>お問い合わせ</h4><p>建具の種類・ご希望のイメージをお聞かせください。</p></div></div>
+    <div class="flow-row"><div class="step">02</div><div><h4>現地採寸</h4><p>開口部を実際に測り、仕様をご提案します。</p></div></div>
+    <div class="flow-row"><div class="step">03</div><div><h4>製作</h4><p>工房にて一枚ずつ木を組み、仕上げます。</p></div></div>
+    <div class="flow-row"><div class="step">04</div><div><h4>取付</h4><p>現地で建付けを調整し、お引渡しします。</p></div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>建具のご相談、承ります</h2>
+  <p>修理のみのご相談も歓迎です。まずはお気軽にお問い合わせください。</p>
+  <a class="btn" href="mailto:ttttt@mub.biglobe.ne.jp">メールで相談する</a>
+</section>
+
+<footer>※本ページはASUNOKIによるリニューアル提案用のデザインサンプルです。実在の宮島建具店様の公式サイトではありません。</footer>
+
+<script>
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }), {threshold:.15});
+  document.querySelectorAll('.craft,.flow-row').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
