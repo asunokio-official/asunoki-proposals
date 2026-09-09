@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>桐たんすの京都-市やま | 京都・鹿ヶ谷の桐たんす専門店</title>
+<style>
+  :root{ --kinari:#f7f4ec; --sumi:#242220; --wood:#a97c50; --wood-deep:#7a5735; --line:#ddd5c2; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; background:var(--kinari); color:var(--sumi); line-height:2;}
+  a{color:inherit; text-decoration:none;}
+  .notice{background:var(--sumi); color:#c9b892; text-align:center; font-size:.7rem; padding:6px 10px;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 32px;}
+
+  header{position:sticky; top:0; z-index:30; background:rgba(247,244,236,.9); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:20px 32px;}
+  .brand{font-size:1rem; letter-spacing:.18em;}
+  nav{display:flex; gap:26px; font-size:.8rem; letter-spacing:.06em;}
+  nav a{opacity:.7; transition:.25s;}
+  nav a:hover{opacity:1; color:var(--wood-deep);}
+
+  .hero{padding:130px 32px 110px; text-align:center;}
+  .hero .kicker{font-size:.7rem; letter-spacing:.4em; color:var(--wood-deep); margin-bottom:26px;}
+  .hero h1{font-size:clamp(1.9rem,4.4vw,3.1rem); letter-spacing:.1em; font-weight:400; margin-bottom:26px;}
+  .hero p{max-width:520px; margin:0 auto; font-size:.92rem; color:#57503f;}
+  .hero .grain{width:1px; height:70px; background:var(--wood); margin:44px auto 0;}
+
+  section{padding:100px 32px;}
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;}
+  .split .panel{aspect-ratio:3/4; background:
+    repeating-linear-gradient(180deg, rgba(169,124,80,.14) 0 3px, transparent 3px 22px),
+    linear-gradient(160deg,#efe6d4,#e2d5ba);
+    display:flex; align-items:center; justify-content:center; color:var(--wood-deep); font-size:.85rem; letter-spacing:.3em;}
+  .split .text .kicker{font-size:.7rem; letter-spacing:.35em; color:var(--wood-deep); margin-bottom:18px;}
+  .split .text h2{font-size:1.5rem; font-weight:400; margin-bottom:22px; letter-spacing:.06em;}
+  .split .text p{font-size:.88rem; color:#57503f; margin-bottom:14px;}
+
+  .features{background:#efe9db;}
+  .features .row{display:grid; grid-template-columns:repeat(3,1fr); gap:60px; text-align:center;}
+  .features .n{font-size:.75rem; letter-spacing:.2em; color:var(--wood-deep); margin-bottom:14px;}
+  .features h3{font-size:1.05rem; font-weight:400; margin-bottom:14px; letter-spacing:.06em;}
+  .features p{font-size:.85rem; color:#57503f;}
+
+  .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:2px;}
+  .gallery .cell{aspect-ratio:1/1; background:linear-gradient(150deg,#efe6d4,#d8c8a4); opacity:0; transform:translateY(14px); transition:.7s;}
+  .gallery .cell.show{opacity:1; transform:none;}
+  .gallery .cell:nth-child(odd){background:linear-gradient(150deg,#e6dac0,#c9b892);}
+
+  .cta{text-align:center;}
+  .cta h2{font-size:1.4rem; font-weight:400; letter-spacing:.08em; margin-bottom:16px;}
+  .cta p{font-size:.88rem; color:#57503f; max-width:480px; margin:0 auto 30px;}
+  .btn{display:inline-block; padding:15px 46px; border:1px solid var(--sumi); font-size:.82rem; letter-spacing:.2em; transition:.3s;}
+  .btn:hover{background:var(--sumi); color:#fff;}
+
+  footer{padding:34px 32px; text-align:center; font-size:.72rem; color:#8a8172; border-top:1px solid var(--line);}
+  @media(max-width:760px){
+    .split{grid-template-columns:1fr;}
+    .features .row{grid-template-columns:1fr; gap:36px;}
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実際のサービス内容とは異なる場合があります。</div>
+
+<header>
+  <div class="wrap">
+    <div class="brand">桐たんすの京都-市やま</div>
+    <nav>
+      <a href="#about">私たちについて</a>
+      <a href="#features">選ばれる理由</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="kicker">KYOTO ICHIYAMA　鹿ヶ谷</div>
+  <h1>着物とともに、<br>桐とともに。</h1>
+  <p>京都・鹿ヶ谷にて、呉服店様との長いお付き合いの中で培ってきた、桐たんすと和洋家具の専門店です。</p>
+  <div class="grain"></div>
+</div>
+
+<section id="about">
+  <div class="wrap split">
+    <div class="text">
+      <div class="kicker">Our Story</div>
+      <h2>呉服の街で、<br>信頼を積み重ねて。</h2>
+      <p>大切な着物を守る道具として、桐たんすは長く選ばれてきました。市やまは、京都の呉服店様に卸してきた経験と実績をもとに、確かな品質のものだけをお届けしています。</p>
+      <p>湿気に強く、着物を虫やカビから守る桐の特性。夏はさらりと、冬はしっとりと、四季を通じて中身を守り続けます。</p>
+    </div>
+    <div class="panel">市やま家具</div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="wrap row">
+    <div><div class="n">01</div><h3>確かな目利き</h3><p>呉服店様への長年の卸実績で培った、木材と仕立ての目利き。</p></div>
+    <div><div class="n">02</div><h3>用途に合わせた提案</h3><p>総桐たんすから衣裳ケース、雛人形ケースまで幅広くご用意。</p></div>
+    <div><div class="n">03</div><h3>京都からお届け</h3><p>店頭でのご相談はもちろん、全国への通信販売にも対応。</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="kicker" style="text-align:center;">Gallery</div>
+    <h2 style="text-align:center; font-weight:400; font-size:1.4rem; margin:18px 0 50px; letter-spacing:.08em;">桐の表情</h2>
+  </div>
+  <div class="gallery">
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>桐たんす選び、ご相談ください</h2>
+  <p>用途やお部屋の広さに合わせて、最適な一棹をご提案します。</p>
+  <a class="btn" href="#">お問い合わせ</a>
+</section>
+
+<footer>© 桐たんすの京都-市やま　※本サイトはデザイン提案用のモックアップです</footer>
+
+<script>
+  const cells = document.querySelectorAll('.gallery .cell');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); } });
+  }, {threshold:.2});
+  cells.forEach((el,i)=>{ el.style.transitionDelay=(i*100)+'ms'; io.observe(el); });
+</script>
+</body>
+</html>
