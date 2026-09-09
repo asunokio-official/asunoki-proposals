@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>科学する数学塾 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --chalk-board:#1c3a30;
+    --chalk-board-deep:#122620;
+    --chalk:#eef0e4;
+    --coral:#e88a5c;
+    --paper:#f7f5ec;
+    --ink:#242620;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.8;}
+  .notice{background:var(--chalk-board-deep);color:var(--chalk);text-align:center;font-size:.75rem;padding:6px 10px;}
+  header{position:sticky;top:0;z-index:50;background:var(--chalk-board);}
+  nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;}
+  .brand{color:var(--chalk);font-weight:700;letter-spacing:.05em;font-size:1.05rem;}
+  .navlinks{display:flex;gap:24px;font-size:.82rem;}
+  .navlinks a{color:#a8b8ac;text-decoration:none;transition:.3s;}
+  .navlinks a:hover{color:var(--coral);}
+
+  /* HERO — chalkboard with conic-section line art (their actual curriculum) */
+  .hero{
+    position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.015) 0 1px, transparent 1px 32px),
+      linear-gradient(160deg,var(--chalk-board),var(--chalk-board-deep));
+  }
+  .curve-svg{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55%;opacity:.5;}
+  .hero-content{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 28px;width:100%;}
+  .hero-eyebrow{color:var(--coral);letter-spacing:.35em;font-size:.72rem;margin-bottom:26px;}
+  .hero h1{font-size:clamp(2.1rem,5.5vw,3.6rem);color:var(--chalk);line-height:1.45;max-width:600px;font-weight:700;}
+  .hero p{color:#b8c4bc;max-width:440px;margin-top:26px;}
+
+  section{padding:100px 28px;max-width:1120px;margin:0 auto;}
+  .section-eyebrow{color:var(--coral);letter-spacing:.3em;font-size:.72rem;}
+  .fade{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  /* Philosophy — story-driven, notebook style */
+  .philosophy{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start;}
+  .philosophy-num{font-size:5rem;color:var(--coral);font-weight:700;line-height:1;opacity:.8;}
+  .philosophy h2{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--chalk-board);margin-bottom:20px;line-height:1.6;}
+  .philosophy p{color:#4a4c42;font-size:.95rem;margin-bottom:14px;}
+
+  /* Curriculum — chalkboard cards, asymmetric */
+  .curriculum-header{margin-bottom:56px;}
+  .curriculum-header h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--chalk-board);margin-top:14px;}
+  .curriculum{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;}
+  .curr-main{background:var(--chalk-board);color:var(--chalk);padding:48px 40px;min-height:280px;display:flex;flex-direction:column;justify-content:center;}
+  .curr-main h3{font-size:1.3rem;margin-bottom:16px;color:var(--coral);}
+  .curr-main p{color:#c4d0c8;font-size:.92rem;}
+  .curr-side{display:flex;flex-direction:column;gap:24px;}
+  .curr-small{background:#fff;border:1px solid #ddd8c8;padding:28px;flex:1;}
+  .curr-small h4{color:var(--chalk-board);margin-bottom:8px;font-size:1rem;}
+  .curr-small p{font-size:.85rem;color:#6b6d5e;}
+
+  .access{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  .map-box{aspect-ratio:4/3;background:#e5e0cc;display:flex;align-items:center;justify-content:center;color:var(--coral);font-size:.85rem;}
+  .info-line{display:flex;gap:18px;padding:13px 0;border-bottom:1px solid #ddd8c8;}
+  .info-line .k{width:76px;color:var(--coral);font-size:.85rem;flex-shrink:0;font-weight:600;}
+
+  .cta{text-align:center;padding:110px 28px;background:var(--chalk-board-deep);color:#fff;}
+  .cta h2{font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:24px;}
+  .btn{display:inline-block;background:var(--coral);color:#fff;padding:18px 50px;text-decoration:none;font-weight:700;letter-spacing:.03em;transition:.3s;}
+  .btn:hover{background:#d67640;}
+  footer{text-align:center;padding:32px 24px;font-size:.72rem;color:#8a988e;background:var(--chalk-board-deep);}
+  @media(max-width:760px){
+    .philosophy,.curriculum,.access{grid-template-columns:1fr;}
+    .curve-svg{width:90%;opacity:.25;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">科学する数学塾</div>
+    <div class="navlinks">
+      <a href="#philosophy">ごあいさつ</a>
+      <a href="#curriculum">授業内容</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <svg class="curve-svg" viewBox="0 0 400 400" fill="none" stroke="#e88a5c" stroke-width="1.4">
+    <ellipse cx="200" cy="200" rx="150" ry="90" opacity=".7"/>
+    <path d="M50,350 Q200,50 350,350" opacity=".5"/>
+    <path d="M60,60 Q200,220 340,60" opacity=".4"/>
+    <circle cx="200" cy="200" r="120" opacity=".3"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-eyebrow">大阪府堺市 ｜ 高校数学専門</div>
+    <h1>素朴な疑問から、<br>科学する力を。</h1>
+    <p>「なぜ、そうなるのか？」を大切に。経験則の理由を解き明かす学びで、総合的に考える力を養います。</p>
+  </div>
+</div>
+
+<section id="philosophy" class="philosophy fade">
+  <div class="philosophy-num">01</div>
+  <div>
+    <div class="section-eyebrow">PHILOSOPHY</div>
+    <h2>蕎麦屋の経験則から、<br>数学塾へ。</h2>
+    <p>蕎麦屋に生まれ育った塾長は、幼い頃から職人の"経験則"を聞かされて育ちました。「なぜそうすれば上手くいくのか？」という素朴な疑問が、学びの原点です。</p>
+    <p>「科」という漢字には「系統的に分類された物事」という意味があります。科学するとは、知識を系統的に学び、最終的にはそれらを組み合わせて総合的に考える力を養うことです。</p>
+  </div>
+</section>
+
+<section id="curriculum" class="fade">
+  <div class="curriculum-header">
+    <div class="section-eyebrow">CURRICULUM</div>
+    <h2>授業内容</h2>
+  </div>
+  <div class="curriculum">
+    <div class="curr-main">
+      <h3>円錐曲線（数学C）</h3>
+      <p>放物線・双曲線・楕円・円。円錐を切る角度によって生まれる4つの曲線を、ステップを細かく分けて学びます。すでに理解している項目は飛ばし、自分に必要な項目だけを学べます。</p>
+    </div>
+    <div class="curr-side">
+      <div class="curr-small"><h4>個別対応</h4><p>一人ひとりの理解度に合わせて、学ぶ項目を選べます。</p></div>
+      <div class="curr-small"><h4>予約制</h4><p>お電話・メールにてお気軽にお問い合わせください。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="access fade">
+  <div>
+    <div class="section-eyebrow">ACCESS</div>
+    <h2 style="font-size:1.8rem;color:var(--chalk-board);margin:14px 0 24px;">アクセス・お問い合わせ</h2>
+    <div class="info-line"><div class="k">エリア</div><div>大阪府堺市</div></div>
+    <div class="info-line"><div class="k">電話</div><div>072-221-1237</div></div>
+  </div>
+  <div class="map-box">アクセスマップ</div>
+</section>
+
+<div class="cta fade">
+  <h2>体験・お問い合わせはお気軽に</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>科学する数学塾（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
