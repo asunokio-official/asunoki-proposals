@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>美術表装 大西寵志堂 | リニューアルデザイン提案</title>
+<style>
+  :root{
+    --sumi:#161412;
+    --sumi-deep:#0c0b0a;
+    --vermillion:#a8402e;
+    --gold:#c9a24b;
+    --paper:#f3ede0;
+    --ink:#211f1a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"游明朝","Hiragino Mincho ProN",serif;background:var(--paper);color:var(--ink);line-height:1.95;}
+  .notice{background:var(--sumi-deep);color:#e0d4b8;text-align:center;font-size:.75rem;padding:6px 10px;font-family:sans-serif;}
+  header{position:sticky;top:0;z-index:50;background:rgba(22,20,18,.94);backdrop-filter:blur(6px);}
+  nav{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:20px 28px;}
+  .brand{color:#f0e6d0;font-size:1.05rem;letter-spacing:.1em;}
+  .navlinks{display:flex;gap:26px;font-size:.78rem;font-family:sans-serif;}
+  .navlinks a{color:#a89a80;text-decoration:none;transition:.3s;}
+  .navlinks a:hover{color:var(--gold);}
+
+  /* HERO — vertical scroll (掛軸) as central visual device */
+  .hero{
+    min-height:94vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+    background:radial-gradient(ellipse 60% 50% at 50% 0%, rgba(201,162,75,.1), transparent 60%),var(--sumi);
+  }
+  .scroll-device{
+    position:relative;width:180px;height:520px;margin:0 auto 40px;
+    background:linear-gradient(180deg,#e8dcc0,#d8c8a0);
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  .scroll-device::before,.scroll-device::after{
+    content:"";position:absolute;left:-14px;right:-14px;height:20px;background:var(--vermillion);
+  }
+  .scroll-device::before{top:0;}
+  .scroll-device::after{bottom:0;}
+  .scroll-inner{position:absolute;inset:32px 20px;border:1px solid rgba(160,64,46,.3);display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;color:var(--vermillion);font-size:1.3rem;letter-spacing:.3em;}
+  .hero-text{text-align:center;position:relative;z-index:2;padding:0 28px;}
+  .hero-eyebrow{color:var(--gold);letter-spacing:.4em;font-size:.72rem;margin-bottom:22px;font-family:sans-serif;}
+  .hero h1{font-size:clamp(1.9rem,4.5vw,3rem);color:#f0e6d0;line-height:1.8;letter-spacing:.04em;}
+
+  section{padding:110px 28px;max-width:1000px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:64px;}
+  .section-title small{letter-spacing:.3em;color:var(--vermillion);font-size:.72rem;font-family:sans-serif;}
+  .section-title h2{font-size:1.75rem;color:var(--ink);margin-top:14px;letter-spacing:.06em;}
+  .fade{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease;}
+  .fade.in{opacity:1;transform:translateY(0);}
+
+  /* Services — vertical scroll-inspired list */
+  .service-list{max-width:700px;margin:0 auto;}
+  .service-row{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:32px 0;border-top:1px solid rgba(168,64,46,.18);}
+  .service-row:last-child{border-bottom:1px solid rgba(168,64,46,.18);}
+  .service-row .jp{color:var(--vermillion);font-size:1.1rem;}
+  .service-row p{font-size:.92rem;color:#4a463c;font-family:sans-serif;}
+
+  /* Media mentions */
+  .media-band{background:var(--sumi);color:#f0e6d0;padding:90px 28px;text-align:center;}
+  .media-band .section-title small{color:var(--gold);}
+  .media-band .section-title h2{color:#fff;}
+  .media-list{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-family:sans-serif;}
+  .media-item{border:1px solid rgba(201,162,75,.4);padding:12px 24px;font-size:.82rem;color:#d8c8a0;}
+
+  /* Pilgrimage story */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .story-visual{aspect-ratio:3/4;background:linear-gradient(160deg,#e8dcc0,#d0bc90);display:flex;align-items:center;justify-content:center;color:var(--vermillion);font-size:.85rem;font-family:sans-serif;}
+  .story p{font-size:.95rem;color:#4a463c;margin-bottom:14px;font-family:sans-serif;}
+
+  .access{text-align:center;font-family:sans-serif;}
+  .info-block{margin-bottom:16px;}
+  .info-block .k{color:var(--vermillion);font-size:.75rem;letter-spacing:.15em;display:block;margin-bottom:6px;}
+
+  .cta{text-align:center;padding:110px 28px;background:var(--sumi-deep);}
+  .cta h2{color:#f0e6d0;font-size:1.6rem;margin-bottom:28px;letter-spacing:.06em;}
+  .btn{display:inline-block;background:var(--vermillion);color:#fff;padding:18px 52px;text-decoration:none;letter-spacing:.1em;font-size:.85rem;font-family:sans-serif;transition:.3s;}
+  .btn:hover{background:#8a3225;}
+  footer{text-align:center;padding:32px 24px;font-size:.7rem;color:#a89a80;background:var(--sumi-deep);font-family:sans-serif;}
+  @media(max-width:760px){
+    .story{grid-template-columns:1fr;}
+    .service-row{grid-template-columns:70px 1fr;}
+    .scroll-device{width:130px;height:380px;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の許可を得て制作したものではなく、公開情報をもとにASUNOKIが作成したイメージ提案です。</div>
+
+<header>
+  <nav>
+    <div class="brand">美術表装 大西寵志堂</div>
+    <div class="navlinks">
+      <a href="#services">表装について</a>
+      <a href="#story">御集印表装</a>
+      <a href="#access">アクセス</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <div class="scroll-device"><div class="scroll-inner">表装</div></div>
+    <div class="hero-eyebrow">高野山</div>
+    <h1>大切な一幅を、<br>次の世代へ。</h1>
+  </div>
+</div>
+
+<section id="services" class="fade">
+  <div class="section-title"><small>SERVICES</small><h2>表装について</h2></div>
+  <div class="service-list">
+    <div class="service-row"><div class="jp">掛軸</div><p>大切な書画を、美しく永く残す表装を承ります。</p></div>
+    <div class="service-row"><div class="jp">屏風</div><p>屏風の新調・修復にも対応いたします。</p></div>
+    <div class="service-row"><div class="jp">襖</div><p>襖の表装も丁寧に仕上げます。</p></div>
+    <div class="service-row"><div class="jp">宝来</div><p>高野山の吉祥・宝来の販売も行っております。</p></div>
+  </div>
+</section>
+
+<div class="media-band">
+  <div class="section-title"><small>MEDIA</small><h2>メディア出演</h2></div>
+  <div class="media-list fade">
+    <div class="media-item">BS朝日「京都ぶらり歴史探訪」</div>
+    <div class="media-item">BS-TBS</div>
+    <div class="media-item">朝日放送「ココイロ」</div>
+  </div>
+</div>
+
+<section id="story" class="story fade">
+  <div class="story-visual">御集印帳 写真スペース</div>
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:24px;"><small>PILGRIMAGE</small><h2 style="font-family:sans-serif;">御集印表装</h2></div>
+    <p>四国88ヶ所霊場巡拝など、大切な御朱印帳・集印帳の表装も承っております。</p>
+    <p>「大切な物を後世に残したい」というお客様の想いを形にすることを大切に、初心を忘れず親切丁寧な仕事を心がけております。</p>
+  </div>
+</section>
+
+<section id="access" class="access fade">
+  <div class="section-title"><small>ACCESS</small><h2>アクセス・お問い合わせ</h2></div>
+  <div class="info-block"><span class="k">住所</span>和歌山県伊都郡高野町高野山504-4</div>
+  <div class="info-block"><span class="k">電話</span>0736-56-3695</div>
+</section>
+
+<div class="cta fade">
+  <h2>表装・修復のご相談はお気軽に</h2>
+  <a class="btn" href="#access">お問い合わせ</a>
+</div>
+
+<footer>美術表装 大西寵志堂（デザイン提案サンプル） ｜ 本サイトはASUNOKIが制作したリニューアル提案イメージです</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
