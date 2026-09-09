@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>早地根焼き | 岩手の陶芸工房</title>
+<style>
+  :root{ --clay:#b1613d; --clay-d:#7a4128; --char:#2a2420; --char-d:#181410; --stone:#e8ded0; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif; background:var(--stone); color:var(--char); line-height:1.85;}
+  .notice{background:var(--char-d); color:#cbb9a3; text-align:center; font-size:11px; padding:7px 12px; letter-spacing:.04em;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  header.hero{
+    position:relative; min-height:94vh; display:flex; align-items:flex-end;
+    padding:48px 24px 72px; overflow:hidden;
+    background:radial-gradient(120% 90% at 70% 10%, #3a281f 0%, var(--char) 45%, var(--char-d) 100%);
+    color:#eee2d2;
+  }
+  .kiln-glow{
+    position:absolute; width:520px; height:520px; border-radius:50%; right:-140px; top:-140px;
+    background:radial-gradient(circle, rgba(177,97,61,.55), rgba(177,97,61,.12) 55%, transparent 72%);
+    filter:blur(6px); animation:glow 5.5s ease-in-out infinite;
+  }
+  @keyframes glow{ 0%,100%{opacity:.5; transform:scale(1);} 50%{opacity:.9; transform:scale(1.1);} }
+  @media (prefers-reduced-motion: reduce){ .kiln-glow{animation:none;} }
+  .hero-inner{position:relative; z-index:2; max-width:720px;}
+  .hero-eyebrow{font-size:11px; letter-spacing:.4em; color:#d69a6f; margin-bottom:20px; font-weight:600;}
+  .hero h1{font-size:clamp(38px,7vw,68px); font-weight:800; letter-spacing:.02em;}
+  .hero p.sub{margin-top:22px; font-size:15px; color:#c9bba8; max-width:32em;}
+  .hero .place{margin-top:34px; font-size:12px; letter-spacing:.06em; color:#9c8b76; display:flex; gap:18px; flex-wrap:wrap;}
+
+  section{padding:96px 0;}
+  .section-head{margin-bottom:54px;}
+  .section-head .eyebrow{font-size:11px; letter-spacing:.35em; color:var(--clay-d); margin-bottom:10px; font-weight:700;}
+  .section-head h2{font-size:clamp(24px,3.4vw,32px); font-weight:800;}
+
+  .courses{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:#d9cbb4;}
+  .c-card{background:var(--stone); padding:40px 26px;}
+  .c-card .time{font-size:28px; font-weight:800; color:var(--clay-d);}
+  .c-card .label{font-size:12px; color:#7a6c58; margin-top:6px;}
+  @media(max-width:860px){ .courses{grid-template-columns:repeat(2,1fr);} }
+
+  .story{background:var(--char); color:#e8ded0;}
+  .story-inner{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;}
+  .story-visual{
+    aspect-ratio:1/1; border-radius:50%; position:relative;
+    background:radial-gradient(circle at 35% 30%, #c97c50, #6b3d24 70%);
+    box-shadow:0 0 0 1px rgba(255,255,255,.06), inset 0 0 60px rgba(0,0,0,.4);
+  }
+  .story-text .eyebrow{font-size:11px; letter-spacing:.35em; color:#d69a6f; margin-bottom:14px; font-weight:700;}
+  .story-text h2{font-size:clamp(22px,3vw,30px); margin-bottom:22px; font-weight:800;}
+  .story-text p{font-size:15px; color:#c9bba8; margin-bottom:16px;}
+  @media(max-width:820px){ .story-inner{grid-template-columns:1fr;} }
+
+  .works{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .work{aspect-ratio:1/1; border-radius:4px; position:relative; overflow:hidden;}
+  .work.a{background:radial-gradient(circle at 40% 35%, #d69a6f, #8a4c2c 75%);}
+  .work.b{background:radial-gradient(circle at 55% 40%, #cabca4, #7a6c58 75%);}
+  .work.c{background:radial-gradient(circle at 45% 30%, #b1613d, #4a2f1f 78%);}
+  @media(max-width:760px){ .works{grid-template-columns:1fr;} }
+
+  .visit{background:#eee2d2;}
+  .visit-inner{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+  .visit dl{display:grid; grid-template-columns:80px 1fr; row-gap:16px; font-size:14px;}
+  .visit dt{color:#8a7a63;}
+  .cta{
+    margin-top:12px; display:inline-flex; align-items:center; gap:10px;
+    background:var(--clay-d); color:#fff; padding:16px 30px; border-radius:2px;
+    font-size:13px; letter-spacing:.08em; text-decoration:none; font-weight:700;
+  }
+  @media(max-width:760px){ .visit-inner{grid-template-columns:1fr;} }
+
+  footer{background:var(--char-d); color:#8a7a63; text-align:center; padding:40px 24px; font-size:11px;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1; transform:none;}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはデザイン提案用のサンプルです（ASUNOKI作成）</div>
+
+<header class="hero">
+  <span class="kiln-glow"></span>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">IWATE · POTTERY STUDIO</p>
+    <h1>早地根焼き</h1>
+    <p class="sub">土をこね、窯の火を見つめる。皿や碗のひとつひとつに、手のぬくもりを込める陶芸工房です。</p>
+    <div class="place">
+      <span>岩手県 早地根焼き工房</span>
+      <span>0198-48-4907</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">EXPERIENCE</p>
+      <h2>作陶体験コース</h2>
+    </div>
+    <div class="courses">
+      <div class="c-card reveal"><div class="time">90分</div><div class="label">短時間コース</div></div>
+      <div class="c-card reveal"><div class="time">120分</div><div class="label">じっくりコース</div></div>
+      <div class="c-card reveal"><div class="time">150分</div><div class="label">こだわりコース</div></div>
+      <div class="c-card reveal"><div class="time">13:30〜</div><div class="label">受付開始時間</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap story-inner">
+    <div class="story-visual reveal"></div>
+    <div class="story-text reveal">
+      <p class="eyebrow">ABOUT</p>
+      <h2>土と炎が生む、<br>一点のかたち。</h2>
+      <p>早地根焼きは、皿や碗などの陶芸品をひとつひとつ手作業で仕上げる工房です。土をこねる感触、ろくろの回転、窯の炎。すべての工程に、静かな時間が流れています。</p>
+      <p>初めての方でも安心して取り組める作陶体験コースをご用意し、土に触れる時間そのものを楽しんでいただけるよう努めています。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">WORKS</p>
+      <h2>器の表情</h2>
+    </div>
+    <div class="works">
+      <div class="work a reveal"></div>
+      <div class="work b reveal"></div>
+      <div class="work c reveal"></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap visit-inner">
+    <div class="reveal">
+      <p class="eyebrow">VISIT</p>
+      <h2 style="font-size:28px;font-weight:800;margin:16px 0 20px;">お問い合わせ</h2>
+      <p style="font-size:14px;color:#7a6c58;">体験コースのご予約・お問い合わせは、お電話またはメールにて承っております。</p>
+    </div>
+    <div class="reveal">
+      <dl>
+        <dt>電話</dt><dd>0198-48-4907</dd>
+        <dt>受付時間</dt><dd>13:30〜17:00</dd>
+        <dt>メール</dt><dd>o_hayachineyaki3@kub.biglobe.ne.jp</dd>
+      </dl>
+      <a class="cta" href="mailto:o_hayachineyaki3@kub.biglobe.ne.jp">メールでお問い合わせ →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  早地根焼き　岩手県 ｜ 本ページはASUNOKIによる提案用モックアップです
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
