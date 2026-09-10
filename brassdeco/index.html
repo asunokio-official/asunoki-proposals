@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>brass!Deco | 前橋市・中古金管楽器の専門店</title>
+<style>
+  :root{ --brass:#c9992e; --brass-light:#e8c874; --navy:#12182b; --navy-deep:#0a0e1c; --paper:#f5f1e6; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif; background:var(--paper); color:var(--navy-deep); line-height:1.8;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:var(--brass); color:var(--navy-deep); text-align:center; font-size:.72rem; padding:7px 10px; font-weight:700;}
+  header{position:sticky; top:0; z-index:50; background:var(--navy); color:#f5f1e6;}
+  .nav{max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:18px 24px;}
+  .brand{font-weight:800; font-size:1.15rem; letter-spacing:.03em;}
+  .brand b{color:var(--brass-light);}
+  .brand small{display:block; font-size:.6rem; font-weight:500; color:#8a92a8; letter-spacing:.1em; margin-top:3px;}
+  .navlinks{display:flex; gap:26px; font-size:.85rem; font-weight:600;}
+  .navlinks a{opacity:.8}
+  .cta-mini{background:var(--brass); color:var(--navy-deep) !important; padding:10px 20px; border-radius:2px; font-size:.8rem; font-weight:800;}
+
+  .hero{position:relative; background:radial-gradient(circle at 82% 30%, rgba(201,153,46,.22), transparent 55%), linear-gradient(150deg, var(--navy-deep) 0%, var(--navy) 100%); color:#f5f1e6; padding:100px 24px 110px; overflow:hidden;}
+  .hero::after{content:""; position:absolute; right:4%; top:50%; transform:translateY(-50%); width:280px; height:280px; border-radius:50%; border:3px solid rgba(201,153,46,.35);}
+  .hero::before{content:""; position:absolute; right:14%; top:50%; transform:translateY(-50%); width:160px; height:160px; border-radius:50%; border:3px solid rgba(201,153,46,.5);}
+  .hero-inner{max-width:1100px; margin:0 auto; position:relative;}
+  .hero-eyebrow{font-size:.8rem; letter-spacing:.24em; color:var(--brass-light); font-weight:800;}
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.1rem); font-weight:800; margin:20px 0 24px; line-height:1.5; max-width:15em;}
+  .hero p{max-width:30em; font-size:.95rem; color:#c3c8da;}
+  .hero-cta{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:15px 28px; font-size:.86rem; font-weight:800; border-radius:2px;}
+  .btn-primary{background:var(--brass); color:var(--navy-deep);}
+  .btn-ghost{border:1.5px solid #414a63; color:#f5f1e6;}
+
+  section{max-width:1100px; margin:0 auto; padding:90px 24px;}
+  .section-head{margin-bottom:44px;}
+  .section-head .no{font-size:.78rem; color:var(--brass); font-weight:800; letter-spacing:.16em;}
+  .section-head h2{font-size:1.6rem; font-weight:800; margin-top:8px;}
+  .section-head p{margin-top:10px; color:#5c5645; font-size:.9rem; max-width:36em;}
+
+  .fade{opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s ease;}
+  .fade.in{opacity:1; transform:none;}
+
+  .instruments{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid #ddd3b5;}
+  .inst{padding:36px 20px; border-bottom:1px solid #ddd3b5; border-right:1px solid #ddd3b5; text-align:center;}
+  .inst:nth-child(4n){border-right:none;}
+  .inst .ico{width:60px; height:60px; border-radius:50%; margin:0 auto 18px; background:radial-gradient(circle at 35% 30%, var(--brass-light), var(--brass) 70%); box-shadow:0 10px 22px -8px rgba(201,153,46,.5);}
+  .inst h4{font-size:.95rem; font-weight:800;}
+  .inst p{font-size:.78rem; color:#8a8360; margin-top:6px;}
+
+  .about{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  .about-visual{aspect-ratio:4/3; background:linear-gradient(160deg,var(--navy) 0%, var(--navy-deep) 100%); position:relative;}
+  .about-visual::after{content:"♪"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:6rem; color:var(--brass); opacity:.7;}
+  .about p{font-size:.92rem; color:#4a4536;}
+
+  .flow{background:var(--navy-deep); color:#f5f1e6; padding:90px 24px;}
+  .flow-inner{max-width:1100px; margin:0 auto;}
+  .flow-list{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; margin-top:44px;}
+  .flow-item .no{font-size:.75rem; color:var(--brass-light); font-weight:800; letter-spacing:.15em;}
+  .flow-item h4{margin:12px 0; font-size:1.02rem; font-weight:800;}
+  .flow-item p{font-size:.85rem; color:#a9afc3;}
+
+  .access-inner{display:grid; grid-template-columns:1fr 1fr; gap:50px; border:1px solid #ddd3b5; padding:50px;}
+  .access dl{display:grid; grid-template-columns:auto 1fr; gap:12px 20px; font-size:.9rem;}
+  .access dt{color:var(--brass); font-weight:800;}
+  .map-box{background:#ece4c9; display:flex; align-items:center; justify-content:center; font-size:.85rem; color:#8a8360; min-height:200px;}
+
+  footer{padding:50px 24px 70px; text-align:center; font-size:.75rem; color:#8a8360;}
+
+  @media(max-width:820px){
+    .instruments{grid-template-columns:1fr 1fr;}
+    .inst:nth-child(2n){border-right:none;}
+    .about{grid-template-columns:1fr;}
+    .flow-list{grid-template-columns:1fr;}
+    .access-inner{grid-template-columns:1fr; padding:30px;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実際の店舗ページではありません。</div>
+
+<header>
+  <div class="nav">
+    <div class="brand">brass<b>!</b>Deco<small>前橋市南町 中古金管楽器専門店</small></div>
+    <nav class="navlinks">
+      <a href="#instruments">取扱楽器</a>
+      <a href="#about">お店について</a>
+      <a href="#flow">買取・委託の流れ</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <a class="cta-mini" href="#access">お問い合わせ</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner fade">
+    <p class="hero-eyebrow">MAEBASHI · USED BRASS INSTRUMENTS</p>
+    <h1>一本の金管楽器に、<br>次の音色を。</h1>
+    <p>群馬県前橋市で、中古金管楽器の販売・委託・買取を行っています。トランペット、ホルン、トロンボーン、ユーフォニアム、チューバなど、状態の良い楽器を一本一本丁寧にお取り扱いしています。</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#instruments">取扱楽器を見る</a>
+      <a class="btn btn-ghost" href="#flow">買取・委託のご相談</a>
+    </div>
+  </div>
+</div>
+
+<section id="instruments">
+  <div class="section-head fade">
+    <p class="no">INSTRUMENTS</p>
+    <h2>取扱楽器</h2>
+    <p>金管楽器を中心に、幅広いラインナップをご用意しています。</p>
+  </div>
+  <div class="instruments fade">
+    <div class="inst"><div class="ico"></div><h4>トランペット</h4></div>
+    <div class="inst"><div class="ico"></div><h4>フレンチホルン</h4></div>
+    <div class="inst"><div class="ico"></div><h4>トロンボーン</h4></div>
+    <div class="inst"><div class="ico"></div><h4>ユーフォニアム</h4></div>
+    <div class="inst"><div class="ico"></div><h4>チューバ</h4></div>
+    <div class="inst"><div class="ico"></div><h4>その他金管楽器</h4></div>
+    <div class="inst"><div class="ico"></div><h4>マウスピース</h4></div>
+    <div class="inst"><div class="ico"></div><h4>関連アクセサリー</h4></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about fade">
+    <div class="about-visual"></div>
+    <div>
+      <p class="no" style="font-size:.78rem;color:var(--brass);font-weight:800;letter-spacing:.16em;">ABOUT</p>
+      <h2 style="font-size:1.5rem;font-weight:800;margin:14px 0 18px;">一本ずつ、状態を確かめて</h2>
+      <p>お預かりする楽器は、状態やコンディションを一本ずつ丁寧に確認しています。「久しぶりに吹きたい」「学生時代の楽器を手放したい」「初めての一本を探している」など、金管楽器にまつわるご相談をお気軽にどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<div class="flow" id="flow">
+  <div class="flow-inner">
+    <div class="section-head fade" style="margin-bottom:0;">
+      <p class="no" style="color:var(--brass-light);">FLOW</p>
+      <h2 style="color:#f5f1e6;">買取・委託の流れ</h2>
+    </div>
+    <div class="flow-list fade">
+      <div class="flow-item"><p class="no">01</p><h4>お問い合わせ</h4><p>楽器の種類・状態をメールまたはお電話でお知らせください。</p></div>
+      <div class="flow-item"><p class="no">02</p><h4>査定</p><p>状態を確認の上、買取・委託の条件をご案内します。</p></div>
+      <div class="flow-item"><p class="no">03</p><h4>ご成約</h4><p>ご納得いただいた上で、買取または委託をお受けします。</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="access" id="access">
+  <div class="section-head fade">
+    <p class="no">ACCESS</p>
+    <h2>アクセス・お問い合わせ</h2>
+  </div>
+  <div class="access-inner fade">
+    <div>
+      <dl>
+        <dt>住所</dt><dd>〒371-0805 群馬県前橋市南町3-37-7</dd>
+        <dt>電話</dt><dd>027-212-8491</dd>
+        <dt>時間</dt><dd>11:00〜19:00</dd>
+      </dl>
+    </div>
+    <div class="map-box">MAP（イメージ）</div>
+  </div>
+</section>
+
+<footer>
+  <p>本ページはリニューアル提案用のモックアップです。実在の情報を一部参考にしていますが、公式サイトではありません。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
