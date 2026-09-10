@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>猫印硯工房｜群馬 那智黒石の硯と手作り雑貨</title>
+<style>
+:root{
+  --charcoal:#211f1d; --charcoal-soft:#33302c; --cream:#f7f1e6; --terracotta:#b8664a; --sage:#8a9078; --ink:#211f1d;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:"Hiragino Maru Gothic ProN","Yu Gothic",sans-serif; background:var(--cream); color:var(--ink); line-height:1.9;}
+a{color:inherit;}
+.notice{background:var(--charcoal); color:#e9e2d2; text-align:center; padding:9px 16px; font-size:12px; letter-spacing:.04em;}
+header{position:sticky; top:0; z-index:50; background:rgba(247,241,230,.95); backdrop-filter:blur(6px); border-bottom:1px solid #e5dbc6;}
+.nav-wrap{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 24px;}
+.logo{font-size:17px; font-weight:700; letter-spacing:.04em; display:flex; align-items:center; gap:8px;}
+.logo .paw{color:var(--terracotta);}
+nav ul{list-style:none; display:flex; gap:28px; font-size:13px;}
+nav a{text-decoration:none; color:var(--ink);}
+.menu-toggle{display:none;}
+@media(max-width:780px){
+  nav ul{position:fixed; top:60px; left:0; right:0; background:var(--cream); flex-direction:column; max-height:0; overflow:hidden; transition:max-height .35s; border-bottom:1px solid #e5dbc6;}
+  nav ul.open{max-height:320px;}
+  nav ul li{border-top:1px solid #eee6d4;}
+  nav a{display:block; padding:16px 24px;}
+  .menu-toggle{display:block; background:none; border:none; font-size:22px;}
+}
+.hero{position:relative; min-height:86vh; display:flex; align-items:center; background:var(--charcoal); overflow:hidden;}
+.hero .blob{position:absolute; border-radius:50%; opacity:.18;}
+.hero .blob.a{width:420px; height:420px; background:var(--terracotta); top:-120px; right:-80px; filter:blur(60px);}
+.hero .blob.b{width:320px; height:320px; background:var(--sage); bottom:-100px; left:-60px; filter:blur(60px);}
+.hero-inner{position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:0 24px; color:#f2ece0;}
+.hero-eyebrow{font-size:12px; letter-spacing:.3em; opacity:.65; margin-bottom:22px;}
+.hero h1{font-size:clamp(32px,6vw,58px); font-weight:700; line-height:1.5;}
+.hero p.sub{margin-top:24px; font-size:15px; max-width:440px; opacity:.8;}
+section{max-width:1080px; margin:0 auto; padding:110px 24px;}
+.section-head{margin-bottom:56px;}
+.section-eyebrow{font-size:12px; letter-spacing:.26em; color:var(--terracotta); margin-bottom:12px;}
+.section-head h2{font-size:clamp(26px,4vw,36px); font-weight:700;}
+.fade-up{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+.fade-up.in{opacity:1; transform:none;}
+.story{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:center;}
+.story-visual{aspect-ratio:1; border-radius:20px; background:linear-gradient(150deg,#33302c,#211f1d); position:relative;}
+.story-visual::after{content:"那智黒石"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:13px; letter-spacing:.3em; color:rgba(242,236,224,.4);}
+.story p{margin-bottom:18px; font-size:15px;}
+@media(max-width:780px){.story{grid-template-columns:1fr;}}
+.collection{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+.collection .card{background:#fff; border-radius:16px; padding:36px 28px; box-shadow:0 10px 30px rgba(33,31,29,.06);}
+.collection .card h3{font-size:17px; margin-bottom:12px;}
+.collection .card p{font-size:13.5px; color:#6b6155;}
+@media(max-width:780px){.collection{grid-template-columns:1fr;}}
+.maker-band{background:var(--sage); color:#22261c;}
+.maker-band .section-eyebrow{color:#3a4030;}
+.maker-list{display:flex; gap:2px; flex-wrap:wrap; margin-top:10px;}
+.maker-list .item{flex:1; min-width:200px; background:#f2f4ec; padding:36px 26px;}
+.maker-list h4{font-size:15px; margin-bottom:10px;}
+.maker-list p{font-size:13px; color:#4a5040;}
+.owner{text-align:center; max-width:620px; margin-inline:auto;}
+.owner blockquote{font-size:18px; line-height:2; color:var(--charcoal); margin-bottom:18px;}
+.owner .name{font-size:13px; letter-spacing:.05em; color:var(--terracotta);}
+.access{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; font-size:14px;}
+.access dt{color:var(--terracotta); font-size:12px; letter-spacing:.1em; margin-bottom:6px;}
+@media(max-width:780px){.access{grid-template-columns:1fr;}}
+footer{background:var(--charcoal); color:#bdb4a2; text-align:center; padding:44px 24px; font-size:12px; letter-spacing:.04em;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の情報を元に、ASUNOKIが独自に制作したリニューアル提案です。</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo"><span class="paw">●</span> 猫印硯工房</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav><ul>
+      <li><a href="#story">工房について</a></li>
+      <li><a href="#collection">作品</a></li>
+      <li><a href="#maker">選び方・お手入れ</a></li>
+      <li><a href="#owner">工房主より</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">GUNMA / NACHIGURO INKSTONE</p>
+    <h1>硯に、<br>猫の表情をひとつまみ。</h1>
+    <p class="sub">天然那智黒石を使い、ひとつひとつ手作りする硯と雑貨。書のための道具でありながら、どこか愛らしい表情を持たせています。</p>
+  </div>
+</div>
+
+<section id="story">
+  <div class="story">
+    <div class="story-visual fade-up"></div>
+    <div class="fade-up">
+      <p class="section-eyebrow">OUR STORY</p>
+      <h2 style="margin-bottom:28px;">2000年から、<br>石と向き合う日々。</h2>
+      <p>猫印硯工房は、群馬県渋川市で2000年12月に創業して以来、20年以上にわたり手作りの硯・雑貨をつくり続けています。素材となる天然那智黒石の風合いを活かしながら、猫モチーフを添えた作品も手がけています。</p>
+      <p>「雑貨ならではの手作り感、素朴な風合い」を大切に、一点ずつ表情の異なる作品をお届けしています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="collection" style="padding-top:0;">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">COLLECTION</p>
+    <h2>硯と、猫の雑貨と。</h2>
+  </div>
+  <div class="collection">
+    <div class="card fade-up"><h3>那智黒石の硯</h3><p>書を嗜む方のための、実用の硯。石の質感を活かした、静かで凛とした表情に仕上げています。</p></div>
+    <div class="card fade-up"><h3>猫モチーフの小物</h3><p>手書きの猫イラストを添えた、遊び心のある雑貨たち。贈り物としても選ばれています。</p></div>
+    <div class="card fade-up"><h3>南紀熊野の作品</h3><p>石の産地・南紀熊野の風土を感じられる、素朴であたたかみのあるシリーズです。</p></div>
+  </div>
+</section>
+
+<section id="maker" class="maker-band">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">選び方・お手入れ</p>
+    <h2>長く付き合う道具として。</h2>
+  </div>
+  <div class="maker-list">
+    <div class="item fade-up"><h4>石の見方</h4><p>那智黒石ならではの、艶と粒子の違いをご案内。実際に触れて選ぶことをおすすめしています。</p></div>
+    <div class="item fade-up"><h4>使い始め</h4><p>初めて硯をお使いになる方にも分かりやすい、墨のすり方の基本をご紹介しています。</p></div>
+    <div class="item fade-up"><h4>お手入れ</h4><p>長くきれいに使っていただくための、日々のお手入れ方法をお伝えしています。</p></div>
+  </div>
+</section>
+
+<section id="owner">
+  <div class="owner fade-up">
+    <blockquote>「硯は堅苦しいもの、と思われがちですが、もっと身近に感じてもらいたい。猫のモチーフには、そんな想いを込めています。」</blockquote>
+    <p class="name">猫印硯工房</p>
+  </div>
+</section>
+
+<section id="access">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">ACCESS</p>
+    <h2>工房情報</h2>
+  </div>
+  <dl class="access fade-up">
+    <div><dt>所在地</dt><dd>群馬県渋川市</dd></div>
+    <div><dt>電話番号</dt><dd>0278-70-0114</dd></div>
+    <div><dt>メール</dt><dd>catmark@qj9.so-net.ne.jp</dd></div>
+  </dl>
+</section>
+
+<footer>
+  © 猫印硯工房（デザイン提案用サンプル） ｜ 本ページはASUNOKIによるリニューアル提案モックアップです。
+</footer>
+
+<script>
+document.querySelectorAll('.fade-up').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
