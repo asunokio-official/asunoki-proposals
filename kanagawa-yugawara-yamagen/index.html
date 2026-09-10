@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>手づくりジャム工房 やまげん | 神奈川県湯河原町</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf3e2;
+    --cream-2:#f3e7cc;
+    --mikan:#e2812f;
+    --mikan-dark:#b85f1c;
+    --berry:#b53d3f;
+    --leaf:#5c7d3f;
+    --leaf-light:#8fac68;
+    --ink:#3c3120;
+    --paper:#fffaf0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--ink);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .maru{font-family:'Zen Maru Gothic',sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px;}
+
+  .notice{background:var(--leaf);color:#fff7e6;text-align:center;font-size:11.5px;letter-spacing:.04em;padding:9px 12px;}
+
+  header{position:sticky;top:0;z-index:60;background:rgba(251,243,226,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e6d6ae;}
+  .hnav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1100px;margin:0 auto;}
+  .brand{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;color:var(--mikan-dark);display:flex;align-items:center;gap:10px;}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--berry);}
+  .hnav nav{display:flex;gap:26px;font-size:13px;color:#6b5c3e;}
+  .hnav nav a:hover{color:var(--mikan-dark);}
+  @media(max-width:800px){.hnav nav{display:none;}}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:120px 0 70px;overflow:hidden;
+    background:radial-gradient(circle at 85% 18%,rgba(226,129,47,.22),transparent 55%),radial-gradient(circle at 8% 90%,rgba(92,125,63,.16),transparent 50%),var(--cream);}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:2;}
+  @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:44px;}}
+  .badge{display:inline-block;font-size:12.5px;letter-spacing:.06em;color:var(--leaf);background:#eaf0dd;border-radius:20px;padding:7px 18px;margin-bottom:26px;font-weight:700;}
+  .hero h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;color:var(--ink);font-size:clamp(28px,4.4vw,46px);line-height:1.55;}
+  .hero h1 em{font-style:normal;color:var(--mikan-dark);}
+  .hero p.lead{margin-top:22px;font-size:14.5px;color:#5c4f38;max-width:440px;}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:15px 30px;font-size:13.5px;border-radius:30px;transition:all .25s;font-weight:700;}
+  .btn-primary{background:var(--mikan);color:#fff7e6;}
+  .btn-primary:hover{background:var(--mikan-dark);transform:translateY(-2px);}
+  .btn-ghost{border:1.5px solid var(--leaf);color:var(--leaf);}
+  .btn-ghost:hover{background:var(--leaf);color:#fff7e6;}
+
+  /* jar shelf illustration */
+  .shelf-stage{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:18px;height:380px;}
+  .jar{position:relative;width:82px;border-radius:10px 10px 16px 16px;box-shadow:0 18px 30px -12px rgba(60,49,32,.35);transition:transform .35s;}
+  .jar:hover{transform:translateY(-10px) rotate(-2deg);}
+  .jar .lid{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:64px;height:20px;background:#d8cba3;border-radius:6px 6px 2px 2px;border:1px solid #b8a97c;}
+  .jar .label{position:absolute;left:8px;right:8px;top:38%;height:34%;background:rgba(255,250,240,.92);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Zen Maru Gothic',sans-serif;font-size:11px;font-weight:700;color:var(--ink);text-align:center;padding:4px;}
+  .jar.h1{height:190px;background:linear-gradient(160deg,#f3a34e,var(--mikan) 70%);}
+  .jar.h2{height:230px;background:linear-gradient(160deg,#7f5aa0,#4f3768 70%);}
+  .jar.h3{height:170px;background:linear-gradient(160deg,#e07a7c,var(--berry) 70%);}
+  .shelf-board{position:absolute;bottom:-14px;left:-20px;right:-20px;height:16px;background:#c9a96b;border-radius:3px;box-shadow:0 10px 20px rgba(60,49,32,.25);}
+
+  section{padding:96px 0;}
+  .kicker{font-family:'Zen Maru Gothic',sans-serif;font-size:12.5px;letter-spacing:.1em;color:var(--mikan-dark);margin-bottom:14px;font-weight:700;}
+  h2.section-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(22px,2.8vw,30px);color:var(--ink);line-height:1.6;}
+
+  /* purity checklist */
+  .purity-wrap{background:var(--paper);border-top:1px solid #e6d6ae;border-bottom:1px solid #e6d6ae;}
+  .purity-row{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:44px;}
+  @media(max-width:860px){.purity-row{grid-template-columns:repeat(2,1fr);}}
+  .purity{text-align:center;padding:26px 14px;}
+  .purity .x{width:52px;height:52px;border-radius:50%;background:#f3e2c9;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--berry);font-weight:700;}
+  .purity p{font-size:13px;color:#6b5c3e;font-weight:700;}
+
+  /* product rows - asymmetric editorial */
+  .flavor-row{display:grid;grid-template-columns:.5fr 1fr;gap:40px;align-items:center;padding:34px 0;border-bottom:1px solid #e6d6ae;}
+  .flavor-row:last-child{border-bottom:none;}
+  @media(max-width:760px){.flavor-row{grid-template-columns:1fr;gap:18px;}}
+  .flavor-swatch{aspect-ratio:1/1;border-radius:16px;position:relative;overflow:hidden;}
+  .flavor-swatch::after{content:attr(data-jp);position:absolute;right:10px;bottom:-6px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:70px;color:rgba(255,255,255,.18);}
+  .flavor-text .season{font-size:11.5px;color:var(--leaf);font-weight:700;letter-spacing:.06em;}
+  .flavor-text h3{font-family:'Zen Maru Gothic',sans-serif;font-size:19px;margin:8px 0 10px;color:var(--ink);}
+  .flavor-text p{font-size:13.5px;color:#5c4f38;}
+
+  /* story */
+  .story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
+  @media(max-width:880px){.story-grid{grid-template-columns:1fr;gap:32px;}}
+  .story-text p{margin-bottom:18px;font-size:14.5px;color:#4a3f2c;}
+  .cert-badge{display:inline-flex;align-items:center;gap:10px;background:#eaf0dd;border-radius:30px;padding:10px 20px;font-size:12.5px;color:var(--leaf);font-weight:700;margin-top:6px;}
+  .orchard-fig{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(165deg,#c7dba0,var(--leaf-light) 55%,var(--leaf) 100%);position:relative;overflow:hidden;}
+  .orchard-fig .sun{position:absolute;top:14%;right:16%;width:60px;height:60px;border-radius:50%;background:radial-gradient(circle,#ffe9b8,rgba(255,233,184,0));}
+  .orchard-fig .hill{position:absolute;bottom:-10%;left:-10%;right:-10%;height:50%;background:#4f7038;border-radius:50% 50% 0 0/100% 100% 0 0;}
+
+  .cta-section{text-align:center;background:radial-gradient(circle at 50% 0%,rgba(226,129,47,.14),transparent 60%);}
+  .cta-section p{margin:20px auto 0;max-width:460px;font-size:14px;color:#5c4f38;}
+  .cta-section .btn-primary{margin-top:34px;}
+
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e6d6ae;margin-top:46px;border-radius:14px;overflow:hidden;}
+  @media(max-width:700px){.info-grid{grid-template-columns:1fr;}}
+  .info-card{padding:30px;background:var(--paper);}
+  .info-card dt{font-size:11px;letter-spacing:.08em;color:var(--mikan-dark);margin-top:14px;font-weight:700;}
+  .info-card dt:first-child{margin-top:0;}
+  .info-card dd{font-size:14.5px;margin-top:4px;}
+
+  footer{padding:42px 0;text-align:center;border-top:1px solid #e6d6ae;}
+  footer p{font-size:12px;color:#8c7c58;}
+
+  .fade-up{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .fade-up.in{opacity:1;transform:translateY(0);}
+  @media(prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none;transition:none;}}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはデザイン提案用のサンプルです。実際の公開サイトではありません。</div>
+
+<header>
+  <div class="hnav">
+    <div class="brand"><span class="dot"></span>手づくりジャム工房 やまげん</div>
+    <nav>
+      <a href="#flavors">ジャムのご紹介</a>
+      <a href="#purity">こだわり</a>
+      <a href="#story">工房と湯河原</a>
+      <a href="#access">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge fade-up in">湯河原ブランド認定</span>
+      <h1 class="fade-up in">湯河原の果実を、<br>ひと瓶ずつ<em>手づくりで。</em></h1>
+      <p class="lead fade-up in">保存料・着色料・香料を使わず、湯河原で育った新鮮な果実を、小さな工房でひと瓶ずつ丁寧に炊き上げています。</p>
+      <div class="cta fade-up in">
+        <a href="#flavors" class="btn btn-primary">ジャムを見る</a>
+        <a href="#purity" class="btn btn-ghost">こだわりを見る</a>
+      </div>
+    </div>
+    <div class="shelf-stage fade-up in">
+      <div class="jar h2"><div class="lid"></div><div class="label">ブルーベリー</div></div>
+      <div class="jar h1"><div class="lid"></div><div class="label">湯河原みかん</div></div>
+      <div class="jar h3"><div class="lid"></div><div class="label">完熟いちご</div></div>
+      <div class="shelf-board"></div>
+    </div>
+  </div>
+</section>
+
+<section class="purity-wrap" id="purity">
+  <div class="wrap">
+    <p class="kicker fade-up">OUR PROMISE</p>
+    <h2 class="section-title fade-up">添加物に頼らず、<br>素材の味を活かします。</h2>
+    <div class="purity-row">
+      <div class="purity fade-up"><div class="x">無</div><p>保存料不使用</p></div>
+      <div class="purity fade-up"><div class="x">無</div><p>着色料不使用</p></div>
+      <div class="purity fade-up"><div class="x">無</div><p>香料不使用</p></div>
+      <div class="purity fade-up"><div class="x">低</div><p>農薬・化学肥料を抑えた原料</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flavors">
+  <div class="wrap">
+    <p class="kicker fade-up">FLAVORS</p>
+    <h2 class="section-title fade-up">季節ごとに炊き上げる、<br>湯河原の恵み。</h2>
+    <div style="margin-top:44px;">
+      <div class="flavor-row fade-up">
+        <div class="flavor-swatch" data-jp="橙" style="background:linear-gradient(155deg,#f3a34e,var(--mikan) 80%);"></div>
+        <div class="flavor-text">
+          <span class="season">冬の定番</span>
+          <h3>湯河原みかんジャム</h3>
+          <p>地元・湯河原で育った柑橘を使用。皮の香りごと楽しめる、すっきりとした甘さに仕上げています。</p>
+        </div>
+      </div>
+      <div class="flavor-row fade-up">
+        <div class="flavor-swatch" data-jp="莓" style="background:linear-gradient(155deg,#7f5aa0,#4f3768 80%);"></div>
+        <div class="flavor-text">
+          <span class="season">初夏の限定</span>
+          <h3>ブルーベリージャム</h3>
+          <p>実が引き締まる時期に収穫したブルーベリーを、粒感を残しながらじっくりと炊き上げました。</p>
+        </div>
+      </div>
+      <div class="flavor-row fade-up">
+        <div class="flavor-swatch" data-jp="苺" style="background:linear-gradient(155deg,#e07a7c,var(--berry) 80%);"></div>
+        <div class="flavor-text">
+          <span class="season">春の限定</span>
+          <h3>完熟いちごジャム</h3>
+          <p>香りが立つ完熟いちごを厳選。パンだけでなく、ヨーグルトや紅茶にもよく合います。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <p class="kicker fade-up">ABOUT US</p>
+    <h2 class="section-title fade-up">神奈川県湯河原町、<br>小さな工房から。</h2>
+    <div class="story-grid" style="margin-top:44px;">
+      <div class="story-text fade-up">
+        <p>「やまげん」は、神奈川県湯河原町にある手づくりジャム工房です。地元の果実を中心に、保存料・着色料・香料に頼らず、素材そのものの味を活かしたジャムづくりを続けています。</p>
+        <p>農薬や化学肥料を抑えた原料を選び、地域の農園とも連携しながら、季節ごとの果実を活かした商品を少量ずつ炊き上げています。</p>
+        <p>その取り組みが認められ、「湯河原ブランド」認定商品としてもご紹介いただいています。</p>
+        <span class="cert-badge">🍊 湯河原ブランド認定商品</span>
+      </div>
+      <div class="orchard-fig fade-up"><div class="sun"></div><div class="hill"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="access">
+  <div class="wrap">
+    <p class="kicker fade-up">CONTACT</p>
+    <h2 class="section-title fade-up">ご注文・お問い合わせは<br>お気軽にどうぞ。</h2>
+    <p class="fade-up">オンラインストアのほか、お電話・メールでのお問い合わせも承っています。</p>
+    <a href="#" class="btn btn-primary fade-up">お問い合わせ</a>
+    <div class="info-grid">
+      <div class="info-card fade-up">
+        <dt>所在地</dt><dd>神奈川県湯河原町土肥3-1-9</dd>
+        <dt>電話</dt><dd>0465-62-4677</dd>
+      </div>
+      <div class="info-card fade-up">
+        <dt>営業時間</dt><dd>9:00〜16:00</dd>
+        <dt>定休日</dt><dd>土曜・日曜・祝日</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p>手づくりジャム工房 やまげん — 神奈川県湯河原町 ／ 本サンプルはデザイン提案用に制作したものです。</p></div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade-up');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
