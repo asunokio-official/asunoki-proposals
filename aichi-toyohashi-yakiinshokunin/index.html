@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>焼印職人 | 磯部彫金所 - オーダーメイド焼印製作</title>
+<style>
+  :root{
+    --bg:#161210; --bg2:#1f1815; --ember:#d9702e; --ember2:#f2a55c;
+    --gold:#c79a4b; --text:#f1e9e0; --text-muted:#c9b8a8; --line:#3a2c22;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;background:var(--bg);color:var(--text);line-height:1.9;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:#000;color:#e0b98a;text-align:center;font-size:12px;padding:6px 10px;letter-spacing:.05em;font-family:sans-serif;}
+  header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 28px;backdrop-filter:blur(6px);background:rgba(22,18,16,.55);}
+  .logo{font-size:18px;letter-spacing:.15em;font-weight:600;}
+  .logo span{color:var(--ember2);}
+  nav{display:none;gap:28px;font-size:13px;letter-spacing:.1em;font-family:sans-serif;}
+  nav a{opacity:.85;transition:opacity .3s;}
+  nav a:hover{opacity:1;color:var(--ember2);}
+  @media(min-width:820px){nav{display:flex;}}
+
+  .hero{position:relative;height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 24px;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(ellipse at 30% 20%, rgba(217,112,46,.25), transparent 55%),
+    radial-gradient(ellipse at 75% 75%, rgba(199,154,75,.18), transparent 50%),
+    linear-gradient(180deg,#100c0a,#1a1512 60%,#0f0b09);
+  }
+  .ember-dot{position:absolute;border-radius:50%;background:var(--ember2);box-shadow:0 0 8px 2px rgba(242,165,92,.8);opacity:0;animation:rise 9s ease-in infinite;}
+  @keyframes rise{0%{opacity:0;transform:translateY(0) translateX(0);}10%{opacity:.9;}90%{opacity:.3;}100%{opacity:0;transform:translateY(-70vh) translateX(20px);}}
+  .hero-inner{position:relative;z-index:2;max-width:720px;}
+  .kicker{font-family:sans-serif;font-size:12px;letter-spacing:.35em;color:var(--ember2);margin-bottom:22px;}
+  h1.title{font-size:clamp(34px,7vw,64px);font-weight:600;letter-spacing:.06em;line-height:1.35;}
+  h1.title em{font-style:normal;color:var(--ember2);}
+  .hero-sub{margin-top:26px;font-size:15px;color:var(--text-muted);font-family:sans-serif;letter-spacing:.03em;}
+  .scrolldown{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);width:1px;height:56px;background:linear-gradient(var(--ember2),transparent);}
+
+  section{padding:110px 24px;max-width:980px;margin:0 auto;}
+  .eyebrow{font-family:sans-serif;font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:14px;}
+  h2{font-size:clamp(24px,4vw,36px);font-weight:600;letter-spacing:.05em;margin-bottom:34px;}
+  p.lead{font-size:15.5px;color:var(--text-muted);max-width:640px;}
+
+  .fade{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:none;}
+
+  .story{display:grid;gap:44px;}
+  @media(min-width:760px){.story{grid-template-columns:1fr 1fr;align-items:center;}}
+  .story-visual{aspect-ratio:4/5;border-radius:2px;background:
+    radial-gradient(circle at 30% 30%, rgba(242,165,92,.35), transparent 60%),
+    linear-gradient(150deg,#2a1e17,#120d0b);
+    border:1px solid var(--line);display:flex;align-items:center;justify-content:center;}
+  .seal-mark{width:56%;aspect-ratio:1;border-radius:50%;border:2px solid var(--ember2);display:flex;align-items:center;justify-content:center;font-family:sans-serif;font-size:13px;letter-spacing:.2em;color:var(--ember2);text-align:center;opacity:.85;}
+
+  .services{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:10px;}
+  @media(min-width:700px){.services{grid-template-columns:repeat(3,1fr);}}
+  .svc{background:var(--bg2);padding:34px 28px;}
+  .svc .num{font-family:sans-serif;font-size:12px;color:var(--ember2);letter-spacing:.2em;margin-bottom:14px;}
+  .svc h3{font-size:19px;margin-bottom:12px;font-weight:600;}
+  .svc p{font-size:13.5px;color:var(--text-muted);font-family:sans-serif;}
+
+  .process{margin-top:20px;border-left:1px solid var(--line);padding-left:0;}
+  .step{display:flex;gap:22px;padding:22px 0;border-bottom:1px solid var(--line);}
+  .step .n{font-family:sans-serif;color:var(--ember2);font-size:13px;letter-spacing:.2em;min-width:70px;}
+  .step .t{font-size:15px;}
+  .step .d{font-family:sans-serif;font-size:13px;color:var(--text-muted);margin-top:4px;}
+
+  .cta{background:linear-gradient(180deg,#1a1310,#100c0a);text-align:center;}
+  .cta h2{margin-bottom:18px;}
+  .info{margin-top:34px;font-family:sans-serif;font-size:13.5px;color:var(--text-muted);display:grid;gap:8px;}
+  .info b{color:var(--text);}
+
+  footer{padding:44px 24px;text-align:center;font-family:sans-serif;font-size:11.5px;color:#7a6a5c;border-top:1px solid var(--line);}
+  @media (prefers-reduced-motion: reduce){ .ember-dot{animation:none;opacity:0;} }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+<header>
+  <div class="logo">焼印職人 <span>| 磯部彫金所</span></div>
+  <nav>
+    <a href="#story">こだわり</a>
+    <a href="#services">製作メニュー</a>
+    <a href="#process">ご注文の流れ</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="hero" id="hero">
+  <div id="dots"></div>
+  <div class="hero-inner">
+    <div class="kicker">CUSTOM BRANDING IRON — 愛知県豊橋市</div>
+    <h1 class="title">熱と、鉄と、<br><em>ひと押しの誇り。</em></h1>
+    <p class="hero-sub">木・革・食品へ想いを刻む、オーダーメイド焼印の製作所</p>
+  </div>
+  <div class="scrolldown"></div>
+</div>
+
+<section id="story">
+  <div class="eyebrow">OUR CRAFT</div>
+  <div class="story">
+    <div class="fade">
+      <h2>ひとつの焼印に、<br>ひとつの想いを。</h2>
+      <p class="lead">
+        高温に熱した金属を木製品・革製品・食品などへ押し当て、ブランドや想いのかたちを焼き付ける——それが焼印です。
+        磯部彫金所では、既製の家紋やイラストから、お名前・ロゴを使った完全オリジナルの一点まで、
+        用途に合わせた焼印を一つひとつお作りしています。木工作家様の作品証明、飲食店様の焼き菓子、
+        革職人様のブランドマークまで、「金気なく、確かな押し跡を残す」ことを大切に仕上げています。
+      </p>
+    </div>
+    <div class="story-visual fade">
+      <div class="seal-mark">ISOBE<br>CHOKINSHO<br>since—</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="eyebrow">MENU</div>
+  <h2 class="fade">製作メニュー</h2>
+  <div class="services fade">
+    <div class="svc">
+      <div class="num">01</div>
+      <h3>既製品焼印</h3>
+      <p>家紋・季節のイラスト・定番デザインから選べる、すぐにご利用いただける焼印です。</p>
+    </div>
+    <div class="svc">
+      <div class="num">02</div>
+      <h3>セミオーダー焼印</h3>
+      <p>既存デザインをベースに、お店・工房のお名前や文字だけをカスタマイズします。</p>
+    </div>
+    <div class="svc">
+      <div class="num">03</div>
+      <h3>完全オリジナル焼印</h3>
+      <p>ロゴやイラストから起こす、世界にひとつだけの焼印。レーザー彫刻にも対応します。</p>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="eyebrow">FLOW</div>
+  <h2 class="fade">ご注文の流れ</h2>
+  <div class="process fade">
+    <div class="step"><div class="n">STEP 01</div><div><div class="t">お問い合わせ・デザインのご相談</div><div class="d">サイズ・押したい素材(木/革/食品)・デザインのイメージをお聞かせください。</div></div></div>
+    <div class="step"><div class="n">STEP 02</div><div><div class="t">お見積り・デザイン確認</div><div class="d">ご要望に合わせたデザイン案と金額をご提示します。</div></div></div>
+    <div class="step"><div class="n">STEP 03</div><div><div class="t">製作</div><div class="d">目安納期は2〜8営業日。お急ぎのご相談も承ります。</div></div></div>
+    <div class="step"><div class="n">STEP 04</div><div><div class="t">お届け</div><div class="d">完成した焼印を発送、またはご来社でお渡しします。</div></div></div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="eyebrow">CONTACT</div>
+  <h2 class="fade">焼印のご相談・お見積りは<br>お気軽にどうぞ</h2>
+  <p class="lead fade" style="margin:0 auto;">初めての方も、木工・革・飲食など業種を問わずご相談いただけます。</p>
+  <div class="info fade">
+    <div><b>磯部彫金所（焼印職人）</b></div>
+    <div>〒441-1113　愛知県豊橋市東森岡1-10-19</div>
+    <div>TEL：0532-74-7750（平日9:00〜18:00）／FAX：0532-88-3051</div>
+    <div>Mail：shopmaster@yakiin.co.jp</div>
+  </div>
+</section>
+
+<footer>© 磯部彫金所 - 焼印職人（本ページはデザイン提案用サンプルです）</footer>
+
+<script>
+  // gentle ember particles
+  const wrap = document.getElementById('dots');
+  for(let i=0;i<14;i++){
+    const d=document.createElement('div');
+    d.className='ember-dot';
+    const size=2+Math.random()*3;
+    d.style.width=size+'px';d.style.height=size+'px';
+    d.style.left=(10+Math.random()*80)+'%';
+    d.style.bottom=(-5-Math.random()*10)+'%';
+    d.style.animationDelay=(Math.random()*9)+'s';
+    d.style.animationDuration=(7+Math.random()*5)+'s';
+    wrap.appendChild(d);
+  }
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  },{threshold:.2});
+  document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
