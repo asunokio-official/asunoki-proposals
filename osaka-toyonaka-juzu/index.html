@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>京念珠 亀屋 | 大阪府豊中市の数珠専門店</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#f4f1ea;
+    --stone-2:#e9e3d6;
+    --sumi:#2a2823;
+    --indigo:#3f3c5c;
+    --indigo-light:#6a6690;
+    --gold:#a68b5b;
+    --text:#3f3b34;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--stone);color:var(--text);line-height:2;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .serif{font-family:'Zen Old Mincho',serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+
+  .notice{background:var(--sumi);color:#b9b3e0;text-align:center;font-size:11.5px;letter-spacing:.05em;padding:8px 12px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(244,241,234,.92);backdrop-filter:blur(6px);border-bottom:1px solid #ddd6c2;}
+  .hnav{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;max-width:920px;margin:0 auto;}
+  .brand{font-family:'Zen Old Mincho',serif;font-weight:600;font-size:18px;letter-spacing:.2em;color:var(--sumi);}
+  .hnav nav{display:flex;gap:32px;font-size:12px;letter-spacing:.1em;color:#7a7564;}
+  .hnav nav a:hover{color:var(--indigo);}
+  @media(max-width:680px){.hnav nav{display:none;}}
+
+  /* hero — circular / bead motif, very quiet */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 0 100px;overflow:hidden;}
+  .bead-ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:560px;height:560px;border-radius:50%;border:1px solid rgba(63,60,92,.14);}
+  .bead-ring.r2{width:720px;height:720px;border-color:rgba(166,139,91,.12);}
+  .bead-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--indigo-light);opacity:.4;}
+  @media(max-width:700px){.bead-ring{width:340px;height:340px;} .bead-ring.r2{width:440px;height:440px;}}
+  .hero-inner{position:relative;z-index:3;max-width:560px;margin:0 auto;}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.34em;color:var(--gold);margin-bottom:28px;}
+  .hero h1{font-family:'Zen Old Mincho',serif;font-weight:600;color:var(--sumi);font-size:clamp(28px,4.4vw,42px);line-height:2;letter-spacing:.06em;}
+  .hero h1 em{font-style:normal;color:var(--indigo);}
+  .hero p.lead{margin:28px auto 0;font-size:14px;color:#6b6656;max-width:400px;}
+  .hero .cta{margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;font-size:13px;letter-spacing:.12em;transition:all .25s;border-radius:30px;}
+  .btn-primary{background:var(--indigo);color:#f4f1ea;}
+  .btn-primary:hover{background:#2f2c47;transform:translateY(-2px);}
+  .btn-ghost{border:1px solid #b7b09a;color:var(--sumi);}
+  .btn-ghost:hover{border-color:var(--indigo);color:var(--indigo);}
+
+  section{padding:104px 0;}
+  .center{text-align:center;}
+  .kicker{font-size:11.5px;letter-spacing:.3em;color:var(--gold);margin-bottom:18px;font-weight:500;}
+  h2.section-title{font-family:'Zen Old Mincho',serif;font-weight:600;font-size:clamp(22px,2.8vw,29px);color:var(--sumi);line-height:1.9;}
+
+  /* about — quiet single column */
+  .about p{max-width:600px;margin:0 auto 20px;font-size:14.5px;color:#544f43;text-align:center;}
+  .about-badge{display:inline-flex;gap:18px;margin-top:36px;font-size:12px;color:#8a8471;letter-spacing:.08em;}
+  .about-badge b{color:var(--indigo);}
+
+  /* categories — soft, few, generous space */
+  .cat-bg{background:var(--stone-2);}
+  .cat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd6c2;margin-top:54px;}
+  @media(max-width:760px){.cat-row{grid-template-columns:1fr;}}
+  .cat{background:var(--stone-2);padding:44px 34px;text-align:center;}
+  .cat .ring{width:64px;height:64px;border-radius:50%;border:1px solid var(--indigo-light);margin:0 auto 22px;display:flex;align-items:center;justify-content:center;}
+  .cat .ring span{width:8px;height:8px;border-radius:50%;background:var(--gold);}
+  .cat h4{font-family:'Zen Old Mincho',serif;font-size:16px;color:var(--sumi);margin-bottom:10px;}
+  .cat p{font-size:12px;color:#8a8471;line-height:1.9;}
+
+  /* materials — refined list */
+  .mat-list{max-width:640px;margin:54px auto 0;}
+  .mat-row{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-top:1px solid #ddd6c2;font-size:13.5px;}
+  .mat-row:last-child{border-bottom:1px solid #ddd6c2;}
+  .mat-row span:first-child{color:var(--sumi);}
+  .mat-row span:last-child{color:var(--gold);font-size:11.5px;letter-spacing:.06em;}
+
+  .custom{background:var(--sumi);color:#d9d4c4;}
+  .custom .kicker{color:#c4a97a;}
+  .custom h2{color:#f4f1ea;}
+  .custom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:50px;text-align:center;}
+  @media(max-width:760px){.custom-grid{grid-template-columns:1fr;gap:28px;}}
+  .custom-item b{display:block;font-family:'Zen Old Mincho',serif;font-size:26px;color:#c4a97a;margin-bottom:10px;}
+  .custom-item p{font-size:12px;color:#a49e8c;}
+
+  .cta-section{text-align:center;}
+  .cta-section p{margin:22px auto 0;max-width:440px;font-size:14px;color:#6b6656;}
+  .cta-section .btn-primary{margin-top:36px;}
+
+  .info-grid{display:flex;justify-content:center;gap:60px;margin-top:50px;flex-wrap:wrap;text-align:center;}
+  .info-card dt{font-size:11px;letter-spacing:.14em;color:var(--gold);margin-bottom:6px;}
+  .info-card dd{font-size:14.5px;color:var(--sumi);}
+
+  footer{padding:48px 0;text-align:center;border-top:1px solid #ddd6c2;}
+  footer p{font-size:12px;color:#a49e8c;}
+
+  .fade-up{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease;}
+  .fade-up.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはデザイン提案用のサンプルです。実際の公開サイトではありません。</div>
+
+<header>
+  <div class="hnav">
+    <div class="brand">京念珠 亀屋</div>
+    <nav>
+      <a href="#about">亀屋について</a>
+      <a href="#category">数珠を選ぶ</a>
+      <a href="#custom">誂え・名入れ</a>
+      <a href="#access">店舗案内</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bead-ring"></div>
+  <div class="bead-ring r2"></div>
+  <div class="hero-inner">
+    <p class="eyebrow fade-up in">大阪府豊中市</p>
+    <h1 class="fade-up in">一連の数珠に、<br><em>祈りを込めて。</em></h1>
+    <p class="lead fade-up in">京都の職人による手作りの数珠を、男性用・女性用・お子様用まで。宗派に合わせた本式数珠から、日常に寄り添う略式数珠まで取り揃えています。</p>
+    <div class="cta fade-up in">
+      <a href="#category" class="btn btn-primary">数珠を選ぶ</a>
+      <a href="#access" class="btn btn-ghost">店舗案内</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap center">
+    <p class="kicker fade-up">ABOUT KAMEYA</p>
+    <h2 class="section-title fade-up">京都の職人が仕立てる、<br>日本製の数珠。</h2>
+    <p class="fade-up">亀屋は、大阪府豊中市にて数珠・念珠を専門に扱う店舗です。木の実や天然石など、素材ごとの表情を活かしながら、京都の職人の手によって一連一連丁寧に仕立てています。真言宗・浄土宗・日蓮宗・禅宗・天台宗など、各宗派に対応した本式数珠もご用意しております。</p>
+    <div class="about-badge fade-up">
+      <span><b>日本製</b> 京都の職人による製作</span>
+      <span><b>8宗派</b> 主要宗派に対応</span>
+    </div>
+  </div>
+</section>
+
+<section class="cat-bg" id="category">
+  <div class="wrap">
+    <p class="kicker fade-up center">CATEGORY</p>
+    <h2 class="section-title fade-up center">お求めになる方に合わせて、<br>数珠をお選びいただけます。</h2>
+    <div class="cat-row">
+      <div class="cat fade-up"><div class="ring"><span></span></div><h4>男性用数珠</h4><p>略式から宗派別の本式まで、落ち着いた表情の数珠を。</p></div>
+      <div class="cat fade-up"><div class="ring"><span></span></div><h4>女性用数珠</h4><p>天然石を用いた華やかな二連仕立てもご用意します。</p></div>
+      <div class="cat fade-up"><div class="ring"><span></span></div><h4>お子様用数珠</h4><p>初めての一連にふさわしい、優しい佇まいの数珠を。</p></div>
+    </div>
+    <div class="mat-list">
+      <div class="mat-row fade-up"><span>木の実(菩提樹・黒檀 等)</span><span>NATURAL WOOD</span></div>
+      <div class="mat-row fade-up"><span>天然石(水晶・瑪瑙 等)</span><span>GEMSTONE</span></div>
+      <div class="mat-row fade-up"><span>八宗派対応 二天珠仕立て</span><span>ALL SECTS</span></div>
+      <div class="mat-row fade-up"><span>数珠ブレスレット</span><span>EVERYDAY</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="custom" id="custom">
+  <div class="wrap">
+    <p class="kicker fade-up center">CUSTOM ORDER</p>
+    <h2 class="section-title fade-up center">誂えと、名入れと。</h2>
+    <div class="custom-grid">
+      <div class="custom-item fade-up"><b>誂え</b><p>略式数珠はサイズ・素材を自由に組み合わせてお誂えいただけます。</p></div>
+      <div class="custom-item fade-up"><b>7日〜3週間</b><p>宗派別の本式数珠は、ご注文から仕立てまでお時間をいただきます。</p></div>
+      <div class="custom-item fade-up"><b>名入れ</b><p>親玉への名入れも承っております(800円〜1,200円・税込)。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="access">
+  <div class="wrap center">
+    <p class="kicker fade-up">CONTACT</p>
+    <h2 class="section-title fade-up">数珠選びのご相談は、<br>お気軽にお問い合わせください。</h2>
+    <p class="fade-up">数珠の選び方、宗派に合わせたご相談も承ります。</p>
+    <a href="#" class="btn btn-primary fade-up">お問い合わせ</a>
+    <div class="info-grid">
+      <div class="info-card fade-up"><dt>所在地</dt><dd>大阪府豊中市服部本町4-1-11</dd></div>
+      <div class="info-card fade-up"><dt>営業時間</dt><dd>平日 10:00〜17:00</dd></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p>京念珠 亀屋 ／ 本サンプルはデザイン提案用に制作したものです。</p></div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade-up');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
