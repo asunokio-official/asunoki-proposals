@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>株式会社桶数｜木曽ヒノキの木桶職人</title>
+<style>
+:root{
+  --forest:#2f3d2f; --forest-deep:#1c261c; --hinoki:#e3c99a; --hinoki-deep:#b8905a; --paper:#f5f1e7; --ink:#211d18;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; background:var(--paper); color:var(--ink); line-height:1.9;}
+a{color:inherit;}
+.notice{background:var(--forest-deep); color:#e6ddc8; text-align:center; padding:9px 16px; font-size:12px; letter-spacing:.04em;}
+header{position:sticky; top:0; z-index:50; background:rgba(245,241,231,.95); backdrop-filter:blur(6px); border-bottom:1px solid #dcd0b4;}
+.nav-wrap{max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 24px;}
+.logo{font-size:17px; font-weight:700; letter-spacing:.06em; color:var(--forest-deep);}
+nav ul{list-style:none; display:flex; gap:28px; font-size:13px;}
+nav a{text-decoration:none; color:var(--ink);}
+.menu-toggle{display:none;}
+@media(max-width:780px){
+  nav ul{position:fixed; top:60px; left:0; right:0; background:var(--paper); flex-direction:column; max-height:0; overflow:hidden; transition:max-height .35s; border-bottom:1px solid #dcd0b4;}
+  nav ul.open{max-height:320px;}
+  nav ul li{border-top:1px solid #e6dcc4;}
+  nav a{display:block; padding:16px 24px;}
+  .menu-toggle{display:block; background:none; border:none; font-size:22px;}
+}
+.hero{position:relative; min-height:90vh; display:flex; align-items:flex-end; background:linear-gradient(190deg,#3f4f3a 0%, #24301f 60%, #161d13 100%); overflow:hidden;}
+.hero::before{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(90deg, rgba(227,201,154,.05) 0 3px, transparent 3px 60px);}
+.hero-inner{position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:0 24px 84px; width:100%; color:#f2ecdb;}
+.hero-eyebrow{font-size:12px; letter-spacing:.32em; opacity:.7; margin-bottom:22px;}
+.hero h1{font-size:clamp(34px,6vw,62px); font-weight:700; line-height:1.5;}
+.hero p.sub{margin-top:24px; font-size:15px; max-width:480px; opacity:.82;}
+section{max-width:1100px; margin:0 auto; padding:110px 24px;}
+.section-head{margin-bottom:56px;}
+.section-eyebrow{font-size:12px; letter-spacing:.26em; color:var(--hinoki-deep); margin-bottom:12px;}
+.section-head h2{font-size:clamp(26px,4vw,36px); font-weight:700;}
+.fade-up{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+.fade-up.in{opacity:1; transform:none;}
+.history{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:center;}
+.history-visual{aspect-ratio:4/5; background:linear-gradient(160deg,var(--hinoki),var(--hinoki-deep)); position:relative;}
+.history-visual::after{content:"木曽ヒノキ"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:13px; letter-spacing:.3em; color:rgba(33,29,24,.45);}
+.history p{margin-bottom:18px; font-size:15px;}
+@media(max-width:780px){.history{grid-template-columns:1fr;}}
+.spec{background:var(--forest); color:#eee7d3;}
+.spec .section-eyebrow{color:var(--hinoki);}
+.spec-table{margin-top:20px; border-top:1px solid rgba(238,231,211,.25);}
+.spec-row{display:grid; grid-template-columns:220px 1fr; gap:24px; padding:22px 0; border-bottom:1px solid rgba(238,231,211,.15); font-size:14.5px;}
+.spec-row dt{color:var(--hinoki); font-weight:700;}
+@media(max-width:640px){.spec-row{grid-template-columns:1fr;}}
+.craft-award{display:grid; grid-template-columns:.8fr 1.2fr; gap:56px; align-items:center;}
+.award-badge{aspect-ratio:1; max-width:220px; border-radius:50%; background:radial-gradient(circle, var(--hinoki) 0%, var(--hinoki-deep) 100%); display:flex; align-items:center; justify-content:center; text-align:center; font-size:13px; letter-spacing:.1em; color:var(--forest-deep); font-weight:700; padding:20px;}
+.craft-award blockquote{font-size:18px; line-height:2; margin-bottom:16px;}
+.craft-award .name{font-size:13px; letter-spacing:.05em; color:var(--hinoki-deep);}
+@media(max-width:780px){.craft-award{grid-template-columns:1fr; text-align:center;} .award-badge{margin:0 auto;}}
+.access{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; font-size:14px;}
+.access dt{color:var(--hinoki-deep); font-size:12px; letter-spacing:.1em; margin-bottom:6px;}
+@media(max-width:780px){.access{grid-template-columns:1fr;}}
+footer{background:var(--forest-deep); color:#c4bda6; text-align:center; padding:44px 24px; font-size:12px; letter-spacing:.04em;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の情報を元に、ASUNOKIが独自に制作したリニューアル提案です。</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">株式会社 桶数</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav><ul>
+      <li><a href="#history">工房について</a></li>
+      <li><a href="#spec">木桶づくり</a></li>
+      <li><a href="#award">現代の名工</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">NAGANO KISO / WOODEN BUCKET CRAFTSMAN</p>
+    <h1>室町時代から続く、<br>木曽の木桶づくり。</h1>
+    <p class="sub">木曽の良質なヒノキを原料に、接着剤を使わない伝統の製法で。三代にわたり、木桶一筋に向き合ってきました。</p>
+  </div>
+</div>
+
+<section id="history">
+  <div class="history">
+    <div class="history-visual fade-up"></div>
+    <div class="fade-up">
+      <p class="section-eyebrow">OUR HISTORY</p>
+      <h2 style="margin-bottom:28px;">1941年創業、<br>三代続く木桶職人。</h2>
+      <p>株式会社桶数は、1941年に伊藤數馬が創業して以来、木曽ヒノキを使った木桶づくりを専門に続けてきました。室町時代から受け継がれる製法を守り、接着剤を一切使わず、木そのものの力で組み上げています。</p>
+      <p>ご家庭用の小さな桶から、業務用の大きな桶まで、ご要望に合わせて一つひとつ手作り。仕上がりまで数ヶ月から数年かかることもある、時間をかけた仕事です。</p>
+    </div>
+  </div>
+</section>
+
+<section id="spec" class="spec">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">MATERIAL &amp; CRAFT</p>
+    <h2>木曽ヒノキという、選択。</h2>
+  </div>
+  <div class="spec-table fade-up">
+    <div class="spec-row"><dt>素材</dt><dd>木曽産のヒノキのみを厳選して使用</dd></div>
+    <div class="spec-row"><dt>製法</dt><dd>接着剤を使わず、木の性質を活かして組み上げる伝統製法</dd></div>
+    <div class="spec-row"><dt>製作期間</dt><dd>サイズ・用途により、数ヶ月から数年かけてお仕上げ</dd></div>
+    <div class="spec-row"><dt>対応</dt><dd>ご家庭用から業務用まで、サイズオーダーに対応</dd></div>
+  </div>
+</section>
+
+<section id="award">
+  <div class="craft-award">
+    <div class="award-badge fade-up">現代の名工<br>2018年受章</div>
+    <div class="fade-up">
+      <p class="section-eyebrow">CRAFTSMANSHIP</p>
+      <blockquote>「木は生きています。その声を聞きながら組み上げるのが、私たちの仕事です。」</blockquote>
+      <p class="name">株式会社桶数　二代目代表　伊藤今朝雄（厚生労働大臣「現代の名工」受章）</p>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">ACCESS</p>
+    <h2>工房情報</h2>
+  </div>
+  <dl class="access fade-up">
+    <div><dt>所在地</dt><dd>長野県木曽郡上松町大字小川2314</dd></div>
+    <div><dt>電話番号</dt><dd>0264-52-2204</dd></div>
+    <div><dt>メール</dt><dd>okekazu.110@gmail.com</dd></div>
+  </dl>
+</section>
+
+<footer>
+  © 株式会社桶数（デザイン提案用サンプル） ｜ 本ページはASUNOKIによるリニューアル提案モックアップです。
+</footer>
+
+<script>
+document.querySelectorAll('.fade-up').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
