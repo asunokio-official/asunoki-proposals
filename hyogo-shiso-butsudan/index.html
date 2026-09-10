@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>さえき仏壇店 | 創業文化五年・兵庫県宍粟市の仏壇仏具店</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;800&family=Zen+Old+Mincho:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --kuro:#181210;
+    --kuro-soft:#2c221d;
+    --urushi:#5c1a1a;
+    --urushi-deep:#3d0f0f;
+    --kin:#b8934a;
+    --kin-light:#d9b876;
+    --washi:#f6f0e6;
+    --washi-2:#ede3d0;
+    --text:#3a322a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--washi);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .serif{font-family:'Shippori Mincho',serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+  img{max-width:100%;display:block;}
+
+  .notice{background:var(--kuro);color:#cbb98a;text-align:center;font-size:11.5px;letter-spacing:.05em;padding:8px 12px;}
+
+  header{position:fixed;top:29px;left:0;right:0;z-index:50;background:rgba(246,240,230,.92);backdrop-filter:blur(6px);border-bottom:1px solid #ddcda3;}
+  .hnav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1040px;margin:0 auto;}
+  .brand{font-family:'Zen Old Mincho',serif;font-weight:600;font-size:18px;letter-spacing:.16em;color:var(--kuro);}
+  .brand span{color:var(--urushi);}
+  .hnav nav{display:flex;gap:34px;font-size:12.5px;letter-spacing:.1em;color:#6b6152;}
+  .hnav nav a:hover{color:var(--urushi);}
+  @media(max-width:720px){.hnav nav{display:none;}}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:170px 0 100px;overflow:hidden;
+    background:
+      radial-gradient(ellipse 900px 500px at 85% 10%, rgba(184,147,74,.14), transparent 60%),
+      linear-gradient(180deg,#1c1512,#241a15 55%,#1c1512);}
+  .hero::before{content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(115deg,rgba(184,147,74,.05) 0 2px,transparent 2px 90px);
+    opacity:.5;}
+  .hero-inner{position:relative;z-index:3;max-width:600px;}
+  .eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.3em;color:var(--kin-light);margin-bottom:26px;}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--kin-light);}
+  .hero h1{font-family:'Zen Old Mincho',serif;font-weight:600;color:#f3ead9;font-size:clamp(30px,4.6vw,46px);line-height:1.85;letter-spacing:.04em;}
+  .hero h1 em{font-style:normal;color:var(--kin-light);}
+  .hero p.lead{margin-top:28px;font-size:14.5px;color:#c9bda3;max-width:440px;}
+  .hero .cta{margin-top:44px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;font-size:13.5px;letter-spacing:.1em;transition:all .25s;border-radius:2px;}
+  .btn-primary{background:var(--kin);color:#241a15;font-weight:600;}
+  .btn-primary:hover{background:var(--kin-light);transform:translateY(-2px);}
+  .btn-ghost{border:1px solid #6b5c42;color:#e8ddc5;}
+  .btn-ghost:hover{border-color:var(--kin-light);color:var(--kin-light);}
+
+  .hero-seal{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:230px;height:230px;border:1px solid rgba(184,147,74,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .hero-seal::before{content:"";position:absolute;inset:18px;border:1px solid rgba(184,147,74,.2);border-radius:50%;}
+  .hero-seal span{font-family:'Zen Old Mincho',serif;color:rgba(217,184,118,.5);font-size:15px;letter-spacing:.5em;writing-mode:vertical-rl;}
+  @media(max-width:880px){.hero-seal{display:none;}}
+
+  section{padding:110px 0;}
+  .kicker{font-size:12px;letter-spacing:.28em;color:var(--urushi);margin-bottom:16px;font-weight:600;}
+  h2.section-title{font-family:'Zen Old Mincho',serif;font-weight:600;font-size:clamp(24px,3vw,32px);color:var(--kuro);line-height:1.7;}
+
+  /* history */
+  .history{background:var(--washi-2);}
+  .history-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;margin-top:50px;}
+  @media(max-width:880px){.history-grid{grid-template-columns:1fr;gap:36px;}}
+  .history-visual{aspect-ratio:3/4;background:linear-gradient(155deg,var(--urushi) 0%,var(--urushi-deep) 60%,#25090a 100%);position:relative;overflow:hidden;}
+  .history-visual::after{content:"佛";position:absolute;right:20px;bottom:6px;font-family:'Zen Old Mincho',serif;font-size:150px;color:rgba(184,147,74,.14);line-height:1;}
+  .history-visual .yr{position:absolute;top:30px;left:30px;color:var(--kin-light);font-family:'Zen Old Mincho',serif;}
+  .history-visual .yr b{display:block;font-size:38px;font-weight:600;}
+  .history-visual .yr small{font-size:11px;letter-spacing:.2em;color:#d9c49f;}
+  .history-text p{margin-bottom:20px;font-size:15px;color:#463b30;}
+  .history-locs{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px;}
+  .loc{border-top:1px solid #cdb989;padding-top:16px;}
+  .loc dt{font-family:'Zen Old Mincho',serif;font-size:14.5px;color:var(--urushi);margin-bottom:6px;}
+  .loc dd{font-size:12.5px;color:#6b6152;}
+
+  /* altars gallery */
+  .altars{}
+  .altars-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:50px;}
+  .altars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ddcda3;}
+  @media(max-width:860px){.altars-grid{grid-template-columns:repeat(2,1fr);}}
+  .altar-card{background:var(--washi);padding:0;position:relative;overflow:hidden;}
+  .altar-fig{aspect-ratio:4/5;position:relative;display:flex;align-items:center;justify-content:center;}
+  .altar-fig span{font-family:'Zen Old Mincho',serif;font-size:13px;letter-spacing:.2em;color:rgba(255,255,255,.75);position:relative;z-index:2;}
+  .altar-fig.f1{background:linear-gradient(160deg,#8a5a20,#3d2610 75%);}
+  .altar-fig.f2{background:linear-gradient(160deg,#5c4530,#241a12 75%);}
+  .altar-fig.f3{background:linear-gradient(160deg,#4a2f2f,#1c1111 75%);}
+  .altar-fig.f4{background:linear-gradient(160deg,#6b5738,#2b2213 75%);}
+  .altar-card .cap{padding:20px 22px 26px;}
+  .altar-card h4{font-family:'Zen Old Mincho',serif;font-size:15px;color:var(--kuro);margin-bottom:8px;}
+  .altar-card p{font-size:12px;color:#7a6f5d;line-height:1.75;}
+
+  /* restoration */
+  .restore{background:var(--kuro);color:#e8ddc5;}
+  .restore .kicker{color:var(--kin-light);}
+  .restore h2{color:#f3ead9;}
+  .restore-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;margin-top:54px;align-items:start;}
+  @media(max-width:880px){.restore-grid{grid-template-columns:1fr;gap:36px;}}
+  .restore-steps{counter-reset:step;}
+  .rstep{display:flex;gap:20px;padding:22px 0;border-top:1px solid rgba(184,147,74,.2);}
+  .rstep:first-child{border-top:none;}
+  .rstep .num{font-family:'Zen Old Mincho',serif;color:var(--kin-light);font-size:14px;flex-shrink:0;width:28px;}
+  .rstep h4{font-size:14.5px;color:#f3ead9;margin-bottom:6px;}
+  .rstep p{font-size:12.5px;color:#b6a888;}
+  .restore-note{background:rgba(184,147,74,.08);border:1px solid rgba(184,147,74,.25);padding:32px;}
+  .restore-note .kicker{margin-bottom:14px;}
+  .restore-note p{font-size:13.5px;color:#d9cbab;line-height:1.9;}
+
+  .cta-section{text-align:center;background:var(--washi-2);}
+  .cta-section p{margin:22px auto 0;max-width:460px;font-size:14px;color:#5c5346;}
+  .cta-section .btn-primary{margin-top:38px;background:var(--urushi);color:#f3ead9;}
+  .cta-section .btn-primary:hover{background:var(--urushi-deep);}
+
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddcda3;margin-top:50px;}
+  @media(max-width:700px){.info-grid{grid-template-columns:1fr;}}
+  .info-card{padding:34px;background:var(--washi);}
+  .info-card dt{font-size:11px;letter-spacing:.14em;color:var(--urushi);margin-top:18px;font-weight:600;}
+  .info-card dt:first-child{margin-top:0;}
+  .info-card dd{font-size:14.5px;margin-top:5px;color:var(--text);}
+
+  footer{padding:50px 0;text-align:center;border-top:1px solid #ddcda3;background:var(--washi);}
+  footer p{font-size:12px;color:#9a8f76;}
+
+  .fade-up{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .fade-up.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはデザイン提案用のサンプルです。実際の公開サイトではありません。</div>
+
+<header>
+  <div class="hnav">
+    <div class="brand"><span>さえき</span>仏壇店</div>
+    <nav>
+      <a href="#history">沿革</a>
+      <a href="#altars">お仏壇</a>
+      <a href="#restore">修復・お洗濯</a>
+      <a href="#access">店舗案内</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow">兵庫県宍粟市 ・ 創業文化五年(1808年)</p>
+      <h1 class="fade-up in">二百十余年、<br><em>お仏壇と、</em>ご縁を結ぶ。</h1>
+      <p class="lead fade-up in">揖保乃庄・伊和神社の門前で創業して以来、金仏壇から家具調仏壇まで、ご家庭に合わせたお仏壇選びと、代々受け継がれた仏壇の修復・お洗濯を承っております。</p>
+      <div class="cta fade-up in">
+        <a href="#altars" class="btn btn-primary">お仏壇を見る</a>
+        <a href="#access" class="btn btn-ghost">店舗案内</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-seal"><span>先祖供養</span></div>
+</section>
+
+<section class="history" id="history">
+  <div class="wrap">
+    <p class="kicker fade-up">HISTORY</p>
+    <h2 class="section-title fade-up">伊和神社の門前より、<br>二軒の店で歩んだ歴史。</h2>
+    <div class="history-grid">
+      <div class="history-visual fade-up">
+        <div class="yr"><small>創業</small><b>1808</b><small>文化五年</small></div>
+      </div>
+      <div class="history-text fade-up">
+        <p>さえき仏壇店は、文化五年(1808年)、兵庫県宍粟市一宮町安積・伊和神社の門前にて創業いたしました。以来二百十余年、地域の皆様の先祖供養とともに歩んでまいりました。</p>
+        <p>現在は宍粟市一宮町の本店と、佐用郡佐用町の佐用店の二店舗にて、金仏壇・家具調仏壇・唐木仏壇・小型仏壇まで幅広くお取り扱いし、お客様のご自宅の広さやご宗派に合わせたご提案をいたします。</p>
+        <div class="history-locs">
+          <div class="loc">
+            <dt>本店</dt>
+            <dd>兵庫県宍粟市一宮町安積1361-1<br>TEL 0790-72-2323</dd>
+          </div>
+          <div class="loc">
+            <dt>佐用店</dt>
+            <dd>兵庫県佐用郡佐用町佐用73-1<br>TEL 0790-82-3991</dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="altars" id="altars">
+  <div class="wrap">
+    <div class="altars-head">
+      <div>
+        <p class="kicker fade-up">ALTARS</p>
+        <h2 class="section-title fade-up">ご自宅に合わせて選べる、<br>四つのお仏壇。</h2>
+      </div>
+    </div>
+    <div class="altars-grid">
+      <div class="altar-card fade-up">
+        <div class="altar-fig f1"><span>金仏壇</span></div>
+        <div class="cap"><h4>金仏壇</h4><p>金箔・金粉を用いた伝統的な様式。浄土真宗をはじめ、格式を重んじるご家庭に。</p></div>
+      </div>
+      <div class="altar-card fade-up">
+        <div class="altar-fig f2"><span>唐木仏壇</span></div>
+        <div class="cap"><h4>唐木仏壇</h4><p>紫檀・黒檀など銘木の木目を活かした重厚な佇まい。長くお使いいただける定番です。</p></div>
+      </div>
+      <div class="altar-card fade-up">
+        <div class="altar-fig f3"><span>家具調仏壇</span></div>
+        <div class="cap"><h4>家具調仏壇</h4><p>洋室やマンションの居間にも馴染む現代的なデザイン。色柄も豊富にご用意します。</p></div>
+      </div>
+      <div class="altar-card fade-up">
+        <div class="altar-fig f4"><span>小型仏壇</span></div>
+        <div class="cap"><h4>小型仏壇</h4><p>手元供養や省スペースにも対応するコンパクトサイズ。一人暮らしのお部屋にも。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="restore" id="restore">
+  <div class="wrap">
+    <p class="kicker fade-up">RESTORATION</p>
+    <h2 class="section-title fade-up">代々受け継がれたお仏壇を、<br>解体洗浄から完全修復まで。</h2>
+    <div class="restore-grid">
+      <div class="restore-steps">
+        <div class="rstep fade-up">
+          <div class="num">01</div>
+          <div><h4>ご相談・お見積り</h4><p>スマートフォンで撮影したお仏壇のお写真をお送りいただくだけで、無料でお見積りいたします。</p></div>
+        </div>
+        <div class="rstep fade-up">
+          <div class="num">02</div>
+          <div><h4>解体・洗浄</h4><p>金具・扉・柱など一つひとつを解体し、長年の汚れやほこりを丁寧に取り除きます。</p></div>
+        </div>
+        <div class="rstep fade-up">
+          <div class="num">03</div>
+          <div><h4>修復・組み直し</h4><p>傷んだ箇所の修復、金箔の補修などを行い、元の姿に近い状態へ組み直します。</p></div>
+        </div>
+        <div class="rstep fade-up">
+          <div class="num">04</div>
+          <div><h4>ご納品・開眼</h4><p>ご自宅にお届けし、必要に応じてお洗濯の目安時期についてもご案内いたします。</p></div>
+        </div>
+      </div>
+      <div class="restore-note fade-up">
+        <p class="kicker">一部修理から全体お洗濯まで</p>
+        <p>ご法事前のお洗濯、ご転居・改築時の一時お預かりにも対応しております。お仏壇の状態やご予算に応じて、部分修理から全体のお洗濯まで柔軟にご提案いたします。まずはお気軽にお写真をお送りください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="access">
+  <div class="wrap">
+    <p class="kicker fade-up">CONTACT</p>
+    <h2 class="section-title fade-up">お仏壇のことなら、<br>お気軽にご相談ください。</h2>
+    <p class="fade-up">お仏壇選び、修復・お洗濯のご相談、お仏具のご用意まで承ります。</p>
+    <a href="#" class="btn btn-primary fade-up">お問い合わせ</a>
+    <div class="info-grid">
+      <div class="info-card fade-up">
+        <p class="kicker" style="margin-bottom:0;">本店</p>
+        <dt>住所</dt><dd>兵庫県宍粟市一宮町安積1361-1</dd>
+        <dt>電話</dt><dd>0790-72-2323</dd>
+      </div>
+      <div class="info-card fade-up">
+        <p class="kicker" style="margin-bottom:0;">佐用店</p>
+        <dt>住所</dt><dd>兵庫県佐用郡佐用町佐用73-1</dd>
+        <dt>電話</dt><dd>0790-82-3991</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p>さえき仏壇店 — 創業文化五年(1808年) ／ 本サンプルはデザイン提案用に制作したものです。</p></div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade-up');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
