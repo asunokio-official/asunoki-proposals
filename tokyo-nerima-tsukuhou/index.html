@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>佃煮専門店 佃宝 | 東京都練馬区・伝統の窯で炊く佃煮</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f1e6cd;
+    --paper-2:#e6d6ae;
+    --brown:#3f2a1c;
+    --brown-2:#2a1c12;
+    --shu:#b23a2a;
+    --shu-light:#d4674f;
+    --nori:#4f6b3f;
+    --gold:#b8934a;
+    --ink:#2e2318;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Zen Kaku Gothic New',sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .syuku{font-family:'Yuji Syuku',serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  .notice{background:var(--brown-2);color:#e0c9a0;text-align:center;font-size:11.5px;letter-spacing:.04em;padding:9px 12px;}
+
+  header{position:sticky;top:0;z-index:60;background:rgba(241,230,205,.92);backdrop-filter:blur(8px);border-bottom:1px solid #d8c396;}
+  .hnav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1080px;margin:0 auto;}
+  .brand{font-family:'Yuji Syuku',serif;font-size:24px;color:var(--brown);letter-spacing:.06em;}
+  .hnav nav{display:flex;gap:26px;font-size:12.5px;letter-spacing:.04em;color:#5c4a34;}
+  .hnav nav a:hover{color:var(--shu);}
+  @media(max-width:800px){.hnav nav{display:none;}}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;
+    background:linear-gradient(175deg,var(--brown-2) 0%,var(--brown) 65%,#472e1e 100%);}
+  .hero::after{content:"";position:absolute;right:-8%;top:10%;width:60%;height:80%;background:radial-gradient(ellipse,rgba(178,58,42,.22),transparent 65%);}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:3;}
+  @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:44px;}}
+  .stamp-row{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
+  .stamp{width:52px;height:52px;border-radius:50%;border:2px solid var(--shu-light);display:flex;align-items:center;justify-content:center;font-family:'Yuji Syuku',serif;font-size:16px;color:var(--shu-light);}
+  .stamp-row span{font-size:12px;letter-spacing:.1em;color:#c9b48c;}
+  .hero h1{font-family:'Yuji Syuku',serif;color:#f1e6cd;font-size:clamp(30px,4.6vw,50px);line-height:1.7;letter-spacing:.04em;}
+  .hero h1 em{font-style:normal;color:var(--shu-light);}
+  .hero p.lead{margin-top:22px;font-size:14px;color:#c9b48c;max-width:430px;}
+  .hero .cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 30px;font-size:13.5px;letter-spacing:.06em;transition:all .25s;}
+  .btn-primary{background:var(--shu);color:#f1e6cd;font-weight:700;}
+  .btn-primary:hover{background:var(--shu-light);transform:translateY(-2px);}
+  .btn-ghost{border:1px solid #6b573e;color:#d8c396;}
+  .btn-ghost:hover{border-color:var(--shu-light);color:var(--shu-light);}
+
+  /* kama (kiln pot) illustration */
+  .kama-stage{position:relative;display:flex;align-items:center;justify-content:center;height:340px;}
+  .kama{position:relative;width:220px;height:150px;}
+  .kama-pot{position:absolute;bottom:0;left:0;right:0;height:110px;background:linear-gradient(160deg,#5c4530,var(--brown-2) 80%);border-radius:0 0 60px 60px/0 0 40px 40px;}
+  .kama-rim{position:absolute;top:0;left:-8px;right:-8px;height:26px;background:linear-gradient(160deg,#786040,#4a3624);border-radius:50%;}
+  .kama-steam{position:absolute;top:-70px;left:50%;width:3px;height:70px;background:linear-gradient(rgba(241,230,205,0),rgba(241,230,205,.35));transform:translateX(-50%);border-radius:3px;filter:blur(2px);animation:steam 4s ease-in-out infinite;}
+  .kama-steam.s2{left:38%;animation-delay:1.2s;height:56px;top:-56px;}
+  .kama-steam.s3{left:62%;animation-delay:2.1s;height:60px;top:-60px;}
+  @keyframes steam{0%,100%{opacity:.2;transform:translateX(-50%) translateY(0);}50%{opacity:.6;transform:translateX(-50%) translateY(-10px);}}
+  @media(prefers-reduced-motion:reduce){.kama-steam{animation:none;opacity:.4;}}
+
+  section{padding:100px 0;}
+  .kicker{font-family:'Zen Kaku Gothic New',sans-serif;font-size:12px;letter-spacing:.16em;color:var(--shu);margin-bottom:16px;font-weight:700;}
+  h2.section-title{font-family:'Yuji Syuku',serif;font-size:clamp(24px,3vw,34px);color:var(--brown);line-height:1.7;letter-spacing:.02em;}
+
+  /* product boxes grid */
+  .box-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:50px;}
+  @media(max-width:900px){.box-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.box-grid{grid-template-columns:1fr 1fr;}}
+  .p-box{background:var(--brown-2);border-radius:4px;padding:22px 18px;position:relative;overflow:hidden;transition:transform .3s;}
+  .p-box:hover{transform:translateY(-6px);}
+  .p-box::before{content:"";position:absolute;top:10px;right:10px;width:10px;height:10px;border-radius:50%;background:var(--shu);}
+  .p-box .nm{font-family:'Yuji Syuku',serif;font-size:15px;color:#f1e6cd;margin-top:10px;line-height:1.6;}
+  .p-box .wt{font-size:10.5px;color:#a08a68;margin-top:6px;}
+  .p-box .pr{font-size:15px;color:var(--gold);margin-top:14px;font-weight:700;}
+  .p-box.wide{grid-column:span 2;background:linear-gradient(120deg,var(--brown-2),#4a2f1f);}
+  @media(max-width:520px){.p-box.wide{grid-column:span 2;}}
+
+  /* craft story */
+  .craft-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;margin-top:50px;}
+  @media(max-width:880px){.craft-grid{grid-template-columns:1fr;gap:32px;}}
+  .craft-fig{aspect-ratio:4/5;background:linear-gradient(160deg,#c9b48c,var(--paper-2) 80%);position:relative;overflow:hidden;}
+  .craft-fig::after{content:"佃";position:absolute;right:0;bottom:-24px;font-family:'Yuji Syuku',serif;font-size:190px;color:rgba(63,42,28,.1);}
+  .craft-text p{margin-bottom:18px;font-size:14.5px;color:#4a3a28;}
+  .nori-tag{display:inline-flex;gap:8px;font-size:11.5px;background:var(--nori);color:#f1e6cd;padding:7px 14px;border-radius:2px;margin-top:6px;}
+
+  .cta-section{text-align:center;}
+  .cta-section p{margin:22px auto 0;max-width:460px;font-size:14px;color:#5c4a34;}
+  .cta-section .btn-primary{margin-top:36px;background:var(--brown);color:var(--paper);}
+  .cta-section .btn-primary:hover{background:#4a3222;}
+
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--paper-2);margin-top:50px;}
+  @media(max-width:700px){.info-grid{grid-template-columns:1fr;}}
+  .info-card{padding:32px;background:#f8f0dc;}
+  .info-card dt{font-size:10.5px;letter-spacing:.1em;color:var(--shu);margin-top:16px;font-weight:700;}
+  .info-card dt:first-child{margin-top:0;}
+  .info-card dd{font-size:14.5px;margin-top:4px;}
+
+  footer{padding:48px 0;text-align:center;border-top:1px solid var(--paper-2);}
+  footer p{font-size:12px;color:#8c7654;}
+
+  .fade-up{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease;}
+  .fade-up.in{opacity:1;transform:translateY(0);}
+  @media(prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none;transition:none;}}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはデザイン提案用のサンプルです。実際の公開サイトではありません。</div>
+
+<header>
+  <div class="hnav">
+    <div class="brand">佃宝</div>
+    <nav>
+      <a href="#products">商品ラインナップ</a>
+      <a href="#craft">伝統の窯</a>
+      <a href="#access">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="stamp-row fade-up in"><div class="stamp">無添加</div><span>東京都練馬区 ／ 佃煮専門店</span></div>
+      <h1 class="fade-up in">伝統の窯で、<br>ひと粒ずつ<em>炊き上げる。</em></h1>
+      <p class="lead fade-up in">保存料や着色料に頼らず、昔ながらの窯でじっくりと炊き上げる佃煮専門店。ご飯のお供からギフトまで、練馬の小さな店から丁寧にお届けしています。</p>
+      <div class="cta fade-up in">
+        <a href="#products" class="btn btn-primary">商品を見る</a>
+        <a href="#access" class="btn btn-ghost">ご注文・お問い合わせ</a>
+      </div>
+    </div>
+    <div class="kama-stage fade-up in">
+      <div class="kama">
+        <div class="kama-steam"></div>
+        <div class="kama-steam s2"></div>
+        <div class="kama-steam s3"></div>
+        <div class="kama-rim"></div>
+        <div class="kama-pot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <p class="kicker fade-up">PRODUCT LINE</p>
+    <h2 class="section-title fade-up">定番の味から、<br>贅沢な一品まで。</h2>
+    <div class="box-grid">
+      <div class="p-box fade-up"><div class="nm">ふき豆</div><div class="wt">150g</div><div class="pr">¥880</div></div>
+      <div class="p-box fade-up"><div class="nm">ベビー帆立</div><div class="wt">50g</div><div class="pr">¥1,480</div></div>
+      <div class="p-box fade-up"><div class="nm">霜降り牛の佃煮</div><div class="wt">40g</div><div class="pr">¥1,180</div></div>
+      <div class="p-box fade-up"><div class="nm">黒酢入り椎茸</div><div class="wt">70g</div><div class="pr">¥750</div></div>
+      <div class="p-box fade-up"><div class="nm">きゃらぶき</div><div class="wt">45g</div><div class="pr">¥601</div></div>
+      <div class="p-box fade-up"><div class="nm">細こぶ</div><div class="wt">40g</div><div class="pr">¥601</div></div>
+      <div class="p-box fade-up"><div class="nm">特選うまい梅</div><div class="wt">450g</div><div class="pr">¥3,240</div></div>
+      <div class="p-box wide fade-up"><div class="nm">5点詰め合わせ（ギフト対応）</div><div class="wt">人気商品を少しずつ楽しめる詰め合わせ</div><div class="pr">¥5,944</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="craft">
+  <div class="wrap">
+    <p class="kicker fade-up">OUR CRAFT</p>
+    <h2 class="section-title fade-up">練馬の店から、<br>昔ながらの味を。</h2>
+    <div class="craft-grid">
+      <div class="craft-fig fade-up"></div>
+      <div class="craft-text fade-up">
+        <p>佃宝は、東京都練馬区にある佃煮専門店です。伝統の窯を使い、素材ひとつひとつに合わせて炊き加減を見極めながら、保存料や着色料に頼らない佃煮を作り続けています。</p>
+        <p>ふき豆やきゃらぶきといった定番の味から、霜降り牛やベビー帆立を使った贅沢な一品まで、幅広いラインナップをご用意。ご贈答用の詰め合わせも承っております。</p>
+        <p>ご注文はオンラインで24時間受付。ヤマト便にて常温・冷蔵でお届けします。</p>
+        <span class="nori-tag">🍶 伝統の窯／無添加／ギフト対応</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="access">
+  <div class="wrap">
+    <p class="kicker fade-up">CONTACT</p>
+    <h2 class="section-title fade-up">ご注文・ご相談は<br>お気軽にどうぞ。</h2>
+    <p class="fade-up">お電話・オンラインショップ・メールでご注文を承っています。</p>
+    <a href="#" class="btn btn-primary fade-up">お問い合わせ</a>
+    <div class="info-grid">
+      <div class="info-card fade-up">
+        <dt>所在地</dt><dd>東京都練馬区春日町1-10-25</dd>
+        <dt>電話</dt><dd>03-5848-6098（9:00〜15:30）</dd>
+      </div>
+      <div class="info-card fade-up">
+        <dt>定休日</dt><dd>火曜・水曜</dd>
+        <dt>配送</dt><dd>ヤマト便／常温・冷蔵対応／発送目安3〜5日</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p>佃煮専門店 佃宝 — 東京都練馬区 ／ 本サンプルはデザイン提案用に制作したものです。</p></div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade-up');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
