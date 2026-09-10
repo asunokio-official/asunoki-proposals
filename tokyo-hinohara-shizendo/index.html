@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自然堂 | 刺し子・本藍染め・草木染め - 東京都檜原村</title>
+<style>
+  :root{
+    --indigo:#233a5e; --indigo2:#3a5a86; --cream:#f4efe4; --ink:#26241f;
+    --muted:#6d6558; --line:#ddd3bf; --bg:#faf6ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;background:var(--bg);color:var(--ink);line-height:1.95;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:var(--indigo);color:var(--cream);text-align:center;font-size:12px;padding:6px 10px;letter-spacing:.05em;font-family:sans-serif;}
+  header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 30px;background:rgba(250,246,236,.88);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .logo{font-size:17px;letter-spacing:.15em;font-weight:600;color:var(--indigo);}
+  nav{display:none;gap:26px;font-size:13px;letter-spacing:.08em;font-family:sans-serif;}
+  nav a{color:var(--muted);transition:color .3s;}
+  nav a:hover{color:var(--indigo);}
+  @media(min-width:820px){nav{display:flex;}}
+
+  .hero{position:relative;min-height:96svh;display:flex;align-items:center;padding:120px 28px 60px;background:linear-gradient(160deg,var(--indigo) 0%,var(--indigo2) 55%,#4a6d94 100%);color:var(--cream);overflow:hidden;}
+  .stitch{position:absolute;inset:0;opacity:.12;
+    background-image:repeating-linear-gradient(45deg, transparent 0 18px, #fff 18px 20px),
+                      repeating-linear-gradient(-45deg, transparent 0 26px, #fff 26px 28px);}
+  .hero-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;text-align:left;}
+  .kicker{font-family:sans-serif;font-size:12px;letter-spacing:.3em;color:#cddaf0;margin-bottom:20px;}
+  h1.title{font-size:clamp(32px,6.4vw,58px);font-weight:600;line-height:1.55;}
+  h1.title em{font-style:normal;color:#e8c46b;}
+  .hero-sub{margin-top:24px;font-size:15px;color:#d9e2f2;font-family:sans-serif;max-width:460px;}
+
+  section{padding:100px 26px;max-width:960px;margin:0 auto;}
+  .eyebrow{font-family:sans-serif;font-size:12px;letter-spacing:.3em;color:var(--indigo);margin-bottom:14px;}
+  h2{font-size:clamp(23px,3.8vw,34px);font-weight:600;margin-bottom:30px;}
+  p.lead{font-size:15px;color:var(--muted);max-width:620px;}
+
+  .fade{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:none;}
+
+  .story{display:grid;gap:42px;align-items:center;}
+  @media(min-width:760px){.story{grid-template-columns:1fr 1fr;}}
+  .story-visual{aspect-ratio:4/5;border-radius:2px;background:
+    linear-gradient(160deg,#2c4a72,#1b3050);position:relative;overflow:hidden;}
+  .story-visual::after{content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(90deg, rgba(255,255,255,.18) 0 1px, transparent 1px 22px),
+                      repeating-linear-gradient(0deg, rgba(255,255,255,.1) 0 1px, transparent 1px 22px);}
+
+  .grid3{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:6px;}
+  @media(min-width:700px){.grid3{grid-template-columns:repeat(3,1fr);}}
+  .card{background:var(--bg);padding:32px 26px;}
+  .card .tag{font-family:sans-serif;font-size:11px;letter-spacing:.2em;color:var(--indigo);margin-bottom:12px;}
+  .card h3{font-size:18px;margin-bottom:10px;font-weight:600;}
+  .card p{font-size:13.5px;color:var(--muted);font-family:sans-serif;}
+
+  .band{background:var(--indigo);color:var(--cream);text-align:center;padding:90px 26px;}
+  .band p{font-family:sans-serif;font-size:14px;color:#cddaf0;max-width:600px;margin:16px auto 0;}
+
+  .cta{background:#f0e9d8;text-align:center;border-top:1px solid var(--line);}
+  .info{margin-top:32px;font-family:sans-serif;font-size:13.5px;color:var(--muted);display:grid;gap:8px;}
+  .info b{color:var(--ink);}
+  footer{padding:40px 26px;text-align:center;font-family:sans-serif;font-size:11.5px;color:#9d9382;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+<header>
+  <div class="logo">自然堂</div>
+  <nav>
+    <a href="#story">自然堂について</a>
+    <a href="#works">取り扱い</a>
+    <a href="#care">お手入れ</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="stitch"></div>
+  <div class="hero-inner">
+    <div class="kicker">SASHIKO / INDIGO / PLANT DYE — 東京都檜原村</div>
+    <h1 class="title">藍に染まり、<br><em>針目に想いを刺す。</em></h1>
+    <p class="hero-sub">刺し子・本藍染め・草木染めの小売・卸売。奥多摩の里、檜原村から自然の色と手仕事をお届けします。</p>
+  </div>
+</div>
+
+<section id="story">
+  <div class="eyebrow">ABOUT</div>
+  <div class="story">
+    <div class="fade">
+      <h2>山あいの村で、<br>藍と針を重ねる。</h2>
+      <p class="lead">
+        自然堂は、東京都檜原村を拠点に、刺し子・本藍染め・草木染めの品々を小売・通販・卸売でお届けしています。
+        化学染料に頼らず、藍や植物の力で色を生み出す本藍染め、一針一針に模様を重ねる刺し子。
+        どちらも、時間をかけてこそ生まれる風合いを大切にしています。長くお使いいただくための
+        お手入れ方法についても、丁寧にご案内しています。
+      </p>
+    </div>
+    <div class="story-visual fade"></div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="eyebrow">PRODUCTS</div>
+  <h2 class="fade">取り扱い</h2>
+  <div class="grid3 fade">
+    <div class="card">
+      <div class="tag">SASHIKO</div>
+      <h3>刺し子</h3>
+      <p>一針一針、布に模様を刺し重ねる伝統の技法。小物から布地まで幅広くご用意しています。</p>
+    </div>
+    <div class="card">
+      <div class="tag">INDIGO</div>
+      <h3>本藍染め</h3>
+      <p>藍の発酵の力だけで染め上げる、深く澄んだ藍色。使うほどに色合いが育ちます。</p>
+    </div>
+    <div class="card">
+      <div class="tag">PLANT DYE</div>
+      <h3>草木染め</h3>
+      <p>植物由来の自然な色合いを活かした染めもの。小売・通販・卸売に対応しています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="care">
+  <div class="band fade">
+    <div class="eyebrow" style="color:#cddaf0;">CARE</div>
+    <h2 style="color:var(--cream);">洗い方も、作品のうち。</h2>
+    <p>本藍染め・草木染めは、洗い方ひとつで風合いの育ち方が変わります。長く付き合っていただけるよう、お手入れ方法も丁寧にご案内しています。</p>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="eyebrow">CONTACT</div>
+  <h2 class="fade">刺し子・藍染め・草木染めの<br>ご相談はお気軽に</h2>
+  <p class="lead fade" style="margin:0 auto;">個人のお客様から卸売のご相談まで承っております。</p>
+  <div class="info fade">
+    <div><b>株式会社自然堂</b></div>
+    <div>〒190-0223　東京都西多摩郡檜原村南郷6128</div>
+    <div>TEL：042-598-6200</div>
+    <div>Mail：zle20151@biglobe.ne.jp</div>
+  </div>
+</section>
+
+<footer>© 株式会社自然堂（本ページはデザイン提案用サンプルです）</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  },{threshold:.2});
+  document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
