@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アトリエ吉田 | ステンドグラス工房 - 横浜</title>
+<style>
+  :root{
+    --bg:#fbf8f3; --ink:#2c2a28; --muted:#6b655d; --line:#e4ddd0;
+    --blue:#3f7cb0; --amber:#e0a63f; --rose:#c96b7a; --green:#5f9a72;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;background:var(--bg);color:var(--ink);line-height:1.95;}
+  a{color:inherit;text-decoration:none;}
+  .notice{background:var(--ink);color:#f2ece0;text-align:center;font-size:12px;padding:6px 10px;letter-spacing:.05em;font-family:sans-serif;}
+  header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 30px;background:rgba(251,248,243,.86);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .logo{font-size:17px;letter-spacing:.1em;font-weight:600;}
+  nav{display:none;gap:26px;font-size:13px;letter-spacing:.08em;font-family:sans-serif;}
+  nav a{color:var(--muted);transition:color .3s;}
+  nav a:hover{color:var(--blue);}
+  @media(min-width:820px){nav{display:flex;}}
+
+  .hero{position:relative;min-height:96svh;display:flex;flex-direction:column;justify-content:center;padding:130px 28px 60px;overflow:hidden;}
+  .glasspane{position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);opacity:.5;}
+  .pane{border-right:1px solid rgba(0,0,0,.04);position:relative;overflow:hidden;}
+  .pane::before{content:"";position:absolute;inset:0;opacity:0;animation:glow 7s ease-in-out infinite;}
+  .pane:nth-child(1)::before{background:radial-gradient(circle at 40% 30%,var(--blue),transparent 70%);animation-delay:.2s;}
+  .pane:nth-child(2)::before{background:radial-gradient(circle at 60% 60%,var(--amber),transparent 70%);animation-delay:1.4s;}
+  .pane:nth-child(3)::before{background:radial-gradient(circle at 30% 70%,var(--rose),transparent 70%);animation-delay:2.6s;}
+  .pane:nth-child(4)::before{background:radial-gradient(circle at 70% 30%,var(--green),transparent 70%);animation-delay:3.8s;}
+  .pane:nth-child(5)::before{background:radial-gradient(circle at 50% 50%,var(--blue),transparent 70%);animation-delay:1s;}
+  .pane:nth-child(6)::before{background:radial-gradient(circle at 40% 60%,var(--amber),transparent 70%);animation-delay:2.2s;}
+  @keyframes glow{0%,100%{opacity:0;}50%{opacity:.25;}}
+  .hero-inner{position:relative;z-index:2;max-width:640px;}
+  .kicker{font-family:sans-serif;font-size:12px;letter-spacing:.3em;color:var(--blue);margin-bottom:20px;}
+  h1.title{font-size:clamp(32px,6.4vw,58px);font-weight:600;line-height:1.5;}
+  h1.title em{font-style:normal;color:var(--blue);}
+  .hero-sub{margin-top:24px;font-size:15px;color:var(--muted);font-family:sans-serif;max-width:460px;}
+
+  section{padding:100px 26px;max-width:960px;margin:0 auto;}
+  .eyebrow{font-family:sans-serif;font-size:12px;letter-spacing:.3em;color:var(--blue);margin-bottom:14px;}
+  h2{font-size:clamp(23px,3.8vw,34px);font-weight:600;margin-bottom:30px;}
+  p.lead{font-size:15px;color:var(--muted);max-width:620px;}
+
+  .fade{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease;}
+  .fade.in{opacity:1;transform:none;}
+
+  .story{display:grid;gap:42px;align-items:center;}
+  @media(min-width:760px){.story{grid-template-columns:1fr 1fr;}}
+  .story-visual{aspect-ratio:4/5;border-radius:4px;background:
+    conic-gradient(from 200deg at 30% 30%,var(--blue),var(--amber),var(--rose),var(--green),var(--blue));
+    opacity:.85;position:relative;overflow:hidden;}
+  .story-visual::after{content:"";position:absolute;inset:0;background:
+    repeating-linear-gradient(115deg, rgba(255,255,255,.55) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(25deg, rgba(255,255,255,.35) 0 2px, transparent 2px 60px);}
+
+  .grid3{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:6px;}
+  @media(min-width:700px){.grid3{grid-template-columns:repeat(3,1fr);}}
+  .card{background:var(--bg);padding:32px 26px;}
+  .card .tag{font-family:sans-serif;font-size:11px;letter-spacing:.2em;color:var(--blue);margin-bottom:12px;}
+  .card h3{font-size:18px;margin-bottom:10px;font-weight:600;}
+  .card p{font-size:13.5px;color:var(--muted);font-family:sans-serif;}
+
+  .quote{border-left:3px solid var(--blue);padding:6px 0 6px 26px;margin-top:8px;}
+  .quote p{font-size:16px;color:var(--ink);}
+
+  .cta{background:#f2ece0;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .info{margin-top:32px;font-family:sans-serif;font-size:13.5px;color:var(--muted);display:grid;gap:8px;}
+  .info b{color:var(--ink);}
+  footer{padding:40px 26px;text-align:center;font-family:sans-serif;font-size:11.5px;color:#a49a8a;}
+  @media (prefers-reduced-motion: reduce){ .pane::before{animation:none;opacity:0;} }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+<header>
+  <div class="logo">アトリエ吉田</div>
+  <nav>
+    <a href="#story">工房について</a>
+    <a href="#works">製作・修理</a>
+    <a href="#voice">お客様の声</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="glasspane">
+    <div class="pane"></div><div class="pane"></div><div class="pane"></div>
+    <div class="pane"></div><div class="pane"></div><div class="pane"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="kicker">STAINED GLASS ATELIER — 横浜市都筑区</div>
+    <h1 class="title">光が通るたび、<br><em>色が生まれる。</em></h1>
+    <p class="hero-sub">一枚一枚の色ガラスを組み合わせ、窓や扉に光の物語をつくる。オーダーメイドのステンドグラス工房です。</p>
+  </div>
+</div>
+
+<section id="story">
+  <div class="eyebrow">ATELIER</div>
+  <div class="story">
+    <div class="fade">
+      <h2>ガラスに光を通す、<br>小さな工房から。</h2>
+      <p class="lead">
+        アトリエ吉田は、横浜・都筑区で製作と修理を行うステンドグラス工房です。
+        住宅の窓やドア、店舗のサインまで、お客様のご要望に合わせて一枚ずつ設計し、
+        カットしたガラスを鉛線で組み上げていきます。古くなったステンドグラスの修理にも対応し、
+        「壊れたから諦める」のではなく「直して使い続ける」という選択肢をご提案しています。
+      </p>
+    </div>
+    <div class="story-visual fade"></div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="eyebrow">WORKS</div>
+  <h2 class="fade">製作・修理メニュー</h2>
+  <div class="grid3 fade">
+    <div class="card">
+      <div class="tag">ORDER MADE</div>
+      <h3>オーダーメイド製作</h3>
+      <p>窓・扉・室内建具などのサイズやイメージに合わせて、一枚から設計・製作します。</p>
+    </div>
+    <div class="card">
+      <div class="tag">REPAIR</div>
+      <h3>修理・メンテナンス</h3>
+      <p>割れ・鉛線の劣化など、既存のステンドグラスの修理・補強を承ります。</p>
+    </div>
+    <div class="card">
+      <div class="tag">GALLERY</div>
+      <h3>作品のご紹介</h3>
+      <p>製作事例はCreema・Facebookでも公開中。イメージづくりの参考にご覧いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="eyebrow">VOICE</div>
+  <h2 class="fade">工房が大切にしていること</h2>
+  <div class="quote fade">
+    <p>「既製品にはない、その空間だけのための一枚を。」<br>色の組み合わせから鉛線の通し方まで、住まいや店舗の雰囲気に合わせて丁寧に打ち合わせを重ねています。</p>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="eyebrow">CONTACT</div>
+  <h2 class="fade">製作・修理のご相談は<br>お気軽にどうぞ</h2>
+  <p class="lead fade" style="margin:0 auto;">イメージ段階のご相談も歓迎です。写真だけでも構いません。</p>
+  <div class="info fade">
+    <div><b>アトリエ吉田</b></div>
+    <div>神奈川県横浜市都筑区茅ヶ崎1-20-6</div>
+    <div>TEL / FAX：045-895-2862</div>
+    <div>Mail：at-yoshida@msi.biglobe.ne.jp</div>
+  </div>
+</section>
+
+<footer>© アトリエ吉田（本ページはデザイン提案用サンプルです）</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  },{threshold:.2});
+  document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
