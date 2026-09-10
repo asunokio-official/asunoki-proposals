@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>金高刃物老舗 | 創業1651年・京都の刃物鍛冶</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --char:#161412;
+    --char-2:#221e1a;
+    --ember:#c8631f;
+    --ember-light:#e89355;
+    --steel:#8a8478;
+    --cream:#efe9de;
+    --text:#2c2822;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .serif{font-family:'Shippori Mincho',serif;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  .notice{background:var(--char);color:#e89355;text-align:center;font-size:11.5px;letter-spacing:.05em;padding:8px 12px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(239,233,222,.94);backdrop-filter:blur(6px);border-bottom:1px solid #d8cfbd;}
+  .hnav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1080px;margin:0 auto;}
+  .brand{font-family:'Shippori Mincho',serif;font-weight:800;font-size:18px;letter-spacing:.1em;color:var(--char);}
+  .brand small{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ember);letter-spacing:.12em;margin-left:10px;}
+  .hnav nav{display:flex;gap:30px;font-size:12.5px;letter-spacing:.06em;color:#6b6152;}
+  .hnav nav a:hover{color:var(--ember);}
+  @media(max-width:780px){.hnav nav{display:none;}}
+
+  /* hero */
+  .hero{position:relative;min-height:96vh;display:flex;align-items:center;padding:130px 0 90px;overflow:hidden;background:radial-gradient(ellipse 900px 500px at 80% 20%,rgba(200,99,31,.16),transparent 60%),linear-gradient(180deg,#141210,var(--char) 55%,#1c1815);}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:end;position:relative;z-index:3;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;}}
+  .eyebrow{display:flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--ember-light);margin-bottom:26px;}
+  .hero h1{font-family:'Shippori Mincho',serif;font-weight:800;color:#efe9de;font-size:clamp(30px,4.6vw,48px);line-height:1.75;letter-spacing:.03em;}
+  .hero h1 em{font-style:normal;color:var(--ember-light);}
+  .hero p.lead{margin-top:26px;font-size:14.5px;color:#b3ab9c;max-width:440px;}
+  .hero .cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;font-size:13.5px;letter-spacing:.06em;transition:all .25s;border-radius:2px;}
+  .btn-primary{background:var(--ember);color:#161412;font-weight:700;}
+  .btn-primary:hover{background:var(--ember-light);transform:translateY(-2px);}
+  .btn-ghost{border:1px solid #5c554a;color:#d9d2c3;}
+  .btn-ghost:hover{border-color:var(--ember-light);color:var(--ember-light);}
+  .hero-spec{border-left:1px solid rgba(200,99,31,.3);padding-left:28px;}
+  .hero-spec .row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);font-family:'JetBrains Mono',monospace;font-size:12px;}
+  .hero-spec .row span:first-child{color:#8a8172;}
+  .hero-spec .row span:last-child{color:#e8ddc8;}
+
+  section{padding:104px 0;}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--ember);margin-bottom:16px;}
+  h2.section-title{font-family:'Shippori Mincho',serif;font-weight:800;font-size:clamp(24px,3vw,32px);color:var(--char);line-height:1.7;}
+
+  /* generations timeline */
+  .gen-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:54px;border-top:1px solid #d8cfbd;border-left:1px solid #d8cfbd;}
+  @media(max-width:820px){.gen-row{grid-template-columns:repeat(2,1fr);}}
+  .gen{border-right:1px solid #d8cfbd;border-bottom:1px solid #d8cfbd;padding:28px 22px;}
+  .gen b{display:block;font-family:'Shippori Mincho',serif;font-size:26px;color:var(--ember);margin-bottom:8px;}
+  .gen p{font-size:12px;color:#7a7060;}
+
+  /* product spec table */
+  .spec-bg{background:var(--char-2);color:#d9d2c3;}
+  .spec-bg .kicker{color:var(--ember-light);}
+  .spec-bg h2{color:#efe9de;}
+  .spec-table{margin-top:50px;border-top:1px solid rgba(255,255,255,.12);}
+  .spec-tr{display:grid;grid-template-columns:1fr 2fr 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.12);align-items:center;}
+  @media(max-width:760px){.spec-tr{grid-template-columns:1fr;gap:6px;}}
+  .spec-tr .cat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ember-light);letter-spacing:.08em;}
+  .spec-tr .items{font-family:'Shippori Mincho',serif;font-size:15px;color:#efe9de;}
+  .spec-tr .note{font-size:11.5px;color:#8a8172;text-align:right;}
+  @media(max-width:760px){.spec-tr .note{text-align:left;}}
+
+  /* yoshitaka line */
+  .yoshitaka-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;margin-top:50px;}
+  @media(max-width:880px){.yoshitaka-grid{grid-template-columns:1fr;gap:32px;}}
+  .yoshitaka-fig{aspect-ratio:4/5;background:linear-gradient(160deg,#4a3520,#221812 70%);position:relative;}
+  .yoshitaka-fig::after{content:"鍛";position:absolute;right:20px;bottom:6px;font-family:'Shippori Mincho',serif;font-size:130px;color:rgba(200,99,31,.12);}
+  .yoshitaka-text p{margin-bottom:18px;font-size:14.5px;color:#463b2e;}
+  .steel-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+  .steel-tag{font-family:'JetBrains Mono',monospace;font-size:11px;background:var(--char);color:var(--ember-light);padding:7px 14px;border-radius:2px;}
+
+  .cta-section{text-align:center;background:var(--cream);}
+  .cta-section p{margin:22px auto 0;max-width:460px;font-size:14px;color:#5c5346;}
+  .cta-section .btn-primary{margin-top:38px;background:var(--char);color:#efe9de;}
+  .cta-section .btn-primary:hover{background:#2c2620;}
+
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#d8cfbd;margin-top:50px;}
+  @media(max-width:700px){.info-grid{grid-template-columns:1fr;}}
+  .info-card{padding:32px;background:var(--cream);}
+  .info-card dt{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ember);margin-top:16px;}
+  .info-card dt:first-child{margin-top:0;}
+  .info-card dd{font-size:14.5px;margin-top:4px;}
+
+  footer{padding:48px 0;text-align:center;border-top:1px solid #d8cfbd;}
+  footer p{font-size:12px;color:#9a8f76;}
+
+  .fade-up{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease;}
+  .fade-up.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはデザイン提案用のサンプルです。実際の公開サイトではありません。</div>
+
+<header>
+  <div class="hnav">
+    <div class="brand">金高刃物老舗<small>KYOTO / EST.1651</small></div>
+    <nav>
+      <a href="#gen">沿革</a>
+      <a href="#products">取扱刃物</a>
+      <a href="#yoshitaka">佳孝の手仕事</a>
+      <a href="#access">店舗案内</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow fade-up in">KYOTO HAMONO SINCE 1651</p>
+      <h1 class="fade-up in">火と鉄を、<br><em>七代にわたって。</em></h1>
+      <p class="lead fade-up in">承応年間の創業から370年余。京都・六角通の鍛冶場で、七代目とその弟・佳孝が、包丁と鋏を一挺ずつ鍛え続けています。</p>
+      <div class="cta fade-up in">
+        <a href="#products" class="btn btn-primary">取扱刃物を見る</a>
+        <a href="#access" class="btn btn-ghost">店舗案内</a>
+      </div>
+    </div>
+    <div class="hero-spec fade-up in">
+      <div class="row"><span>FOUNDED</span><span>1651 (承応年間)</span></div>
+      <div class="row"><span>LOCATION</span><span>京都市中京区六角通</span></div>
+      <div class="row"><span>GENERATION</span><span>七代目 継承中</span></div>
+      <div class="row"><span>CRAFT LINE</span><span>佳孝 / 手鍛造</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="gen">
+  <div class="wrap">
+    <p class="kicker fade-up">HISTORY</p>
+    <h2 class="section-title fade-up">承応年間の創業から、<br>七代にわたる鍛冶の系譜。</h2>
+    <div class="gen-row">
+      <div class="gen fade-up"><b>1651</b><p>承応年間、京都にて創業。刃物鍛冶としての歴史が始まる。</p></div>
+      <div class="gen fade-up"><b>7代目</b><p>現在は七代目が本店・船岡店の二店舗を率いる。</p></div>
+      <div class="gen fade-up"><b>佳孝</b><p>七代目の弟・佳孝が、鍛造から焼き入れ、研ぎまでを一貫して手掛ける。</p></div>
+      <div class="gen fade-up"><b>370年+</b><p>時代を超えて受け継がれてきた、京都の鍛冶の技術。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="spec-bg" id="products">
+  <div class="wrap">
+    <p class="kicker fade-up">PRODUCT LINE</p>
+    <h2 class="section-title fade-up">鋏から庖丁、剃刀まで。<br>用途ごとの刃物を鍛える。</h2>
+    <div class="spec-table">
+      <div class="spec-tr fade-up"><span class="cat">SCISSORS</span><span class="items">裁ち鋏 ／ 植木鋏 ／ 花鋏 ／ 握り鋏</span><span class="note">用途別に鍛造</span></div>
+      <div class="spec-tr fade-up"><span class="cat">KITCHEN KNIVES</span><span class="items">出刃庖丁 ／ 刺身包丁 ／ 三徳庖丁 ／ ペティ庖丁</span><span class="note">和洋対応</span></div>
+      <div class="spec-tr fade-up"><span class="cat">SPECIALTY</span><span class="items">日本剃刀 ／ 皮裁ち庖丁 ／ リード削り ／ 鉛筆削り</span><span class="note">専門職人向け</span></div>
+      <div class="spec-tr fade-up"><span class="cat">MATERIALS</span><span class="items">白紙鋼・青紙鋼 ／ CRMO-7・CV-134・D-2・440-C</span><span class="note">炭素鋼〜ステンレス</span></div>
+      <div class="spec-tr fade-up"><span class="cat">SERVICE</span><span class="items">研ぎ直し ／ 名入れ彫刻(1,500円〜) ／ オーダー製作</span><span class="note">アフターフォロー対応</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="yoshitaka">
+  <div class="wrap">
+    <p class="kicker fade-up">THE YOSHITAKA LINE</p>
+    <h2 class="section-title fade-up">佳孝の手による、<br>鍛造から研ぎまでの一貫仕事。</h2>
+    <div class="yoshitaka-grid">
+      <div class="yoshitaka-fig fade-up"></div>
+      <div class="yoshitaka-text fade-up">
+        <p>七代目の弟である佳孝が、鍛造・焼き入れ・研ぎまでを京都伝統の技法で一貫して手掛ける「佳孝」シリーズ。白紙鋼・青紙鋼をはじめとした複数の鋼材から、用途とご要望に応じて一挺ずつオーダーメイドで製作いたします。</p>
+        <p>包丁鍛冶体験もご案内しており、短時間で刃物づくりの一端に触れていただけます。</p>
+        <div class="steel-tags">
+          <span class="steel-tag">白紙鋼</span>
+          <span class="steel-tag">青紙鋼</span>
+          <span class="steel-tag">CRMO-7</span>
+          <span class="steel-tag">D-2</span>
+          <span class="steel-tag">440-C</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="access">
+  <div class="wrap">
+    <p class="kicker fade-up">CONTACT</p>
+    <h2 class="section-title fade-up">刃物のご相談は、<br>お気軽にお問い合わせください。</h2>
+    <p class="fade-up">研ぎ直し、名入れ、オーダー製作までご相談承ります。</p>
+    <a href="#" class="btn btn-primary fade-up">お問い合わせ</a>
+    <div class="info-grid">
+      <div class="info-card fade-up">
+        <dt>本店</dt><dd>京都市中京区六角通東洞院西入る堂之前町244<br>075-221-5446 ／ 平日・土 9:00〜17:00</dd>
+      </div>
+      <div class="info-card fade-up">
+        <dt>船岡店</dt><dd>京都市北区紫野東野町25<br>075-431-4658 ／ 平日 12:30〜17:00</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p>金高刃物老舗 — 京都 創業1651年 ／ 本サンプルはデザイン提案用に制作したものです。</p></div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade-up');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
