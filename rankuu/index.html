@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>藍空尺八工房｜茨城 手作り尺八の製作・修理</title>
+<style>
+:root{
+  --indigo-deep:#141d26; --indigo:#22323f; --bamboo:#7c9070; --paper:#f3f0e8; --gold:#c9a15a; --ink:#1c1916;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; background:var(--paper); color:var(--ink); line-height:1.9;}
+a{color:inherit;}
+.notice{background:var(--indigo-deep); color:#dce4dc; text-align:center; padding:9px 16px; font-size:12px; letter-spacing:.04em;}
+header{position:sticky; top:0; z-index:50; background:rgba(243,240,232,.94); backdrop-filter:blur(6px); border-bottom:1px solid #ddd6c4;}
+.nav-wrap{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 24px;}
+.logo{font-size:16px; letter-spacing:.16em; color:var(--indigo-deep); font-weight:700;}
+nav ul{list-style:none; display:flex; gap:30px; font-size:13px;}
+nav a{text-decoration:none; color:var(--ink);}
+.menu-toggle{display:none;}
+@media(max-width:780px){
+  nav ul{position:fixed; top:60px; left:0; right:0; background:var(--paper); flex-direction:column; max-height:0; overflow:hidden; transition:max-height .35s; border-bottom:1px solid #ddd6c4;}
+  nav ul.open{max-height:320px;}
+  nav ul li{border-top:1px solid #e6e0d0;}
+  nav a{display:block; padding:16px 24px;}
+  .menu-toggle{display:block; background:none; border:none; font-size:22px;}
+}
+.hero{position:relative; min-height:92vh; display:flex; align-items:center; background:var(--indigo-deep); overflow:hidden;}
+.hero::before{content:""; position:absolute; right:-10%; top:50%; transform:translateY(-50%); width:70vw; max-width:900px; height:6px; background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:.5; filter:blur(1px);}
+.hero-inner{position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:0 24px; width:100%; color:#e8e2d2;}
+.hero-eyebrow{font-size:12px; letter-spacing:.4em; opacity:.6; margin-bottom:28px;}
+.hero h1{font-size:clamp(38px,7vw,72px); font-weight:700; line-height:1.45; letter-spacing:.03em;}
+.hero p.sub{margin-top:28px; font-size:15px; max-width:440px; opacity:.75; line-height:2;}
+section{max-width:1080px; margin:0 auto; padding:120px 24px;}
+.section-head{margin-bottom:60px;}
+.section-eyebrow{font-size:12px; letter-spacing:.3em; color:var(--gold); margin-bottom:14px;}
+.section-head h2{font-size:clamp(26px,4vw,38px); font-weight:700; letter-spacing:.03em;}
+.fade-up{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+.fade-up.in{opacity:1; transform:none;}
+.philosophy{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
+.philosophy .big{font-size:26px; line-height:2; font-weight:700;}
+.philosophy p{font-size:15px; color:#4a4236; margin-bottom:18px;}
+@media(max-width:780px){.philosophy{grid-template-columns:1fr;}}
+.works{background:var(--indigo); color:#e8e2d2;}
+.works .section-eyebrow{color:var(--bamboo);}
+.works-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:20px; background:rgba(232,226,210,.12);}
+.work{background:var(--indigo-deep); padding:44px 30px;}
+.work h3{font-size:18px; margin-bottom:12px; font-weight:700;}
+.work p{font-size:13.5px; opacity:.7;}
+@media(max-width:780px){.works-grid{grid-template-columns:1fr;}}
+.process{display:flex; gap:2px; background:#ddd6c4; flex-wrap:wrap;}
+.process .step{flex:1; min-width:220px; background:var(--paper); padding:40px 28px;}
+.process .n{font-size:24px; color:var(--gold); font-weight:700; margin-bottom:12px;}
+.process p{font-size:13.5px; color:#4a4236;}
+.owner{display:grid; grid-template-columns:.8fr 1.2fr; gap:56px; align-items:center;}
+.owner-photo{aspect-ratio:1; border-radius:50%; max-width:240px; background:linear-gradient(150deg,#3a5040,#141d26);}
+.owner blockquote{font-size:18px; line-height:2; margin-bottom:16px;}
+.owner .name{font-size:13px; letter-spacing:.1em; color:var(--gold);}
+@media(max-width:780px){.owner{grid-template-columns:1fr; text-align:center;} .owner-photo{margin:0 auto;}}
+.access{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; font-size:14px;}
+.access dt{color:var(--gold); font-size:12px; letter-spacing:.1em; margin-bottom:6px;}
+@media(max-width:780px){.access{grid-template-columns:1fr;}}
+footer{background:var(--indigo-deep); color:#a9a290; text-align:center; padding:44px 24px; font-size:12px; letter-spacing:.04em;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の情報を元に、ASUNOKIが独自に制作したリニューアル提案です。</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">藍空尺八工房</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav><ul>
+      <li><a href="#philosophy">ものづくりの想い</a></li>
+      <li><a href="#works">作品</a></li>
+      <li><a href="#process">製作工程</a></li>
+      <li><a href="#owner">工房主より</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">IBARAKI / HANDMADE SHAKUHACHI</p>
+    <h1>一音一音に、<br>吹き手の呼吸を。</h1>
+    <p class="sub">茨城・常陸大宮の工房で、一本一本を手作りする尺八づくり。音色・鳴り・音程・操作性まで、演奏する人の視点でつくり続けています。</p>
+  </div>
+</div>
+
+<section id="philosophy">
+  <div class="philosophy">
+    <div class="fade-up">
+      <p class="section-eyebrow">PHILOSOPHY</p>
+      <p class="big">プレイヤーのための、<br>楽器づくりでありたい。</p>
+    </div>
+    <div class="fade-up">
+      <p>藍空尺八工房は、大部仁が一人で製作を続ける小さな工房です。「音色・鳴り・音程・操作性など、楽器としての性能を追求する」ことを何よりも大切にしています。</p>
+      <p>既製品では出会えない、自分だけの一管。ご希望の音色や吹きやすさに合わせて、ひとつひとつオーダーに応じた調整を行っています。修理・お手入れのご相談も承っています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="works">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">WORKS</p>
+    <h2>手作りの尺八たち。</h2>
+  </div>
+  <div class="works-grid">
+    <div class="work fade-up"><h3>普及管</h3><p>初めて尺八に触れる方にも扱いやすい、標準的な一管。安定した音程と鳴りを重視して仕上げています。</p></div>
+    <div class="work fade-up"><h3>演奏用尺八</h3><p>長年の奏者の要望に応え、音色と操作性を追求した一管。竹の個性を活かした表情豊かな仕上がりに。</p></div>
+    <div class="work fade-up"><h3>オーダーメイド</h3><p>音の好み、手の大きさ、吹き方の癖まで伺いながら、あなただけの一管を製作いたします。</p></div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">PROCESS</p>
+    <h2>竹から、楽器へ。</h2>
+  </div>
+</section>
+<div class="process">
+  <div class="step fade-up"><div class="n">01</div><p>厳選した真竹を選定し、乾燥・下ごしらえを行う</p></div>
+  <div class="step fade-up"><div class="n">02</div><p>歌口・指孔の位置を決め、音律を丁寧に調整</p></div>
+  <div class="step fade-up"><div class="n">03</div><p>内部を漆で仕上げ、鳴りと響きを整える</p></div>
+  <div class="step fade-up"><div class="n">04</div><p>実際に試奏を重ね、演奏者の視点で最終調整</p></div>
+</div>
+
+<section id="owner">
+  <div class="owner">
+    <div class="owner-photo fade-up"></div>
+    <div class="fade-up">
+      <blockquote>「一本一本、吹く人の呼吸や癖に寄り添いたい。だからこそ、時間をかけてでも手作りにこだわっています。」</blockquote>
+      <p class="name">藍空尺八工房　大部仁</p>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">ACCESS</p>
+    <h2>工房情報</h2>
+  </div>
+  <dl class="access fade-up">
+    <div><dt>所在地</dt><dd>茨城県常陸大宮市檜山589</dd></div>
+    <div><dt>電話／FAX</dt><dd>0295-55-2087</dd></div>
+    <div><dt>メール</dt><dd>mail@rankuu.com</dd></div>
+  </dl>
+</section>
+
+<footer>
+  © 藍空尺八工房（デザイン提案用サンプル） ｜ 本ページはASUNOKIによるリニューアル提案モックアップです。
+</footer>
+
+<script>
+document.querySelectorAll('.fade-up').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
