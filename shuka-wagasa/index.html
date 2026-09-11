@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>和傘工房 朱夏｜大分・中津の和傘職人</title>
+<style>
+:root{
+  --vermilion:#b7332a; --vermilion-deep:#7c1f19; --ink:#1c1917; --bamboo:#c9b98a; --paper:#f7f3ec;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; background:var(--paper); color:var(--ink); line-height:1.9;}
+a{color:inherit;}
+.notice{background:var(--ink); color:#ece4d6; text-align:center; padding:9px 16px; font-size:12px; letter-spacing:.04em;}
+header{position:sticky; top:0; z-index:50; background:rgba(247,243,236,.95); backdrop-filter:blur(6px); border-bottom:1px solid #e2d6bd;}
+.nav-wrap{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 24px;}
+.logo{font-size:17px; font-weight:700; letter-spacing:.06em; color:var(--vermilion-deep);}
+nav ul{list-style:none; display:flex; gap:28px; font-size:13px;}
+nav a{text-decoration:none; color:var(--ink);}
+.menu-toggle{display:none;}
+@media(max-width:780px){
+  nav ul{position:fixed; top:60px; left:0; right:0; background:var(--paper); flex-direction:column; max-height:0; overflow:hidden; transition:max-height .35s; border-bottom:1px solid #e2d6bd;}
+  nav ul.open{max-height:320px;}
+  nav ul li{border-top:1px solid #ece2c9;}
+  nav a{display:block; padding:16px 24px;}
+  .menu-toggle{display:block; background:none; border:none; font-size:22px;}
+}
+.hero{position:relative; min-height:90vh; display:flex; align-items:center; justify-content:center; text-align:center; background:radial-gradient(circle at 50% 42%, var(--vermilion) 0%, var(--vermilion-deep) 46%, #3d100c 100%); overflow:hidden;}
+.hero::before{content:""; position:absolute; width:640px; height:640px; border:1px solid rgba(255,255,255,.12); border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%);}
+.hero::after{content:""; position:absolute; width:440px; height:440px; border:1px solid rgba(255,255,255,.18); border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%);}
+.hero-inner{position:relative; z-index:2; max-width:620px; padding:0 24px; color:#fbeee6;}
+.hero-eyebrow{font-size:12px; letter-spacing:.34em; opacity:.75; margin-bottom:24px;}
+.hero h1{font-size:clamp(32px,6vw,60px); font-weight:700; line-height:1.6;}
+.hero p.sub{margin-top:26px; font-size:14.5px; opacity:.85; max-width:440px; margin-left:auto; margin-right:auto;}
+section{max-width:1080px; margin:0 auto; padding:104px 24px;}
+.section-head{margin-bottom:52px;}
+.section-eyebrow{font-size:12px; letter-spacing:.26em; color:var(--vermilion); margin-bottom:12px;}
+.section-head h2{font-size:clamp(24px,3.6vw,34px); font-weight:700;}
+.fade-up{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease;}
+.fade-up.in{opacity:1; transform:none;}
+.gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+.gallery-item{aspect-ratio:3/4; background:linear-gradient(160deg,var(--bamboo),#a68f5a); display:flex; align-items:flex-end; padding:16px; font-size:12px; color:#2a2214;}
+@media(max-width:780px){.gallery{grid-template-columns:repeat(2,1fr);}}
+.story{background:var(--ink); color:#ece4d6;}
+.story .story-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;}
+.story h2{font-size:clamp(24px,3.4vw,32px); margin-bottom:24px;}
+.story p{font-size:14.5px; margin-bottom:16px; opacity:.85;}
+.story-visual{aspect-ratio:4/5; background:radial-gradient(circle,var(--vermilion),var(--vermilion-deep));}
+@media(max-width:780px){.story .story-inner{grid-template-columns:1fr;}}
+.repair{text-align:center;}
+.repair p{max-width:520px; margin:0 auto 28px; font-size:14.5px; opacity:.8;}
+.repair-box{display:inline-block; border:1px solid var(--vermilion); padding:22px 40px; font-size:14px; color:var(--vermilion-deep);}
+.access{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; font-size:13.5px;}
+.access dt{color:var(--vermilion); font-size:12px; letter-spacing:.1em; margin-bottom:6px;}
+@media(max-width:780px){.access{grid-template-columns:1fr;}}
+footer{background:var(--ink); color:#c9bfa8; text-align:center; padding:44px 24px; font-size:12px; letter-spacing:.04em;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の情報を元に、ASUNOKIが独自に制作したリニューアル提案です。</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">和傘工房 朱夏</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav><ul>
+      <li><a href="#gallery">和傘の種類</a></li>
+      <li><a href="#story">工房について</a></li>
+      <li><a href="#repair">修理・特注</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">OITA NAKATSU / WAGASA CRAFTSMAN</p>
+    <h1>竹と和紙が生む、<br>一本の傘。</h1>
+    <p class="sub">大分県中津市で、番傘・蛇の目傘・日傘を一点一点手作業で製作。あんどんやランプシェードも手がけています。</p>
+  </div>
+</div>
+
+<section id="gallery">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">OUR WORKS</p>
+    <h2>和傘の種類</h2>
+  </div>
+  <div class="gallery fade-up">
+    <div class="gallery-item">番傘</div>
+    <div class="gallery-item">蛇の目傘</div>
+    <div class="gallery-item">日傘</div>
+    <div class="gallery-item">踊り傘</div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="story-inner">
+    <div class="fade-up">
+      <p class="section-eyebrow" style="color:var(--bamboo);">OUR STORY</p>
+      <h2>一点一点、<br>真心を込めて。</h2>
+      <p>和傘工房「朱夏」は、大分県中津市で竹と和紙を用いた和傘づくりを行う工房です。番傘・蛇の目傘・日傘・踊り傘のほか、特注傘のご相談も承っています。</p>
+      <p>傘だけでなく、あんどんやランプシェードといった、和紙と竹を活かした照明の製作も手がけています。</p>
+    </div>
+    <div class="story-visual fade-up"></div>
+  </div>
+</section>
+
+<section id="repair" class="repair">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">REPAIR &amp; ORDER</p>
+    <h2>修理・特注のご相談</h2>
+  </div>
+  <p class="fade-up">長くお使いいただいた和傘の修理や、サイズ・柄をご指定いただく特注のご相談も承っています。まずはお気軽にお問い合わせください。</p>
+  <div class="repair-box fade-up">修理・特注のご相談はお気軽にお問い合わせください</div>
+</section>
+
+<section id="access">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">ACCESS</p>
+    <h2>工房情報</h2>
+  </div>
+  <dl class="access fade-up">
+    <div><dt>所在地</dt><dd>大分県中津市鷹匠町901-1</dd></div>
+    <div><dt>電話番号</dt><dd>0979-23-1820</dd></div>
+    <div><dt>メール</dt><dd>info@shu-ka.jp</dd></div>
+  </dl>
+</section>
+
+<footer>
+  © 和傘工房 朱夏（デザイン提案用サンプル） ｜ 本ページはASUNOKIによるリニューアル提案モックアップです。
+</footer>
+
+<script>
+document.querySelectorAll('.fade-up').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
