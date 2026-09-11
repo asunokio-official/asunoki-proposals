@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>和ろうそくの小大黒屋｜福井の和蝋燭専門店</title>
+<style>
+:root{
+  --flame:#d98a3d; --flame-deep:#a85f1f; --black:#1a1613; --black-soft:#2a231d; --paper:#f6efe2;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; background:var(--paper); color:#251f19; line-height:1.95;}
+a{color:inherit;}
+.notice{background:var(--black); color:#ecd9bd; text-align:center; padding:9px 16px; font-size:12px; letter-spacing:.04em; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(246,239,226,.95); backdrop-filter:blur(6px); border-bottom:1px solid #ddcba6;}
+.nav-wrap{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 24px;}
+.logo{font-size:16.5px; font-weight:700; letter-spacing:.06em; color:var(--flame-deep);}
+nav ul{list-style:none; display:flex; gap:28px; font-size:13px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+nav a{text-decoration:none; color:#251f19;}
+.menu-toggle{display:none;}
+@media(max-width:780px){
+  nav ul{position:fixed; top:60px; left:0; right:0; background:var(--paper); flex-direction:column; max-height:0; overflow:hidden; transition:max-height .35s; border-bottom:1px solid #ddcba6;}
+  nav ul.open{max-height:320px;}
+  nav ul li{border-top:1px solid #e8dcc0;}
+  nav a{display:block; padding:16px 24px;}
+  .menu-toggle{display:block; background:none; border:none; font-size:22px;}
+}
+.hero{position:relative; min-height:88vh; display:flex; align-items:flex-end; background:radial-gradient(ellipse at 50% 30%, #4a2f14 0%, #241609 55%, #100a05 100%); overflow:hidden;}
+.hero::before{content:""; position:absolute; width:220px; height:220px; border-radius:50%; background:radial-gradient(circle, rgba(217,138,61,.35), transparent 70%); top:22%; left:50%; transform:translateX(-50%); filter:blur(6px);}
+.hero-inner{position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:0 24px 84px; width:100%; color:#f3e7d3;}
+.hero-eyebrow{font-size:12px; letter-spacing:.32em; opacity:.72; margin-bottom:22px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+.hero h1{font-size:clamp(30px,5.4vw,56px); font-weight:700; line-height:1.65;}
+.hero p.sub{margin-top:24px; font-size:14.5px; max-width:460px; opacity:.85; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+section{max-width:1080px; margin:0 auto; padding:104px 24px;}
+.section-head{margin-bottom:52px;}
+.section-eyebrow{font-size:12px; letter-spacing:.26em; color:var(--flame-deep); margin-bottom:12px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+.section-head h2{font-size:clamp(24px,3.6vw,34px); font-weight:700;}
+.fade-up{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease;}
+.fade-up.in{opacity:1; transform:none;}
+.timeline{border-left:1px solid #d9c39a; padding-left:32px;}
+.timeline-item{margin-bottom:36px; position:relative;}
+.timeline-item::before{content:""; position:absolute; left:-37px; top:6px; width:9px; height:9px; border-radius:50%; background:var(--flame);}
+.timeline-item .year{font-size:12px; letter-spacing:.1em; color:var(--flame-deep); margin-bottom:8px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+.timeline-item p{font-size:14.5px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+.craft{background:var(--black); color:#ecdfc7;}
+.craft .section-eyebrow{color:var(--flame);}
+.craft-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px; margin-top:12px;}
+.craft-item h3{font-size:16px; margin-bottom:12px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+.craft-item p{font-size:13.5px; opacity:.82; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+@media(max-width:780px){.craft-grid{grid-template-columns:1fr; gap:32px;}}
+.access{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; font-size:13.5px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+.access dt{color:var(--flame-deep); font-size:12px; letter-spacing:.1em; margin-bottom:6px;}
+@media(max-width:780px){.access{grid-template-columns:1fr;}}
+footer{background:var(--black); color:#c9b795; text-align:center; padding:44px 24px; font-size:12px; letter-spacing:.04em; font-family:"Hiragino Kaku Gothic ProN",sans-serif;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の情報を元に、ASUNOKIが独自に制作したリニューアル提案です。</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">和ろうそくの小大黒屋</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav><ul>
+      <li><a href="#history">歴史</a></li>
+      <li><a href="#craft">和ろうそくづくり</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">FUKUI / JAPANESE CANDLE SINCE ANCIENT TIMES</p>
+    <h1>一本の灯りに、<br>永い年月を込めて。</h1>
+    <p class="sub">630年以上の歴史を持つ製法で、切ろうそくと和紙を調合した国産最高級の和ろうそくを、福井の地で作り続けています。</p>
+  </div>
+</div>
+
+<section id="history">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">OUR HISTORY</p>
+    <h2>灯りを守り続けた歳月</h2>
+  </div>
+  <div class="timeline fade-up">
+    <div class="timeline-item">
+      <p class="year">630年以上前</p>
+      <p>切ろうそくと和紙の調合による、和ろうそくづくりがこの地で始まったと伝わります。</p>
+    </div>
+    <div class="timeline-item">
+      <p class="year">今も変わらず</p>
+      <p>国産最高級の和ろうそくを、福井県福井市の地で製造・販売しています。</p>
+    </div>
+    <div class="timeline-item">
+      <p class="year">これから</p>
+      <p>和ろうそく立てや線香、仏具とともに、日々の灯りをお届けしています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="craft" class="craft">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">CRAFTSMANSHIP</p>
+    <h2>和ろうそくという、灯り。</h2>
+  </div>
+  <div class="craft-grid fade-up">
+    <div class="craft-item">
+      <h3>和紙との調合</h3>
+      <p>芯に和紙を用いることで、揺らぎながらも力強く長持ちする炎が生まれます。</p>
+    </div>
+    <div class="craft-item">
+      <h3>国産最高級素材</h3>
+      <p>厳選した国産の原料を用い、一本一本丁寧に仕上げています。</p>
+    </div>
+    <div class="craft-item">
+      <h3>暮らしと仏事に</h3>
+      <p>ご仏前の灯りから、日々の暮らしを彩る灯りまで幅広くご用意しています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">ACCESS</p>
+    <h2>店舗情報</h2>
+  </div>
+  <dl class="access fade-up">
+    <div><dt>所在地</dt><dd>福井県福井市順化2-15-9</dd></div>
+    <div><dt>電話番号</dt><dd>0776-22-0986</dd></div>
+    <div><dt>メール</dt><dd>info@rousokuya.com</dd></div>
+  </dl>
+</section>
+
+<footer>
+  © 和ろうそくの小大黒屋（デザイン提案用サンプル） ｜ 本ページはASUNOKIによるリニューアル提案モックアップです。
+</footer>
+
+<script>
+document.querySelectorAll('.fade-up').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
