@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>浅野織物 | 組紐の製造・販売（岡山県井原市）</title>
+<style>
+  :root{
+    --navy:#0f1b2e; --navy2:#16263f; --gold:#b98d4f; --cream:#f4ede2; --ink:#1c2430;
+    --line:rgba(255,255,255,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; background:var(--cream); color:var(--ink); line-height:1.9; -webkit-font-smoothing:antialiased;}
+  .notice{background:#2a2016;color:#e8d9c2;text-align:center;font-size:12px;padding:8px 12px;letter-spacing:.05em;}
+  nav{position:sticky;top:0;z-index:50;background:rgba(244,237,226,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,0,0,.08);}
+  .navwrap{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+  .brand{font-size:15px;letter-spacing:.2em;font-weight:600;}
+  .navlinks{display:flex;gap:28px;font-size:13px;letter-spacing:.05em;}
+  .navlinks a{color:var(--ink);text-decoration:none;opacity:.75;}
+  .navlinks a:hover{opacity:1;}
+  header.hero{position:relative;background:radial-gradient(120% 140% at 20% 0%, var(--navy2), var(--navy) 55%, #0a1220 100%);color:#f0e9dc;padding:132px 24px 110px;overflow:hidden;}
+  header.hero::before{content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(115deg, rgba(185,141,79,.09) 0 2px, transparent 2px 26px),
+                      repeating-linear-gradient(25deg, rgba(255,255,255,.05) 0 1px, transparent 1px 22px);
+    opacity:.55;}
+  .heroin{max-width:880px;margin:0 auto;position:relative;}
+  .eyebrow{font-size:12px;letter-spacing:.35em;color:var(--gold);margin-bottom:22px;}
+  h1.title{font-size:clamp(34px,6vw,58px);font-weight:600;letter-spacing:.06em;line-height:1.35;margin-bottom:26px;}
+  .lead{font-size:16px;color:#d9cdb8;max-width:560px;margin-bottom:44px;}
+  .stat-row{display:flex;gap:48px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:28px;}
+  .stat b{display:block;font-size:26px;font-weight:600;color:#f0e9dc;letter-spacing:.03em;}
+  .stat span{font-size:11px;letter-spacing:.1em;color:#b7a98d;}
+  section{padding:96px 24px;}
+  .wrap{max-width:1080px;margin:0 auto;}
+  .kicker{font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:14px;}
+  h2{font-size:clamp(24px,3.4vw,34px);font-weight:600;letter-spacing:.04em;margin-bottom:36px;}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start;}
+  .about-grid p{margin-bottom:18px;color:#3a3229;font-size:15px;}
+  .about-card{background:#fff;border:1px solid rgba(0,0,0,.06);padding:32px;box-shadow:0 18px 40px -28px rgba(0,0,0,.35);}
+  .about-card dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:13.5px;}
+  .about-card dt{color:#8a7a5f;letter-spacing:.05em;}
+  .about-card dd{color:var(--ink);}
+  .products{background:var(--navy);color:#efe7d8;}
+  .products .kicker{color:var(--gold);}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);margin-top:8px;}
+  .pcard{background:var(--navy2);padding:34px 24px;transition:transform .5s cubic-bezier(.2,.7,.2,1),background .4s;}
+  .pcard:hover{transform:translateY(-4px);background:#1c2f4c;}
+  .pcard .num{font-size:11px;color:var(--gold);letter-spacing:.15em;margin-bottom:14px;}
+  .pcard h3{font-size:16px;font-weight:600;margin-bottom:10px;letter-spacing:.04em;}
+  .pcard p{font-size:12.5px;color:#b7a98d;line-height:1.8;}
+  .sample{padding:110px 24px;background:linear-gradient(180deg,#f4ede2,#ece1cf);}
+  .sample .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .sample-visual{aspect-ratio:4/3;background:
+      repeating-linear-gradient(100deg, #cbb488 0 3px, transparent 3px 30px),
+      repeating-linear-gradient(10deg, #a98a52 0 2px, transparent 2px 34px), var(--navy);
+    position:relative;}
+  .sample-visual::after{content:"組紐 サンプル工房";position:absolute;bottom:20px;left:20px;color:#f0e9dc;font-size:12px;letter-spacing:.2em;}
+  .sample h2{margin-bottom:22px;}
+  .sample p{color:#3a3229;font-size:15px;margin-bottom:16px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:14px 30px;background:var(--navy);color:#f0e9dc;text-decoration:none;font-size:13px;letter-spacing:.1em;transition:background .3s;}
+  .btn:hover{background:#1c2f4c;}
+  .timeline{padding:100px 24px;}
+  .tl-row{display:flex;gap:40px;border-top:1px solid rgba(0,0,0,.09);padding:26px 0;align-items:baseline;}
+  .tl-row:first-of-type{border-top:none;}
+  .tl-year{font-size:14px;color:var(--gold);width:120px;flex:none;letter-spacing:.08em;}
+  .tl-text{font-size:14.5px;color:#3a3229;}
+  footer{background:#0a1220;color:#8a7f6c;padding:60px 24px 40px;font-size:12.5px;}
+  .footwrap{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:32px;margin-bottom:24px;}
+  .footwrap b{color:#e8d9c2;font-size:14px;letter-spacing:.08em;}
+  @media(max-width:760px){
+    .about-grid,.sample .wrap{grid-template-columns:1fr;}
+    .pgrid{grid-template-columns:repeat(2,1fr);}
+    .stat-row{gap:28px;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはASUNOKIによるデザイン提案用のサンプルサイトです。実際の浅野織物様のサイトではありません。</div>
+<nav><div class="navwrap">
+  <div class="brand">浅野織物</div>
+  <div class="navlinks">
+    <a href="#about">会社案内</a><a href="#products">製品</a><a href="#sample">サンプル工房</a><a href="#access">アクセス</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="heroin">
+    <div class="eyebrow">ASANO TEXTILE — SINCE 1912</div>
+    <h1 class="title">紐一本に、<br>百十余年の織りの技を。</h1>
+    <p class="lead">明治45年creation創業、岡山県井原市。組紐・ロープの製造から、用途に合わせた一点もののサンプル制作まで、43名の職人が今日も紐と向き合っています。</p>
+    <div class="stat-row">
+      <div class="stat"><b>1912</b><span>創業（明治45年）</span></div>
+      <div class="stat"><b>43名</b><span>職人・従業員数</span></div>
+      <div class="stat"><b>1,200台</b><span>製紐機保有台数</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="kicker">ABOUT US</div>
+      <h2>一本の紐に、<br>用途への答えを編み込む。</h2>
+      <p>組紐は太古より人々の暮らしとともにありました。物と物を結び、束ね、時代とともにその用途を広げてきた紐。浅野織物は、その歴史を受け継ぎながら、現代の多様なニーズに応える組紐・ロープをご提案しています。</p>
+      <p>「こんな紐が欲しい」「こんな特徴を持った組紐があったら」——そんなご相談からはじまるものづくりを大切にしています。着物の帯締めから工業用途まで、素材・太さ・強度・色柄、あらゆる組み合わせをサンプル工房でかたちにします。</p>
+    </div>
+    <div class="about-card">
+      <dl>
+        <dt>会社名</dt><dd>浅野織物（アサノファイバ有限会社）</dd>
+        <dt>創業</dt><dd>明治45年（1912年）</dd>
+        <dt>所在地</dt><dd>岡山県井原市</dd>
+        <dt>従業員数</dt><dd>43名</dd>
+        <dt>主な設備</dt><dd>製紐機（3打〜96打）1,200台<br>全自動高速ワインダー 60台</dd>
+        <dt>関連会社</dt><dd>アサノファイバ有限会社（オンラインショップ運営）</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="kicker">PRODUCTS</div>
+    <h2>用途から選ぶ、組紐という技術。</h2>
+    <div class="pgrid">
+      <div class="pcard"><div class="num">01</div><h3>和装・帯締め</h3><p>着物・振袖に合わせる帯締め、羽織紐。色柄・太さのオーダーに対応。</p></div>
+      <div class="pcard"><div class="num">02</div><h3>工業用ロープ</h3><p>耐久性・強度を求められる産業資材向けの組紐・ロープ製造。</p></div>
+      <div class="pcard"><div class="num">03</div><h3>アクセサリー素材</h3><p>ブレスレットやストラップなど、小ロットの雑貨向け組紐にも対応。</p></div>
+      <div class="pcard"><div class="num">04</div><h3>オーダー試作</h3><p>「こんな紐が欲しい」の一言から、サンプル工房で試作・提案します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sample" id="sample">
+  <div class="wrap">
+    <div class="sample-visual"></div>
+    <div>
+      <div class="kicker">SAMPLE WORKSHOP</div>
+      <h2>「こんな紐が欲しい」から、<br>ものづくりがはじまる。</h2>
+      <p>太さ、素材、色、強度——組紐は組み合わせ次第で無限の表情を持ちます。浅野織物のサンプル工房では、お客様の「こんな特徴を持った紐があったら」というご相談から、実際に試作を重ねてかたちにしていきます。</p>
+      <p>法人様の産業資材から、個人のお客様の小ロットご相談まで、まずはお気軽にお問い合わせください。</p>
+      <a class="btn" href="#access">お問い合わせはこちら →</a>
+    </div>
+  </div>
+</section>
+
+<section class="timeline" id="history">
+  <div class="wrap">
+    <div class="kicker">HISTORY</div>
+    <h2>百十余年、紐と向き合う。</h2>
+    <div class="tl-row"><div class="tl-year">1912</div><div class="tl-text">明治45年、岡山県井原市にて組紐の製造を開始。</div></div>
+    <div class="tl-row"><div class="tl-year">現在</div><div class="tl-text">製紐機1,200台、全自動高速ワインダー60台をはじめとする設備を有し、43名の職人・従業員が製造にあたる。</div></div>
+    <div class="tl-row"><div class="tl-year">現在</div><div class="tl-text">関連会社アサノファイバ有限会社にて、個人のお客様向けオンラインショップも展開。</div></div>
+  </div>
+</section>
+
+<footer id="access">
+  <div class="footwrap">
+    <div>
+      <b>浅野織物</b><br><br>
+      岡山県井原市<br>
+      TEL：0866-62-0048<br>
+      FAX：0866-62-3335<br>
+      Mail：info@asano-orimono.co.jp
+    </div>
+    <div style="max-width:340px;">
+      本ページは組紐の製造・販売を行う浅野織物様に向けた、ASUNOKIによるリニューアル提案用モックアップです。実際の貴社サイトではございません。
+    </div>
+  </div>
+  <div style="max-width:1080px;margin:0 auto;">© ASANO TEXTILE — Renewal proposal by ASUNOKI</div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='translateY(0)'; } });
+},{threshold:.15});
+document.querySelectorAll('.pcard, .about-card, .sample-visual, .tl-row').forEach(el=>{
+  el.style.opacity=0; el.style.transform='translateY(16px)'; el.style.transition='opacity .7s ease, transform .7s ease';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
