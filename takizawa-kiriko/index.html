@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>瀧澤硝子工芸 | 江戸切子の製造・販売（東京都江東区）</title>
+<style>
+  :root{--ink:#0a0a0d;--ink2:#14141c;--glass:#7fd4e8;--glassdeep:#2b8fae;--paper:#faf9f6;--text:#d9d9de;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Sans","Yu Gothic",sans-serif;background:var(--paper);color:#1b1b1f;line-height:1.85;}
+  .notice{background:#161616;color:#cfcfd4;text-align:center;font-size:12px;padding:8px 12px;letter-spacing:.04em;}
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,249,246,.9);backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,0,0,.08);}
+  .navwrap{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;}
+  .brand{font-size:14px;letter-spacing:.22em;font-weight:700;}
+  .navlinks{display:flex;gap:26px;font-size:12.5px;letter-spacing:.04em;}
+  .navlinks a{color:#1b1b1f;text-decoration:none;opacity:.7;}
+  .navlinks a:hover{opacity:1;}
+  header.hero{position:relative;min-height:92vh;display:flex;align-items:center;background:radial-gradient(70% 90% at 75% 30%, #12222a, var(--ink) 60%);color:#f2f2f4;padding:120px 24px 90px;overflow:hidden;}
+  .facets{position:absolute;inset:0;opacity:.5;
+    background:
+      linear-gradient(115deg, transparent 46%, rgba(127,212,232,.14) 47%, transparent 48%),
+      linear-gradient(70deg, transparent 30%, rgba(127,212,232,.09) 31%, transparent 32%),
+      linear-gradient(160deg, transparent 60%, rgba(127,212,232,.10) 61%, transparent 62%),
+      linear-gradient(20deg, transparent 75%, rgba(127,212,232,.08) 76%, transparent 78%);
+  }
+  .heroin{max-width:760px;position:relative;}
+  .eyebrow{font-size:11px;letter-spacing:.4em;color:var(--glass);margin-bottom:24px;}
+  h1.title{font-size:clamp(32px,5.6vw,52px);font-weight:700;letter-spacing:.05em;line-height:1.5;margin-bottom:26px;}
+  .lead{font-size:15.5px;color:#b9b9c2;max-width:520px;margin-bottom:40px;}
+  .heroctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:14px 30px;font-size:13px;letter-spacing:.1em;text-decoration:none;border:1px solid rgba(255,255,255,.28);color:#f2f2f4;transition:.3s;}
+  .btn.solid{background:var(--glassdeep);border-color:var(--glassdeep);}
+  .btn:hover{background:rgba(255,255,255,.08);}
+  .btn.solid:hover{background:#3aa5c6;}
+  section{padding:100px 24px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .kicker{font-size:11px;letter-spacing:.32em;color:var(--glassdeep);margin-bottom:16px;}
+  h2{font-size:clamp(24px,3.2vw,32px);font-weight:700;letter-spacing:.03em;margin-bottom:32px;}
+  .master{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;}
+  .master-visual{aspect-ratio:3/4;background:linear-gradient(160deg,#101019,#1c2732);position:relative;overflow:hidden;}
+  .master-visual::before{content:"";position:absolute;inset:0;
+    background:repeating-conic-gradient(from 20deg at 30% 30%, rgba(127,212,232,.12) 0 8deg, transparent 8deg 26deg);}
+  .master-visual::after{content:"瀧澤 利夫\A 1938年生まれ";white-space:pre;position:absolute;bottom:22px;left:22px;color:#e8f7fb;font-size:12px;letter-spacing:.12em;line-height:1.8;}
+  .master p{font-size:15px;color:#2c2c33;margin-bottom:18px;}
+  .quote{border-left:3px solid var(--glassdeep);padding-left:20px;margin:28px 0;font-size:16px;color:#1b1b1f;}
+  .services{background:var(--ink);color:#e6e6ea;}
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);margin-top:8px;}
+  .scard{background:var(--ink2);padding:36px 26px;}
+  .scard .n{color:var(--glass);font-size:11px;letter-spacing:.16em;margin-bottom:16px;}
+  .scard h3{font-size:16px;font-weight:700;margin-bottom:10px;}
+  .scard p{font-size:12.5px;color:#9c9ca4;}
+  .gallery{background:var(--paper);}
+  .grow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .gitem{aspect-ratio:1;background:linear-gradient(135deg,#e6f6fa,#c7e9f0);position:relative;overflow:hidden;transition:transform .5s;}
+  .gitem::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg, rgba(43,143,174,.14) 0 4px, transparent 4px 16px);}
+  .gitem:hover{transform:scale(1.03);}
+  .edu{padding:100px 24px;background:linear-gradient(180deg,#f2f6f7,#e7eff1);}
+  .edu .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .edu p{font-size:15px;color:#2c2c33;margin-bottom:16px;}
+  .stat2{display:flex;gap:40px;margin-top:24px;}
+  .stat2 b{display:block;font-size:26px;color:var(--glassdeep);}
+  .stat2 span{font-size:11px;color:#6b6b72;letter-spacing:.06em;}
+  footer{background:var(--ink);color:#8f8f97;padding:56px 24px 36px;font-size:12.5px;}
+  .footwrap{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:28px;margin-bottom:22px;}
+  .footwrap b{color:#e6e6ea;font-size:14px;letter-spacing:.06em;}
+  @media(max-width:780px){
+    .master,.edu .wrap{grid-template-columns:1fr;}
+    .sgrid{grid-template-columns:1fr 1fr;}
+    .grow{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはASUNOKIによるデザイン提案用のサンプルサイトです。実際の瀧澤硝子工芸様のサイトではありません。</div>
+<nav><div class="navwrap">
+  <div class="brand">瀧澤硝子工芸</div>
+  <div class="navlinks"><a href="#master">職人</a><a href="#services">ご案内</a><a href="#gallery">作品</a><a href="#edu">体験・教室</a><a href="#access">アクセス</a></div>
+</div></nav>
+
+<header class="hero">
+  <div class="facets"></div>
+  <div class="heroin">
+    <div class="eyebrow">TAKIZAWA GLASS CRAFTS — EDO KIRIKO</div>
+    <h1 class="title">一条の光が、<br>硝子の中で技になる。</h1>
+    <p class="lead">東京都江東区。江戸切子一筋、職人 瀧澤利夫が手がける切子工房です。名入れの記念品から、江戸切子体験教室まで——ひとつひとつの器に、手仕事の光を刻みます。</p>
+    <div class="heroctas">
+      <a class="btn solid" href="#services">名入れ・オーダーのご相談</a>
+      <a class="btn" href="#edu">体験教室について</a>
+    </div>
+  </div>
+</header>
+
+<section id="master">
+  <div class="wrap master">
+    <div class="master-visual"></div>
+    <div>
+      <div class="kicker">THE CRAFTSMAN</div>
+      <h2>硝子に線を刻んで、<br>幾十年。</h2>
+      <p>瀧澤硝子工芸を率いるのは、1938年生まれの職人・瀧澤利夫。中学卒業とともに上京し、以来ずっと江戸切子とともに歩んできました。回転する砥石に硝子を当て、一本一本の線に手の記憶を重ねる仕事です。</p>
+      <div class="quote">「同じ模様でも、同じものは二つとない。それが手仕事の切子です。」</div>
+      <p>現在も年間およそ300名の小中学生に向けた体験教室の講師をつとめ、次の世代へ江戸切子の魅力を伝え続けています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="kicker">SERVICES</div>
+    <h2>江戸切子を、暮らしと節目に。</h2>
+    <div class="sgrid">
+      <div class="scard"><div class="n">01</div><h3>江戸切子グラス</h3><p>普段づかいのグラスから贈答用まで、伝統文様を中心にお作りしています。</p></div>
+      <div class="scard"><div class="n">02</div><h3>名入れ・オーダー</h3><p>記念品・引き出物として、お名前やロゴを入れたオリジナル切子を承ります。</p></div>
+      <div class="scard"><div class="n">03</div><h3>大量注文対応</h3><p>周年記念や結婚式の引き出物など、まとまった数のご注文にも対応いたします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="kicker">WORKS</div>
+    <h2>光をまとう、文様たち。</h2>
+    <div class="grow">
+      <div class="gitem"></div><div class="gitem"></div><div class="gitem"></div><div class="gitem"></div>
+    </div>
+  </div>
+</section>
+
+<section class="edu" id="edu">
+  <div class="wrap">
+    <div>
+      <div class="kicker">WORKSHOP</div>
+      <h2>次の世代へ、<br>切子の光を手渡す。</h2>
+      <p>瀧澤硝子工芸では、江戸切子の講座・体験教室も開催しています。硝子に線を刻む緊張感と、模様が浮かび上がる瞬間の楽しさを、多くの方に体験していただいています。</p>
+      <div class="stat2">
+        <div><b>年間約300名</b><span>小中学生の体験教育実績</span></div>
+        <div><b>2002年〜</b><span>ウェブでの発信開始</span></div>
+      </div>
+    </div>
+    <div class="master-visual" style="aspect-ratio:4/3;"></div>
+  </div>
+</section>
+
+<footer id="access">
+  <div class="footwrap">
+    <div>
+      <b>瀧澤硝子工芸（有）</b><br><br>
+      東京都江東区大島1-22-2<br>
+      TEL：03-3681-3965<br>
+      Mail：webmaster@kiriko.co.jp
+    </div>
+    <div style="max-width:340px;">
+      本ページは江戸切子の製造・販売を行う瀧澤硝子工芸様に向けた、ASUNOKIによるリニューアル提案用モックアップです。実際の貴社サイトではございません。
+    </div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">© TAKIZAWA GLASS CRAFTS — Renewal proposal by ASUNOKI</div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='translateY(0)'; } });
+},{threshold:.15});
+document.querySelectorAll('.scard, .gitem, .master-visual').forEach(el=>{
+  el.style.opacity=0; el.style.transform='translateY(16px)'; el.style.transition='opacity .7s ease, transform .7s ease';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
