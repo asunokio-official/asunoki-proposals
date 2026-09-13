@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>篠原風鈴本舗｜江戸川区 江戸風鈴の製造・販売</title>
+<style>
+:root{
+  --indigo:#1c3a4a; --indigo-deep:#102630; --glass:#bfe3e0; --sand:#f4efe4; --ink:#20282a; --gold:#c99a4b;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; background:var(--sand); color:var(--ink); line-height:1.9;}
+a{color:inherit;}
+.notice{background:var(--indigo-deep); color:#dbeceb; text-align:center; padding:9px 16px; font-size:12px; letter-spacing:.04em;}
+header{position:sticky; top:0; z-index:50; background:rgba(244,239,228,.94); backdrop-filter:blur(6px); border-bottom:1px solid #ddd2b8;}
+.nav-wrap{max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 24px;}
+.logo{font-size:15px; letter-spacing:.14em; color:var(--indigo-deep); font-weight:700;}
+nav ul{list-style:none; display:flex; gap:28px; font-size:13px;}
+nav a{text-decoration:none;}
+.menu-toggle{display:none;}
+@media(max-width:780px){
+  nav ul{position:fixed; top:58px; left:0; right:0; background:var(--sand); flex-direction:column; max-height:0; overflow:hidden; transition:max-height .35s; border-bottom:1px solid #ddd2b8;}
+  nav ul.open{max-height:320px;}
+  nav ul li{border-top:1px solid #e7ddc4;}
+  nav a{display:block; padding:15px 24px;}
+  .menu-toggle{display:block; background:none; border:none; font-size:21px;}
+}
+.hero{position:relative; min-height:94vh; display:flex; align-items:center; background:radial-gradient(ellipse at 75% 20%, #2c5568, var(--indigo-deep) 65%); overflow:hidden;}
+.hero .orb{position:absolute; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(191,227,224,.65), rgba(191,227,224,.05) 70%); filter:blur(1px);}
+.hero .o1{width:220px; height:220px; top:12%; right:12%; animation:drift1 9s ease-in-out infinite;}
+.hero .o2{width:120px; height:120px; top:55%; right:28%; animation:drift2 11s ease-in-out infinite;}
+.hero .o3{width:70px; height:70px; top:30%; right:38%; animation:drift1 7s ease-in-out infinite;}
+@keyframes drift1{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes drift2{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
+.hero-inner{position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:0 24px; width:100%; color:#eaf3f2;}
+.hero-eyebrow{font-size:12px; letter-spacing:.4em; opacity:.6; margin-bottom:26px;}
+.hero h1{font-size:clamp(38px,7vw,74px); font-weight:700; line-height:1.5; letter-spacing:.03em;}
+.hero p.sub{margin-top:28px; font-size:15px; max-width:460px; opacity:.8; line-height:2;}
+section{max-width:1100px; margin:0 auto; padding:110px 24px;}
+.section-head{margin-bottom:56px;}
+.section-eyebrow{font-size:12px; letter-spacing:.3em; color:var(--gold); margin-bottom:14px;}
+.section-head h2{font-size:clamp(26px,4vw,36px); font-weight:700; letter-spacing:.03em;}
+.fade-up{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+.fade-up.in{opacity:1; transform:none;}
+.history{display:grid; grid-template-columns:.9fr 1.1fr; gap:64px; align-items:start;}
+.history .big{font-size:24px; line-height:2; font-weight:700; color:var(--indigo-deep);}
+.history p{font-size:15px; color:#463f34; margin-bottom:18px;}
+@media(max-width:780px){.history{grid-template-columns:1fr;}}
+.sound{background:var(--indigo); color:#eaf3f2;}
+.sound .section-eyebrow{color:var(--glass);}
+.sound-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:20px; background:rgba(234,243,242,.14);}
+.sound-item{background:var(--indigo-deep); padding:46px 30px; position:relative;}
+.sound-item .ring{width:46px; height:46px; border-radius:50%; border:2px solid var(--glass); margin-bottom:20px;}
+.sound-item h3{font-size:17px; margin-bottom:12px; font-weight:700;}
+.sound-item p{font-size:13.5px; opacity:.72;}
+@media(max-width:780px){.sound-grid{grid-template-columns:1fr;}}
+.experience{display:flex; gap:2px; background:#e2d7ba; flex-wrap:wrap;}
+.experience .step{flex:1; min-width:220px; background:var(--sand); padding:40px 28px;}
+.experience .n{font-size:22px; color:var(--gold); font-weight:700; margin-bottom:10px;}
+.experience p{font-size:13.5px; color:#463f34;}
+.owner{display:grid; grid-template-columns:.8fr 1.2fr; gap:56px; align-items:center;}
+.owner-mark{aspect-ratio:1; border-radius:50%; max-width:220px; background:radial-gradient(circle at 35% 30%, #4c7c86, var(--indigo-deep) 75%);}
+.owner blockquote{font-size:18px; line-height:2; margin-bottom:16px; color:var(--indigo-deep);}
+.owner .name{font-size:13px; letter-spacing:.1em; color:var(--gold);}
+@media(max-width:780px){.owner{grid-template-columns:1fr; text-align:center;} .owner-mark{margin:0 auto;}}
+.access{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; font-size:14px;}
+.access dt{color:var(--gold); font-size:12px; letter-spacing:.1em; margin-bottom:6px;}
+@media(max-width:780px){.access{grid-template-columns:1fr;}}
+footer{background:var(--indigo-deep); color:#b7c8c7; text-align:center; padding:44px 24px; font-size:12px; letter-spacing:.04em;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の店舗様の情報を元に、ASUNOKIが独自に制作したリニューアル提案です。</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">篠原風鈴本舗</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav><ul>
+      <li><a href="#history">江戸風鈴とは</a></li>
+      <li><a href="#sound">音のかたち</a></li>
+      <li><a href="#experience">制作体験</a></li>
+      <li><a href="#owner">職人より</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">EDOGAWA / EDO FURIN SINCE 1915</p>
+    <h1>涼を、<br>百年、鳴らし続ける。</h1>
+    <p class="sub">大正4年の創業から100余年、江戸時代と変わらない製法で一つひとつ手作りする江戸風鈴。東京都江戸川区の工房から、日本の夏の音をお届けしています。</p>
+  </div>
+</div>
+
+<section id="history">
+  <div class="history">
+    <div class="fade-up">
+      <p class="section-eyebrow">HISTORY</p>
+      <p class="big">変わらない製法で、<br>変わらない音を。</p>
+    </div>
+    <div class="fade-up">
+      <p>篠原風鈴本舗は、大正4年（1915年）の創業以来、江戸時代と変わらない製法で風鈴を作り続けている江戸川区南篠崎町の工房です。ガラスを吹き、絵付けをし、一つひとつ手作業で仕上げています。</p>
+      <p>店頭での販売のほか、タワーホール船堀1階の「エドマチ」、しのざき文化プラザ3階の「アルティザン」でもお取り扱いいただいています。ご来店の際は、乗用車3台分の駐車スペースもご利用いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<section id="sound" class="sound">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">THE SOUND WE MAKE</p>
+    <h2>ガラスが生む、涼やかな音。</h2>
+  </div>
+  <div class="sound-grid">
+    <div class="sound-item fade-up"><div class="ring"></div><h3>吹きガラス</h3><p>熟練の職人が一つひとつ手吹きでガラスを成形。同じ形はふたつとない、手仕事ならではの表情が生まれます。</p></div>
+    <div class="sound-item fade-up"><div class="ring"></div><h3>内絵付け</h3><p>風鈴の内側から絵柄を描く伝統技法。金魚や朝顔など、江戸の夏を彩る意匠を職人が筆一本で仕上げます。</p></div>
+    <div class="sound-item fade-up"><div class="ring"></div><h3>ギザギザの鳴り口</h3><p>風鈴の口をあえてギザギザに仕上げることで、澄んだ余韻のある独特の音色が生まれます。</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">WORKSHOP</p>
+    <h2>制作体験・出張教室</h2>
+  </div>
+</section>
+<div class="experience">
+  <div class="step fade-up"><div class="n">見学</div><p>工房での製作の様子をご見学いただけます。ガラスを吹き、絵を描く工程を間近でご覧ください。</p></div>
+  <div class="step fade-up"><div class="n">制作体験</div><p>ご予約制で、絵付け等の制作体験を承っております。詳しくはお電話にてご相談ください。</p></div>
+  <div class="step fade-up"><div class="n">出張教室</div><p>学校行事やイベントへの出張体験教室にも対応しております。まずはお気軽にお問い合わせください。</p></div>
+</div>
+
+<section id="owner">
+  <div class="owner">
+    <div class="owner-mark fade-up"></div>
+    <div class="fade-up">
+      <blockquote>「江戸時代から変わらない製法を、これからも守り続けていきたい。一つひとつの音に、その想いを込めています。」</blockquote>
+      <p class="name">篠原風鈴本舗　職人一同</p>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">ACCESS</p>
+    <h2>店舗情報</h2>
+  </div>
+  <dl class="access fade-up">
+    <div><dt>所在地</dt><dd>〒133-0065　東京都江戸川区南篠崎町4-22-5</dd></div>
+    <div><dt>営業時間</dt><dd>9:00〜18:00（12〜13時は昼休み）</dd></div>
+    <div><dt>電話／メール</dt><dd>03-3670-2512<br>honpo55@nifty.com</dd></div>
+  </dl>
+</section>
+
+<footer>
+  © 篠原風鈴本舗（デザイン提案用サンプル） ｜ 本ページはASUNOKIによるリニューアル提案モックアップです。
+</footer>
+
+<script>
+document.querySelectorAll('.fade-up').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
