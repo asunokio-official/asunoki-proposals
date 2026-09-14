@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>染工房石田｜金沢 二代・石田貴博の手染め藍染</title>
+<style>
+:root{
+  --indigo:#1c3050; --indigo-deep:#0d1a2e; --indigo-mid:#2f4d75; --bone:#f2ede0; --clay:#c98b52; --ink:#221f1c;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; background:var(--bone); color:var(--ink); line-height:1.9;}
+a{color:inherit;}
+.notice{background:var(--indigo-deep); color:#e6ecef; text-align:center; padding:9px 16px; font-size:12px; letter-spacing:.04em;}
+header{position:sticky; top:0; z-index:50; background:rgba(242,237,224,.94); backdrop-filter:blur(6px); border-bottom:1px solid #d9cdb0;}
+.nav-wrap{max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 24px;}
+.logo{font-size:15px; letter-spacing:.16em; color:var(--indigo-deep); font-weight:700;}
+nav ul{list-style:none; display:flex; gap:26px; font-size:13px;}
+nav a{text-decoration:none;}
+.menu-toggle{display:none; background:none; border:none; font-size:21px; color:var(--indigo-deep);}
+@media(max-width:820px){
+  nav ul{position:fixed; top:58px; left:0; right:0; background:var(--bone); flex-direction:column; max-height:0; overflow:hidden; transition:max-height .35s; border-bottom:1px solid #d9cdb0;}
+  nav ul.open{max-height:340px;}
+  nav ul li{border-top:1px solid #e2d6ba;}
+  nav a{display:block; padding:15px 24px;}
+  .menu-toggle{display:block;}
+}
+.hero{position:relative; min-height:94vh; display:flex; align-items:center; overflow:hidden;
+  background:linear-gradient(155deg,var(--indigo-deep) 0%, var(--indigo) 45%, var(--indigo-mid) 100%);}
+.hero-inner{position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:0 24px; width:100%; color:#eef1f5;}
+.hero-eyebrow{font-size:12px; letter-spacing:.4em; color:#9db8db; margin-bottom:26px;}
+.hero h1{font-size:clamp(38px,7.4vw,84px); font-weight:700; line-height:1.35; letter-spacing:.02em;}
+.hero p.sub{margin-top:28px; font-size:14.5px; max-width:480px; opacity:.82; line-height:2;}
+section{max-width:1100px; margin:0 auto; padding:108px 24px;}
+.section-head{margin-bottom:52px;}
+.section-eyebrow{font-size:12px; letter-spacing:.3em; color:var(--clay); margin-bottom:14px;}
+.section-head h2{font-size:clamp(24px,3.6vw,34px); font-weight:700; letter-spacing:.03em; color:var(--indigo-deep);}
+.fade-up{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease;}
+.fade-up.in{opacity:1; transform:none;}
+.badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;}
+.badge{border:1px solid var(--indigo); color:var(--indigo); font-size:12.5px; padding:8px 16px; border-radius:99px; letter-spacing:.03em;}
+.mag{display:grid; grid-template-columns:1.3fr .7fr; gap:24px;}
+.mag-cell{position:relative; padding:36px 30px; display:flex; flex-direction:column; justify-content:flex-end; min-height:280px; color:#eef1f5;}
+.mag-cell h3{font-size:20px; margin-bottom:10px;}
+.mag-cell p{font-size:13px; opacity:.85;}
+.mag-big{background:linear-gradient(160deg,var(--indigo-mid),var(--indigo-deep)); grid-row:span 2;}
+.mag-small{background:linear-gradient(160deg,var(--clay),#7a4f2a);}
+.mag-row{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:24px;}
+.mag-tall{background:linear-gradient(200deg,var(--indigo),#0d1a2e); min-height:180px;}
+.mag-tall2{background:linear-gradient(200deg,#3a5a82,var(--indigo)); min-height:180px;}
+@media(max-width:820px){.mag{grid-template-columns:1fr;} .mag-big{grid-row:auto;} .mag-row{grid-template-columns:1fr;}}
+.lineage{background:var(--indigo); color:#eef1f5;}
+.lineage .section-eyebrow{color:#9db8db;}
+.lin-track{display:grid; grid-template-columns:1fr auto 1fr; gap:24px; align-items:center;}
+.lin-card{padding:32px 28px; background:rgba(238,241,245,.06);}
+.lin-card .role{font-size:12px; letter-spacing:.1em; color:#9db8db; margin-bottom:10px;}
+.lin-card h3{font-size:19px; margin-bottom:12px;}
+.lin-card p{font-size:13.5px; opacity:.8;}
+.arrow{font-size:28px; opacity:.5; text-align:center;}
+@media(max-width:820px){.lin-track{grid-template-columns:1fr;} .arrow{transform:rotate(90deg);}}
+.benefits{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#d9cdb0;}
+.b-cell{background:var(--bone); padding:38px 28px;}
+.b-cell h4{font-size:15px; margin-bottom:10px; color:var(--indigo-deep);}
+.b-cell p{font-size:13px; color:#4a4234;}
+@media(max-width:820px){.benefits{grid-template-columns:1fr;}}
+.access{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; font-size:14px;}
+.access dt{color:var(--clay); font-size:12px; letter-spacing:.1em; margin-bottom:6px;}
+@media(max-width:820px){.access{grid-template-columns:1fr;}}
+footer{background:var(--indigo-deep); color:#b7bfc6; text-align:center; padding:44px 24px; font-size:12px; letter-spacing:.04em;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです。実在の工房様の情報を元に、ASUNOKIが独自に制作したリニューアル提案です。</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">染工房石田</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav><ul>
+      <li><a href="#collection">コレクション</a></li>
+      <li><a href="#lineage">二代・三代</a></li>
+      <li><a href="#benefits">藍染の効能</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">AIZOME ISHIDA / KANAZAWA</p>
+    <h1>藍に、<br>纏う。</h1>
+    <p class="sub">板締め・絞り・ローケツ・抜染・ムラ染め。ひとつひとつ手染めで仕上げる、金沢の藍染工房です。</p>
+    <div class="badges">
+      <span class="badge">板締め</span>
+      <span class="badge">絞り</span>
+      <span class="badge">ローケツ</span>
+      <span class="badge">抜染</span>
+      <span class="badge">ムラ染め</span>
+    </div>
+  </div>
+</div>
+
+<section id="collection">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">COLLECTION</p>
+    <h2>コレクション</h2>
+  </div>
+  <div class="mag fade-up">
+    <div class="mag-cell mag-big"><h3>ワンピース／ブラウス</h3><p>手染めの濃淡を活かした、一枚仕立ての藍染ウェア。</p></div>
+    <div class="mag-cell mag-small"><h3>スカーフ＆ストール</h3><p>刺繍対応も可能な、羽織りの一枚。</p></div>
+  </div>
+  <div class="mag-row fade-up">
+    <div class="mag-cell mag-tall"><h3>チュニック／カットソー＆T</h3><p>日常に取り入れやすい藍染ウェア。</p></div>
+    <div class="mag-cell mag-tall2"><h3>小物</h3><p>刺繍機によるオリジナル刺繍にも対応。</p></div>
+  </div>
+</section>
+
+<section id="lineage" class="lineage">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">TWO GENERATIONS</p>
+    <h2>二代・三代</h2>
+  </div>
+  <div class="lin-track fade-up">
+    <div class="lin-card"><div class="role">二代目</div><h3>石田貴博</h3><p>平成23年、金沢へ工房を移設。金沢市工芸展めいてつ・エムザ社長賞、NHK金沢放送局局長賞など受賞。加賀能登特産銘品会理事も務める。</p></div>
+    <div class="arrow">→</div>
+    <div class="lin-card"><div class="role">三代目（修行中）</div><h3>石田貴将</h3><p>京都芸術大学に在学しながら、伝統と現代感覚を融合させた作品づくりに取り組んでいる。</p></div>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">WHY INDIGO</p>
+    <h2>藍染の効能</h2>
+  </div>
+  <div class="benefits fade-up">
+    <div class="b-cell"><h4>消臭効果</h4><p>藍に染めた衣料には、消臭効果があるとされています。</p></div>
+    <div class="b-cell"><h4>抗菌性</h4><p>細菌の増殖を抑制する効果も期待できます。</p></div>
+    <div class="b-cell"><h4>染め直し可能</h4><p>色あせても、繰り返し染め直しをして長く楽しめます。</p></div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="section-head fade-up">
+    <p class="section-eyebrow">ACCESS</p>
+    <h2>工房情報</h2>
+  </div>
+  <dl class="access fade-up">
+    <div><dt>所在地</dt><dd>〒920-0102　石川県金沢市岸川町チ43番地</dd></div>
+    <div><dt>電話</dt><dd>090-7382-8397<br>076-255-3552（10:00〜18:00）</dd></div>
+    <div><dt>メール</dt><dd>somekoubouishida@ybb.ne.jp</dd></div>
+  </dl>
+</section>
+
+<footer>
+  © 染工房石田（デザイン提案用サンプル） ｜ 本ページはASUNOKIによるリニューアル提案モックアップです。
+</footer>
+
+<script>
+document.querySelectorAll('.fade-up').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
