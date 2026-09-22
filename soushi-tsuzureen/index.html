@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>奏絲綴苑｜西陣で綴織にふれる、体験工房</title>
+<style>
+  :root{
+    --coral:#d97b5f;
+    --sage:#6f8a6e;
+    --sun:#e3b04b;
+    --ink:#2b2620;
+    --paper:#fdf9f2;
+    --line:#ece3d2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.9;}
+  a{color:inherit;}
+  .en{font-family:"EB Garamond",serif;letter-spacing:.12em;}
+  .notice{background:var(--ink);color:#efe6d3;text-align:center;font-size:11px;padding:8px 12px;}
+
+  header{position:sticky;top:0;z-index:50;background:var(--paper);display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;border-bottom:1px solid var(--line);}
+  .brand{font-size:16px;font-weight:700;}
+  nav{display:flex;gap:26px;font-size:13px;}
+  nav a{text-decoration:none;}
+  nav#siteNav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;border-bottom:1px solid var(--line);}
+  nav#siteNav.open{display:flex;}
+  nav#siteNav a{padding:16px 6vw;border-top:1px solid var(--line);}
+  .menu-btn{display:block;background:none;border:none;font-size:22px;cursor:pointer;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* --- hero: soft blob shapes --- */
+  .hero{position:relative;padding:80px 6vw 60px;overflow:hidden;}
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.35;}
+  .b1{width:340px;height:340px;background:var(--coral);top:-120px;right:-80px;}
+  .b2{width:220px;height:220px;background:var(--sage);bottom:-60px;left:-60px;opacity:.3;}
+  .b3{width:140px;height:140px;background:var(--sun);top:40%;right:10%;opacity:.25;}
+  .hero-inner{position:relative;z-index:1;max-width:620px;}
+  .eyebrow{display:inline-block;font-size:12px;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:100px;margin-bottom:22px;}
+  .hero h1{font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.6;}
+  .hero p.lead{margin-top:24px;font-size:14.5px;color:#5c5346;max-width:480px;}
+  .hero .cta-row{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .hero .cta-row a{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:100px;
+    text-decoration:none;font-size:13.5px;font-weight:700;
+  }
+  .cta-primary{background:var(--coral);color:#fff;}
+  .cta-secondary{background:#fff;border:1px solid var(--line);color:var(--ink);}
+
+  section{padding:90px 6vw;}
+  .section-head{max-width:620px;margin:0 auto 50px;text-align:center;}
+  .section-head .en{display:block;font-size:12px;color:var(--coral);margin-bottom:12px;}
+  .section-head h2{font-size:clamp(22px,3.4vw,30px);font-weight:800;}
+  .section-head p{margin-top:16px;color:#5c5346;font-size:14px;}
+
+  /* --- what is tsuzureori: icon row --- */
+  .about{background:#fff;}
+  .about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:920px;margin:0 auto;}
+  .about-card{text-align:center;padding:10px;}
+  .about-card .ico{
+    width:64px;height:64px;margin:0 auto 18px;border-radius:22px;
+    display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;
+  }
+  .about-card:nth-child(1) .ico{background:var(--coral);}
+  .about-card:nth-child(2) .ico{background:var(--sage);}
+  .about-card:nth-child(3) .ico{background:var(--sun);}
+  .about-card h4{font-size:15px;margin-bottom:10px;}
+  .about-card p{font-size:13px;color:#5c5346;}
+
+  /* --- experience: card carousel-ish row --- */
+  .experience{}
+  .exp-row{display:flex;gap:22px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x proximity;}
+  .exp-row::-webkit-scrollbar{height:6px;}
+  .exp-row::-webkit-scrollbar-thumb{background:var(--coral);border-radius:6px;}
+  .exp-card{
+    flex:0 0 260px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);
+    border-radius:20px;overflow:hidden;
+  }
+  .exp-card .top{height:130px;display:flex;align-items:center;justify-content:center;font-size:34px;}
+  .exp-card:nth-child(1) .top{background:linear-gradient(135deg,#f3c9b8,#d97b5f);}
+  .exp-card:nth-child(2) .top{background:linear-gradient(135deg,#cfdccb,#6f8a6e);}
+  .exp-card:nth-child(3) .top{background:linear-gradient(135deg,#f6dfa8,#e3b04b);}
+  .exp-card .body{padding:22px;}
+  .exp-card h4{font-size:15px;margin-bottom:10px;}
+  .exp-card p{font-size:12.5px;color:#5c5346;}
+
+  /* --- shop / online --- */
+  .shop{background:#fff;}
+  .shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);max-width:820px;margin:0 auto;}
+  .shop-card{background:#fff;padding:40px 32px;}
+  .shop-card h4{font-size:16px;margin-bottom:12px;}
+  .shop-card p{font-size:13px;color:#5c5346;}
+
+  /* --- info --- */
+  .info-section{}
+  .info-wrap{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:44px;}
+  .info-wrap dt{font-size:11px;letter-spacing:.1em;color:var(--coral);margin-top:18px;}
+  .info-wrap dd{font-size:15px;margin-top:6px;}
+  .info-wrap a.btn{
+    display:inline-block;margin-top:26px;padding:14px 28px;background:var(--ink);color:#fff;
+    border-radius:100px;text-decoration:none;font-size:13px;
+  }
+
+  footer{padding:34px 6vw;text-align:center;font-size:11px;color:#8a8072;border-top:1px solid var(--line);}
+
+  @media(max-width:820px){
+    nav:not(#siteNav){display:none;}
+    .about-grid{grid-template-columns:1fr;}
+    .shop-grid{grid-template-columns:1fr;}
+    section{padding:70px 6vw;}
+  }
+  @media (prefers-reduced-motion: reduce){.reveal{transition:none;}}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはASUNOKIによるデザイン提案用のサンプルサイトです。実在の情報は既存サイトを基に一部再構成しています。</div>
+
+<header>
+  <div class="brand">奏絲綴苑</div>
+  <nav>
+    <a href="#about">綴織とは</a>
+    <a href="#experience">体験教室</a>
+    <a href="#shop">購入する</a>
+    <a href="#info">アクセス</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">☰</button>
+  <nav id="siteNav">
+    <a href="#about">綴織とは</a>
+    <a href="#experience">体験教室</a>
+    <a href="#shop">購入する</a>
+    <a href="#info">アクセス</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">西陣爪掻本綴織 技術保存会</span>
+    <h1>指先だけで織り上げる、<br>世界にひとつの一枚。</h1>
+    <p class="lead">京都・西陣で綴織の技術を伝承する保存会「奏絲綴苑」。手織り体験からオーダーメイド、アクセサリーの販売まで、綴織にふれられる場所です。</p>
+    <div class="cta-row">
+      <a class="cta-primary" href="#experience">体験教室を見る</a>
+      <a class="cta-secondary" href="#shop">オンラインで購入</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-head reveal">
+    <span class="en">WHAT IS TSUZUREORI</span>
+    <h2>綴織って、なに？</h2>
+    <p>正式名称は「西陣爪掻本綴織」。機械を使わず、人の手足だけで操作する綴機を使い、爪で文様を織り上げていきます。</p>
+  </div>
+  <div class="about-grid reveal">
+    <div class="about-card"><div class="ico">🖐️</div><h4>すべて手仕事</h4><p>下絵に計算された型紙はなく、色も形も職人の感性に委ねられています。</p></div>
+    <div class="about-card"><div class="ico">🧵</div><h4>爪で織る、唯一の技法</h4><p>指先の爪をやすりで刻み、緯糸を一本ずつ掻き寄せて模様を織り上げます。</p></div>
+    <div class="about-card"><div class="ico">🌿</div><h4>世界に一つの作品</h4><p>同じ図案を使っても、仕上がりは職人ごとに異なる、二つとない作品になります。</p></div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="section-head reveal">
+    <span class="en">WORKSHOP</span>
+    <h2>手織り体験</h2>
+    <p>初めての方でも、綴機に触れながら綴織の技法を体験していただけます。</p>
+  </div>
+  <div class="exp-row reveal">
+    <div class="exp-card">
+      <div class="top">🎨</div>
+      <div class="body"><h4>はじめての手織り体験</h4><p>綴機の使い方から丁寧にご案内。小さな作品を仕上げます。</p></div>
+    </div>
+    <div class="exp-card">
+      <div class="top">💍</div>
+      <div class="body"><h4>アクセサリー制作</h4><p>綴織のアクセサリーづくりに挑戦。世界に一つのお守りに。</p></div>
+    </div>
+    <div class="exp-card">
+      <div class="top">🖼️</div>
+      <div class="body"><h4>オーダーメイド相談</h4><p>作品づくりのご相談も承っています。まずはお気軽にどうぞ。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="section-head reveal">
+    <span class="en">SHOP</span>
+    <h2>作品を購入する</h2>
+  </div>
+  <div class="shop-grid reveal">
+    <div class="shop-card"><h4>オンラインショップ</h4><p>綴織のアクセサリーやオーダーメイド作品を、オンラインでもご覧いただけます。</p></div>
+    <div class="shop-card"><h4>展示会情報</h4><p>奏絲綴苑展をはじめ、各地での出展情報をお知らせしています。</p></div>
+  </div>
+</section>
+
+<section class="info-section" id="info">
+  <div class="section-head reveal">
+    <span class="en">ACCESS</span>
+    <h2>工房のご案内</h2>
+  </div>
+  <div class="info-wrap reveal">
+    <dl>
+      <dt>名称</dt><dd>奏絲綴苑（そうしつづれえん）</dd>
+      <dt>所在地</dt><dd>京都市上京区西柳町590-8</dd>
+      <dt>電話</dt><dd>090-8232-5228（代表：平野）</dd>
+      <dt>営業時間</dt><dd>午前10時～午後5時（不定休）</dd>
+    </dl>
+    <a class="btn" href="mailto:tsuzureen@gmail.com">メールでお問い合わせ</a>
+  </div>
+</section>
+
+<footer>&copy; 奏絲綴苑（本ページはASUNOKIによるリニューアル提案用サンプルです）</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+
+  const menuBtn = document.getElementById('menuBtn');
+  const siteNav = document.getElementById('siteNav');
+  menuBtn.addEventListener('click', ()=>{
+    const open = siteNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  siteNav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+    siteNav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
+  }));
+</script>
+</body>
+</html>
