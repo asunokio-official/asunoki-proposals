@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>西陣浅田綴｜株式会社浅田 天保四年創業 爪掻本綴帯織元</title>
+<style>
+  :root{
+    --shu:#7a1f2b;
+    --kin:#b8923f;
+    --sumi:#161311;
+    --paper:#f3ece0;
+    --line:rgba(184,146,63,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);color:var(--sumi);
+    font-family:"Hiragino Mincho ProN","YuMincho","Noto Serif JP",serif;
+    line-height:2;
+  }
+  a{color:inherit;}
+  .en{font-family:"EB Garamond",serif;letter-spacing:.18em;}
+  .notice{background:var(--sumi);color:#d8c79c;text-align:center;font-size:11px;padding:8px 12px;}
+
+  header{
+    position:sticky;top:0;z-index:50;background:var(--paper);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 6vw;border-bottom:1px solid var(--line);
+  }
+  .brand{font-size:15px;letter-spacing:.25em;}
+  .brand small{display:block;font-size:9px;letter-spacing:.2em;color:var(--shu);margin-top:4px;}
+  nav{display:flex;gap:30px;font-size:12.5px;letter-spacing:.08em;}
+  nav a{text-decoration:none;}
+  nav#siteNav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;border-bottom:1px solid var(--line);}
+  nav#siteNav.open{display:flex;}
+  nav#siteNav a{padding:16px 6vw;border-top:1px solid var(--line);}
+  .menu-btn{display:block;background:none;border:none;font-size:22px;cursor:pointer;color:var(--sumi);}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* --- hero: vertical emphasis --- */
+  .hero{
+    position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:70px 6vw;overflow:hidden;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(122,31,43,.08), transparent 60%),
+      var(--paper);
+  }
+  .hero::before, .hero::after{
+    content:"";position:absolute;top:8%;bottom:8%;width:1px;background:var(--line);
+  }
+  .hero::before{left:8%;}
+  .hero::after{right:8%;}
+  .hero-year{font-size:12px;letter-spacing:.3em;color:var(--shu);margin-bottom:24px;}
+  .hero h1{font-size:clamp(30px,5.4vw,52px);letter-spacing:.1em;line-height:1.9;}
+  .hero h1 .accent{color:var(--shu);}
+  .hero p.lead{max-width:520px;margin:32px auto 0;font-size:14.5px;color:#4a433a;}
+  .hero .since{margin-top:44px;font-size:11px;letter-spacing:.2em;color:#8a7c5c;}
+  .hero .since b{font-size:26px;display:block;color:var(--kin);font-family:"EB Garamond",serif;margin-bottom:6px;}
+
+  section{padding:110px 6vw;}
+  .section-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+  .section-head .en{display:block;font-size:12px;color:var(--shu);margin-bottom:14px;}
+  .section-head h2{font-size:clamp(22px,3.4vw,32px);letter-spacing:.06em;}
+  .section-head p{margin-top:20px;color:#4a433a;font-size:14px;}
+
+  /* --- heritage story: vertical timeline --- */
+  .heritage{background:var(--sumi);color:var(--paper);}
+  .heritage .section-head p{color:#c9bda3;}
+  .timeline{max-width:640px;margin:0 auto;position:relative;}
+  .timeline::before{content:"";position:absolute;left:60px;top:0;bottom:0;width:1px;background:var(--line);}
+  .tl-item{position:relative;padding:0 0 56px 110px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item .yr{position:absolute;left:0;top:0;width:60px;text-align:right;font-family:"EB Garamond",serif;font-size:20px;color:var(--kin);padding-right:24px;}
+  .tl-item .yr::after{content:"";position:absolute;right:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--kin);}
+  .tl-item h4{font-size:16px;margin-bottom:10px;letter-spacing:.04em;}
+  .tl-item p{font-size:13.5px;color:#c9bda3;}
+
+  /* --- technique: full-bleed statement --- */
+  .technique{text-align:center;background:linear-gradient(180deg,#f3ece0,#e8dcc4);}
+  .technique .visual{
+    width:180px;height:180px;margin:0 auto 40px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #c9a862, var(--shu) 75%);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 0 1px var(--line), 0 30px 60px -20px rgba(122,31,43,.35);
+  }
+  .technique .visual span{font-size:52px;color:#f3ece0;}
+  .technique blockquote{max-width:640px;margin:0 auto;font-size:clamp(18px,2.6vw,24px);line-height:2.1;}
+
+  /* --- festival works: 3-card, unequal widths --- */
+  .festivals{}
+  .festival-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2px;background:var(--line);max-width:1000px;margin:0 auto;}
+  .festival-card{background:var(--paper);padding:44px 30px;}
+  .festival-card h4{font-size:16px;margin-bottom:14px;}
+  .festival-card .size{font-size:11px;color:var(--shu);letter-spacing:.05em;margin-bottom:14px;}
+  .festival-card p{font-size:13px;color:#4a433a;}
+
+  /* --- product motifs --- */
+  .motifs{background:var(--sumi);color:var(--paper);}
+  .motifs .section-head p{color:#c9bda3;}
+  .motif-list{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:820px;margin:0 auto;}
+  .motif-chip{border:1px solid var(--line);padding:12px 22px;font-size:13px;letter-spacing:.05em;}
+
+  /* --- contact --- */
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;max-width:960px;margin:0 auto;}
+  .info-list dt{font-size:11px;letter-spacing:.15em;color:var(--shu);margin-top:20px;}
+  .info-list dd{font-size:15px;margin-top:6px;}
+  .cta-box{background:#fff;border:1px solid var(--line);padding:36px;}
+  .cta-box h4{font-size:16px;margin-bottom:14px;}
+  .cta-box p{font-size:13px;color:#4a433a;margin-bottom:22px;}
+  .cta-box a.btn{display:inline-block;padding:14px 30px;background:var(--shu);color:#f3ece0;text-decoration:none;font-size:13px;letter-spacing:.08em;}
+
+  footer{padding:36px 6vw;text-align:center;font-size:11px;color:#8a7c5c;border-top:1px solid var(--line);}
+
+  @media(max-width:820px){
+    nav:not(#siteNav){display:none;}
+    .festival-grid{grid-template-columns:1fr;}
+    .timeline::before{left:44px;}
+    .tl-item{padding-left:80px;}
+    .tl-item .yr{width:44px;padding-right:14px;font-size:16px;}
+    .contact-grid{grid-template-columns:1fr;}
+    section{padding:80px 6vw;}
+  }
+  @media (prefers-reduced-motion: reduce){.reveal{transition:none;}}
+</style>
+</head>
+<body>
+
+<div class="notice">※これはASUNOKIによるデザイン提案用のサンプルサイトです。実在の情報は既存サイトを基に一部再構成しています。</div>
+
+<header>
+  <div class="brand">西陣浅田綴<small>ASADA TSUZURE</small></div>
+  <nav>
+    <a href="#heritage">歴史</a>
+    <a href="#technique">技法</a>
+    <a href="#festivals">祭礼作品</a>
+    <a href="#contact">会社案内</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">☰</button>
+  <nav id="siteNav">
+    <a href="#heritage">歴史</a>
+    <a href="#technique">技法</a>
+    <a href="#festivals">祭礼作品</a>
+    <a href="#contact">会社案内</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="hero-year en">KYOTO NISHIJIN・SINCE 1833</p>
+    <h1>親から子へ、<br>子から孫へ結び継がれる<br><span class="accent">家宝</span>という帯。</h1>
+    <p class="lead">爪掻本綴帯織元として天保四年より京都西陣の地で織り続けてきた株式会社浅田。すべて手仕事による、一本一本が世界に一つの帯です。</p>
+    <div class="since"><b>192</b>YEARS OF TSUZURE WEAVING</div>
+  </div>
+</section>
+
+<section class="heritage" id="heritage">
+  <div class="section-head reveal">
+    <span class="en">OUR HERITAGE</span>
+    <h2>西陣の地に、織り継いだ時間。</h2>
+    <p>応仁の乱ののち西陣に集った織工たちが再興した織物業。その系譜の中で、浅田は綴帯一筋に歩んできました。</p>
+  </div>
+  <div class="timeline reveal">
+    <div class="tl-item">
+      <div class="yr en">1833</div>
+      <h4>創業　天保四年</h4>
+      <p>京都・西陣の地にて、爪掻本綴帯の製織を始める。</p>
+    </div>
+    <div class="tl-item">
+      <div class="yr en">1954</div>
+      <h4>株式会社浅田　設立</h4>
+      <p>昭和二十九年四月、法人として新たな一歩を踏み出す。</p>
+    </div>
+    <div class="tl-item">
+      <div class="yr en">今</div>
+      <h4>そして、次の百年へ</h4>
+      <p>代表・浅田隆史のもと、今も一本一本、爪で織り上げる仕事を続けている。</p>
+    </div>
+  </div>
+</section>
+
+<section class="technique" id="technique">
+  <div class="visual reveal"><span>爪</span></div>
+  <blockquote class="reveal">緯糸を、指先で掻き寄せる。<br>一日にわずか数センチしか進まぬ日もある。<br>それでも、機械には出せない色の重なりがある。</blockquote>
+</section>
+
+<section class="festivals" id="festivals">
+  <div class="section-head reveal">
+    <span class="en">KYOTO'S THREE GREAT FESTIVALS</span>
+    <h2>祭礼装束にも織り込まれた技</h2>
+    <p>京都三大祭の大行列を、爪掻本綴にて長い年月をかけて織り上げた作品があります。</p>
+  </div>
+  <div class="festival-grid reveal">
+    <div class="festival-card">
+      <h4>祇園祭</h4>
+      <div class="size en">SIZE 192 × 90cm</div>
+      <p>長刀鉾を先頭とする山鉾巡行を、一越一越、一年以上をかけて織り上げた作品。</p>
+    </div>
+    <div class="festival-card">
+      <h4>葵祭</h4>
+      <div class="size en">SIZE 80 × 90cm</div>
+      <p>路頭の儀の大行列を、製作に六ヶ月をかけて織り上げています。</p>
+    </div>
+    <div class="festival-card">
+      <h4>時代祭</h4>
+      <div class="size en">SIZE 140 × 90cm</div>
+      <p>平安から明治までの風俗行列を、一年をかけて織り上げた作品です。</p>
+    </div>
+  </div>
+</section>
+
+<section class="motifs">
+  <div class="section-head reveal">
+    <span class="en">MOTIFS</span>
+    <h2>意匠のかたち</h2>
+  </div>
+  <div class="motif-list reveal">
+    <span class="motif-chip">銅鏡文様</span>
+    <span class="motif-chip">正倉院文様</span>
+    <span class="motif-chip">唐草文様</span>
+    <span class="motif-chip">鳳凰</span>
+    <span class="motif-chip">琳派流水</span>
+    <span class="motif-chip">友禅流し</span>
+    <span class="motif-chip">天の川</span>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-head reveal">
+    <span class="en">COMPANY</span>
+    <h2>会社案内</h2>
+  </div>
+  <div class="contact-grid reveal">
+    <dl class="info-list">
+      <dt>会社名</dt><dd>株式会社浅田（屋号：西陣浅田綴）</dd>
+      <dt>創業</dt><dd>天保四年（1833年）</dd>
+      <dt>設立</dt><dd>昭和二十九年（1954年）四月一日</dd>
+      <dt>代表者</dt><dd>代表取締役社長　浅田隆史</dd>
+      <dt>所在地</dt><dd>〒602-0083　京都市上京区大宮通鞍馬口下ル東入607番地</dd>
+      <dt>電話</dt><dd>075-432-3128</dd>
+    </dl>
+    <div class="cta-box">
+      <h4>お問い合わせ</h4>
+      <p>製品に関するご相談、寸法の変更、袋帯・二重太鼓の織りのご相談も承っております。</p>
+      <a class="btn" href="mailto:nisigin@af.wakwak.com">メールで問い合わせる</a>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 株式会社浅田／西陣浅田綴（本ページはASUNOKIによるリニューアル提案用サンプルです）</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+
+  const menuBtn = document.getElementById('menuBtn');
+  const siteNav = document.getElementById('siteNav');
+  menuBtn.addEventListener('click', ()=>{
+    const open = siteNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  siteNav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+    siteNav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
+  }));
+</script>
+</body>
+</html>
