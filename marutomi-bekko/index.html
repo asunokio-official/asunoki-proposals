@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>べっ甲細工 まるとみ｜長崎 本べっ甲の無垢工房</title>
+<style>
+  :root{
+    --amber-1:#8a5a2b;
+    --amber-2:#c98a3e;
+    --amber-3:#e8c27a;
+    --ink:#1b1611;
+    --paper:#f6f0e6;
+    --line:rgba(255,255,255,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Hiragino Mincho ProN","YuMincho","Noto Serif JP",serif;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  a{color:inherit;}
+  .en{font-family:"EB Garamond","Times New Roman",serif;letter-spacing:.12em;}
+
+  /* --- notice --- */
+  .notice{
+    background:#2a2118;color:#c9b697;text-align:center;font-size:11px;
+    padding:8px 12px;letter-spacing:.05em;font-family:sans-serif;
+  }
+
+  /* --- header --- */
+  header{
+    position:sticky;top:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 6vw;
+    background:#1b1611;
+    border-bottom:1px solid var(--line);
+  }
+  header .brand{font-size:15px;letter-spacing:.3em;}
+  nav{display:flex;gap:28px;font-size:12px;letter-spacing:.15em;}
+  nav a{text-decoration:none;opacity:.85;}
+  .menu-btn{display:none;font-size:22px;background:none;border:none;color:var(--paper);}
+
+  /* --- hero --- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;padding:0 6vw;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(201,138,62,.18), transparent 55%),
+      radial-gradient(ellipse at 75% 80%, rgba(138,90,43,.22), transparent 55%),
+      #1b1611;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, transparent 0 68px, rgba(232,194,122,.05) 68px 70px);
+    opacity:.6;pointer-events:none;
+  }
+  .hero-kicker{font-size:12px;letter-spacing:.4em;color:var(--amber-3);margin-bottom:26px;opacity:0;animation:fadeUp 1s .2s ease forwards;}
+  .hero h1{
+    font-size:clamp(34px,6vw,68px);font-weight:500;letter-spacing:.08em;
+    opacity:0;animation:fadeUp 1.1s .4s ease forwards;
+  }
+  .hero h1 span{display:block;font-size:.42em;letter-spacing:.5em;color:var(--amber-2);margin-top:18px;}
+  .hero p.lead{
+    max-width:560px;margin:34px auto 0;font-size:15px;color:#d8c9ac;
+    opacity:0;animation:fadeUp 1.1s .7s ease forwards;
+  }
+  .hero .scroll-cue{
+    position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
+    font-size:10px;letter-spacing:.3em;color:var(--amber-3);opacity:.7;
+  }
+  .scroll-cue .line{width:1px;height:34px;background:var(--amber-3);margin:10px auto 0;animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+  @keyframes pulse{0%,100%{opacity:.25;}50%{opacity:.9;}}
+
+  /* --- reveal utility --- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  section{padding:110px 6vw;position:relative;}
+  .section-head{max-width:680px;margin:0 auto 60px;text-align:center;}
+  .section-head .en{display:block;font-size:12px;color:var(--amber-2);margin-bottom:14px;}
+  .section-head h2{font-size:clamp(24px,3.6vw,34px);font-weight:500;letter-spacing:.06em;}
+  .section-head p{margin-top:20px;color:#c9bda3;font-size:14px;}
+
+  /* --- philosophy: asymmetric split --- */
+  .philosophy{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;
+    background:#221b13;
+  }
+  .philosophy .txt{padding:90px 7vw;display:flex;flex-direction:column;justify-content:center;}
+  .philosophy .visual{
+    position:relative;min-height:420px;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(232,194,122,.35), transparent 60%),
+      linear-gradient(135deg,#3a2a16,#1b1611 70%);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .philosophy .visual .mark{
+    font-family:"EB Garamond",serif;font-size:120px;color:rgba(232,194,122,.25);
+    letter-spacing:0;
+  }
+  .philosophy h3{font-size:26px;font-weight:500;margin-bottom:26px;letter-spacing:.04em;}
+  .philosophy p{color:#c9bda3;font-size:14.5px;margin-bottom:16px;}
+  .philosophy .stat-row{display:flex;gap:36px;margin-top:34px;}
+  .philosophy .stat b{display:block;font-size:30px;color:var(--amber-3);font-family:"EB Garamond",serif;}
+  .philosophy .stat span{font-size:11px;letter-spacing:.1em;color:#a99b7c;}
+
+  /* --- craft process: horizontal timeline --- */
+  .process{background:var(--ink);}
+  .process-row{
+    display:flex;overflow-x:auto;gap:0;scroll-snap-type:x proximity;
+    padding-bottom:10px;
+  }
+  .process-row::-webkit-scrollbar{height:6px;}
+  .process-row::-webkit-scrollbar-thumb{background:var(--amber-1);border-radius:6px;}
+  .process-step{
+    flex:0 0 260px;scroll-snap-align:start;padding:0 28px;border-left:1px solid var(--line);
+    position:relative;
+  }
+  .process-step:first-child{border-left:none;padding-left:0;}
+  .process-step .num{font-family:"EB Garamond",serif;font-size:42px;color:var(--amber-2);opacity:.7;}
+  .process-step h4{margin:16px 0 12px;font-size:16px;letter-spacing:.05em;}
+  .process-step p{font-size:13px;color:#b9ac8f;line-height:1.85;}
+
+  /* --- product categories: staggered cards --- */
+  .products{background:#221b13;}
+  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);}
+  .product-card{
+    background:#1b1611;padding:52px 30px;min-height:230px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    position:relative;overflow:hidden;
+  }
+  .product-card:nth-child(2){transform:translateY(26px);}
+  .product-card:nth-child(4){transform:translateY(-14px);}
+  .product-card:nth-child(6){transform:translateY(14px);}
+  .product-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--amber-1),var(--amber-3));
+    transform:scaleX(0);transform-origin:left;transition:transform .5s ease;
+  }
+  .product-card:hover::before{transform:scaleX(1);}
+  .product-card .jp{font-size:19px;letter-spacing:.06em;margin-bottom:8px;}
+  .product-card .en{font-size:11px;color:var(--amber-2);}
+
+  /* --- integrity banner --- */
+  .integrity{
+    background:linear-gradient(120deg, #2a2118, #1b1611);
+    text-align:center;padding:120px 6vw;
+  }
+  .integrity blockquote{
+    max-width:760px;margin:0 auto;font-size:clamp(20px,3vw,28px);
+    line-height:2;font-weight:500;color:var(--amber-3);
+  }
+  .integrity cite{display:block;margin-top:28px;font-size:12px;letter-spacing:.15em;color:#a99b7c;font-style:normal;}
+
+  /* --- access / contact --- */
+  .contact{background:var(--ink);}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;max-width:980px;margin:0 auto;}
+  .info-list dt{font-size:11px;letter-spacing:.15em;color:var(--amber-2);margin-top:22px;}
+  .info-list dd{font-size:15px;margin-top:6px;color:#e8dfcc;}
+  .cta-box{background:#221b13;padding:40px;border:1px solid var(--line);}
+  .cta-box h4{font-size:16px;margin-bottom:14px;}
+  .cta-box p{font-size:13px;color:#b9ac8f;margin-bottom:22px;}
+  .cta-box a.btn{
+    display:inline-block;padding:14px 30px;background:var(--amber-2);color:#1b1611;
+    text-decoration:none;font-size:13px;letter-spacing:.1em;border-radius:2px;
+  }
+
+  footer{padding:40px 6vw;text-align:center;font-size:11px;color:#8a7c60;border-top:1px solid var(--line);}
+
+  @media(max-width:820px){
+    nav{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;gap:0;background:#1b1611;border-bottom:1px solid var(--line);
+    }
+    nav.open{display:flex;}
+    nav a{padding:16px 6vw;border-top:1px solid var(--line);}
+    .menu-btn{display:block;cursor:pointer;}
+    .philosophy{grid-template-columns:1fr;}
+    .philosophy .visual{min-height:220px;order:-1;}
+    .product-grid{grid-template-columns:1fr 1fr;}
+    .product-card:nth-child(n){transform:none;}
+    .contact-grid{grid-template-columns:1fr;}
+    section{padding:80px 6vw;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-kicker,.hero h1,.hero p.lead{animation:none;opacity:1;}
+    .scroll-cue .line{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="notice">※これはASUNOKIによるデザイン提案用のサンプルサイトです。実在の情報は既存サイトを基に一部再構成しています。</div>
+
+<header>
+  <div class="brand en">MARUTOMI</div>
+  <nav id="siteNav">
+    <a href="#philosophy">こだわり</a>
+    <a href="#process">技法</a>
+    <a href="#products">商品</a>
+    <a href="#contact">アクセス</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">☰</button>
+</header>
+
+<section class="hero">
+  <p class="hero-kicker en">HONMONO BEKKO SINCE THE EDO ERA</p>
+  <h1>一枚の甲羅に、<br>百年先まで残る仕事を。<span class="en">MARUTOMI BEKKO KOUBOU</span></h1>
+  <p class="lead">長崎・五島町にて、貼りべっ甲を扱わず本べっ甲の無垢のみを手がける工房。眼鏡、アクセサリー、和装小物まで、一つひとつを職人の手で仕上げています。</p>
+  <div class="scroll-cue">SCROLL<div class="line"></div></div>
+</section>
+
+<section class="philosophy" id="philosophy">
+  <div class="txt reveal">
+    <span class="en" style="color:var(--amber-2);font-size:12px;">OUR COMMITMENT</span>
+    <h3 style="margin-top:18px;">本物だけを、<br>次の世代へ。</h3>
+    <p>タイマイの甲羅を原料とする「本べっ甲」。表面に一枚だけ貼った「貼りべっ甲」は一切扱わず、無垢の素材にこだわり続けています。眼鏡、アクセサリー、和装小物まで、幅広い製品を一つの工房でつくり続けてきました。</p>
+    <p>大量生産では出せない色の重なりと透明感。それは、素材と誠実に向き合う時間の積み重ねからしか生まれません。</p>
+    <div class="stat-row">
+      <div class="stat"><b>無垢</b><span>ONLY GENUINE MATERIAL</span></div>
+      <div class="stat"><b>9</b><span>PRODUCT CATEGORIES</span></div>
+    </div>
+  </div>
+  <div class="visual reveal"><span class="mark">鼈</span></div>
+</section>
+
+<section class="process" id="process">
+  <div class="section-head reveal">
+    <span class="en">THE PROCESS</span>
+    <h2>甲羅から、かたちへ。</h2>
+    <p>本べっ甲の色と透明感を活かすため、一枚一枚の甲羅の個性を見極めることから仕事が始まります。</p>
+  </div>
+  <div class="process-row reveal">
+    <div class="process-step">
+      <div class="num en">01</div>
+      <h4>素材の見極め</h4>
+      <p>甲羅ごとに異なる色合い・厚み・透明感を見極め、仕上げる製品を思い描きます。</p>
+    </div>
+    <div class="process-step">
+      <div class="num en">02</div>
+      <h4>裁断・成形</h4>
+      <p>無垢の甲羅を活かせるよう、無駄なく丁寧に裁断し、目的の形へと成形していきます。</p>
+    </div>
+    <div class="process-step">
+      <div class="num en">03</div>
+      <h4>圧着・接合</h4>
+      <p>熱と圧力を加えながら、貼り合わせではなく本べっ甲同士を一体化させていきます。</p>
+    </div>
+    <div class="process-step">
+      <div class="num en">04</div>
+      <h4>研磨・仕上げ</h4>
+      <p>幾度も磨き上げることで、べっ甲本来のつやと透明感を最大限に引き出します。</p>
+    </div>
+    <div class="process-step">
+      <div class="num en">05</div>
+      <h4>検品</h4>
+      <p>一点一点、手に取り光にかざしながら、仕上がりを確認して工房を送り出します。</p>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="section-head reveal">
+    <span class="en">PRODUCTS</span>
+    <h2>暮らしの中の、べっ甲。</h2>
+  </div>
+  <div class="product-grid reveal">
+    <div class="product-card"><div class="jp">眼鏡</div><div class="en">EYEWEAR</div></div>
+    <div class="product-card"><div class="jp">アクセサリー</div><div class="en">JEWELRY</div></div>
+    <div class="product-card"><div class="jp">和装小物</div><div class="en">KIMONO ACCESSORIES</div></div>
+    <div class="product-card"><div class="jp">帯留め</div><div class="en">OBIDOME</div></div>
+    <div class="product-card"><div class="jp">茶道具</div><div class="en">TEA CEREMONY</div></div>
+    <div class="product-card"><div class="jp">修理・お手入れ</div><div class="en">REPAIR &amp; CARE</div></div>
+  </div>
+</section>
+
+<section class="integrity">
+  <blockquote class="reveal">「貼りべっ甲は、扱わない。」<br>それが、まるとみの、たった一つの約束です。</blockquote>
+  <cite>べっ甲細工 まるとみ　三代にわたる工房の言葉より</cite>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-head reveal">
+    <span class="en">ACCESS</span>
+    <h2>工房のご案内</h2>
+  </div>
+  <div class="contact-grid reveal">
+    <dl class="info-list">
+      <dt>屋号</dt><dd>べっ甲細工 まるとみ</dd>
+      <dt>所在地</dt><dd>〒850-0036　長崎市五島町8番5号</dd>
+      <dt>電話</dt><dd>095-821-0103</dd>
+      <dt>営業時間</dt><dd>9:00～17:30（土日祝休）</dd>
+    </dl>
+    <div class="cta-box">
+      <h4>ご相談・お問い合わせ</h4>
+      <p>眼鏡や和装小物のオーダー、修理のご相談も承っております。まずはお気軽にお問い合わせください。</p>
+      <a class="btn" href="mailto:shop@marutomi.jpn.com">メールで問い合わせる</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; べっ甲細工 まるとみ（本ページはASUNOKIによるリニューアル提案用サンプルです）
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+
+  const menuBtn = document.getElementById('menuBtn');
+  const siteNav = document.getElementById('siteNav');
+  menuBtn.addEventListener('click', ()=>{
+    const open = siteNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  siteNav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+    siteNav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+  }));
+</script>
+</body>
+</html>
