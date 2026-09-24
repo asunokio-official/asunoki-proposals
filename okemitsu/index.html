@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>桶光｜長崎・五島 木桶職人</title>
+<style>
+  :root{
+    --wood-1:#8a5a34;
+    --wood-2:#c99a63;
+    --wood-3:#f1e0c2;
+    --sea:#2f6b7a;
+    --sea-2:#7fb8c4;
+    --paper:#fbf6ec;
+    --ink:#2c2015;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","YuMincho","Noto Serif JP",serif;line-height:1.9;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .en{font-family:"EB Garamond","Times New Roman",serif;letter-spacing:.12em;}
+
+  .notice{background:var(--ink);color:var(--wood-2);text-align:center;font-size:11px;padding:8px 12px;letter-spacing:.05em;font-family:sans-serif;}
+
+  header{
+    position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+    padding:20px 6vw;background:rgba(251,246,236,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(138,90,52,.2);
+  }
+  header .brand{font-size:16px;letter-spacing:.26em;color:var(--wood-1);}
+  nav{display:flex;gap:26px;font-size:12px;letter-spacing:.1em;}
+  .menu-btn{display:none;font-size:22px;background:none;border:none;color:var(--ink);}
+
+  .hero{
+    min-height:96vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:0 6vw;
+    background:
+      radial-gradient(circle at 20% 25%, rgba(201,154,99,.35), transparent 50%),
+      radial-gradient(circle at 82% 78%, rgba(47,107,122,.25), transparent 50%),
+      var(--paper);
+  }
+  .hero .ring{
+    width:210px;height:210px;border-radius:50%;border:10px solid var(--wood-2);position:absolute;
+    opacity:.5;animation:rot 40s linear infinite;
+  }
+  .hero .ring.r2{width:320px;height:320px;border-color:var(--sea-2);opacity:.3;animation-duration:60s;animation-direction:reverse;}
+  @keyframes rot{to{transform:rotate(360deg);}}
+  .hero .copy{position:relative;z-index:2;}
+  .hero .kicker{font-size:12px;letter-spacing:.32em;color:var(--sea);margin-bottom:26px;}
+  .hero h1{font-size:clamp(30px,5.6vw,54px);letter-spacing:.06em;color:var(--wood-1);}
+  .hero h1 small{display:block;font-size:.4em;letter-spacing:.25em;color:var(--ink);opacity:.65;margin-bottom:16px;}
+  .hero p{max-width:520px;margin:28px auto 0;font-size:14.5px;opacity:.8;}
+
+  section{padding:110px 8vw;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .85s ease,transform .85s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  .journal{max-width:720px;margin:0 auto;}
+  .journal .num{font-size:12px;letter-spacing:.3em;color:var(--sea);margin-bottom:20px;}
+  .journal h2{font-size:clamp(22px,4vw,32px);color:var(--wood-1);margin-bottom:26px;letter-spacing:.04em;}
+  .journal p{font-size:14.5px;opacity:.85;margin-bottom:16px;}
+  .journal .quote{border-left:3px solid var(--sea-2);padding-left:22px;font-style:italic;margin:30px 0;opacity:.85;}
+
+  .products{max-width:1160px;margin:0 auto;}
+  .products h3{text-align:center;font-size:13px;letter-spacing:.25em;color:var(--sea);margin-bottom:50px;}
+  .products .row{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+  .products .p{
+    aspect-ratio:1/1.1;border-radius:50% 50% 8% 8% / 60% 60% 8% 8%;
+    background:linear-gradient(160deg,var(--wood-2),var(--wood-1));
+    display:flex;align-items:flex-end;justify-content:center;padding-bottom:24px;
+    position:relative;overflow:hidden;
+  }
+  .products .p::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 65% 20%,rgba(255,255,255,.25),transparent 50%);}
+  .products .p span{color:var(--paper);font-size:13px;letter-spacing:.1em;position:relative;}
+
+  .island{
+    max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  }
+  .island .visual{aspect-ratio:5/4;border-radius:4px;background:linear-gradient(150deg,var(--sea-2),var(--sea));position:relative;overflow:hidden;}
+  .island .visual::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(255,255,255,.2),transparent 50%);animation:wave 7s ease-in-out infinite;}
+  @keyframes wave{0%,100%{opacity:.6;}50%{opacity:1;}}
+  .island h3{font-size:21px;color:var(--wood-1);margin-bottom:20px;}
+  .island p{font-size:14.5px;opacity:.82;margin-bottom:14px;}
+
+  .cta{background:var(--wood-1);color:var(--paper);text-align:center;}
+  .cta h2{font-size:clamp(22px,4vw,32px);letter-spacing:.06em;margin-bottom:22px;}
+  .cta p{opacity:.82;font-size:14px;margin-bottom:32px;}
+  .cta .btn{display:inline-block;border:1px solid var(--paper);padding:16px 46px;font-size:12px;letter-spacing:.2em;transition:.3s;}
+  .cta .btn:hover{background:var(--paper);color:var(--wood-1);}
+
+  footer{padding:44px 8vw;text-align:center;font-size:11px;opacity:.55;letter-spacing:.1em;border-top:1px solid rgba(138,90,52,.2);}
+
+  @media(max-width:860px){
+    nav{display:none;} .menu-btn{display:block;}
+    section{padding:74px 7vw;}
+    .products .row{grid-template-columns:repeat(2,1fr);}
+    .island{grid-template-columns:1fr;gap:30px;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+
+<header>
+  <div class="brand">桶光</div>
+  <nav>
+    <a href="#about">桶光について</a>
+    <a href="#products">製品</a>
+    <a href="#island">五島にて</a>
+    <a href="#access">アクセス</a>
+  </nav>
+  <button class="menu-btn">☰</button>
+</header>
+
+<section class="hero">
+  <div class="ring"></div>
+  <div class="ring r2"></div>
+  <div class="copy">
+    <div class="kicker en">WOODEN BARREL CRAFTSMAN</div>
+    <h1><small>長崎・五島市</small>桶光</h1>
+    <p>長崎県最後の桶屋のもとで学んだ技を、五島の地で受け継ぐ。おひつ、寿司桶、味噌桶——木桶のある暮らしを届けます。</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="journal reveal">
+    <div class="num en">01 — ABOUT</div>
+    <h2>一人の職人が、島で継いだ技。</h2>
+    <p>桶光は、長崎県五島市岐宿町で桶の製造・販売・修理を手がける工房です。小学4年生から桶づくりの修業を積んできた一代目職人が、平成28年に開業しました。</p>
+    <div class="quote">「大島勝」氏——長崎県最後の桶屋のもとで一年間修業し、その技を受け継いだ。</div>
+    <p>島での農業と桶づくりを並行して営みながら、島外でのワークショップ開催や、職人集団「結い物で繋ぐ会」での活動など、木桶文化を伝える取り組みを続けています。</p>
+  </div>
+</section>
+
+<section id="products">
+  <div class="products reveal">
+    <h3 class="en">PRODUCTS</h3>
+    <div class="row">
+      <div class="p"><span>おひつ</span></div>
+      <div class="p"><span>寿司桶</span></div>
+      <div class="p"><span>味噌桶</span></div>
+      <div class="p"><span>風呂桶</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="island">
+  <div class="island reveal">
+    <div class="visual"></div>
+    <div>
+      <h3>古い大桶も、直して長く使う。</h3>
+      <p>桶光では新調だけでなく、古い大桶の修理にも対応しています。ひとつの桶を長く使い続けられるように——そんな思いを込めて、一つひとつの仕事に向き合っています。</p>
+      <p>五島の自然の中で、木と向き合いながらものをつくる。その丁寧な仕事ぶりが、桶光の一番の特徴です。</p>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="cta reveal">
+  <h2 class="en">VISIT THE WORKSHOP</h2>
+  <p>長崎県五島市岐宿町中嶽2606-20　080-1703-9558</p>
+  <a class="btn en" href="#">CONTACT</a>
+</section>
+
+<footer><div>桶光 / OKEMITSU — 五島市の桶職人</div></footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
