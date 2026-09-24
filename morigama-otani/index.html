@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>森陶器｜徳島 大谷焼窯元</title>
+<style>
+  :root{
+    --clay-1:#7a3b1e;
+    --clay-2:#b5662f;
+    --clay-3:#e8a15e;
+    --cream:#f6ead8;
+    --ink:#2b1710;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);color:var(--ink);
+    font-family:"Hiragino Mincho ProN","YuMincho","Noto Serif JP",serif;
+    line-height:1.85; overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  .en{font-family:"EB Garamond","Times New Roman",serif;letter-spacing:.12em;}
+
+  .notice{background:var(--ink);color:var(--clay-3);text-align:center;font-size:11px;padding:8px 12px;font-family:sans-serif;letter-spacing:.05em;}
+
+  header{
+    position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+    padding:20px 6vw;background:rgba(246,234,216,.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(122,59,30,.18);
+  }
+  header .brand{font-size:16px;letter-spacing:.28em;color:var(--clay-1);}
+  nav{display:flex;gap:26px;font-size:12px;letter-spacing:.12em;}
+  .menu-btn{display:none;font-size:22px;background:none;border:none;color:var(--ink);}
+
+  .hero{
+    min-height:96vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:stretch;
+  }
+  .hero .copy{
+    display:flex;flex-direction:column;justify-content:center;padding:0 6vw;
+  }
+  .hero .copy .kicker{font-size:12px;letter-spacing:.35em;color:var(--clay-2);margin-bottom:26px;}
+  .hero .copy h1{font-size:clamp(32px,5.4vw,56px);letter-spacing:.05em;color:var(--clay-1);}
+  .hero .copy h1 span{display:block;font-size:.42em;letter-spacing:.25em;color:var(--ink);opacity:.7;margin-top:14px;}
+  .hero .copy p{margin-top:30px;max-width:460px;font-size:14.5px;opacity:.82;}
+  .hero .visual{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 30% 30%, var(--clay-3), transparent 60%),
+      radial-gradient(circle at 70% 75%, var(--clay-2), transparent 55%),
+      linear-gradient(160deg,var(--clay-1),#3d1c0c);
+  }
+  .hero .visual::before{
+    content:"";position:absolute;inset:0;
+    background-image:repeating-radial-gradient(circle at 50% 50%, transparent 0 40px, rgba(0,0,0,.05) 40px 42px);
+    animation:spin 60s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .hero .visual .tag{position:absolute;bottom:30px;right:30px;font-size:11px;letter-spacing:.2em;color:var(--cream);opacity:.85;}
+
+  section{padding:110px 8vw;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .85s ease,transform .85s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  .intro{max-width:760px;}
+  .intro .num{font-size:12px;letter-spacing:.3em;color:var(--clay-2);margin-bottom:18px;}
+  .intro h2{font-size:clamp(24px,4vw,34px);color:var(--clay-1);margin-bottom:26px;letter-spacing:.04em;}
+  .intro p{font-size:15px;opacity:.85;}
+
+  .feature-strip{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:0;max-width:1200px;margin:0 auto;
+    border:1px solid rgba(122,59,30,.25);
+  }
+  .feature-strip .f{padding:54px 42px;border-right:1px solid rgba(122,59,30,.2);border-bottom:1px solid rgba(122,59,30,.2);}
+  .feature-strip .f:nth-child(2n){border-right:none;}
+  .feature-strip .f .ico{font-size:11px;letter-spacing:.25em;color:var(--clay-2);margin-bottom:16px;}
+  .feature-strip .f h3{font-size:19px;margin-bottom:14px;letter-spacing:.03em;}
+  .feature-strip .f p{font-size:13.5px;opacity:.78;}
+
+  .story{
+    display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center;max-width:1160px;margin:0 auto;
+  }
+  .story .photo{
+    aspect-ratio:3/4;background:linear-gradient(150deg,var(--clay-2),var(--clay-1));border-radius:2px;position:relative;overflow:hidden;
+  }
+  .story .photo::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 60% 30%,rgba(255,255,255,.15),transparent 50%);animation:glow 8s ease-in-out infinite;}
+  @keyframes glow{0%,100%{opacity:.6;}50%{opacity:1;}}
+  .story h3{font-size:22px;color:var(--clay-1);margin-bottom:20px;}
+  .story p{font-size:14.5px;opacity:.82;margin-bottom:14px;}
+
+  .cta{background:var(--ink);color:var(--cream);text-align:center;}
+  .cta h2{font-size:clamp(22px,4vw,32px);letter-spacing:.06em;margin-bottom:22px;}
+  .cta p{opacity:.75;font-size:14px;margin-bottom:32px;}
+  .cta .btn{display:inline-block;border:1px solid var(--clay-3);color:var(--clay-3);padding:16px 46px;font-size:12px;letter-spacing:.2em;transition:.3s;}
+  .cta .btn:hover{background:var(--clay-3);color:var(--ink);}
+
+  footer{padding:44px 8vw;text-align:center;font-size:11px;opacity:.55;letter-spacing:.1em;border-top:1px solid rgba(122,59,30,.2);}
+
+  @media(max-width:860px){
+    nav{display:none;} .menu-btn{display:block;}
+    .hero{grid-template-columns:1fr;}
+    .hero .visual{min-height:44vh;order:-1;}
+    section{padding:74px 7vw;}
+    .feature-strip{grid-template-columns:1fr;}
+    .feature-strip .f{border-right:none;}
+    .story{grid-template-columns:1fr;gap:30px;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+
+<header>
+  <div class="brand">森陶器</div>
+  <nav>
+    <a href="#about">窯元について</a>
+    <a href="#kiln">登窯</a>
+    <a href="#experience">陶芸体験</a>
+    <a href="#access">アクセス</a>
+  </nav>
+  <button class="menu-btn">☰</button>
+</header>
+
+<section class="hero">
+  <div class="copy">
+    <div class="kicker en">OTANI-YAKI KILN</div>
+    <h1>森陶器<span>徳島・鳴門　大谷焼窯元</span></h1>
+    <p>国登録有形文化財の登窯で、今も土と炎と向き合う。水琴窟の音色が響く工房で、大谷焼の陶芸体験を。</p>
+  </div>
+  <div class="visual"><div class="tag en">NARUTO, TOKUSHIMA</div></div>
+</section>
+
+<section id="about">
+  <div class="intro reveal">
+    <div class="num en">01 — ABOUT</div>
+    <h2>登窯とともに歩んできた、大谷焼。</h2>
+    <p>森陶器は、徳島県鳴門市大麻町にて大谷焼を手がける窯元です。国登録有形文化財に指定された登窯を現在も保有・活用しており、伝統工芸の継承者として土地の記憶を今に伝えています。</p>
+  </div>
+</section>
+
+<section id="kiln">
+  <div class="feature-strip reveal">
+    <div class="f"><div class="ico en">I.</div><h3>国登録有形文化財の登窯</h3><p>今も現役で使われている登窯。歴史ある窯の中で、大谷焼特有の技法が受け継がれています。</p></div>
+    <div class="f"><div class="ico en">II.</div><h3>水琴窟の音色</h3><p>登窯の内部では、水琴窟の澄んだ音色をお聞きいただけます。土地固有の体験です。</p></div>
+    <div class="f"><div class="ico en">III.</div><h3>電動ロクロ・絵付け体験</h3><p>陶芸体験メニューを完備。初めての方でも大谷焼の技に触れられます。</p></div>
+    <div class="f"><div class="ico en">IV.</div><h3>季節の窯まつり</h3><p>季節ごとに窯まつりを開催し、地域との交流を大切にしています。</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="story reveal">
+    <div class="photo"></div>
+    <div>
+      <h3>土と炎、そして音が息づく工房。</h3>
+      <p>大谷焼は、大きな甕（かめ）をはじめとする陶器づくりで知られる徳島の伝統工芸です。森陶器では、その技術を今に伝えながら、電動ロクロや絵付けといった陶芸体験を通じて、より多くの方に大谷焼の魅力を届けています。</p>
+      <p>登窯という歴史的建造物の中で作業する時間そのものが、この工房ならではの体験です。</p>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="cta reveal">
+  <h2 class="en">VISIT THE KILN</h2>
+  <p>徳島県鳴門市大麻町大谷字井利ノ肩24　(088)689-0022</p>
+  <a class="btn en" href="#">CONTACT</a>
+</section>
+
+<footer><div>森陶器 / MORIGAMA — 大谷焼窯元</div></footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
