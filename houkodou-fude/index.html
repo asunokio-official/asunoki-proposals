@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>仿古堂｜広島・熊野 化粧筆工房</title>
+<style>
+  :root{
+    --rose-1:#5c2a34;
+    --rose-2:#a15b66;
+    --rose-3:#e6c9c2;
+    --gold:#bfa06a;
+    --paper:#fbf4ef;
+    --ink:#2c1f22;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","YuMincho","Noto Serif JP",serif;line-height:1.9;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .en{font-family:"EB Garamond","Times New Roman",serif;letter-spacing:.16em;}
+
+  .notice{background:var(--rose-1);color:var(--rose-3);text-align:center;font-size:11px;padding:8px 12px;letter-spacing:.05em;font-family:sans-serif;}
+
+  header{
+    position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+    padding:20px 6vw;background:rgba(251,244,239,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(191,160,106,.25);
+  }
+  header .brand{font-size:16px;letter-spacing:.3em;color:var(--rose-1);}
+  nav{display:flex;gap:26px;font-size:12px;letter-spacing:.12em;}
+  .menu-btn{display:none;font-size:22px;background:none;border:none;color:var(--ink);}
+
+  .hero{
+    min-height:96vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    position:relative;padding:0 6vw;
+    background:linear-gradient(180deg,#fbf4ef 0%,#f3e3de 100%);
+  }
+  .hero .halo{
+    position:absolute;width:480px;height:480px;border-radius:50%;
+    background:radial-gradient(circle,rgba(191,160,106,.25),transparent 65%);
+    animation:pulse 8s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.08);opacity:1;}}
+  .hero .kicker{position:relative;font-size:12px;letter-spacing:.4em;color:var(--rose-2);margin-bottom:26px;}
+  .hero h1{position:relative;font-size:clamp(30px,5.6vw,54px);letter-spacing:.1em;color:var(--rose-1);}
+  .hero h1 small{display:block;font-size:.38em;letter-spacing:.28em;color:var(--ink);opacity:.62;margin-bottom:18px;}
+  .hero p{position:relative;max-width:500px;margin:28px auto 0;font-size:14.5px;opacity:.8;}
+
+  section{padding:110px 8vw;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .85s ease,transform .85s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  .intro{max-width:720px;margin:0 auto;text-align:center;}
+  .intro .num{font-size:12px;letter-spacing:.3em;color:var(--rose-2);margin-bottom:20px;}
+  .intro h2{font-size:clamp(22px,4vw,32px);color:var(--rose-1);margin-bottom:26px;letter-spacing:.04em;}
+  .intro p{font-size:14.5px;opacity:.82;}
+
+  .lines{max-width:1160px;margin:0 auto;}
+  .lines h3{text-align:center;font-size:12px;letter-spacing:.3em;color:var(--rose-2);margin-bottom:50px;}
+  .lines .row{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
+  .lines .card{
+    background:var(--paper);border:1px solid rgba(191,160,106,.3);border-radius:4px;padding:50px 30px;text-align:center;
+    transition:transform .4s ease,box-shadow .4s ease;
+  }
+  .lines .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(92,42,52,.12);}
+  .lines .card .glyph{
+    width:64px;height:64px;border-radius:50%;margin:0 auto 26px;
+    background:linear-gradient(150deg,var(--rose-3),var(--gold));
+  }
+  .lines .card h4{font-size:19px;color:var(--rose-1);margin-bottom:12px;letter-spacing:.06em;}
+  .lines .card p{font-size:13px;opacity:.75;}
+
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1160px;margin:0 auto;}
+  .story .visual{aspect-ratio:4/5;border-radius:4px;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,var(--rose-3),var(--rose-2));
+  }
+  .story .visual::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 65% 25%,rgba(255,255,255,.3),transparent 50%);animation:shimmer 9s ease-in-out infinite;}
+  @keyframes shimmer{0%,100%{opacity:.6;}50%{opacity:1;}}
+  .story h3{font-size:21px;color:var(--rose-1);margin-bottom:20px;}
+  .story p{font-size:14.5px;opacity:.82;margin-bottom:14px;}
+
+  .cta{background:var(--rose-1);color:var(--paper);text-align:center;}
+  .cta h2{font-size:clamp(22px,4vw,32px);letter-spacing:.08em;margin-bottom:22px;}
+  .cta p{opacity:.82;font-size:14px;margin-bottom:32px;}
+  .cta .btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:16px 46px;font-size:12px;letter-spacing:.2em;transition:.3s;}
+  .cta .btn:hover{background:var(--gold);color:var(--rose-1);}
+
+  footer{padding:44px 8vw;text-align:center;font-size:11px;opacity:.55;letter-spacing:.1em;border-top:1px solid rgba(191,160,106,.25);}
+
+  @media(max-width:860px){
+    nav{display:none;} .menu-btn{display:block;}
+    section{padding:74px 7vw;}
+    .lines .row{grid-template-columns:1fr;}
+    .story{grid-template-columns:1fr;gap:30px;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+
+<header>
+  <div class="brand">仿古堂</div>
+  <nav>
+    <a href="#about">仿古堂について</a>
+    <a href="#lines">化粧筆シリーズ</a>
+    <a href="#story">ものづくり</a>
+    <a href="#access">アクセス</a>
+  </nav>
+  <button class="menu-btn">☰</button>
+</header>
+
+<section class="hero">
+  <div class="halo"></div>
+  <div class="kicker en">KUMANO BRUSH, SINCE 1900</div>
+  <h1><small>広島・熊野町</small>仿古堂</h1>
+  <p>筆にこだわり、筆を愛する。120年以上、四代にわたり受け継がれてきた熊野筆のものづくりを、化粧筆という形で今に伝えています。</p>
+</section>
+
+<section id="about">
+  <div class="intro reveal">
+    <div class="num en">01 — ABOUT</div>
+    <h2>1900年創業、四代続く筆づくり。</h2>
+    <p>仿古堂は、筆の産地として知られる広島県熊野町にて、筆の製造・卸売を営んできた工房です。二代目・井原思斉による「仿古銘筆」を基礎とし、現在は「HOUKODOU」ブランドとして、女性スタッフの視点を活かした化粧筆づくりに力を入れています。</p>
+  </div>
+</section>
+
+<section id="lines">
+  <div class="lines reveal">
+    <h3 class="en">COSMETIC BRUSH LINES</h3>
+    <div class="row">
+      <div class="card"><div class="glyph"></div><h4>宙 — SORA</h4><p>天地の広がりを思わせる、まろやかな穂先。</p></div>
+      <div class="card"><div class="glyph"></div><h4>萌 — MOE</h4><p>萌え出づる若葉のような、やわらかな質感。</p></div>
+      <div class="card"><div class="glyph"></div><h4>凪 — NAGI</h4><p>凪いだ海面のような、静かで確かな使い心地。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="story reveal">
+    <div class="visual"></div>
+    <div>
+      <h3>毛質、毛量、形状。すべてにこだわる。</h3>
+      <p>仿古堂の化粧筆は、女性スタッフによる開発チームが、毛質・毛量・形状・軸の長短・デザインのすべてにこだわり抜いて生み出しています。天地人・松竹梅という自然の観念を、それぞれのシリーズに込めました。</p>
+      <p>工房では見学・体験プログラムも実施し、隣接する「筆の駅」で情報発信も行っています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="cta reveal">
+  <h2 class="en">VISIT HOUKODOU</h2>
+  <p>広島県安芸郡熊野町出来庭10-6-23　082-854-0003</p>
+  <a class="btn en" href="#">CONTACT</a>
+</section>
+
+<footer><div>仿古堂 / HOUKODOU — 熊野筆工房</div></footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
