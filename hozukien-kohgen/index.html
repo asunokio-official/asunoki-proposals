@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>森川商店 芳月苑｜お香専門店 リニューアル提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--smoke:#e7ded0;--ember:#a8623a;--deep:#3b2a22;--ink:#2a221c;--gold:#b98d4c;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--smoke);color:var(--ink);line-height:1.9;}
+  .mincho{font-family:'Shippori Mincho',serif;}
+  .disclaimer{background:var(--deep);color:#eadfcd;text-align:center;font-size:.72rem;padding:.5rem 1rem;}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5%;background:rgba(231,222,208,.9);backdrop-filter:blur(6px);}
+  .logo{font-family:'Shippori Mincho',serif;font-weight:600;}
+  nav{display:none;} @media(min-width:800px){nav{display:flex;gap:2rem;font-size:.85rem;}}
+  nav a{color:var(--ink);text-decoration:none;}
+
+  .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 6% 5rem;overflow:hidden;
+    background:radial-gradient(ellipse at 50% 110%, rgba(168,98,58,.28), transparent 60%), var(--smoke);}
+  .smoke-wisp{position:absolute;bottom:0;left:50%;width:2px;height:60%;background:linear-gradient(to top, rgba(59,42,34,.35), transparent);
+    transform-origin:bottom center;filter:blur(6px);}
+  .smoke-wisp.w1{left:45%;animation:wisp 9s ease-in-out infinite;}
+  .smoke-wisp.w2{left:52%;animation:wisp 11s ease-in-out infinite 1.5s;}
+  .smoke-wisp.w3{left:58%;animation:wisp 8s ease-in-out infinite 3s;}
+  @keyframes wisp{0%{transform:translateX(0) scaleY(.8);opacity:.5;}50%{transform:translateX(14px) scaleY(1.1);opacity:.85;}100%{transform:translateX(-6px) scaleY(.9);opacity:.4;}}
+  .hero-content{position:relative;z-index:2;max-width:680px;}
+  .hero-eyebrow{letter-spacing:.4em;font-size:.72rem;color:var(--ember);margin-bottom:1.5rem;}
+  .hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(2rem,5.6vw,3.5rem);line-height:1.65;color:var(--deep);}
+  .hero p{margin-top:1.7rem;color:#5c4c3d;font-size:.95rem;}
+
+  section{padding:6.5rem 6%;max-width:1080px;margin:0 auto;}
+  .fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s, transform .8s;}
+  .fade-up.in{opacity:1;transform:none;}
+
+  .scents{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(59,42,34,.14);}
+  @media(min-width:700px){.scents{grid-template-columns:repeat(3,1fr);}}
+  .scent{background:var(--smoke);padding:2.6rem 1.8rem;}
+  .scent .sn{font-family:'Shippori Mincho',serif;font-size:1.5rem;color:var(--ember);display:block;margin-bottom:.8rem;}
+  .scent h3{font-size:1rem;margin-bottom:.5rem;}
+  .scent p{font-size:.85rem;color:#5c4c3d;}
+
+  .about{background:var(--deep);color:#eadfcd;border-radius:3px;padding:4.5rem 6%;display:grid;gap:2.4rem;}
+  @media(min-width:820px){.about{grid-template-columns:1fr 1fr;align-items:center;}}
+  .about h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;margin-bottom:1.1rem;}
+  .about p{color:#c9b9a2;font-size:.93rem;}
+  .about-visual{aspect-ratio:4/3;border-radius:2px;background:radial-gradient(circle at 60% 40%, var(--ember), var(--deep) 75%);position:relative;}
+  .about-visual span{position:absolute;bottom:1.3rem;left:1.3rem;font-family:'Shippori Mincho',serif;color:#eadfcd;}
+
+  .cta{text-align:center;padding-bottom:7rem;}
+  .cta h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;color:var(--deep);margin-bottom:1rem;}
+  .cta p{max-width:30rem;margin:0 auto 2rem;color:#5c4c3d;font-size:.92rem;}
+  .btn{display:inline-block;background:var(--ember);color:#fff;padding:.95rem 2.4rem;text-decoration:none;font-size:.9rem;border-radius:2px;transition:transform .25s,box-shadow .25s;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(168,98,58,.35);}
+  footer{background:var(--deep);color:#a9977f;text-align:center;padding:2.4rem 1rem;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです</div>
+<header><div class="logo">森川商店 芳月苑</div><nav><a href="#scents">香りのご案内</a><a href="#about">こだわり</a></nav></header>
+
+<section class="hero">
+  <div class="smoke-wisp w1"></div><div class="smoke-wisp w2"></div><div class="smoke-wisp w3"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">HOZUKIEN — INCENSE SPECIALTY, OSAKA</div>
+    <h1 class="mincho">一本の香りが、<br>部屋の空気を変える。</h1>
+    <p>大阪・城東区。線香・抹香・塗香など、暮らしに寄り添う香りを届け続けてきたお香専門店です。</p>
+  </div>
+</section>
+
+<section class="fade-up" id="scents">
+  <div class="scents">
+    <div class="scent"><span class="sn">香</span><h3>お線香</h3><p>毎日の供養から、来客時の空間づくりまで。</p></div>
+    <div class="scent"><span class="sn">贈</span><h3>進物用ギフト</h3><p>1,000円台から贈答用の上質な詰め合わせまで。</p></div>
+    <div class="scent"><span class="sn">和</span><h3>塗香・抹香</h3><p>本格的な香りにこだわる方への専門ラインナップ。</p></div>
+  </div>
+</section>
+
+<section class="fade-up" id="about">
+  <div class="about">
+    <div class="about-visual"><span>香りの記憶</span></div>
+    <div>
+      <h2 class="mincho">価格帯の広さは、<br>そのまま想いの広さ</h2>
+      <p>日々の暮らしに使えるお線香から、大切な方への贈答用ギフトまで。幅広い価格帯とラインナップで、香りを通じたさまざまな想いに応えてきました。オンライン決済にも対応し、全国どこからでもご注文いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta fade-up">
+  <h2 class="mincho">香りの選びやすさを、もっと届けやすく。</h2>
+  <p>豊富な商品ラインナップとギフト選びの導線を整理し、スマートフォンでも選びやすいサイトへのリニューアルをご提案します。</p>
+  <a class="btn" href="mailto:info@hozukien.com">お問い合わせについて</a>
+</section>
+
+<footer>森川商店 芳月苑（大阪市城東区）｜本サイトはリニューアル提案用モックアップです</footer>
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
