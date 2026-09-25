@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>友禅工房 陽明｜加賀友禅 リニューアル提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--crimson:#a9314a;--indigo:#2e4a72;--gold:#c8973f;--green:#4c6b47;--paper:#faf6ee;--ink:#2a2420;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;}
+  .mincho{font-family:'Shippori Mincho',serif;}
+  .disclaimer{background:#241e1a;color:#f0e6d4;text-align:center;font-size:.72rem;padding:.5rem 1rem;}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5%;background:rgba(250,246,238,.9);backdrop-filter:blur(6px);}
+  .logo{font-family:'Shippori Mincho',serif;font-weight:600;}
+  nav{display:none;} @media(min-width:800px){nav{display:flex;gap:2rem;font-size:.85rem;}}
+  nav a{color:var(--ink);text-decoration:none;}
+
+  .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 6% 5rem;overflow:hidden;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(169,49,74,.16), transparent 45%),
+      radial-gradient(circle at 85% 30%, rgba(46,74,114,.16), transparent 45%),
+      radial-gradient(circle at 50% 90%, rgba(76,107,71,.16), transparent 45%),
+      var(--paper);
+  }
+  .petal{position:absolute;width:10px;height:16px;border-radius:60% 0 60% 0;opacity:.5;animation:drift 14s linear infinite;}
+  .petal.p1{background:var(--crimson);left:12%;top:-5%;animation-delay:0s;}
+  .petal.p2{background:var(--gold);left:30%;top:-5%;animation-delay:3s;}
+  .petal.p3{background:var(--indigo);left:70%;top:-5%;animation-delay:6s;}
+  .petal.p4{background:var(--green);left:85%;top:-5%;animation-delay:9s;}
+  @keyframes drift{from{transform:translateY(-10vh) rotate(0deg);}to{transform:translateY(110vh) rotate(200deg);}}
+  .hero-content{position:relative;z-index:2;max-width:700px;}
+  .hero-eyebrow{letter-spacing:.4em;font-size:.72rem;color:var(--crimson);margin-bottom:1.5rem;}
+  .hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(2rem,5.6vw,3.5rem);line-height:1.65;color:#3a3128;}
+  .hero p{margin-top:1.7rem;color:#5c5348;font-size:.95rem;}
+
+  section{padding:6.5rem 6%;max-width:1080px;margin:0 auto;}
+  .fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s, transform .8s;}
+  .fade-up.in{opacity:1;transform:none;}
+
+  .colors{display:flex;justify-content:center;gap:1.4rem;margin-bottom:1rem;flex-wrap:wrap;}
+  .swatch{width:52px;height:52px;border-radius:50%;box-shadow:0 6px 16px rgba(0,0,0,.12);}
+
+  .story{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center;}
+  @media(min-width:820px){.story{grid-template-columns:1fr 1fr;}}
+  .story h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;color:var(--crimson);margin-bottom:1.1rem;}
+  .story p{font-size:.93rem;color:#5c5348;}
+  .kimono{aspect-ratio:3/4;border-radius:2px;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,var(--crimson) 0%, var(--gold) 45%, var(--indigo) 100%);}
+  .kimono::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(60deg, rgba(255,255,255,.08) 0 2px, transparent 2px 20px);}
+
+  .offerings{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(42,36,32,.12);}
+  @media(min-width:700px){.offerings{grid-template-columns:repeat(3,1fr);}}
+  .offer{background:var(--paper);padding:2.6rem 1.8rem;}
+  .offer h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;color:var(--crimson);margin-bottom:.6rem;}
+  .offer p{font-size:.85rem;color:#5c5348;}
+
+  .cta{text-align:center;padding-bottom:7rem;}
+  .cta h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;color:#3a3128;margin-bottom:1rem;}
+  .cta p{max-width:30rem;margin:0 auto 2rem;color:#5c5348;font-size:.92rem;}
+  .btn{display:inline-block;background:var(--crimson);color:#fff;padding:.95rem 2.4rem;text-decoration:none;font-size:.9rem;border-radius:2px;transition:transform .25s,box-shadow .25s;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(169,49,74,.32);}
+  footer{background:#241e1a;color:#b8ab97;text-align:center;padding:2.4rem 1rem;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです</div>
+<header><div class="logo">友禅工房 陽明</div><nav><a href="#story">工房について</a><a href="#offerings">ご案内</a></nav></header>
+
+<section class="hero">
+  <div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div>
+  <div class="hero-content">
+    <div class="colors">
+      <div class="swatch" style="background:var(--crimson);"></div>
+      <div class="swatch" style="background:var(--gold);"></div>
+      <div class="swatch" style="background:var(--indigo);"></div>
+      <div class="swatch" style="background:var(--green);"></div>
+    </div>
+    <div class="hero-eyebrow">YUZEN KOUBOU YOUMEI — KANAZAWA</div>
+    <h1 class="mincho">一筆に、一色に、<br>あなただけの物語を。</h1>
+    <p>石川県金沢市。加賀友禅の技を受け継ぐ平野利明が、世界に一つだけの手描き友禅を仕立てる工房です。</p>
+  </div>
+</section>
+
+<section class="fade-up" id="story">
+  <div class="story">
+    <div class="kimono"></div>
+    <div>
+      <h2 class="mincho">加賀五彩が生む、<br>奥行きのある色彩</h2>
+      <p>臙脂・黄土・緑・藍・古代紫を基調とする加賀友禅の伝統技法を用い、一枚一枚を手描きで仕上げています。既製品にはない、その方だけのための一着を、オーダーメイドでお仕立てします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up" id="offerings">
+  <div class="offerings">
+    <div class="offer"><h3>オーダーメイド制作</h3><p>着物からリメイクまで、要望に合わせた一点物を制作。</p></div>
+    <div class="offer"><h3>体験教室</h3><p>彩色体験・染額作り体験など、初めての方も安心。</p></div>
+    <div class="offer"><h3>リメイク相談</h3><p>お手持ちの着物や生地を活かしたリメイクにも対応。</p></div>
+  </div>
+</section>
+
+<section class="cta fade-up">
+  <h2 class="mincho">色の物語を、より多くの方へ。</h2>
+  <p>作品ギャラリーと体験教室のご案内を見やすく整理し、加賀友禅の魅力がひと目で伝わるサイトへのリニューアルをご提案します。</p>
+  <a class="btn" href="mailto:info@yuzen-youmei.com">お問い合わせについて</a>
+</section>
+
+<footer>友禅工房 陽明（石川県金沢市）｜本サイトはリニューアル提案用モックアップです</footer>
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
