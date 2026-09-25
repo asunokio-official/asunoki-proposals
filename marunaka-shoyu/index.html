@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>丸中醤油｜蔵元 リニューアル提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Old+Mincho:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --shoyu-black:#1c1410;
+    --shoyu-amber:#8a4a1f;
+    --shoyu-gold:#c98a33;
+    --paper:#f3ece0;
+    --ink:#231a14;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;}
+  .mincho{font-family:'Zen Old Mincho',serif;}
+  .disclaimer{background:var(--shoyu-black);color:#d8c6ab;text-align:center;font-size:.72rem;padding:.5rem 1rem;}
+
+  header{
+    position:fixed;inset:0 0 auto 0;z-index:100;display:flex;justify-content:space-between;align-items:center;
+    padding:1.1rem 5%;background:rgba(243,236,224,.9);backdrop-filter:blur(6px);
+  }
+  .logo{font-family:'Zen Old Mincho',serif;font-weight:600;font-size:1.1rem;letter-spacing:.06em;}
+  nav{display:none;}
+  @media(min-width:800px){nav{display:flex;gap:2rem;font-size:.85rem;}}
+  nav a{color:var(--ink);text-decoration:none;}
+
+  .hero{
+    min-height:100vh;display:grid;grid-template-columns:1fr;
+    background:linear-gradient(150deg,var(--shoyu-black) 0%, #2c1e14 60%, var(--shoyu-amber) 140%);
+    color:#f3ece0;position:relative;overflow:hidden;
+  }
+  @media(min-width:900px){.hero{grid-template-columns:1.15fr .85fr;}}
+  .hero-text{padding:9rem 6% 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
+  .hero-eyebrow{letter-spacing:.4em;font-size:.72rem;color:var(--shoyu-gold);margin-bottom:1.6rem;}
+  .hero h1{font-family:'Zen Old Mincho',serif;font-weight:600;font-size:clamp(2rem,5.2vw,3.6rem);line-height:1.55;}
+  .hero p{margin-top:1.6rem;max-width:32rem;color:#d8c6ab;font-size:.95rem;}
+  .hero-side{
+    position:relative;min-height:340px;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(201,138,51,.35), transparent 55%),
+      repeating-radial-gradient(circle at 70% 70%, rgba(201,138,51,.08) 0 2px, transparent 2px 40px);
+  }
+  .hero-side::after{
+    content:"醤";position:absolute;bottom:6%;right:8%;font-family:'Zen Old Mincho',serif;
+    font-size:11rem;color:rgba(201,138,51,.16);line-height:1;
+  }
+
+  section{padding:6.5rem 6%;max-width:1080px;margin:0 auto;}
+  .fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s, transform .8s;}
+  .fade-up.in{opacity:1;transform:none;}
+
+  .timeline{display:grid;grid-template-columns:1fr;gap:2.2rem;}
+  @media(min-width:760px){.timeline{grid-template-columns:repeat(4,1fr);}}
+  .timeline .tnum{font-family:'Zen Old Mincho',serif;font-size:2.6rem;color:var(--shoyu-amber);}
+  .timeline .titem{border-top:2px solid var(--shoyu-amber);padding-top:1rem;}
+  .timeline h4{font-size:.95rem;margin:.4rem 0;}
+  .timeline p{font-size:.82rem;color:#5c5044;}
+
+  .craft{
+    background:var(--shoyu-black);color:#f3ece0;border-radius:3px;
+    display:grid;gap:2.4rem;padding:5rem 6%;
+  }
+  @media(min-width:820px){.craft{grid-template-columns:1fr 1fr;align-items:center;}}
+  .craft h2{font-family:'Zen Old Mincho',serif;font-size:1.9rem;margin-bottom:1.2rem;color:#f0e2c8;}
+  .craft p{color:#c9bba3;font-size:.93rem;}
+  .craft-visual{
+    aspect-ratio:5/4;border-radius:2px;position:relative;overflow:hidden;
+    background:linear-gradient(200deg,var(--shoyu-amber),#3a2314 75%);
+  }
+  .craft-visual::before{
+    content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(0deg, rgba(0,0,0,.12) 0 4px, transparent 4px 8px);
+    mix-blend-mode:multiply;
+  }
+  .craft-visual span{position:absolute;bottom:1.3rem;left:1.3rem;font-family:'Zen Old Mincho',serif;color:#f3ece0;}
+
+  .products{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(28,20,16,.14);}
+  @media(min-width:700px){.products{grid-template-columns:repeat(3,1fr);}}
+  .product{background:var(--paper);padding:2.6rem 1.8rem;}
+  .product .pn{font-family:'Zen Old Mincho',serif;font-size:1.6rem;color:var(--shoyu-amber);margin-bottom:.8rem;display:block;}
+  .product h3{font-size:1rem;margin-bottom:.5rem;}
+  .product p{font-size:.85rem;color:#5c5044;}
+
+  .cta{text-align:center;padding-bottom:7rem;}
+  .cta h2{font-family:'Zen Old Mincho',serif;font-size:1.9rem;margin-bottom:1rem;}
+  .cta p{max-width:32rem;margin:0 auto 2rem;color:#5c5044;font-size:.92rem;}
+  .btn{
+    display:inline-block;background:var(--shoyu-amber);color:#fff;padding:.95rem 2.4rem;
+    text-decoration:none;font-size:.9rem;letter-spacing:.06em;border-radius:2px;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(138,74,31,.35);}
+  footer{background:var(--shoyu-black);color:#a2917a;text-align:center;padding:2.4rem 1rem;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです</div>
+<header>
+  <div class="logo">丸中醤油</div>
+  <nav><a href="#craft">古式製法</a><a href="#products">商品</a></nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">MARUNAKA SHOYU — EDO PERIOD BREWERY</div>
+    <h1 class="mincho">二百余年、蔵に棲む<br>菌と、対話しながら。</h1>
+    <p>江戸時代からの伝統と製法を守る、滋賀県の醤油蔵元。登録有形文化財に指定された蔵で、今も昔ながらの古式製法による醤油づくりを続けています。</p>
+  </div>
+  <div class="hero-side"></div>
+</section>
+
+<section class="fade-up">
+  <div class="timeline">
+    <div class="titem"><div class="tnum">200+</div><h4>年の歴史</h4><p>江戸時代創業、二百余年の歳月を重ねた醤油蔵。</p></div>
+    <div class="titem"><div class="tnum">有形</div><h4>登録文化財</h4><p>蔵そのものが文化庁の登録有形文化財に指定。</p></div>
+    <div class="titem"><div class="tnum">古式</div><h4>製法を継承</h4><p>効率化を急がず、蔵付き酵母と向き合う醸造。</p></div>
+    <div class="titem"><div class="tnum">直営</div><h4>ECで発信</h4><p>蔵元直営のオンラインショップも運営中。</p></div>
+  </div>
+</section>
+
+<section class="fade-up" id="craft">
+  <div class="craft">
+    <div class="craft-visual"><span>蔵の温度と時間</span></div>
+    <div>
+      <h2 class="mincho">効率ではなく、<br>時間に委ねるものづくり</h2>
+      <p>大豆と小麦を蒸し、麹をつくり、蔵に棲みついた酵母とともにじっくりと発酵させる。丸中醤油が守り続けているのは、二百年変わらないその工程そのものです。季節ごとに表情を変える蔵の中で、醤油はゆっくりと熟成していきます。</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up" id="products">
+  <div class="products">
+    <div class="product"><span class="pn">壱</span><h3>濃口醤油</h3><p>毎日の食卓に寄り添う、深みのある定番の味わい。</p></div>
+    <div class="product"><span class="pn">弐</span><h3>再仕込み醤油</h3><p>醤油で醤油を仕込む、贅沢な二段仕込み製法。</p></div>
+    <div class="product"><span class="pn">参</span><h3>限定醸造</h3><p>季節や仕込み年による、蔵元だけの限定醤油。</p></div>
+  </div>
+</section>
+
+<section class="cta fade-up">
+  <h2 class="mincho">二百年の蔵の物語を、伝わる形に。</h2>
+  <p>歴史・製法・商品ラインナップを整理し、初めての方にも蔵の魅力が伝わるサイトへのリニューアルをご提案します。</p>
+  <a class="btn" href="mailto:info@s-marunaka.com">お問い合わせについて</a>
+</section>
+
+<footer>丸中醤油（滋賀県）｜本サイトはリニューアル提案用モックアップです</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
