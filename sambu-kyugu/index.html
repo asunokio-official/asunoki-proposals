@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>山武弓具店｜リニューアル提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#111214;--white:#f7f6f3;--red:#b3242c;--gray:#5a5b5f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--white);color:var(--black);line-height:1.85;}
+  .mincho{font-family:'Shippori Mincho',serif;}
+  .disclaimer{background:var(--black);color:#d8d6d0;text-align:center;font-size:.72rem;padding:.5rem 1rem;}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5%;background:rgba(247,246,243,.92);backdrop-filter:blur(6px);}
+  .logo{font-family:'Shippori Mincho',serif;font-weight:700;letter-spacing:.04em;}
+  nav{display:none;} @media(min-width:800px){nav{display:flex;gap:2rem;font-size:.85rem;}}
+  nav a{color:var(--black);text-decoration:none;}
+
+  .hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:8rem 6% 4rem;overflow:hidden;background:var(--black);color:var(--white);}
+  .arrow-line{position:absolute;top:0;bottom:0;width:2px;background:linear-gradient(var(--red),transparent);}
+  .arrow-line.a1{left:20%;animation:shoot 4s ease-in infinite;}
+  .arrow-line.a2{left:65%;animation:shoot 5.2s ease-in infinite 1.2s;}
+  .arrow-line.a3{left:88%;animation:shoot 3.6s ease-in infinite 2.4s;}
+  @keyframes shoot{0%{transform:translateY(-100%);opacity:0;}10%{opacity:1;}100%{transform:translateY(100vh);opacity:0;}}
+  .hero-content{position:relative;z-index:2;max-width:680px;}
+  .hero-eyebrow{letter-spacing:.4em;font-size:.72rem;color:var(--red);margin-bottom:1.5rem;}
+  .hero h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(2rem,5.6vw,3.6rem);line-height:1.5;}
+  .hero p{margin-top:1.7rem;color:#c9c8c3;font-size:.95rem;}
+
+  section{padding:6.5rem 6%;max-width:1080px;margin:0 auto;}
+  .fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s, transform .8s;}
+  .fade-up.in{opacity:1;transform:none;}
+
+  .grid4{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid #ddd;border-left:1px solid #ddd;}
+  @media(min-width:760px){.grid4{grid-template-columns:repeat(4,1fr);}}
+  .gitem{padding:2.4rem 1.6rem;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+  .gitem .gn{font-family:'Shippori Mincho',serif;font-size:1.6rem;color:var(--red);display:block;margin-bottom:.7rem;}
+  .gitem p{font-size:.85rem;color:var(--gray);}
+
+  .split{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center;}
+  @media(min-width:820px){.split{grid-template-columns:1fr 1fr;}}
+  .split h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;margin-bottom:1.1rem;}
+  .split p{font-size:.93rem;color:var(--gray);}
+  .target{aspect-ratio:1;border-radius:50%;position:relative;
+    background:repeating-radial-gradient(circle, var(--white) 0 8%, var(--black) 8% 16%);
+    max-width:280px;margin:0 auto;}
+  .target::after{content:"";position:absolute;inset:44%;background:var(--red);border-radius:50%;}
+
+  .cta{text-align:center;padding-bottom:7rem;}
+  .cta h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;margin-bottom:1rem;}
+  .cta p{max-width:30rem;margin:0 auto 2rem;color:var(--gray);font-size:.92rem;}
+  .btn{display:inline-block;background:var(--black);color:#fff;padding:.95rem 2.4rem;text-decoration:none;font-size:.9rem;border-radius:2px;transition:transform .25s,box-shadow .25s;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(17,18,20,.3);}
+  footer{background:var(--black);color:#9a9993;text-align:center;padding:2.4rem 1rem;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです</div>
+<header><div class="logo">山武弓具店</div><nav><a href="#lineup">取扱品目</a><a href="#craft">こだわり</a></nav></header>
+
+<section class="hero">
+  <div class="arrow-line a1"></div><div class="arrow-line a2"></div><div class="arrow-line a3"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">SAMBU KYUGU — KYUDO EQUIPMENT</div>
+    <h1 class="mincho">一射に込める集中を、<br>道具から支える。</h1>
+    <p>千葉県山武市。全日本弓道具協会会員として、弓・矢・ユガケ・弦を扱う弓道具専門店です。オーダーメイド矢にも対応しています。</p>
+  </div>
+</section>
+
+<section class="fade-up" id="lineup">
+  <div class="grid4">
+    <div class="gitem"><span class="gn">弓</span><p>初心者用から上級者向けまで幅広く取り揃え。</p></div>
+    <div class="gitem"><span class="gn">矢</span><p>オーダーメイドによる一人ひとりに合わせた矢。</p></div>
+    <div class="gitem"><span class="gn">具</span><p>ユガケ・弦など、弓道に必要な道具一式。</p></div>
+    <div class="gitem"><span class="gn">便</span><p>当日出荷・ネコポス対応の通信販売サービス。</p></div>
+  </div>
+</section>
+
+<section class="fade-up" id="craft">
+  <div class="split">
+    <div class="target"></div>
+    <div>
+      <h2 class="mincho">大会にも、日々の稽古にも</h2>
+      <p>大会への出店や日々のQ&amp;A対応など、弓道に打ち込む方々のそばに立ち続けてきました。実店舗での相談と通信販売、その両方を大切にしながら、一人ひとりの弓道具選びに向き合っています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta fade-up">
+  <h2 class="mincho">選びやすさが、稽古の質を変える。</h2>
+  <p>商品ラインナップとオーダーメイドの流れを整理し、初めての方にも分かりやすいサイトへのリニューアルをご提案します。</p>
+  <a class="btn" href="mailto:yumi@sambu.jp">お問い合わせについて</a>
+</section>
+
+<footer>山武弓具店（千葉県山武市）｜本サイトはリニューアル提案用モックアップです</footer>
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
