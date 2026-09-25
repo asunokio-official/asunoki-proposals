@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>翠華園谷村弥三郎｜高山茶筌 リニューアル提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bamboo-dark:#2b3a2a;
+    --bamboo:#4a5f42;
+    --bamboo-light:#8fa384;
+    --cream:#f7f3ea;
+    --ink:#242220;
+    --gold:#a8843f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans JP',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  .mincho{font-family:'Shippori Mincho',serif;}
+  .disclaimer{
+    background:var(--bamboo-dark);color:#dfe6da;text-align:center;
+    font-size:.72rem;padding:.5rem 1rem;letter-spacing:.05em;
+  }
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:1.1rem 5%;
+    background:rgba(247,243,234,.88);backdrop-filter:blur(6px);
+    transition:box-shadow .3s;
+  }
+  header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06);}
+  .logo{font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:600;letter-spacing:.08em;color:var(--bamboo-dark);}
+  nav a{margin-left:2rem;font-size:.85rem;color:var(--ink);text-decoration:none;letter-spacing:.05em;}
+  nav{display:none;}
+  @media(min-width:800px){nav{display:block;}}
+
+  .hero{
+    position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:6rem 6% 4rem;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(143,163,132,.35), transparent 55%),
+      radial-gradient(ellipse at 85% 90%, rgba(168,132,63,.18), transparent 50%),
+      linear-gradient(160deg,#eef0e5 0%, var(--cream) 45%, #f2ecd9 100%);
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(100deg, rgba(74,95,66,.05) 0 2px, transparent 2px 34px);
+    animation:driftBg 40s linear infinite;
+  }
+  @keyframes driftBg{ from{background-position:0 0;} to{background-position:600px 0;} }
+  .hero-eyebrow{font-size:.8rem;letter-spacing:.35em;color:var(--gold);margin-bottom:1.4rem;}
+  .hero h1{
+    font-family:'Shippori Mincho',serif;font-weight:700;
+    font-size:clamp(2.1rem,6vw,4.2rem);color:var(--bamboo-dark);
+    line-height:1.5;letter-spacing:.03em;
+  }
+  .hero p.lead{max-width:34rem;margin:1.8rem auto 0;color:#4a473f;font-size:1rem;}
+  .hero .ring{
+    width:120px;height:120px;border-radius:50%;border:1px solid rgba(74,95,66,.35);
+    display:flex;align-items:center;justify-content:center;margin:2.6rem auto 0;
+    font-family:'Shippori Mincho',serif;font-size:1.6rem;color:var(--bamboo);
+    animation:breathe 6s ease-in-out infinite;
+  }
+  @keyframes breathe{0%,100%{transform:scale(1);opacity:.85;}50%{transform:scale(1.06);opacity:1;}}
+
+  section{padding:6.5rem 6%;max-width:1080px;margin:0 auto;}
+  .fade-up{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s ease;}
+  .fade-up.in{opacity:1;transform:none;}
+
+  .history{background:var(--bamboo-dark);color:#eef0e5;border-radius:2px;}
+  .history-grid{display:grid;grid-template-columns:1fr;gap:2.4rem;}
+  @media(min-width:820px){.history-grid{grid-template-columns:.9fr 1.1fr;align-items:center;}}
+  .history-num{font-family:'Shippori Mincho',serif;font-size:5rem;color:var(--bamboo-light);line-height:1;}
+  .history h2{font-family:'Shippori Mincho',serif;font-size:1.9rem;margin-bottom:1.2rem;}
+  .history p{color:#cfd6c8;font-size:.95rem;}
+
+  .features{display:grid;grid-template-columns:1fr;gap:0;}
+  @media(min-width:760px){.features{grid-template-columns:repeat(3,1fr);}}
+  .feature{
+    padding:2.6rem 1.6rem;border-top:1px solid rgba(74,95,66,.25);
+    position:relative;
+  }
+  @media(min-width:760px){.feature{border-top:none;border-left:1px solid rgba(74,95,66,.25);}
+    .feature:first-child{border-left:none;}}
+  .feature .fk{font-family:'Shippori Mincho',serif;font-size:2.4rem;color:var(--gold);display:block;margin-bottom:1rem;}
+  .feature h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;margin-bottom:.6rem;color:var(--bamboo-dark);}
+  .feature p{font-size:.88rem;color:#5b584e;}
+
+  .experience{
+    background:linear-gradient(135deg,#f2ecd9,#e9ecdf);
+    border-radius:4px;padding:4.5rem 6%;
+    display:grid;gap:2.5rem;
+  }
+  @media(min-width:820px){.experience{grid-template-columns:1fr 1fr;align-items:center;}}
+  .experience h2{font-family:'Shippori Mincho',serif;font-size:1.8rem;color:var(--bamboo-dark);margin-bottom:1.1rem;}
+  .experience .tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;}
+  .experience .tag{
+    border:1px solid var(--bamboo);color:var(--bamboo-dark);font-size:.78rem;
+    padding:.4rem .9rem;border-radius:999px;
+  }
+  .experience-visual{
+    aspect-ratio:4/3;border-radius:4px;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,var(--bamboo) 0%, var(--bamboo-dark) 70%);
+  }
+  .experience-visual::after{
+    content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 3px, transparent 3px 22px);
+  }
+  .experience-visual span{
+    position:absolute;bottom:1.4rem;left:1.4rem;color:#e8ecdf;font-family:'Shippori Mincho',serif;font-size:1rem;
+  }
+
+  .cta{
+    text-align:center;padding-bottom:7rem;
+  }
+  .cta h2{font-family:'Shippori Mincho',serif;font-size:1.9rem;color:var(--bamboo-dark);margin-bottom:1rem;}
+  .cta p{color:#5b584e;max-width:32rem;margin:0 auto 2rem;font-size:.92rem;}
+  .btn{
+    display:inline-block;background:var(--bamboo-dark);color:#fff;padding:.95rem 2.4rem;
+    border-radius:2px;text-decoration:none;font-size:.9rem;letter-spacing:.08em;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(43,58,42,.28);}
+
+  footer{
+    background:var(--ink);color:#a6a293;text-align:center;padding:2.4rem 1rem;font-size:.78rem;
+  }
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです</div>
+<header id="header">
+  <div class="logo">翠華園谷村弥三郎</div>
+  <nav>
+    <a href="#history">歴史</a>
+    <a href="#features">こだわり</a>
+    <a href="#experience">体験教室</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">TAKAYAMA CHASEN — SINCE 室町後期</div>
+  <h1 class="mincho">五百年の竹の呼吸を、<br>一本の茶筌に。</h1>
+  <p class="lead">奈良県生駒市高山。室町時代後期より受け継がれる高山茶筌の技を、全工程手作業でつむぐ翠華園谷村弥三郎の仕事場です。</p>
+  <div class="ring mincho">筌</div>
+</section>
+
+<section class="history fade-up" id="history">
+  <div class="history-grid">
+    <div class="history-num">500</div>
+    <div>
+      <h2>つぶさに作る心</h2>
+      <p>約530年前、室町時代後期に高山の地で生まれた茶筌づくり。翠華園谷村弥三郎では、一本の竹を選ぶところから、割く・練る・編むという全工程を、すべて職人の手だけで仕上げています。効率よりも、一本ごとの穂先の表情を大切にする姿勢を、代々受け継いでいます。</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up" id="features">
+  <div class="features">
+    <div class="feature">
+      <span class="fk">竹</span>
+      <h3>厳選した淡竹</h3>
+      <p>茶筌に適した竹を見極め、油抜き・寒晒しを経た良質な素材のみを使用しています。</p>
+    </div>
+    <div class="feature">
+      <span class="fk">手</span>
+      <h3>全工程手作業</h3>
+      <p>割り・味削り・下編み・上編み。機械に頼らず、指先の感覚だけで穂の均一さを整えます。</p>
+    </div>
+    <div class="feature">
+      <span class="fk">継</span>
+      <h3>体験教室で伝える</h3>
+      <p>春の桜茶会や体験教室を通じて、地域の方や観光の方にも高山茶筌の魅力を伝えています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up" id="experience">
+  <div class="experience">
+    <div>
+      <h2 class="mincho">見て、触れて、使ってわかる価値</h2>
+      <p>ウェブショップでの直販に加え、体験教室や季節の茶会案内など、工房の「今」をオンラインで発信し続けています。</p>
+      <div class="tags">
+        <span class="tag">#高山茶筌翠華園</span>
+        <span class="tag">#翠華園体験教室</span>
+        <span class="tag">春の桜茶会</span>
+        <span class="tag">Instagram発信中</span>
+      </div>
+    </div>
+    <div class="experience-visual"><span>竹編みの表情</span></div>
+  </div>
+</section>
+
+<section class="cta fade-up">
+  <h2 class="mincho">五百年の技を、次の百年へ。</h2>
+  <p>体験教室のご案内や、ウェブショップでの茶筌のご紹介ページを、より見やすく・伝わりやすい形にリニューアルするご提案です。</p>
+  <a class="btn" href="mailto:suikaen.yasaburo@gmail.com">お問い合わせについて</a>
+</section>
+
+<footer>
+  翠華園谷村弥三郎（奈良県生駒市高山町）｜本サイトはリニューアル提案用モックアップです
+</footer>
+
+<script>
+  document.addEventListener('scroll', function(){
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+  });
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:.15});
+  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
