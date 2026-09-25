@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>二橋染工場｜浜松注染 リニューアル提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--indigo-deep:#1b2b4a;--indigo:#2f4d7a;--indigo-light:#7c9bc4;--paper:#f4f2ea;--ink:#20222a;--sun:#d98b3f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;}
+  .mincho{font-family:'Shippori Mincho',serif;}
+  .disclaimer{background:var(--indigo-deep);color:#dbe4f2;text-align:center;font-size:.72rem;padding:.5rem 1rem;}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5%;background:rgba(244,242,234,.9);backdrop-filter:blur(6px);}
+  .logo{font-family:'Shippori Mincho',serif;font-weight:600;}
+  nav{display:none;} @media(min-width:800px){nav{display:flex;gap:2rem;font-size:.85rem;}}
+  nav a{color:var(--ink);text-decoration:none;}
+
+  .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 6% 5rem;overflow:hidden;
+    background:linear-gradient(200deg,var(--indigo-deep) 0%, var(--indigo) 55%, var(--indigo-light) 130%);color:#f4f2ea;}
+  .dye-wave{position:absolute;inset:0;opacity:.35;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 20%, rgba(255,255,255,.25), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 80% 75%, rgba(255,255,255,.18), transparent 60%);
+    animation:swirl 18s ease-in-out infinite alternate;
+  }
+  @keyframes swirl{from{transform:scale(1) rotate(0deg);}to{transform:scale(1.15) rotate(4deg);}}
+  .hero-content{position:relative;z-index:2;max-width:720px;}
+  .hero-eyebrow{letter-spacing:.4em;font-size:.72rem;color:var(--sun);margin-bottom:1.5rem;}
+  .hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(2rem,5.6vw,3.6rem);line-height:1.55;}
+  .hero p{margin-top:1.7rem;color:#d7dfee;font-size:.95rem;}
+
+  section{padding:6.5rem 6%;max-width:1080px;margin:0 auto;}
+  .fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s, transform .8s;}
+  .fade-up.in{opacity:1;transform:none;}
+
+  .steps{display:grid;grid-template-columns:1fr;gap:2rem;}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr);}}
+  .step{position:relative;padding-top:1.4rem;}
+  .step .sn{position:absolute;top:0;left:0;font-family:'Shippori Mincho',serif;font-size:2.2rem;color:var(--indigo-light);}
+  .step h3{margin-top:2.6rem;font-size:.95rem;margin-bottom:.5rem;}
+  .step p{font-size:.83rem;color:#565a63;}
+
+  .split{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center;}
+  @media(min-width:820px){.split{grid-template-columns:1fr 1fr;}}
+  .split h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;color:var(--indigo-deep);margin-bottom:1.1rem;}
+  .split p{font-size:.93rem;color:#4c4f57;}
+  .fabric{aspect-ratio:4/3;border-radius:2px;position:relative;overflow:hidden;
+    background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-light) 100%);}
+  .fabric::before{content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 2px, transparent 2px 18px);}
+  .fabric span{position:absolute;bottom:1.3rem;left:1.3rem;font-family:'Shippori Mincho',serif;color:#f4f2ea;}
+
+  .lineup{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(27,43,74,.15);}
+  @media(min-width:700px){.lineup{grid-template-columns:repeat(3,1fr);}}
+  .lineitem{background:var(--paper);padding:2.4rem 1.6rem;}
+  .lineitem h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;color:var(--indigo-deep);margin-bottom:.6rem;}
+  .lineitem p{font-size:.85rem;color:#4c4f57;}
+
+  .cta{text-align:center;padding-bottom:7rem;}
+  .cta h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;color:var(--indigo-deep);margin-bottom:1rem;}
+  .cta p{max-width:30rem;margin:0 auto 2rem;color:#4c4f57;font-size:.92rem;}
+  .btn{display:inline-block;background:var(--indigo-deep);color:#fff;padding:.95rem 2.4rem;text-decoration:none;font-size:.9rem;border-radius:2px;transition:transform .25s,box-shadow .25s;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(27,43,74,.32);}
+  footer{background:var(--indigo-deep);color:#a9b7d1;text-align:center;padding:2.4rem 1rem;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです</div>
+<header><div class="logo">二橋染工場</div><nav><a href="#craft">注染とは</a><a href="#lineup">製品</a></nav></header>
+
+<section class="hero">
+  <div class="dye-wave"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">NIHASHI SOMEKOJO — SINCE 1927</div>
+    <h1 class="mincho">裏表なく染め上げる、<br>一枚の布のいろどり。</h1>
+    <p>静岡県浜松市。1927年創業、三代にわたって注染という日本独自の染色技法と向き合い続けてきた染工場です。</p>
+  </div>
+</section>
+
+<section class="fade-up" id="craft">
+  <div class="steps">
+    <div class="step"><span class="sn">01</span><h3>型付け</h3><p>手彫りの型紙で防染糊を生地に施します。</p></div>
+    <div class="step"><span class="sn">02</span><h3>注ぎ染め</h3><p>染料を注ぎ込み、生地の芯まで染め抜きます。</p></div>
+    <div class="step"><span class="sn">03</span><h3>色のにじみ</h3><p>手染めならではのぼかしと揺らぎが生まれます。</p></div>
+    <div class="step"><span class="sn">04</span><h3>水元</h3><p>糊を洗い流し、柔らかな風合いに仕上げます。</p></div>
+  </div>
+</section>
+
+<section class="fade-up">
+  <div class="split">
+    <div class="fabric"><span>色のゆらぎ</span></div>
+    <div>
+      <h2 class="mincho">効率化できない、<br>手仕事だけの表情</h2>
+      <p>注染は明治時代に考案された日本独自の染色手法。生地の裏表なく染めることができ、糸そのものを染め上げるため色に深みが生まれます。使うほどに柔らかくなる風合いも、この技法ならではの魅力です。</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up" id="lineup">
+  <div class="lineup">
+    <div class="lineitem"><h3>手ぬぐい</h3><p>日常使いから贈答用まで、豊富な柄で展開。</p></div>
+    <div class="lineitem"><h3>浴衣地</h3><p>遠州織物との組み合わせによる本格浴衣地。</p></div>
+    <div class="lineitem"><h3>注染体験</h3><p>染めの工程を実際に体験できるプログラムも。</p></div>
+  </div>
+</section>
+
+<section class="cta fade-up">
+  <h2 class="mincho">100年続く色を、次の世代へ伝える。</h2>
+  <p>注染の魅力や体験プログラムが伝わるよう、スマートフォンでも見やすいサイトへのリニューアルをご提案します。</p>
+  <a class="btn" href="mailto:nihashisenkou@cy.tnc.ne.jp">お問い合わせについて</a>
+</section>
+
+<footer>二橋染工場（静岡県浜松市）｜本サイトはリニューアル提案用モックアップです</footer>
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
