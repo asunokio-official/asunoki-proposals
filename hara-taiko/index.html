@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>はら太鼓店｜リニューアル提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#a3202a;--red-deep:#701219;--black:#1a1512;--paper:#f5efe6;--gold:#c9a24a;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans JP',sans-serif;background:var(--paper);color:var(--black);line-height:1.85;}
+  .mincho{font-family:'Shippori Mincho',serif;}
+  .disclaimer{background:var(--black);color:#e9d9c0;text-align:center;font-size:.72rem;padding:.5rem 1rem;}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5%;background:rgba(245,239,230,.9);backdrop-filter:blur(6px);}
+  .logo{font-family:'Shippori Mincho',serif;font-weight:700;}
+  nav{display:none;} @media(min-width:800px){nav{display:flex;gap:2rem;font-size:.85rem;}}
+  nav a{color:var(--black);text-decoration:none;}
+
+  .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 6% 5rem;overflow:hidden;background:var(--black);color:var(--paper);}
+  .rings{position:absolute;left:50%;top:50%;width:140vmax;height:140vmax;transform:translate(-50%,-50%);
+    background:repeating-radial-gradient(circle, rgba(163,32,42,.14) 0 2px, transparent 2px 46px);
+    animation:pulseRing 4.5s ease-in-out infinite;
+  }
+  @keyframes pulseRing{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.7;}50%{transform:translate(-50%,-50%) scale(1.05);opacity:1;}}
+  .hero-content{position:relative;z-index:2;max-width:680px;}
+  .hero-eyebrow{letter-spacing:.4em;font-size:.72rem;color:var(--gold);margin-bottom:1.5rem;}
+  .hero h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(2rem,5.6vw,3.6rem);line-height:1.5;}
+  .hero p{margin-top:1.7rem;color:#d8cabb;font-size:.95rem;}
+
+  section{padding:6.5rem 6%;max-width:1080px;margin:0 auto;}
+  .fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s, transform .8s;}
+  .fade-up.in{opacity:1;transform:none;}
+
+  .roles{display:grid;grid-template-columns:1fr;gap:0;}
+  @media(min-width:760px){.roles{grid-template-columns:repeat(3,1fr);}}
+  .role{padding:2.6rem 1.8rem;border-top:1px solid rgba(163,32,42,.2);}
+  @media(min-width:760px){.role{border-top:none;border-left:1px solid rgba(163,32,42,.2);}.role:first-child{border-left:none;}}
+  .role .rn{font-family:'Shippori Mincho',serif;font-size:1.6rem;color:var(--red);display:block;margin-bottom:.8rem;}
+  .role h3{font-size:1rem;margin-bottom:.5rem;}
+  .role p{font-size:.85rem;color:#5a5148;}
+
+  .split{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center;}
+  @media(min-width:820px){.split{grid-template-columns:1fr 1fr;}}
+  .split h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;color:var(--red-deep);margin-bottom:1.1rem;}
+  .split p{font-size:.93rem;color:#5a5148;}
+  .drum{aspect-ratio:1;border-radius:50%;position:relative;max-width:300px;margin:0 auto;
+    background:radial-gradient(circle at 40% 35%, #e6c88a, var(--red) 55%, var(--red-deep) 100%);
+    box-shadow:0 20px 50px rgba(112,18,25,.3);}
+  .drum::after{content:"";position:absolute;inset:8%;border-radius:50%;border:3px solid rgba(0,0,0,.15);}
+
+  .cta{text-align:center;padding-bottom:7rem;}
+  .cta h2{font-family:'Shippori Mincho',serif;font-size:1.85rem;color:var(--red-deep);margin-bottom:1rem;}
+  .cta p{max-width:30rem;margin:0 auto 2rem;color:#5a5148;font-size:.92rem;}
+  .btn{display:inline-block;background:var(--red);color:#fff;padding:.95rem 2.4rem;text-decoration:none;font-size:.9rem;border-radius:2px;transition:transform .25s,box-shadow .25s;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(163,32,42,.35);}
+  footer{background:var(--black);color:#a99b8a;text-align:center;padding:2.4rem 1rem;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです</div>
+<header><div class="logo">はら太鼓店</div><nav><a href="#roles">対応内容</a><a href="#story">代表について</a></nav></header>
+
+<section class="hero">
+  <div class="rings"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">HARA TAIKO — NAGANO, SINCE 2005</div>
+    <h1 class="mincho">一打が生まれる場所を、<br>山の麓につくる。</h1>
+    <p>長野県富士見町。太鼓の製造販売にとどまらず、職人・指導者・奏者として和太鼓と向き合い続けている工房です。</p>
+  </div>
+</section>
+
+<section class="fade-up" id="roles">
+  <div class="roles">
+    <div class="role"><span class="rn">職</span><h3>製造・修理</h3><p>皮の張替えから本体の修理まで丁寧に対応。</p></div>
+    <div class="role"><span class="rn">導</span><h3>指導</h3><p>県内外の学校・和太鼓チームへの指導実績。</p></div>
+    <div class="role"><span class="rn">奏</span><h3>演奏活動</h3><p>ユニット「天空」としての演奏・楽曲提供も。</p></div>
+  </div>
+</section>
+
+<section class="fade-up" id="story">
+  <div class="split">
+    <div class="drum"></div>
+    <div>
+      <h2 class="mincho">職人であり、奏者であること</h2>
+      <p>1997年に埼玉県から長野県へ移住し、修行を経て2005年に開業。太鼓をつくるだけでなく、実際に打ち、教え、伝える立場として活動を続けているのが、はら太鼓店の大きな特長です。「降旗三兄弟」とのユニット「天空」としての演奏活動も行っています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta fade-up">
+  <h2 class="mincho">音を伝える仕事の幅を、正しく届ける。</h2>
+  <p>製造・修理・指導・演奏という4つの活動を整理して伝え、依頼しやすいサイトへのリニューアルをご提案します。</p>
+  <a class="btn" href="mailto:harataikoten@yahoo.co.jp">お問い合わせについて</a>
+</section>
+
+<footer>はら太鼓店（長野県諏訪郡富士見町）｜本サイトはリニューアル提案用モックアップです</footer>
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
